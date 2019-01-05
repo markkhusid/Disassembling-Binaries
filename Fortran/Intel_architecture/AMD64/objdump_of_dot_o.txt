@@ -1,0 +1,37 @@
+
+add.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <MAIN__>:
+   0:	55                   	push   rbp
+   1:	48 89 e5             	mov    rbp,rsp
+   4:	c7 45 fc 01 00 00 00 	mov    DWORD PTR [rbp-0x4],0x1
+   b:	c7 45 f8 09 00 00 00 	mov    DWORD PTR [rbp-0x8],0x9
+  12:	8b 55 fc             	mov    edx,DWORD PTR [rbp-0x4]
+  15:	8b 45 f8             	mov    eax,DWORD PTR [rbp-0x8]
+  18:	01 d0                	add    eax,edx
+  1a:	89 45 f4             	mov    DWORD PTR [rbp-0xc],eax
+  1d:	90                   	nop
+  1e:	5d                   	pop    rbp
+  1f:	c3                   	ret    
+
+0000000000000020 <main>:
+  20:	55                   	push   rbp
+  21:	48 89 e5             	mov    rbp,rsp
+  24:	48 83 ec 10          	sub    rsp,0x10
+  28:	89 7d fc             	mov    DWORD PTR [rbp-0x4],edi
+  2b:	48 89 75 f0          	mov    QWORD PTR [rbp-0x10],rsi
+  2f:	48 8b 55 f0          	mov    rdx,QWORD PTR [rbp-0x10]
+  33:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+  36:	48 89 d6             	mov    rsi,rdx
+  39:	89 c7                	mov    edi,eax
+  3b:	e8 00 00 00 00       	call   40 <main+0x20>
+  40:	be 00 00 00 00       	mov    esi,0x0
+  45:	bf 09 00 00 00       	mov    edi,0x9
+  4a:	e8 00 00 00 00       	call   4f <main+0x2f>
+  4f:	e8 ac ff ff ff       	call   0 <MAIN__>
+  54:	b8 00 00 00 00       	mov    eax,0x0
+  59:	c9                   	leave  
+  5a:	c3                   	ret    
