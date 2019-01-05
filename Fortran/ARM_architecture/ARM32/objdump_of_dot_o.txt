@@ -1,0 +1,41 @@
+
+add.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <MAIN__>:
+   0:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
+   4:	e28db000 	add	fp, sp, #0
+   8:	e24dd014 	sub	sp, sp, #20
+   c:	e3a03001 	mov	r3, #1
+  10:	e50b3008 	str	r3, [fp, #-8]
+  14:	e3a03009 	mov	r3, #9
+  18:	e50b300c 	str	r3, [fp, #-12]
+  1c:	e51b2008 	ldr	r2, [fp, #-8]
+  20:	e51b300c 	ldr	r3, [fp, #-12]
+  24:	e0823003 	add	r3, r2, r3
+  28:	e50b3010 	str	r3, [fp, #-16]
+  2c:	e1a00000 	nop			; (mov r0, r0)
+  30:	e28bd000 	add	sp, fp, #0
+  34:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
+  38:	e12fff1e 	bx	lr
+
+0000003c <main>:
+  3c:	e92d4800 	push	{fp, lr}
+  40:	e28db004 	add	fp, sp, #4
+  44:	e24dd008 	sub	sp, sp, #8
+  48:	e50b0008 	str	r0, [fp, #-8]
+  4c:	e50b100c 	str	r1, [fp, #-12]
+  50:	e51b100c 	ldr	r1, [fp, #-12]
+  54:	e51b0008 	ldr	r0, [fp, #-8]
+  58:	ebfffffe 	bl	0 <_gfortran_set_args>
+  5c:	e59f1018 	ldr	r1, [pc, #24]	; 7c <main+0x40>
+  60:	e3a00009 	mov	r0, #9
+  64:	ebfffffe 	bl	0 <_gfortran_set_options>
+  68:	ebffffe4 	bl	0 <MAIN__>
+  6c:	e3a03000 	mov	r3, #0
+  70:	e1a00003 	mov	r0, r3
+  74:	e24bd004 	sub	sp, fp, #4
+  78:	e8bd8800 	pop	{fp, pc}
+  7c:	00000000 	.word	0x00000000
