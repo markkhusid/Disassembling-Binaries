@@ -1,0 +1,29 @@
+
+add.o:     file format elf64-littleaarch64
+
+
+Disassembly of section .text.n_main:
+
+0000000000000000 <main>:
+   0:	a9bf7bfd 	stp	x29, x30, [sp, #-16]!
+   4:	910003fd 	mov	x29, sp
+   8:	94000000 	bl	0 <FPC_INITIALIZEUNITS>
+   c:	52800060 	mov	w0, #0x3                   	// #3
+  10:	90000001 	adrp	x1, 0 <main>
+  14:	91000021 	add	x1, x1, #0x0
+  18:	78000020 	sturh	w0, [x1]
+  1c:	528000a1 	mov	w1, #0x5                   	// #5
+  20:	90000000 	adrp	x0, 0 <main>
+  24:	91000000 	add	x0, x0, #0x0
+  28:	78000001 	sturh	w1, [x0]
+  2c:	90000000 	adrp	x0, 0 <main>
+  30:	91000000 	add	x0, x0, #0x0
+  34:	78c00000 	ldursh	w0, [x0]
+  38:	11001400 	add	w0, w0, #0x5
+  3c:	13003c00 	sxth	w0, w0
+  40:	90000001 	adrp	x1, 0 <main>
+  44:	91000021 	add	x1, x1, #0x0
+  48:	78000020 	sturh	w0, [x1]
+  4c:	94000000 	bl	0 <FPC_DO_EXIT>
+  50:	a8c17bfd 	ldp	x29, x30, [sp], #16
+  54:	d65f03c0 	ret
