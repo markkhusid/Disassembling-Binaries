@@ -1,0 +1,230 @@
+
+add.o:     file format elf32-littlearm
+
+
+Disassembly of section .bss:
+
+00000000 <U_$P$ADD_$$_A>:
+	...
+
+00000002 <U_$P$ADD_$$_B>:
+	...
+
+00000004 <U_$P$ADD_$$_C>:
+	...
+
+Disassembly of section .stab:
+
+00000000 <.stab>:
+   0:	00000001 	andeq	r0, r0, r1
+   4:	00110000 	andseq	r0, r1, r0
+   8:	000000ab 	andeq	r0, r0, fp, lsr #1
+   c:	00000008 	andeq	r0, r0, r8
+  10:	00000064 	andeq	r0, r0, r4, rrx
+  14:	00000000 	andeq	r0, r0, r0
+  18:	0000005a 	andeq	r0, r0, sl, asr r0
+  1c:	00000064 	andeq	r0, r0, r4, rrx
+  20:	00000000 	andeq	r0, r0, r0
+  24:	00000061 	andeq	r0, r0, r1, rrx
+  28:	00000080 	andeq	r0, r0, r0, lsl #1
+  2c:	00000000 	andeq	r0, r0, r0
+  30:	0000006b 	andeq	r0, r0, fp, rrx
+  34:	00000080 	andeq	r0, r0, r0, lsl #1
+  38:	00000000 	andeq	r0, r0, r0
+  3c:	0000008d 	andeq	r0, r0, sp, lsl #1
+  40:	00040026 	andeq	r0, r4, r6, lsr #32
+  44:	00000000 	andeq	r0, r0, r0
+  48:	00000092 	muleq	r0, r2, r0
+  4c:	00040026 	andeq	r0, r4, r6, lsr #32
+  50:	00000002 	andeq	r0, r0, r2
+  54:	00000097 	muleq	r0, r7, r0
+  58:	00040026 	andeq	r0, r4, r6, lsr #32
+  5c:	00000004 	andeq	r0, r0, r4
+  60:	0000009c 	muleq	r0, ip, r0
+  64:	00030024 	andeq	r0, r3, r4, lsr #32
+  68:	00000000 	andeq	r0, r0, r0
+  6c:	000000a4 	andeq	r0, r0, r4, lsr #1
+  70:	00000084 	andeq	r0, r0, r4, lsl #1
+	...
+  7c:	00060044 	andeq	r0, r6, r4, asr #32
+	...
+  88:	00080044 	andeq	r0, r8, r4, asr #32
+  8c:	00000014 	andeq	r0, r0, r4, lsl r0
+  90:	00000000 	andeq	r0, r0, r0
+  94:	00090044 	andeq	r0, r9, r4, asr #32
+  98:	00000020 	andeq	r0, r0, r0, lsr #32
+  9c:	00000000 	andeq	r0, r0, r0
+  a0:	000a0044 	andeq	r0, sl, r4, asr #32
+  a4:	0000002c 	andeq	r0, r0, ip, lsr #32
+  a8:	00000000 	andeq	r0, r0, r0
+  ac:	000b0044 	andeq	r0, fp, r4, asr #32
+  b0:	0000004c 	andeq	r0, r0, ip, asr #32
+  b4:	00000000 	andeq	r0, r0, r0
+  b8:	000000c0 	andeq	r0, r0, r0, asr #1
+	...
+  c4:	000000e0 	andeq	r0, r0, r0, ror #1
+  c8:	00000060 	andeq	r0, r0, r0, rrx
+  cc:	00000000 	andeq	r0, r0, r0
+  d0:	00000064 	andeq	r0, r0, r4, rrx
+  d4:	00000000 	andeq	r0, r0, r0
+
+Disassembly of section .stabstr:
+
+00000000 <.stabstr>:
+   0:	64646100 	strbtvs	r6, [r4], #-256	; 0xffffff00
+   4:	0070702e 	rsbseq	r7, r0, lr, lsr #32
+   8:	6d6f682f 	stclvs	8, cr6, [pc, #-188]!	; ffffff54 <U_$P$ADD_$$_C+0xffffff50>
+   c:	69702f65 	ldmdbvs	r0!, {r0, r2, r5, r6, r8, r9, sl, fp, sp}^
+  10:	676e452f 	strbvs	r4, [lr, -pc, lsr #10]!
+  14:	65656e69 	strbvs	r6, [r5, #-3689]!	; 0xfffff197
+  18:	676e6972 			; <UNDEFINED> instruction: 0x676e6972
+  1c:	5449472f 	strbpl	r4, [r9], #-1839	; 0xfffff8d1
+  20:	2f425548 	svccs	0x00425548
+  24:	61736944 	cmnvs	r3, r4, asr #18
+  28:	6d657373 	stclvs	3, cr7, [r5, #-460]!	; 0xfffffe34
+  2c:	6e696c62 	cdpvs	12, 6, cr6, cr9, cr2, {3}
+  30:	69422d67 	stmdbvs	r2, {r0, r1, r2, r5, r6, r8, sl, fp, sp}^
+  34:	6972616e 	ldmdbvs	r2!, {r1, r2, r3, r5, r6, r8, sp, lr}^
+  38:	502f7365 	eorpl	r7, pc, r5, ror #6
+  3c:	61637361 	cmnvs	r3, r1, ror #6
+  40:	52412f6c 	subpl	r2, r1, #108, 30	; 0x1b0
+  44:	72415f4d 	subvc	r5, r1, #308	; 0x134
+  48:	74696863 	strbtvc	r6, [r9], #-2147	; 0xfffff79d
+  4c:	75746365 	ldrbvc	r6, [r4, #-869]!	; 0xfffffc9b
+  50:	412f6572 			; <UNDEFINED> instruction: 0x412f6572
+  54:	32334d52 	eorscc	r4, r3, #5248	; 0x1480
+  58:	6461002f 	strbtvs	r0, [r1], #-47	; 0xffffffd1
+  5c:	70702e64 	rsbsvc	r2, r0, r4, ror #28
+  60:	696f7600 	stmdbvs	pc!, {r9, sl, ip, sp, lr}^	; <UNPREDICTABLE>
+  64:	32743a64 	rsbscc	r3, r4, #100, 20	; 0x64000
+  68:	5300323d 	movwpl	r3, #573	; 0x23d
+  6c:	4c4c414d 	stfmie	f4, [ip], {77}	; 0x4d
+  70:	3a544e49 	bcc	151399c <U_$P$ADD_$$_C+0x1513998>
+  74:	403d3174 	eorsmi	r3, sp, r4, ror r1
+  78:	3b363173 	blcc	d8c64c <U_$P$ADD_$$_C+0xd8c648>
+  7c:	2d3b3172 	ldfcss	f3, [fp, #-456]!	; 0xfffffe38
+  80:	36373233 			; <UNDEFINED> instruction: 0x36373233
+  84:	32333b38 	eorscc	r3, r3, #56, 22	; 0xe000
+  88:	3b373637 	blcc	dcd96c <U_$P$ADD_$$_C+0xdcd968>
+  8c:	533a4100 	teqpl	sl, #0, 2
+  90:	3a420031 	bcc	108015c <U_$P$ADD_$$_C+0x1080158>
+  94:	43003153 	movwmi	r3, #339	; 0x153
+  98:	0031533a 	eorseq	r5, r1, sl, lsr r3
+  9c:	6e69616d 	powvsez	f6, f1, #5.0
+  a0:	0032463a 	eorseq	r4, r2, sl, lsr r6
+  a4:	2e646461 	cdpcs	4, 6, cr6, cr4, cr1, {3}
+  a8:	Address 0x000000a8 is out of bounds.
+
+
+Disassembly of section .text.n_main:
+
+00000000 <main>:
+   0:	e1a0c00d 	mov	ip, sp
+   4:	e92dd800 	push	{fp, ip, lr, pc}
+   8:	e24cb004 	sub	fp, ip, #4
+   c:	e24dd030 	sub	sp, sp, #48	; 0x30
+  10:	fafffffe 	blx	0 <FPC_INITIALIZEUNITS>
+  14:	e3a00003 	mov	r0, #3
+  18:	e59f1034 	ldr	r1, [pc, #52]	; 54 <main+0x54>
+  1c:	e1c100b0 	strh	r0, [r1]
+  20:	e3a00005 	mov	r0, #5
+  24:	e59f102c 	ldr	r1, [pc, #44]	; 58 <main+0x58>
+  28:	e1c100b0 	strh	r0, [r1]
+  2c:	e59f0020 	ldr	r0, [pc, #32]	; 54 <main+0x54>
+  30:	e1d010f0 	ldrsh	r1, [r0]
+  34:	e59f001c 	ldr	r0, [pc, #28]	; 58 <main+0x58>
+  38:	e1d000f0 	ldrsh	r0, [r0]
+  3c:	e0800001 	add	r0, r0, r1
+  40:	e6bf1070 	sxth	r1, r0
+  44:	e59f0010 	ldr	r0, [pc, #16]	; 5c <main+0x5c>
+  48:	e1c010b0 	strh	r1, [r0]
+  4c:	fafffffe 	blx	0 <FPC_DO_EXIT>
+  50:	e91ba800 	ldmdb	fp, {fp, sp, pc}
+  54:	00000000 	andeq	r0, r0, r0
+  58:	00000002 	andeq	r0, r0, r2
+  5c:	00000004 	andeq	r0, r0, r4
+
+Disassembly of section .fpc.n_links:
+
+00000000 <.fpc.n_links>:
+	...
+
+Disassembly of section .data.n_INITFINAL:
+
+00000000 <INITFINAL>:
+   0:	00000001 	andeq	r0, r0, r1
+	...
+
+Disassembly of section .data.n_FPC_THREADVARTABLES:
+
+00000000 <FPC_THREADVARTABLES>:
+   0:	00000001 	andeq	r0, r0, r1
+   4:	00000000 	andeq	r0, r0, r0
+
+Disassembly of section .data.n_FPC_RESOURCESTRINGTABLES:
+
+00000000 <FPC_RESOURCESTRINGTABLES>:
+   0:	00000000 	andeq	r0, r0, r0
+
+Disassembly of section .data.n_FPC_WIDEINITTABLES:
+
+00000000 <FPC_WIDEINITTABLES>:
+   0:	00000000 	andeq	r0, r0, r0
+
+Disassembly of section .data.n_FPC_RESSTRINITTABLES:
+
+00000000 <FPC_RESSTRINITTABLES>:
+   0:	00000000 	andeq	r0, r0, r0
+
+Disassembly of section .fpc.n_version:
+
+00000000 <.fpc.n_version>:
+   0:	20435046 	subcs	r5, r3, r6, asr #32
+   4:	2e302e33 	mrccs	14, 1, r2, cr0, cr3, {1}
+   8:	66642b30 			; <UNDEFINED> instruction: 0x66642b30
+   c:	312d6773 			; <UNDEFINED> instruction: 0x312d6773
+  10:	70722b31 	rsbsvc	r2, r2, r1, lsr fp
+  14:	642b3169 	strtvs	r3, [fp], #-361	; 0xfffffe97
+  18:	75396265 	ldrvc	r6, [r9, #-613]!	; 0xfffffd9b
+  1c:	325b2031 	subscc	r2, fp, #49	; 0x31
+  20:	2f373130 	svccs	0x00373130
+  24:	322f3730 	eorcc	r3, pc, #48, 14	; 0xc00000
+  28:	66205d37 			; <UNDEFINED> instruction: 0x66205d37
+  2c:	6120726f 			; <UNDEFINED> instruction: 0x6120726f
+  30:	2d206d72 	stccs	13, cr6, [r0, #-456]!	; 0xfffffe38
+  34:	6e694c20 	cdpvs	12, 6, cr4, cr9, cr0, {1}
+  38:	Address 0x00000038 is out of bounds.
+
+
+Disassembly of section .data.n___stklen:
+
+00000000 <__stklen>:
+   0:	00800000 	addeq	r0, r0, r0
+
+Disassembly of section .data.n___heapsize:
+
+00000000 <__heapsize>:
+   0:	00000000 	andeq	r0, r0, r0
+
+Disassembly of section .data.n___fpc_valgrind:
+
+00000000 <__fpc_valgrind>:
+	...
+
+Disassembly of section .data.n_FPC_RESLOCATION:
+
+00000000 <FPC_RESLOCATION>:
+   0:	00000000 	andeq	r0, r0, r0
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00001c41 	andeq	r1, r0, r1, asr #24
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	00000012 	andeq	r0, r0, r2, lsl r0
+  10:	06003605 	streq	r3, [r0], -r5, lsl #12
+  14:	09010806 	stmdbeq	r1, {r1, r2, fp}
+  18:	1c020a01 			; <UNDEFINED> instruction: 0x1c020a01
+  1c:	Address 0x0000001c is out of bounds.
+
