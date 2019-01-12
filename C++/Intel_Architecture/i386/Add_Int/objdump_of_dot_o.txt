@@ -1,0 +1,160 @@
+
+add.o:     file format elf32-i386
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000082  00000000  00000000  00000034  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  00000000  00000000  000000b6  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000001  00000000  00000000  000000b6  2**0
+                  ALLOC
+  3 .init_array   00000004  00000000  00000000  000000b8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+  4 .comment      00000036  00000000  00000000  000000bc  2**0
+                  CONTENTS, READONLY
+  5 .note.GNU-stack 00000000  00000000  00000000  000000f2  2**0
+                  CONTENTS, READONLY
+  6 .eh_frame     00000078  00000000  00000000  000000f4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	55                   	push   ebp
+   1:	89 e5                	mov    ebp,esp
+   3:	83 ec 10             	sub    esp,0x10
+   6:	c7 45 f4 03 00 00 00 	mov    DWORD PTR [ebp-0xc],0x3
+   d:	c7 45 f8 05 00 00 00 	mov    DWORD PTR [ebp-0x8],0x5
+  14:	8b 55 f4             	mov    edx,DWORD PTR [ebp-0xc]
+  17:	8b 45 f8             	mov    eax,DWORD PTR [ebp-0x8]
+  1a:	01 d0                	add    eax,edx
+  1c:	89 45 fc             	mov    DWORD PTR [ebp-0x4],eax
+  1f:	b8 00 00 00 00       	mov    eax,0x0
+  24:	c9                   	leave  
+  25:	c3                   	ret    
+
+00000026 <_Z41__static_initialization_and_destruction_0ii>:
+  26:	55                   	push   ebp
+  27:	89 e5                	mov    ebp,esp
+  29:	83 ec 08             	sub    esp,0x8
+  2c:	83 7d 08 01          	cmp    DWORD PTR [ebp+0x8],0x1
+  30:	75 33                	jne    65 <_Z41__static_initialization_and_destruction_0ii+0x3f>
+  32:	81 7d 0c ff ff 00 00 	cmp    DWORD PTR [ebp+0xc],0xffff
+  39:	75 2a                	jne    65 <_Z41__static_initialization_and_destruction_0ii+0x3f>
+  3b:	83 ec 0c             	sub    esp,0xc
+  3e:	68 00 00 00 00       	push   0x0
+  43:	e8 fc ff ff ff       	call   44 <_Z41__static_initialization_and_destruction_0ii+0x1e>
+  48:	83 c4 10             	add    esp,0x10
+  4b:	83 ec 04             	sub    esp,0x4
+  4e:	68 00 00 00 00       	push   0x0
+  53:	68 00 00 00 00       	push   0x0
+  58:	68 00 00 00 00       	push   0x0
+  5d:	e8 fc ff ff ff       	call   5e <_Z41__static_initialization_and_destruction_0ii+0x38>
+  62:	83 c4 10             	add    esp,0x10
+  65:	90                   	nop
+  66:	c9                   	leave  
+  67:	c3                   	ret    
+
+00000068 <_GLOBAL__sub_I_main>:
+  68:	55                   	push   ebp
+  69:	89 e5                	mov    ebp,esp
+  6b:	83 ec 08             	sub    esp,0x8
+  6e:	83 ec 08             	sub    esp,0x8
+  71:	68 ff ff 00 00       	push   0xffff
+  76:	6a 01                	push   0x1
+  78:	e8 a9 ff ff ff       	call   26 <_Z41__static_initialization_and_destruction_0ii>
+  7d:	83 c4 10             	add    esp,0x10
+  80:	c9                   	leave  
+  81:	c3                   	ret    
+
+Disassembly of section .bss:
+
+00000000 <_ZStL8__ioinit>:
+	...
+
+Disassembly of section .init_array:
+
+00000000 <.init_array>:
+   0:	68                   	.byte 0x68
+   1:	00 00                	add    BYTE PTR [eax],al
+	...
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [edi+0x43],al
+   3:	43                   	inc    ebx
+   4:	3a 20                	cmp    ah,BYTE PTR [eax]
+   6:	28 55 62             	sub    BYTE PTR [ebp+0x62],dl
+   9:	75 6e                	jne    79 <_GLOBAL__sub_I_main+0x11>
+   b:	74 75                	je     82 <_GLOBAL__sub_I_main+0x1a>
+   d:	20 35 2e 34 2e 30    	and    BYTE PTR ds:0x302e342e,dh
+  13:	2d 36 75 62 75       	sub    eax,0x75627536
+  18:	6e                   	outs   dx,BYTE PTR ds:[esi]
+  19:	74 75                	je     90 <_GLOBAL__sub_I_main+0x28>
+  1b:	31 7e 31             	xor    DWORD PTR [esi+0x31],edi
+  1e:	36 2e 30 34 2e       	ss xor BYTE PTR cs:[esi+ebp*1],dh
+  23:	31 31                	xor    DWORD PTR [ecx],esi
+  25:	29 20                	sub    DWORD PTR [eax],esp
+  27:	35 2e 34 2e 30       	xor    eax,0x302e342e
+  2c:	20 32                	and    BYTE PTR [edx],dh
+  2e:	30 31                	xor    BYTE PTR [ecx],dh
+  30:	36 30 36             	xor    BYTE PTR ss:[esi],dh
+  33:	30 39                	xor    BYTE PTR [ecx],bh
+	...
+
+Disassembly of section .eh_frame:
+
+00000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [eax],al
+   4:	00 00                	add    BYTE PTR [eax],al
+   6:	00 00                	add    BYTE PTR [eax],al
+   8:	01 7a 52             	add    DWORD PTR [edx+0x52],edi
+   b:	00 01                	add    BYTE PTR [ecx],al
+   d:	7c 08                	jl     17 <.eh_frame+0x17>
+   f:	01 1b                	add    DWORD PTR [ebx],ebx
+  11:	0c 04                	or     al,0x4
+  13:	04 88                	add    al,0x88
+  15:	01 00                	add    DWORD PTR [eax],eax
+  17:	00 1c 00             	add    BYTE PTR [eax+eax*1],bl
+  1a:	00 00                	add    BYTE PTR [eax],al
+  1c:	1c 00                	sbb    al,0x0
+  1e:	00 00                	add    BYTE PTR [eax],al
+  20:	00 00                	add    BYTE PTR [eax],al
+  22:	00 00                	add    BYTE PTR [eax],al
+  24:	26 00 00             	add    BYTE PTR es:[eax],al
+  27:	00 00                	add    BYTE PTR [eax],al
+  29:	41                   	inc    ecx
+  2a:	0e                   	push   cs
+  2b:	08 85 02 42 0d 05    	or     BYTE PTR [ebp+0x50d4202],al
+  31:	62                   	(bad)  
+  32:	c5 0c 04             	lds    ecx,FWORD PTR [esp+eax*1]
+  35:	04 00                	add    al,0x0
+  37:	00 1c 00             	add    BYTE PTR [eax+eax*1],bl
+  3a:	00 00                	add    BYTE PTR [eax],al
+  3c:	3c 00                	cmp    al,0x0
+  3e:	00 00                	add    BYTE PTR [eax],al
+  40:	26 00 00             	add    BYTE PTR es:[eax],al
+  43:	00 42 00             	add    BYTE PTR [edx+0x0],al
+  46:	00 00                	add    BYTE PTR [eax],al
+  48:	00 41 0e             	add    BYTE PTR [ecx+0xe],al
+  4b:	08 85 02 42 0d 05    	or     BYTE PTR [ebp+0x50d4202],al
+  51:	7e c5                	jle    18 <.eh_frame+0x18>
+  53:	0c 04                	or     al,0x4
+  55:	04 00                	add    al,0x0
+  57:	00 1c 00             	add    BYTE PTR [eax+eax*1],bl
+  5a:	00 00                	add    BYTE PTR [eax],al
+  5c:	5c                   	pop    esp
+  5d:	00 00                	add    BYTE PTR [eax],al
+  5f:	00 68 00             	add    BYTE PTR [eax+0x0],ch
+  62:	00 00                	add    BYTE PTR [eax],al
+  64:	1a 00                	sbb    al,BYTE PTR [eax]
+  66:	00 00                	add    BYTE PTR [eax],al
+  68:	00 41 0e             	add    BYTE PTR [ecx+0xe],al
+  6b:	08 85 02 42 0d 05    	or     BYTE PTR [ebp+0x50d4202],al
+  71:	56                   	push   esi
+  72:	c5 0c 04             	lds    ecx,FWORD PTR [esp+eax*1]
+  75:	04 00                	add    al,0x0
+	...
