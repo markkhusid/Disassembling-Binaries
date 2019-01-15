@@ -1,12 +1,12 @@
 program add
 
-	implicit none
+    implicit none
 
-	integer		:: a, b, c
+    integer    :: a, b, c
 
-	a = 1
-	b = 9
+    a = 1
+    b = 9
 
-	c = a + b
+    c = a + b
 
 end program add
