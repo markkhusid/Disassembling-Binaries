@@ -1,0 +1,81 @@
+
+div_int.o:     file format elf64-littleaarch64
+div_int.o
+architecture: aarch64, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x0000000000000000
+private flags = 0:
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         00000038  0000000000000000  0000000000000000  00000040  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  0000000000000000  0000000000000000  00000078  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  0000000000000000  0000000000000000  00000078  2**0
+                  ALLOC
+  3 .comment      0000001e  0000000000000000  0000000000000000  00000078  2**0
+                  CONTENTS, READONLY
+  4 .note.GNU-stack 00000000  0000000000000000  0000000000000000  00000096  2**0
+                  CONTENTS, READONLY
+  5 .eh_frame     00000030  0000000000000000  0000000000000000  00000098  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 div_int.c
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 l    d  .eh_frame	0000000000000000 .eh_frame
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000000 g     F .text	0000000000000038 main
+
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	d10083ff 	sub	sp, sp, #0x20
+   4:	b9000fe0 	str	w0, [sp, #12]
+   8:	f90003e1 	str	x1, [sp]
+   c:	52800140 	mov	w0, #0xa                   	// #10
+  10:	b9001fe0 	str	w0, [sp, #28]
+  14:	52800040 	mov	w0, #0x2                   	// #2
+  18:	b9001be0 	str	w0, [sp, #24]
+  1c:	b9401fe1 	ldr	w1, [sp, #28]
+  20:	b9401be0 	ldr	w0, [sp, #24]
+  24:	1ac00c20 	sdiv	w0, w1, w0
+  28:	b90017e0 	str	w0, [sp, #20]
+  2c:	52800000 	mov	w0, #0x0                   	// #0
+  30:	910083ff 	add	sp, sp, #0x20
+  34:	d65f03c0 	ret
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	43434700 	.inst	0x43434700 ; undefined
+   4:	4428203a 	.inst	0x4428203a ; undefined
+   8:	61696265 	.inst	0x61696265 ; undefined
+   c:	2e38206e 	usubl	v14.8h, v3.8b, v24.8b
+  10:	2d302e32 	stp	s18, s11, [x17, #-128]
+  14:	20293431 	.inst	0x20293431 ; undefined
+  18:	2e322e38 	uqsub	v24.8b, v17.8b, v18.8b
+  1c:	Address 0x000000000000001c is out of bounds.
+
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	00000010 	.inst	0x00000010 ; undefined
+   4:	00000000 	.inst	0x00000000 ; undefined
+   8:	00527a01 	.inst	0x00527a01 ; undefined
+   c:	011e7804 	.inst	0x011e7804 ; undefined
+  10:	001f0c1b 	.inst	0x001f0c1b ; undefined
+  14:	00000018 	.word	0x00000018
+  18:	00000018 	.word	0x00000018
+  1c:	00000000 	.word	0x00000000
+			1c: R_AARCH64_PREL32	.text
+  20:	00000038 	.word	0x00000038
+  24:	200e4100 	.word	0x200e4100
+  28:	00000e4c 	.word	0x00000e4c
+  2c:	00000000 	.word	0x00000000
