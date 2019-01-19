@@ -1,0 +1,235 @@
+
+writeln.o:     file format elf64-x86-64
+writeln.o
+architecture: i386:x86-64, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x0000000000000000
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         00000000  0000000000000000  0000000000000000  00000040  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .text.n_main  00000050  0000000000000000  0000000000000000  00000040  2**4
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .data.n_INITFINAL 00000020  0000000000000000  0000000000000000  00000090  2**4
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+  3 .data.n_FPC_THREADVARTABLES 00000010  0000000000000000  0000000000000000  000000b0  2**4
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+  4 .data.n_FPC_RESOURCESTRINGTABLES 00000010  0000000000000000  0000000000000000  000000c0  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+  5 .data.n_FPC_WIDEINITTABLES 00000010  0000000000000000  0000000000000000  000000d0  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+  6 .data.n_FPC_RESSTRINITTABLES 00000010  0000000000000000  0000000000000000  000000e0  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+  7 .fpc.n_version 00000038  0000000000000000  0000000000000000  000000f0  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+  8 .data.n___stklen 00000010  0000000000000000  0000000000000000  00000130  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+  9 .data.n___heapsize 00000010  0000000000000000  0000000000000000  00000140  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+ 10 .data.n___fpc_valgrind 00000010  0000000000000000  0000000000000000  00000150  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+ 11 .data.n_FPC_RESLOCATION 00000010  0000000000000000  0000000000000000  00000160  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+ 12 .rodata.n__$WRITELN_PROGRAM$_Ld1 00000010  0000000000000000  0000000000000000  00000170  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 13 .debug_frame  00000048  0000000000000000  0000000000000000  00000180  2**3
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 14 .note.GNU-stack 00000000  0000000000000000  0000000000000000  000007f5  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 writeln.pp
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .text.n_main	0000000000000000 .text.n_main
+0000000000000000 l    d  .data.n_INITFINAL	0000000000000000 .data.n_INITFINAL
+0000000000000000 l    d  .data.n_FPC_THREADVARTABLES	0000000000000000 .data.n_FPC_THREADVARTABLES
+0000000000000000 l    d  .data.n_FPC_RESOURCESTRINGTABLES	0000000000000000 .data.n_FPC_RESOURCESTRINGTABLES
+0000000000000000 l    d  .data.n_FPC_WIDEINITTABLES	0000000000000000 .data.n_FPC_WIDEINITTABLES
+0000000000000000 l    d  .data.n_FPC_RESSTRINITTABLES	0000000000000000 .data.n_FPC_RESSTRINITTABLES
+0000000000000000 l    d  .fpc.n_version	0000000000000000 .fpc.n_version
+0000000000000000 l    d  .data.n___stklen	0000000000000000 .data.n___stklen
+0000000000000000 l    d  .data.n___heapsize	0000000000000000 .data.n___heapsize
+0000000000000000 l    d  .data.n___fpc_valgrind	0000000000000000 .data.n___fpc_valgrind
+0000000000000000 l    d  .data.n_FPC_RESLOCATION	0000000000000000 .data.n_FPC_RESLOCATION
+0000000000000000 l    d  .rodata.n__$WRITELN_PROGRAM$_Ld1	0000000000000000 .rodata.n__$WRITELN_PROGRAM$_Ld1
+0000000000000000 l    d  .debug_frame	0000000000000000 .debug_frame
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 g     F .text.n_main	0000000000000000 PASCALMAIN
+0000000000000000 g     F .text.n_main	000000000000004e main
+0000000000000000 g     O .data.n_INITFINAL	0000000000000020 INITFINAL
+0000000000000000         *UND*	0000000000000000 INIT$_$SYSTEM
+0000000000000000 g     O .data.n_FPC_THREADVARTABLES	000000000000000c FPC_THREADVARTABLES
+0000000000000000         *UND*	0000000000000000 THREADVARLIST_$SYSTEM
+0000000000000000 g     O .data.n_FPC_RESOURCESTRINGTABLES	0000000000000008 FPC_RESOURCESTRINGTABLES
+0000000000000000 g     O .data.n_FPC_WIDEINITTABLES	0000000000000008 FPC_WIDEINITTABLES
+0000000000000000 g     O .data.n_FPC_RESSTRINITTABLES	0000000000000008 FPC_RESSTRINITTABLES
+0000000000000000 g     O .data.n___stklen	0000000000000000 __stklen
+0000000000000000 g     O .data.n___heapsize	0000000000000000 __heapsize
+0000000000000000 g     O .data.n___fpc_valgrind	0000000000000000 __fpc_valgrind
+0000000000000000 g     O .data.n_FPC_RESLOCATION	0000000000000000 FPC_RESLOCATION
+0000000000000000 g     O .rodata.n__$WRITELN_PROGRAM$_Ld1	0000000000000000 _$WRITELN_PROGRAM$_Ld1
+0000000000000000         *UND*	0000000000000000 FPC_INITIALIZEUNITS
+0000000000000000         *UND*	0000000000000000 fpc_get_output
+0000000000000000         *UND*	0000000000000000 fpc_write_text_shortstr
+0000000000000000         *UND*	0000000000000000 FPC_IOCHECK
+0000000000000000         *UND*	0000000000000000 fpc_writeln_end
+0000000000000000         *UND*	0000000000000000 FPC_DO_EXIT
+
+
+
+Disassembly of section .text.n_main:
+
+0000000000000000 <main>:
+   0:	55                   	push   rbp
+   1:	48 89 e5             	mov    rbp,rsp
+   4:	48 8d 64 24 f0       	lea    rsp,[rsp-0x10]
+   9:	48 89 5d f8          	mov    QWORD PTR [rbp-0x8],rbx
+   d:	e8 00 00 00 00       	call   12 <main+0x12>
+			e: R_X86_64_PC32	FPC_INITIALIZEUNITS-0x4
+  12:	e8 00 00 00 00       	call   17 <main+0x17>
+			13: R_X86_64_PC32	fpc_get_output-0x4
+  17:	48 89 c3             	mov    rbx,rax
+  1a:	48 ba 00 00 00 00 00 	movabs rdx,0x0
+  21:	00 00 00 
+			1c: R_X86_64_64	_$WRITELN_PROGRAM$_Ld1
+  24:	48 89 de             	mov    rsi,rbx
+  27:	bf 00 00 00 00       	mov    edi,0x0
+  2c:	e8 00 00 00 00       	call   31 <main+0x31>
+			2d: R_X86_64_PC32	fpc_write_text_shortstr-0x4
+  31:	e8 00 00 00 00       	call   36 <main+0x36>
+			32: R_X86_64_PC32	FPC_IOCHECK-0x4
+  36:	48 89 df             	mov    rdi,rbx
+  39:	e8 00 00 00 00       	call   3e <main+0x3e>
+			3a: R_X86_64_PC32	fpc_writeln_end-0x4
+  3e:	e8 00 00 00 00       	call   43 <main+0x43>
+			3f: R_X86_64_PC32	FPC_IOCHECK-0x4
+  43:	e8 00 00 00 00       	call   48 <main+0x48>
+			44: R_X86_64_PC32	FPC_DO_EXIT-0x4
+  48:	48 8b 5d f8          	mov    rbx,QWORD PTR [rbp-0x8]
+  4c:	c9                   	leave  
+  4d:	c3                   	ret    
+	...
+
+Disassembly of section .data.n_INITFINAL:
+
+0000000000000000 <INITFINAL>:
+   0:	01 00                	add    DWORD PTR [rax],eax
+	...
+			10: R_X86_64_64	INIT$_$SYSTEM
+
+Disassembly of section .data.n_FPC_THREADVARTABLES:
+
+0000000000000000 <FPC_THREADVARTABLES>:
+   0:	01 00                	add    DWORD PTR [rax],eax
+	...
+			4: R_X86_64_64	THREADVARLIST_$SYSTEM
+
+Disassembly of section .data.n_FPC_RESOURCESTRINGTABLES:
+
+0000000000000000 <FPC_RESOURCESTRINGTABLES>:
+	...
+
+Disassembly of section .data.n_FPC_WIDEINITTABLES:
+
+0000000000000000 <FPC_WIDEINITTABLES>:
+	...
+
+Disassembly of section .data.n_FPC_RESSTRINITTABLES:
+
+0000000000000000 <FPC_RESSTRINITTABLES>:
+	...
+
+Disassembly of section .fpc.n_version:
+
+0000000000000000 <.fpc.n_version>:
+   0:	46 50                	rex.RX push rax
+   2:	43 20 33             	rex.XB and BYTE PTR [r11],sil
+   5:	2e 30 2e             	xor    BYTE PTR cs:[rsi],ch
+   8:	34 2b                	xor    al,0x2b
+   a:	64 66 73 67          	fs data16 jae 75 <main+0x75>
+   e:	2d 31 38 75 62       	sub    eax,0x62753831
+  13:	75 6e                	jne    83 <main+0x83>
+  15:	74 75                	je     8c <main+0x8c>
+  17:	32 20                	xor    ah,BYTE PTR [rax]
+  19:	5b                   	pop    rbx
+  1a:	32 30                	xor    dh,BYTE PTR [rax]
+  1c:	31 38                	xor    DWORD PTR [rax],edi
+  1e:	2f                   	(bad)  
+  1f:	30 38                	xor    BYTE PTR [rax],bh
+  21:	2f                   	(bad)  
+  22:	32 39                	xor    bh,BYTE PTR [rcx]
+  24:	5d                   	pop    rbp
+  25:	20 66 6f             	and    BYTE PTR [rsi+0x6f],ah
+  28:	72 20                	jb     4a <main+0x4a>
+  2a:	78 38                	js     64 <main+0x64>
+  2c:	36 5f                	ss pop rdi
+  2e:	36 34 20             	ss xor al,0x20
+  31:	2d 20 4c 69 6e       	sub    eax,0x6e694c20
+  36:	75 78                	jne    b0 <main+0xb0>
+
+Disassembly of section .data.n___stklen:
+
+0000000000000000 <__stklen>:
+   0:	00 00                	add    BYTE PTR [rax],al
+   2:	80 00 00             	add    BYTE PTR [rax],0x0
+	...
+
+Disassembly of section .data.n___heapsize:
+
+0000000000000000 <__heapsize>:
+	...
+
+Disassembly of section .data.n___fpc_valgrind:
+
+0000000000000000 <__fpc_valgrind>:
+	...
+
+Disassembly of section .data.n_FPC_RESLOCATION:
+
+0000000000000000 <FPC_RESLOCATION>:
+	...
+
+Disassembly of section .rodata.n__$WRITELN_PROGRAM$_Ld1:
+
+0000000000000000 <_$WRITELN_PROGRAM$_Ld1>:
+   0:	0c 48                	or     al,0x48
+   2:	65 6c                	gs ins BYTE PTR es:[rdi],dx
+   4:	6c                   	ins    BYTE PTR es:[rdi],dx
+   5:	6f                   	outs   dx,DWORD PTR ds:[rsi]
+   6:	20 57 6f             	and    BYTE PTR [rdi+0x6f],dl
+   9:	72 6c                	jb     77 <_$WRITELN_PROGRAM$_Ld1+0x77>
+   b:	64 21 00             	and    DWORD PTR fs:[rax],eax
+	...
+
+Disassembly of section .debug_frame:
+
+0000000000000000 <.debug_frame>:
+   0:	10 00                	adc    BYTE PTR [rax],al
+   2:	00 00                	add    BYTE PTR [rax],al
+   4:	ff                   	(bad)  
+   5:	ff                   	(bad)  
+   6:	ff                   	(bad)  
+   7:	ff 01                	inc    DWORD PTR [rcx]
+   9:	00 01                	add    BYTE PTR [rcx],al
+   b:	7c 10                	jl     1d <.debug_frame+0x1d>
+   d:	0c 07                	or     al,0x7
+   f:	08 05 10 02 00 30    	or     BYTE PTR [rip+0x30000210],al        # 30000225 <main+0x30000225>
+	...
+			18: R_X86_64_64	.debug_frame
+			20: R_X86_64_64	.text.n_main
+  25:	00 00                	add    BYTE PTR [rax],al
+  27:	00 4e 00             	add    BYTE PTR [rsi+0x0],cl
+  2a:	00 00                	add    BYTE PTR [rax],al
+  2c:	00 00                	add    BYTE PTR [rax],al
+  2e:	00 00                	add    BYTE PTR [rax],al
+  30:	04 01                	add    al,0x1
+  32:	00 00                	add    BYTE PTR [rax],al
+  34:	00 0e                	add    BYTE PTR [rsi],cl
+  36:	10 04 00             	adc    BYTE PTR [rax+rax*1],al
+  39:	00 00                	add    BYTE PTR [rax],al
+  3b:	00 05 06 04 04 03    	add    BYTE PTR [rip+0x3040406],al        # 3040447 <main+0x3040447>
+  41:	00 00                	add    BYTE PTR [rax],al
+  43:	00                   	.byte 0x0
+  44:	0d                   	.byte 0xd
+  45:	06                   	(bad)  
+	...

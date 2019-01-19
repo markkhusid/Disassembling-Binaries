@@ -1,5 +1,9 @@
 
 add.o:     file format elf64-x86-64
+add.o
+architecture: i386:x86-64, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x0000000000000000
 
 Sections:
 Idx Name          Size      VMA               LMA               File off  Algn
@@ -47,6 +51,54 @@ Idx Name          Size      VMA               LMA               File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
  21 .note.GNU-stack 00000000  0000000000000000  0000000000000000  00000347  2**0
                   CONTENTS, READONLY
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 add.pp
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l    d  .debug_line	0000000000000000 .debug_line
+0000000000000000 l    d  .debug_abbrev	0000000000000000 .debug_abbrev
+0000000000000000 l    d  .text.b_DEBUGSTART_$P$ADD	0000000000000000 .text.b_DEBUGSTART_$P$ADD
+0000000000000000 l    d  .text.n_main	0000000000000000 .text.n_main
+0000000000000000 l     O .bss	0000000000000002 U_$P$ADD_$$_A
+0000000000000002 l     O .bss	0000000000000002 U_$P$ADD_$$_B
+0000000000000004 l     O .bss	0000000000000002 U_$P$ADD_$$_C
+0000000000000000 l    d  .fpc.n_links	0000000000000000 .fpc.n_links
+0000000000000000 l    d  .data.n_INITFINAL	0000000000000000 .data.n_INITFINAL
+0000000000000000 l    d  .data.n_FPC_THREADVARTABLES	0000000000000000 .data.n_FPC_THREADVARTABLES
+0000000000000000 l    d  .data.n_FPC_RESOURCESTRINGTABLES	0000000000000000 .data.n_FPC_RESOURCESTRINGTABLES
+0000000000000000 l    d  .data.n_FPC_WIDEINITTABLES	0000000000000000 .data.n_FPC_WIDEINITTABLES
+0000000000000000 l    d  .data.n_FPC_RESSTRINITTABLES	0000000000000000 .data.n_FPC_RESSTRINITTABLES
+0000000000000000 l    d  .fpc.n_version	0000000000000000 .fpc.n_version
+0000000000000000 l    d  .data.n___stklen	0000000000000000 .data.n___stklen
+0000000000000000 l    d  .data.n___heapsize	0000000000000000 .data.n___heapsize
+0000000000000000 l    d  .data.n___fpc_valgrind	0000000000000000 .data.n___fpc_valgrind
+0000000000000000 l    d  .data.n_FPC_RESLOCATION	0000000000000000 .data.n_FPC_RESLOCATION
+0000000000000000 l    d  .debug_frame	0000000000000000 .debug_frame
+0000000000000000 l    d  .debug_info	0000000000000000 .debug_info
+0000000000000000 l    d  .text.z_DEBUGEND_$P$ADD	0000000000000000 .text.z_DEBUGEND_$P$ADD
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 g     O .text.b_DEBUGSTART_$P$ADD	0000000000000000 DEBUGSTART_$P$ADD
+0000000000000000 g     F .text.n_main	0000000000000000 PASCALMAIN
+0000000000000000 g     F .text.n_main	0000000000000040 main
+0000000000000000         *UND*	0000000000000000 FPC_INITIALIZEUNITS
+0000000000000000         *UND*	0000000000000000 FPC_DO_EXIT
+0000000000000000 g     O .text.z_DEBUGEND_$P$ADD	0000000000000000 DEBUGEND_$P$ADD
+0000000000000000 g     O .data.n_INITFINAL	0000000000000020 INITFINAL
+0000000000000000         *UND*	0000000000000000 INIT$_$SYSTEM
+0000000000000000 g     O .data.n_FPC_THREADVARTABLES	000000000000000c FPC_THREADVARTABLES
+0000000000000000         *UND*	0000000000000000 THREADVARLIST_$SYSTEM
+0000000000000000 g     O .data.n_FPC_RESOURCESTRINGTABLES	0000000000000008 FPC_RESOURCESTRINGTABLES
+0000000000000000 g     O .data.n_FPC_WIDEINITTABLES	0000000000000008 FPC_WIDEINITTABLES
+0000000000000000 g     O .data.n_FPC_RESSTRINITTABLES	0000000000000008 FPC_RESSTRINITTABLES
+0000000000000000 g     O .data.n___stklen	0000000000000000 __stklen
+0000000000000000 g     O .data.n___heapsize	0000000000000000 __heapsize
+0000000000000000 g     O .data.n___fpc_valgrind	0000000000000000 __fpc_valgrind
+0000000000000000 g     O .data.n_FPC_RESLOCATION	0000000000000000 FPC_RESLOCATION
+000000000000010b g     O .debug_info	0000000000000000 _$ADD$_Ld1
+0000000000000129 g     O .debug_info	0000000000000000 _$ADD$_Ld2
+
+
 
 Disassembly of section .bss:
 
@@ -62,140 +114,135 @@ Disassembly of section .bss:
 Disassembly of section .debug_line:
 
 0000000000000000 <.debug_line>:
-   0:	51                   	push   %rcx
-   1:	00 00                	add    %al,(%rax)
-   3:	00 02                	add    %al,(%rdx)
-   5:	00 1d 00 00 00 01    	add    %bl,0x1000000(%rip)        # 100000b <_$ADD$_Ld2+0xfffee2>
+   0:	51                   	push   rcx
+   1:	00 00                	add    BYTE PTR [rax],al
+   3:	00 02                	add    BYTE PTR [rdx],al
+   5:	00 1d 00 00 00 01    	add    BYTE PTR [rip+0x1000000],bl        # 100000b <_$ADD$_Ld2+0xfffee2>
+   b:	01 01                	add    DWORD PTR [rcx],eax
+   d:	ff 0d 00 01 01 01    	dec    DWORD PTR [rip+0x1010100]        # 1010113 <_$ADD$_Ld2+0x100ffea>
+PROGRAM add;
+
 VAR
 	a, b, c : INTEGER;
 
 BEGIN
+  13:	01 00                	add    DWORD PTR [rax],eax
+  15:	00 00                	add    BYTE PTR [rax],al
+  17:	01 00                	add    DWORD PTR [rax],eax
 
 	a := 3;
-   b:	01 01                	add    %eax,(%rcx)
-   d:	ff 0d 00 01 01 01    	decl   0x1010100(%rip)        # 1010113 <_$ADD$_Ld2+0x100ffea>
+  19:	00 01                	add    BYTE PTR [rcx],al
+  1b:	00 61 64             	add    BYTE PTR [rcx+0x64],ah
+  1e:	64 2e 70 70          	fs cs jo 92 <U_$P$ADD_$$_C+0x8e>
+  22:	00 00                	add    BYTE PTR [rax],al
 	b := 5;
-  13:	01 00                	add    %eax,(%rax)
-  15:	00 00                	add    %al,(%rax)
-  17:	01 00                	add    %eax,(%rax)
-  19:	00 01                	add    %al,(%rcx)
-  1b:	00 61 64             	add    %ah,0x64(%rcx)
+  24:	00 00                	add    BYTE PTR [rax],al
+  26:	00 00                	add    BYTE PTR [rax],al
+  28:	09 02                	or     DWORD PTR [rdx],eax
+	...
+			2a: R_X86_64_64	.text.n_main
 	c := a + b;
-  1e:	64 2e 70 70          	fs jo,pn 92 <U_$P$ADD_$$_C+0x8e>
-  22:	00 00                	add    %al,(%rax)
-  24:	00 00                	add    %al,(%rax)
-  26:	00 00                	add    %al,(%rax)
-  28:	09 02                	or     %eax,(%rdx)
+  32:	05 01 11 02 09       	add    eax,0x9021101
+  37:	05 02 0e 02 0a       	add    eax,0xa020e02
+  3c:	0d 02 0a 05 07       	or     eax,0x7050a02
+  41:	0d 02 1c 05 01       	or     eax,0x1051c02
+  46:	0d 00 09 02 00       	or     eax,0x20900
+			4a: R_X86_64_64	.text.n_main+0x40
 	...
-  32:	05 01 11 02 09       	add    $0x9021101,%eax
-  37:	05 02 0e 02 0a       	add    $0xa020e02,%eax
-END.
-  3c:	0d 02 0a 05 07       	or     $0x7050a02,%eax
-  41:	0d 02 1c 05 01       	or     $0x1051c02,%eax
-  46:	0d 00 09 02 00       	or     $0x20900,%eax
-	...
-  53:	01 01                	add    %eax,(%rcx)
+  53:	01 01                	add    DWORD PTR [rcx],eax
 
 Disassembly of section .debug_abbrev:
 
 0000000000000000 <.debug_abbrev>:
-PROGRAM add;
-
-VAR
-	a, b, c : INTEGER;
-
+   0:	01 11                	add    DWORD PTR [rcx],edx
+   2:	01 03                	add    DWORD PTR [rbx],eax
+   4:	08 25 08 1b 08 13    	or     BYTE PTR [rip+0x13081b08],ah        # 13081b12 <_$ADD$_Ld2+0x130819e9>
+   a:	0b 42 0b             	or     eax,DWORD PTR [rdx+0xb]
+   d:	10 06                	adc    BYTE PTR [rsi],al
+   f:	11 01                	adc    DWORD PTR [rcx],eax
 BEGIN
-   0:	01 11                	add    %edx,(%rcx)
-   2:	01 03                	add    %eax,(%rbx)
-   4:	08 25 08 1b 08 13    	or     %ah,0x13081b08(%rip)        # 13081b12 <_$ADD$_Ld2+0x130819e9>
-
+  11:	12 01                	adc    al,BYTE PTR [rcx]
+  13:	00 00                	add    BYTE PTR [rax],al
+  15:	02 34 00             	add    dh,BYTE PTR [rax+rax*1]
+  18:	03 08                	add    ecx,DWORD PTR [rax]
 	a := 3;
-   a:	0b 42 0b             	or     0xb(%rdx),%eax
-   d:	10 06                	adc    %al,(%rsi)
-   f:	11 01                	adc    %eax,(%rcx)
-  11:	12 01                	adc    (%rcx),%al
+  1a:	02 0a                	add    cl,BYTE PTR [rdx]
+  1c:	49 10 00             	rex.WB adc BYTE PTR [r8],al
+  1f:	00 03                	add    BYTE PTR [rbx],al
+  21:	2e 01 03             	add    DWORD PTR cs:[rbx],eax
 	b := 5;
-  13:	00 00                	add    %al,(%rax)
-  15:	02 34 00             	add    (%rax,%rax,1),%dh
-  18:	03 08                	add    (%rax),%ecx
-  1a:	02 0a                	add    (%rdx),%cl
-  1c:	49 10 00             	rex.WB adc %al,(%r8)
+  24:	08 27                	or     BYTE PTR [rdi],ah
+  26:	0c 36                	or     al,0x36
+  28:	0b 3f                	or     edi,DWORD PTR [rdi]
+  2a:	0c 11                	or     al,0x11
+  2c:	01 12                	add    DWORD PTR [rdx],edx
 	c := a + b;
-  1f:	00 03                	add    %al,(%rbx)
-  21:	2e 01 03             	add    %eax,%cs:(%rbx)
-  24:	08 27                	or     %ah,(%rdi)
-  26:	0c 36                	or     $0x36,%al
-  28:	0b 3f                	or     (%rdi),%edi
-  2a:	0c 11                	or     $0x11,%al
-  2c:	01 12                	add    %edx,(%rdx)
-  2e:	01 00                	add    %eax,(%rax)
-  30:	00 04 16             	add    %al,(%rsi,%rdx,1)
-  33:	00 03                	add    %al,(%rbx)
-  35:	08 49 10             	or     %cl,0x10(%rcx)
-  38:	00 00                	add    %al,(%rax)
-END.
-  3a:	05 24 00 03 08       	add    $0x8030024,%eax
-  3f:	3e 0b 0b             	or     %ds:(%rbx),%ecx
-  42:	0b 00                	or     (%rax),%eax
-  44:	00 06                	add    %al,(%rsi)
-  46:	10 00                	adc    %al,(%rax)
-  48:	49 10 00             	rex.WB adc %al,(%r8)
+  2e:	01 00                	add    DWORD PTR [rax],eax
+  30:	00 04 16             	add    BYTE PTR [rsi+rdx*1],al
+  33:	00 03                	add    BYTE PTR [rbx],al
+  35:	08 49 10             	or     BYTE PTR [rcx+0x10],cl
+  38:	00 00                	add    BYTE PTR [rax],al
+  3a:	05 24 00 03 08       	add    eax,0x8030024
+  3f:	3e 0b 0b             	or     ecx,DWORD PTR ds:[rbx]
+  42:	0b 00                	or     eax,DWORD PTR [rax]
+  44:	00 06                	add    BYTE PTR [rsi],al
+  46:	10 00                	adc    BYTE PTR [rax],al
+  48:	49 10 00             	rex.WB adc BYTE PTR [r8],al
 	...
 
 Disassembly of section .text.n_main:
 
-0000000000000000 <PASCALMAIN>:
-PROGRAM add;
-
-VAR
-	a, b, c : INTEGER;
-
+0000000000000000 <main>:
 BEGIN
-   0:	55                   	push   %rbp
-   1:	48 89 e5             	mov    %rsp,%rbp
-   4:	e8 00 00 00 00       	callq  9 <PASCALMAIN+0x9>
-
+   0:	55                   	push   rbp
+   1:	48 89 e5             	mov    rbp,rsp
+   4:	e8 00 00 00 00       	call   9 <main+0x9>
+			5: R_X86_64_PC32	FPC_INITIALIZEUNITS-0x4
 	a := 3;
-   9:	66 c7 04 25 00 00 00 	movw   $0x3,0x0
+   9:	66 c7 04 25 00 00 00 	mov    WORD PTR ds:0x0,0x3
   10:	00 03 00 
+			d: R_X86_64_32S	.bss
 	b := 5;
-  13:	66 c7 04 25 00 00 00 	movw   $0x5,0x0
+  13:	66 c7 04 25 00 00 00 	mov    WORD PTR ds:0x0,0x5
   1a:	00 05 00 
+			17: R_X86_64_32S	.bss+0x2
 	c := a + b;
-  1d:	0f bf 14 25 00 00 00 	movswl 0x0,%edx
+  1d:	0f bf 14 25 00 00 00 	movsx  edx,WORD PTR ds:0x0
   24:	00 
-  25:	0f bf 04 25 00 00 00 	movswl 0x0,%eax
+			21: R_X86_64_32S	.bss
+  25:	0f bf 04 25 00 00 00 	movsx  eax,WORD PTR ds:0x0
   2c:	00 
-  2d:	67 8d 04 02          	lea    (%edx,%eax,1),%eax
-  31:	66 89 04 25 00 00 00 	mov    %ax,0x0
+			29: R_X86_64_32S	.bss+0x2
+  2d:	67 8d 04 02          	lea    eax,[edx+eax*1]
+  31:	66 89 04 25 00 00 00 	mov    WORD PTR ds:0x0,ax
   38:	00 
+			35: R_X86_64_32S	.bss+0x4
 END.
-  39:	e8 00 00 00 00       	callq  3e <PASCALMAIN+0x3e>
-  3e:	c9                   	leaveq 
-  3f:	c3                   	retq   
+  39:	e8 00 00 00 00       	call   3e <main+0x3e>
+			3a: R_X86_64_PC32	FPC_DO_EXIT-0x4
+  3e:	c9                   	leave  
+  3f:	c3                   	ret    
 
 Disassembly of section .fpc.n_links:
 
 0000000000000000 <.fpc.n_links>:
 	...
+			0: R_X86_64_64	DEBUGSTART_$P$ADD
+			8: R_X86_64_64	DEBUGEND_$P$ADD
 
 Disassembly of section .data.n_INITFINAL:
 
 0000000000000000 <INITFINAL>:
-PROGRAM add;
-
-VAR
-	a, b, c : INTEGER;
-
-BEGIN
-   0:	01 00                	add    %eax,(%rax)
+   0:	01 00                	add    DWORD PTR [rax],eax
 	...
+			10: R_X86_64_64	INIT$_$SYSTEM
 
 Disassembly of section .data.n_FPC_THREADVARTABLES:
 
 0000000000000000 <FPC_THREADVARTABLES>:
-   0:	01 00                	add    %eax,(%rax)
+   0:	01 00                	add    DWORD PTR [rax],eax
 	...
+			4: R_X86_64_64	THREADVARLIST_$SYSTEM
 
 Disassembly of section .data.n_FPC_RESOURCESTRINGTABLES:
 
@@ -215,42 +262,36 @@ Disassembly of section .data.n_FPC_RESSTRINITTABLES:
 Disassembly of section .fpc.n_version:
 
 0000000000000000 <.fpc.n_version>:
-   0:	46 50                	rex.RX push %rax
-   2:	43 20 33             	rex.XB and %sil,(%r11)
-   5:	2e 30 2e             	xor    %ch,%cs:(%rsi)
-   8:	30 2b                	xor    %ch,(%rbx)
-
-	a := 3;
+   0:	46 50                	rex.RX push rax
+   2:	43 20 33             	rex.XB and BYTE PTR [r11],sil
+   5:	2e 30 2e             	xor    BYTE PTR cs:[rsi],ch
+   8:	30 2b                	xor    BYTE PTR [rbx],ch
    a:	64 66 73 67          	fs data16 jae 75 <U_$P$ADD_$$_C+0x71>
-   e:	2d 32 20 5b 32       	sub    $0x325b2032,%eax
-	b := 5;
-  13:	30 31                	xor    %dh,(%rcx)
+   e:	2d 32 20 5b 32       	sub    eax,0x325b2032
+BEGIN
+  13:	30 31                	xor    BYTE PTR [rcx],dh
   15:	36 2f                	ss (bad) 
-  17:	30 31                	xor    %dh,(%rcx)
+  17:	30 31                	xor    BYTE PTR [rcx],dh
+	a := 3;
   19:	2f                   	(bad)  
-  1a:	32 38                	xor    (%rax),%bh
-  1c:	5d                   	pop    %rbp
-	c := a + b;
-  1d:	20 66 6f             	and    %ah,0x6f(%rsi)
+  1a:	32 38                	xor    bh,BYTE PTR [rax]
+  1c:	5d                   	pop    rbp
+  1d:	20 66 6f             	and    BYTE PTR [rsi+0x6f],ah
   20:	72 20                	jb     42 <U_$P$ADD_$$_C+0x3e>
   22:	78 38                	js     5c <U_$P$ADD_$$_C+0x58>
-  24:	36 5f                	ss pop %rdi
-  26:	36 34 20             	ss xor $0x20,%al
-  29:	2d 20 4c 69 6e       	sub    $0x6e694c20,%eax
+	b := 5;
+  24:	36 5f                	ss pop rdi
+  26:	36 34 20             	ss xor al,0x20
+  29:	2d 20 4c 69 6e       	sub    eax,0x6e694c20
+	c := a + b;
   2e:	75 78                	jne    a8 <U_$P$ADD_$$_C+0xa4>
 
 Disassembly of section .data.n___stklen:
 
 0000000000000000 <__stklen>:
-PROGRAM add;
-
-VAR
-	a, b, c : INTEGER;
-
-BEGIN
-   0:	00 00                	add    %al,(%rax)
-   2:	80 00 00             	addb   $0x0,(%rax)
-   5:	00 00                	add    %al,(%rax)
+   0:	00 00                	add    BYTE PTR [rax],al
+   2:	80 00 00             	add    BYTE PTR [rax],0x0
+   5:	00 00                	add    BYTE PTR [rax],al
 	...
 
 Disassembly of section .data.n___heapsize:
@@ -271,159 +312,166 @@ Disassembly of section .data.n_FPC_RESLOCATION:
 Disassembly of section .debug_frame:
 
 0000000000000000 <.debug_frame>:
-   0:	10 00                	adc    %al,(%rax)
-   2:	00 00                	add    %al,(%rax)
+   0:	10 00                	adc    BYTE PTR [rax],al
+   2:	00 00                	add    BYTE PTR [rax],al
    4:	ff                   	(bad)  
    5:	ff                   	(bad)  
    6:	ff                   	(bad)  
-   7:	ff 01                	incl   (%rcx)
-
-	a := 3;
-   9:	00 01                	add    %al,(%rcx)
+   7:	ff 01                	inc    DWORD PTR [rcx]
+   9:	00 01                	add    BYTE PTR [rcx],al
    b:	7c 10                	jl     1d <.debug_frame+0x1d>
-   d:	0c 07                	or     $0x7,%al
-   f:	08 05 10 02 00 24    	or     %al,0x24000210(%rip)        # 24000225 <_$ADD$_Ld2+0x240000fc>
+   d:	0c 07                	or     al,0x7
+   f:	08 05 10 02 00 24    	or     BYTE PTR [rip+0x24000210],al        # 24000225 <_$ADD$_Ld2+0x240000fc>
 	...
+			18: R_X86_64_64	.debug_frame
+			20: R_X86_64_64	.text.n_main
 	b := 5;
+  25:	00 00                	add    BYTE PTR [rax],al
+  27:	00 40 00             	add    BYTE PTR [rax+0x0],al
+  2a:	00 00                	add    BYTE PTR [rax],al
+  2c:	00 00                	add    BYTE PTR [rax],al
 	c := a + b;
-  25:	00 00                	add    %al,(%rax)
-  27:	00 40 00             	add    %al,0x0(%rax)
-  2a:	00 00                	add    %al,(%rax)
-  2c:	00 00                	add    %al,(%rax)
-  2e:	00 00                	add    %al,(%rax)
+  2e:	00 00                	add    BYTE PTR [rax],al
   30:	41 0e                	rex.B (bad) 
-  32:	10 40 05             	adc    %al,0x5(%rax)
+  32:	10 40 05             	adc    BYTE PTR [rax+0x5],al
   35:	06                   	(bad)  
-  36:	04 43                	add    $0x43,%al
+  36:	04 43                	add    al,0x43
   38:	0d                   	.byte 0xd
-END.
   39:	06                   	(bad)  
 	...
 
 Disassembly of section .debug_info:
 
 0000000000000000 <_$ADD$_Ld1-0x10b>:
-PROGRAM add;
-
-VAR
-	a, b, c : INTEGER;
-
-BEGIN
    0:	2f                   	(bad)  
-   1:	01 00                	add    %eax,(%rax)
-   3:	00 02                	add    %al,(%rdx)
-   5:	00 00                	add    %al,(%rax)
-   7:	00 00                	add    %al,(%rax)
-
+   1:	01 00                	add    DWORD PTR [rax],eax
+   3:	00 02                	add    BYTE PTR [rdx],al
+   5:	00 00                	add    BYTE PTR [rax],al
+			6: R_X86_64_32	.debug_abbrev
+   7:	00 00                	add    BYTE PTR [rax],al
+   9:	00 08                	add    BYTE PTR [rax],cl
+   b:	01 61 64             	add    DWORD PTR [rcx+0x64],esp
+   e:	64 2e 70 70          	fs cs jo 82 <_$ADD$_Ld1-0x89>
+BEGIN
+  12:	00 46 72             	add    BYTE PTR [rsi+0x72],al
+  15:	65 65 20 50 61       	gs and BYTE PTR gs:[rax+0x61],dl
 	a := 3;
-   9:	00 08                	add    %cl,(%rax)
-   b:	01 61 64             	add    %esp,0x64(%rcx)
-   e:	64 2e 70 70          	fs jo,pn 82 <_$ADD$_Ld1-0x89>
-  12:	00 46 72             	add    %al,0x72(%rsi)
-	b := 5;
-  15:	65 65 20 50 61       	gs and %dl,%gs:0x61(%rax)
   1a:	73 63                	jae    7f <_$ADD$_Ld1-0x8c>
   1c:	61                   	(bad)  
-	c := a + b;
-  1d:	6c                   	insb   (%dx),%es:(%rdi)
-  1e:	20 33                	and    %dh,(%rbx)
-  20:	2e 30 2e             	xor    %ch,%cs:(%rsi)
-  23:	30 2b                	xor    %ch,(%rbx)
+  1d:	6c                   	ins    BYTE PTR es:[rdi],dx
+  1e:	20 33                	and    BYTE PTR [rbx],dh
+  20:	2e 30 2e             	xor    BYTE PTR cs:[rsi],ch
+	b := 5;
+  23:	30 2b                	xor    BYTE PTR [rbx],ch
   25:	64 66 73 67          	fs data16 jae 90 <_$ADD$_Ld1-0x7b>
-  29:	2d 32 20 32 30       	sub    $0x30322032,%eax
-  2e:	31 36                	xor    %esi,(%rsi)
+  29:	2d 32 20 32 30       	sub    eax,0x30322032
+	c := a + b;
+  2e:	31 36                	xor    DWORD PTR [rsi],esi
   30:	2f                   	(bad)  
-  31:	30 31                	xor    %dh,(%rcx)
+  31:	30 31                	xor    BYTE PTR [rcx],dh
   33:	2f                   	(bad)  
-  34:	32 38                	xor    (%rax),%bh
-  36:	00 2f                	add    %ch,(%rdi)
-  38:	68 6f 6d 65 2f       	pushq  $0x2f656d6f
-END.
+  34:	32 38                	xor    bh,BYTE PTR [rax]
+  36:	00 2f                	add    BYTE PTR [rdi],ch
+  38:	68 6f 6d 65 2f       	push   0x2f656d6f
   3d:	75 62                	jne    a1 <_$ADD$_Ld1-0x6a>
   3f:	75 6e                	jne    af <_$ADD$_Ld1-0x5c>
   41:	74 75                	je     b8 <_$ADD$_Ld1-0x53>
   43:	2f                   	(bad)  
-  44:	45 6e                	rex.RB outsb %ds:(%rsi),(%dx)
-  46:	67 69 6e 65 65 72 69 	imul   $0x6e697265,0x65(%esi),%ebp
+  44:	45 6e                	rex.RB outs dx,BYTE PTR ds:[rsi]
+  46:	67 69 6e 65 65 72 69 	imul   ebp,DWORD PTR [esi+0x65],0x6e697265
   4d:	6e 
+END.
   4e:	67 2f                	addr32 (bad) 
-  50:	50                   	push   %rax
+  50:	50                   	push   rax
   51:	72 6f                	jb     c2 <_$ADD$_Ld1-0x49>
   53:	67 72 61             	addr32 jb b7 <_$ADD$_Ld1-0x54>
-  56:	6d                   	insl   (%dx),%es:(%rdi)
-  57:	6d                   	insl   (%dx),%es:(%rdi)
-  58:	69 6e 67 2f 44 69 73 	imul   $0x7369442f,0x67(%rsi),%ebp
+  56:	6d                   	ins    DWORD PTR es:[rdi],dx
+  57:	6d                   	ins    DWORD PTR es:[rdi],dx
+  58:	69 6e 67 2f 44 69 73 	imul   ebp,DWORD PTR [rsi+0x67],0x7369442f
   5f:	61                   	(bad)  
   60:	73 73                	jae    d5 <_$ADD$_Ld1-0x36>
-  62:	65 6d                	gs insl (%dx),%es:(%rdi)
+  62:	65 6d                	gs ins DWORD PTR es:[rdi],dx
   64:	62                   	(bad)  
-  65:	6c                   	insb   (%dx),%es:(%rdi)
-  66:	69 6e 67 2d 42 69 6e 	imul   $0x6e69422d,0x67(%rsi),%ebp
+  65:	6c                   	ins    BYTE PTR es:[rdi],dx
+  66:	69 6e 67 2d 42 69 6e 	imul   ebp,DWORD PTR [rsi+0x67],0x6e69422d
   6d:	61                   	(bad)  
   6e:	72 69                	jb     d9 <_$ADD$_Ld1-0x32>
   70:	65 73 2f             	gs jae a2 <_$ADD$_Ld1-0x69>
-  73:	50                   	push   %rax
+  73:	50                   	push   rax
   74:	61                   	(bad)  
   75:	73 63                	jae    da <_$ADD$_Ld1-0x31>
   77:	61                   	(bad)  
-  78:	6c                   	insb   (%dx),%es:(%rdi)
+  78:	6c                   	ins    BYTE PTR es:[rdi],dx
   79:	2f                   	(bad)  
-  7a:	49 6e                	rex.WB outsb %ds:(%rsi),(%dx)
+  7a:	49 6e                	rex.WB outs dx,BYTE PTR ds:[rsi]
   7c:	74 65                	je     e3 <_$ADD$_Ld1-0x28>
-  7e:	6c                   	insb   (%dx),%es:(%rdi)
-  7f:	5f                   	pop    %rdi
+  7e:	6c                   	ins    BYTE PTR es:[rdi],dx
+  7f:	5f                   	pop    rdi
   80:	41 72 63             	rex.B jb e6 <_$ADD$_Ld1-0x25>
-  83:	68 69 74 65 63       	pushq  $0x63657469
+  83:	68 69 74 65 63       	push   0x63657469
   88:	74 75                	je     ff <_$ADD$_Ld1-0xc>
   8a:	72 65                	jb     f1 <_$ADD$_Ld1-0x1a>
   8c:	2f                   	(bad)  
   8d:	41                   	rex.B
   8e:	4d                   	rex.WRB
   8f:	44                   	rex.R
-  90:	36 34 2f             	ss xor $0x2f,%al
+  90:	36 34 2f             	ss xor al,0x2f
   93:	41                   	rex.B
-  94:	64 64 5f             	fs fs pop %rdi
-  97:	49 6e                	rex.WB outsb %ds:(%rsi),(%dx)
+  94:	64 64 5f             	fs fs pop rdi
+  97:	49 6e                	rex.WB outs dx,BYTE PTR ds:[rsi]
   99:	74 2f                	je     ca <_$ADD$_Ld1-0x41>
-  9b:	00 09                	add    %cl,(%rcx)
-  9d:	03 00                	add    (%rax),%eax
+  9b:	00 09                	add    BYTE PTR [rcx],cl
+  9d:	03 00                	add    eax,DWORD PTR [rax]
+			9e: R_X86_64_32	.debug_line
 	...
-  af:	00 00                	add    %al,(%rax)
-  b1:	00 02                	add    %al,(%rdx)
-  b3:	41 00 09             	add    %cl,(%r9)
-  b6:	03 00                	add    (%rax),%eax
+			a2: R_X86_64_64	DEBUGSTART_$P$ADD
+			aa: R_X86_64_64	DEBUGEND_$P$ADD
+  af:	00 00                	add    BYTE PTR [rax],al
+  b1:	00 02                	add    BYTE PTR [rdx],al
+  b3:	41 00 09             	add    BYTE PTR [r9],cl
+  b6:	03 00                	add    eax,DWORD PTR [rax]
+			b7: R_X86_64_64	.bss
 	...
-  c4:	00 00                	add    %al,(%rax)
-  c6:	00 02                	add    %al,(%rdx)
-  c8:	42 00 09             	rex.X add %cl,(%rcx)
-  cb:	03 00                	add    (%rax),%eax
+			bf: R_X86_64_64	_$ADD$_Ld1
+  c4:	00 00                	add    BYTE PTR [rax],al
+  c6:	00 02                	add    BYTE PTR [rdx],al
+  c8:	42 00 09             	rex.X add BYTE PTR [rcx],cl
+  cb:	03 00                	add    eax,DWORD PTR [rax]
+			cc: R_X86_64_64	.bss+0x2
 	...
-  d9:	00 00                	add    %al,(%rax)
-  db:	00 02                	add    %al,(%rdx)
-  dd:	43 00 09             	rex.XB add %cl,(%r9)
-  e0:	03 00                	add    (%rax),%eax
+			d4: R_X86_64_64	_$ADD$_Ld1
+  d9:	00 00                	add    BYTE PTR [rax],al
+  db:	00 02                	add    BYTE PTR [rdx],al
+  dd:	43 00 09             	rex.XB add BYTE PTR [r9],cl
+  e0:	03 00                	add    eax,DWORD PTR [rax]
+			e1: R_X86_64_64	.bss+0x4
 	...
-  ee:	00 00                	add    %al,(%rax)
-  f0:	00 03                	add    %al,(%rbx)
-  f2:	6d                   	insl   (%dx),%es:(%rdi)
+			e9: R_X86_64_64	_$ADD$_Ld1
+  ee:	00 00                	add    BYTE PTR [rax],al
+  f0:	00 03                	add    BYTE PTR [rbx],al
+  f2:	6d                   	ins    DWORD PTR es:[rdi],dx
   f3:	61                   	(bad)  
-  f4:	69 6e 00 01 41 01 00 	imul   $0x14101,0x0(%rsi),%ebp
+  f4:	69 6e 00 01 41 01 00 	imul   ebp,DWORD PTR [rsi+0x0],0x14101
+			fa: R_X86_64_64	main
 	...
+			102: R_X86_64_64	.text.n_main+0x40
 
 000000000000010b <_$ADD$_Ld1>:
- 10b:	04 53                	add    $0x53,%al
+ 10b:	04 53                	add    al,0x53
  10d:	4d                   	rex.WRB
  10e:	41                   	rex.B
  10f:	4c                   	rex.WR
  110:	4c                   	rex.WR
  111:	49                   	rex.WB
- 112:	4e 54                	rex.WRX push %rsp
+ 112:	4e 54                	rex.WRX push rsp
 	...
- 11c:	00 05 53 4d 41 4c    	add    %al,0x4c414d53(%rip)        # 4c414e75 <_$ADD$_Ld2+0x4c414d4c>
+			115: R_X86_64_64	.debug_info+0x11d
+ 11c:	00 05 53 4d 41 4c    	add    BYTE PTR [rip+0x4c414d53],al        # 4c414e75 <_$ADD$_Ld2+0x4c414d4c>
  122:	4c                   	rex.WR
  123:	49                   	rex.WB
- 124:	4e 54                	rex.WRX push %rsp
- 126:	00 05 02 06 00 00    	add    %al,0x602(%rip)        # 72e <_$ADD$_Ld2+0x605>
+ 124:	4e 54                	rex.WRX push rsp
+ 126:	00 05 02       	add    BYTE PTR [rip+0x602],al        # 72e <_$ADD$_Ld2+0x605>
+			12a: R_X86_64_64	_$ADD$_Ld1
 
 0000000000000129 <_$ADD$_Ld2>:
  129:	06                   	(bad)  
