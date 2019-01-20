@@ -1,12 +1,12 @@
 program mult
 
-	implicit none
+    implicit none
 
-	integer		:: a, b, c
+    integer    :: a, b, c
 
-	a = 2
-	b = 3
+    a = 2
+    b = 3
 
-	c = a * b
+    c = a * b
 
 end program mult
