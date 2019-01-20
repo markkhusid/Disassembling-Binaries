@@ -1,0 +1,293 @@
+
+add_int_w_io.o:     file format elf64-x86-64
+add_int_w_io.o
+architecture: i386:x86-64, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x0000000000000000
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         000000e9  0000000000000000  0000000000000000  00000040  2**1
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  0000000000000000  0000000000000000  00000129  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  0000000000000000  0000000000000000  00000129  2**0
+                  ALLOC
+  3 .rodata       000000a8  0000000000000000  0000000000000000  00000130  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .comment      0000002b  0000000000000000  0000000000000000  000001d8  2**0
+                  CONTENTS, READONLY
+  5 .note.GNU-stack 00000000  0000000000000000  0000000000000000  00000203  2**0
+                  CONTENTS, READONLY
+  6 .eh_frame     00000048  0000000000000000  0000000000000000  00000208  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 add_int_w_io.adb
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l    d  .rodata	0000000000000000 .rodata
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 l    d  .eh_frame	0000000000000000 .eh_frame
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000000 g     F .text	00000000000000e9 _ada_add_int_w_io
+0000000000000000         *UND*	0000000000000000 _GLOBAL_OFFSET_TABLE_
+0000000000000000         *UND*	0000000000000000 gnat__io__put__6
+0000000000000000         *UND*	0000000000000000 gnat__io__get
+0000000000000000         *UND*	0000000000000000 __gnat_rcheck_CE_Overflow_Check
+0000000000000000         *UND*	0000000000000000 gnat__io__put__2
+0000000000000000         *UND*	0000000000000000 gnat__io__new_line__2
+
+
+Contents of section .text:
+ 0000 554889e5 41574156 41554154 534883ec  UH..AWAVAUATSH..
+ 0010 18488d05 00000000 488d1500 00000048  .H......H......H
+ 0020 89c14889 d34889d0 4889cf48 89c6e800  ..H..H..H..H....
+ 0030 000000e8 00000000 8945cc4c 8d350000  .........E.L.5..
+ 0040 00004c8d 3d000000 004c89f1 4c89fb4c  ..L.=....L..L..L
+ 0050 89f04c89 fa4889d0 4889cf48 89c6e800  ..L..H..H..H....
+ 0060 000000e8 00000000 8945c8b9 00000000  .........E......
+ 0070 8b55cc8b 45c801d0 7105b901 00000089  .U..E...q.......
+ 0080 c289c885 c07411be 10000000 488d3d00  .....t......H.=.
+ 0090 000000e8 00000000 89d08945 c44c8d25  ...........E.L.%
+ 00a0 00000000 4c8d2d00 0000004c 89e14c89  ....L.-....L..L.
+ 00b0 eb4c89e0 4c89ea48 89d04889 cf4889c6  .L..L..H..H..H..
+ 00c0 e8000000 008b45c4 89c7e800 000000bf  ......E.........
+ 00d0 01000000 e8000000 00904883 c4185b41  ..........H...[A
+ 00e0 5c415d41 5e415f5d c3                 \A]A^A_].       
+Contents of section .rodata:
+ 0000 506c6561 73652065 6e746572 20666972  Please enter fir
+ 0010 73742069 6e746567 6572206e 6f772066  st integer now f
+ 0020 6f6c6c6f 77656420 6279203c 43523e20  ollowed by <CR> 
+ 0030 2d3e2000 00000000 506c6561 73652065  -> .....Please e
+ 0040 6e746572 20736563 6f6e6420 696e7465  nter second inte
+ 0050 67657220 6e6f7720 666f6c6c 6f776564  ger now followed
+ 0060 20627920 3c43523e 202d3e20 6164645f   by <CR> -> add_
+ 0070 696e745f 775f696f 2e616462 00546865  int_w_io.adb.The
+ 0080 2073756d 20697320 3a200000 00000000   sum is : ......
+ 0090 01000000 33000000 01000000 34000000  ....3.......4...
+ 00a0 01000000 0d000000                    ........        
+Contents of section .comment:
+ 0000 00474343 3a202855 62756e74 7520372e  .GCC: (Ubuntu 7.
+ 0010 332e302d 32377562 756e7475 317e3138  3.0-27ubuntu1~18
+ 0020 2e303429 20372e33 2e3000             .04) 7.3.0.     
+Contents of section .eh_frame:
+ 0000 14000000 00000000 017a5200 01781001  .........zR..x..
+ 0010 1b0c0708 90010000 2c000000 1c000000  ........,.......
+ 0020 00000000 e9000000 00410e10 8602430d  .........A....C.
+ 0030 064d8f03 8e048d05 8c068307 02d70c07  .M..............
+ 0040 08000000 00000000                    ........        
+
+Disassembly of section .text:
+
+0000000000000000 <_ada_add_int_w_io>:
+   0:	55                   	push   rbp
+   1:	48 89 e5             	mov    rbp,rsp
+   4:	41 57                	push   r15
+   6:	41 56                	push   r14
+   8:	41 55                	push   r13
+   a:	41 54                	push   r12
+   c:	53                   	push   rbx
+   d:	48 83 ec 18          	sub    rsp,0x18
+  11:	48 8d 05 00 00 00 00 	lea    rax,[rip+0x0]        # 18 <_ada_add_int_w_io+0x18>
+			14: R_X86_64_PC32	.rodata-0x4
+  18:	48 8d 15 00 00 00 00 	lea    rdx,[rip+0x0]        # 1f <_ada_add_int_w_io+0x1f>
+			1b: R_X86_64_PC32	.rodata+0x8c
+  1f:	48 89 c1             	mov    rcx,rax
+  22:	48 89 d3             	mov    rbx,rdx
+  25:	48 89 d0             	mov    rax,rdx
+  28:	48 89 cf             	mov    rdi,rcx
+  2b:	48 89 c6             	mov    rsi,rax
+  2e:	e8 00 00 00 00       	call   33 <_ada_add_int_w_io+0x33>
+			2f: R_X86_64_PLT32	gnat__io__put__6-0x4
+  33:	e8 00 00 00 00       	call   38 <_ada_add_int_w_io+0x38>
+			34: R_X86_64_PLT32	gnat__io__get-0x4
+  38:	89 45 cc             	mov    DWORD PTR [rbp-0x34],eax
+  3b:	4c 8d 35 00 00 00 00 	lea    r14,[rip+0x0]        # 42 <_ada_add_int_w_io+0x42>
+			3e: R_X86_64_PC32	.rodata+0x34
+  42:	4c 8d 3d 00 00 00 00 	lea    r15,[rip+0x0]        # 49 <_ada_add_int_w_io+0x49>
+			45: R_X86_64_PC32	.rodata+0x94
+  49:	4c 89 f1             	mov    rcx,r14
+  4c:	4c 89 fb             	mov    rbx,r15
+  4f:	4c 89 f0             	mov    rax,r14
+  52:	4c 89 fa             	mov    rdx,r15
+  55:	48 89 d0             	mov    rax,rdx
+  58:	48 89 cf             	mov    rdi,rcx
+  5b:	48 89 c6             	mov    rsi,rax
+  5e:	e8 00 00 00 00       	call   63 <_ada_add_int_w_io+0x63>
+			5f: R_X86_64_PLT32	gnat__io__put__6-0x4
+  63:	e8 00 00 00 00       	call   68 <_ada_add_int_w_io+0x68>
+			64: R_X86_64_PLT32	gnat__io__get-0x4
+  68:	89 45 c8             	mov    DWORD PTR [rbp-0x38],eax
+  6b:	b9 00 00 00 00       	mov    ecx,0x0
+  70:	8b 55 cc             	mov    edx,DWORD PTR [rbp-0x34]
+  73:	8b 45 c8             	mov    eax,DWORD PTR [rbp-0x38]
+  76:	01 d0                	add    eax,edx
+  78:	71 05                	jno    7f <_ada_add_int_w_io+0x7f>
+  7a:	b9 01 00 00 00       	mov    ecx,0x1
+  7f:	89 c2                	mov    edx,eax
+  81:	89 c8                	mov    eax,ecx
+  83:	85 c0                	test   eax,eax
+  85:	74 11                	je     98 <_ada_add_int_w_io+0x98>
+  87:	be 10 00 00 00       	mov    esi,0x10
+  8c:	48 8d 3d 00 00 00 00 	lea    rdi,[rip+0x0]        # 93 <_ada_add_int_w_io+0x93>
+			8f: R_X86_64_PC32	.rodata+0x68
+  93:	e8 00 00 00 00       	call   98 <_ada_add_int_w_io+0x98>
+			94: R_X86_64_PLT32	__gnat_rcheck_CE_Overflow_Check-0x4
+  98:	89 d0                	mov    eax,edx
+  9a:	89 45 c4             	mov    DWORD PTR [rbp-0x3c],eax
+  9d:	4c 8d 25 00 00 00 00 	lea    r12,[rip+0x0]        # a4 <_ada_add_int_w_io+0xa4>
+			a0: R_X86_64_PC32	.rodata+0x79
+  a4:	4c 8d 2d 00 00 00 00 	lea    r13,[rip+0x0]        # ab <_ada_add_int_w_io+0xab>
+			a7: R_X86_64_PC32	.rodata+0x9c
+  ab:	4c 89 e1             	mov    rcx,r12
+  ae:	4c 89 eb             	mov    rbx,r13
+  b1:	4c 89 e0             	mov    rax,r12
+  b4:	4c 89 ea             	mov    rdx,r13
+  b7:	48 89 d0             	mov    rax,rdx
+  ba:	48 89 cf             	mov    rdi,rcx
+  bd:	48 89 c6             	mov    rsi,rax
+  c0:	e8 00 00 00 00       	call   c5 <_ada_add_int_w_io+0xc5>
+			c1: R_X86_64_PLT32	gnat__io__put__6-0x4
+  c5:	8b 45 c4             	mov    eax,DWORD PTR [rbp-0x3c]
+  c8:	89 c7                	mov    edi,eax
+  ca:	e8 00 00 00 00       	call   cf <_ada_add_int_w_io+0xcf>
+			cb: R_X86_64_PLT32	gnat__io__put__2-0x4
+  cf:	bf 01 00 00 00       	mov    edi,0x1
+  d4:	e8 00 00 00 00       	call   d9 <_ada_add_int_w_io+0xd9>
+			d5: R_X86_64_PLT32	gnat__io__new_line__2-0x4
+  d9:	90                   	nop
+  da:	48 83 c4 18          	add    rsp,0x18
+  de:	5b                   	pop    rbx
+  df:	41 5c                	pop    r12
+  e1:	41 5d                	pop    r13
+  e3:	41 5e                	pop    r14
+  e5:	41 5f                	pop    r15
+  e7:	5d                   	pop    rbp
+  e8:	c3                   	ret    
+
+Disassembly of section .rodata:
+
+0000000000000000 <.rodata>:
+   0:	50                   	push   rax
+   1:	6c                   	ins    BYTE PTR es:[rdi],dx
+   2:	65 61                	gs (bad) 
+   4:	73 65                	jae    6b <.rodata+0x6b>
+   6:	20 65 6e             	and    BYTE PTR [rbp+0x6e],ah
+   9:	74 65                	je     70 <.rodata+0x70>
+   b:	72 20                	jb     2d <.rodata+0x2d>
+   d:	66 69 72 73 74 20    	imul   si,WORD PTR [rdx+0x73],0x2074
+  13:	69 6e 74 65 67 65 72 	imul   ebp,DWORD PTR [rsi+0x74],0x72656765
+  1a:	20 6e 6f             	and    BYTE PTR [rsi+0x6f],ch
+  1d:	77 20                	ja     3f <.rodata+0x3f>
+  1f:	66 6f                	outs   dx,WORD PTR ds:[rsi]
+  21:	6c                   	ins    BYTE PTR es:[rdi],dx
+  22:	6c                   	ins    BYTE PTR es:[rdi],dx
+  23:	6f                   	outs   dx,DWORD PTR ds:[rsi]
+  24:	77 65                	ja     8b <.rodata+0x8b>
+  26:	64 20 62 79          	and    BYTE PTR fs:[rdx+0x79],ah
+  2a:	20 3c 43             	and    BYTE PTR [rbx+rax*2],bh
+  2d:	52                   	push   rdx
+  2e:	3e 20 2d 3e 20 00 00 	and    BYTE PTR ds:[rip+0x203e],ch        # 2073 <_ada_add_int_w_io+0x2073>
+  35:	00 00                	add    BYTE PTR [rax],al
+  37:	00 50 6c             	add    BYTE PTR [rax+0x6c],dl
+  3a:	65 61                	gs (bad) 
+  3c:	73 65                	jae    a3 <.rodata+0xa3>
+  3e:	20 65 6e             	and    BYTE PTR [rbp+0x6e],ah
+  41:	74 65                	je     a8 <_ada_add_int_w_io+0xa8>
+  43:	72 20                	jb     65 <.rodata+0x65>
+  45:	73 65                	jae    ac <_ada_add_int_w_io+0xac>
+  47:	63 6f 6e             	movsxd ebp,DWORD PTR [rdi+0x6e]
+  4a:	64 20 69 6e          	and    BYTE PTR fs:[rcx+0x6e],ch
+  4e:	74 65                	je     b5 <_ada_add_int_w_io+0xb5>
+  50:	67 65 72 20          	addr32 gs jb 74 <.rodata+0x74>
+  54:	6e                   	outs   dx,BYTE PTR ds:[rsi]
+  55:	6f                   	outs   dx,DWORD PTR ds:[rsi]
+  56:	77 20                	ja     78 <.rodata+0x78>
+  58:	66 6f                	outs   dx,WORD PTR ds:[rsi]
+  5a:	6c                   	ins    BYTE PTR es:[rdi],dx
+  5b:	6c                   	ins    BYTE PTR es:[rdi],dx
+  5c:	6f                   	outs   dx,DWORD PTR ds:[rsi]
+  5d:	77 65                	ja     c4 <_ada_add_int_w_io+0xc4>
+  5f:	64 20 62 79          	and    BYTE PTR fs:[rdx+0x79],ah
+  63:	20 3c 43             	and    BYTE PTR [rbx+rax*2],bh
+  66:	52                   	push   rdx
+  67:	3e 20 2d 3e 20 61 64 	and    BYTE PTR ds:[rip+0x6461203e],ch        # 646120ac <_ada_add_int_w_io+0x646120ac>
+  6e:	64 5f                	fs pop rdi
+  70:	69 6e 74 5f 77 5f 69 	imul   ebp,DWORD PTR [rsi+0x74],0x695f775f
+  77:	6f                   	outs   dx,DWORD PTR ds:[rsi]
+  78:	2e 61                	cs (bad) 
+  7a:	64 62                	fs (bad) 
+  7c:	00 54 68 65          	add    BYTE PTR [rax+rbp*2+0x65],dl
+  80:	20 73 75             	and    BYTE PTR [rbx+0x75],dh
+  83:	6d                   	ins    DWORD PTR es:[rdi],dx
+  84:	20 69 73             	and    BYTE PTR [rcx+0x73],ch
+  87:	20 3a                	and    BYTE PTR [rdx],bh
+  89:	20 00                	and    BYTE PTR [rax],al
+  8b:	00 00                	add    BYTE PTR [rax],al
+  8d:	00 00                	add    BYTE PTR [rax],al
+  8f:	00 01                	add    BYTE PTR [rcx],al
+  91:	00 00                	add    BYTE PTR [rax],al
+  93:	00 33                	add    BYTE PTR [rbx],dh
+  95:	00 00                	add    BYTE PTR [rax],al
+  97:	00 01                	add    BYTE PTR [rcx],al
+  99:	00 00                	add    BYTE PTR [rax],al
+  9b:	00 34 00             	add    BYTE PTR [rax+rax*1],dh
+  9e:	00 00                	add    BYTE PTR [rax],al
+  a0:	01 00                	add    DWORD PTR [rax],eax
+  a2:	00 00                	add    BYTE PTR [rax],al
+  a4:	0d                   	.byte 0xd
+  a5:	00 00                	add    BYTE PTR [rax],al
+	...
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [rdi+0x43],al
+   3:	43 3a 20             	rex.XB cmp spl,BYTE PTR [r8]
+   6:	28 55 62             	sub    BYTE PTR [rbp+0x62],dl
+   9:	75 6e                	jne    79 <_ada_add_int_w_io+0x79>
+   b:	74 75                	je     82 <_ada_add_int_w_io+0x82>
+   d:	20 37                	and    BYTE PTR [rdi],dh
+   f:	2e 33 2e             	xor    ebp,DWORD PTR cs:[rsi]
+  12:	30 2d 32 37 75 62    	xor    BYTE PTR [rip+0x62753732],ch        # 6275374a <_ada_add_int_w_io+0x6275374a>
+  18:	75 6e                	jne    88 <_ada_add_int_w_io+0x88>
+  1a:	74 75                	je     91 <_ada_add_int_w_io+0x91>
+  1c:	31 7e 31             	xor    DWORD PTR [rsi+0x31],edi
+  1f:	38 2e                	cmp    BYTE PTR [rsi],ch
+  21:	30 34 29             	xor    BYTE PTR [rcx+rbp*1],dh
+  24:	20 37                	and    BYTE PTR [rdi],dh
+  26:	2e 33 2e             	xor    ebp,DWORD PTR cs:[rsi]
+  29:	30 00                	xor    BYTE PTR [rax],al
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [rax],al
+   4:	00 00                	add    BYTE PTR [rax],al
+   6:	00 00                	add    BYTE PTR [rax],al
+   8:	01 7a 52             	add    DWORD PTR [rdx+0x52],edi
+   b:	00 01                	add    BYTE PTR [rcx],al
+   d:	78 10                	js     1f <.eh_frame+0x1f>
+   f:	01 1b                	add    DWORD PTR [rbx],ebx
+  11:	0c 07                	or     al,0x7
+  13:	08 90 01 00 00 2c    	or     BYTE PTR [rax+0x2c000001],dl
+  19:	00 00                	add    BYTE PTR [rax],al
+  1b:	00 1c 00             	add    BYTE PTR [rax+rax*1],bl
+  1e:	00 00                	add    BYTE PTR [rax],al
+  20:	00 00                	add    BYTE PTR [rax],al
+			20: R_X86_64_PC32	.text
+  22:	00 00                	add    BYTE PTR [rax],al
+  24:	e9 00 00 00 00       	jmp    29 <.eh_frame+0x29>
+  29:	41 0e                	rex.B (bad) 
+  2b:	10 86 02 43 0d 06    	adc    BYTE PTR [rsi+0x60d4302],al
+  31:	4d 8f 03             	rex.WRB pop QWORD PTR [r11]
+  34:	8e 04 8d 05 8c 06 83 	mov    es,WORD PTR [rcx*4-0x7cf973fb]
+  3b:	07                   	(bad)  
+  3c:	02 d7                	add    dl,bh
+  3e:	0c 07                	or     al,0x7
+  40:	08 00                	or     BYTE PTR [rax],al
+  42:	00 00                	add    BYTE PTR [rax],al
+  44:	00 00                	add    BYTE PTR [rax],al
+	...
