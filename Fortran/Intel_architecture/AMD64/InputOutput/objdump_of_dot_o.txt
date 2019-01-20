@@ -1,0 +1,190 @@
+
+print.o:     file format elf64-x86-64
+print.o
+architecture: i386:x86-64, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x0000000000000000
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         000000b0  0000000000000000  0000000000000000  00000040  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  0000000000000000  0000000000000000  000000f0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  0000000000000000  0000000000000000  000000f0  2**0
+                  ALLOC
+  3 .rodata       0000003c  0000000000000000  0000000000000000  000000f0  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .comment      0000002b  0000000000000000  0000000000000000  0000012c  2**0
+                  CONTENTS, READONLY
+  5 .note.GNU-stack 00000000  0000000000000000  0000000000000000  00000157  2**0
+                  CONTENTS, READONLY
+  6 .eh_frame     00000058  0000000000000000  0000000000000000  00000158  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 print.f08
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l    d  .rodata	0000000000000000 .rodata
+0000000000000000 l     F .text	0000000000000073 MAIN__
+0000000000000020 l     O .rodata	000000000000001c options.1.3502
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 l    d  .eh_frame	0000000000000000 .eh_frame
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000000         *UND*	0000000000000000 _GLOBAL_OFFSET_TABLE_
+0000000000000000         *UND*	0000000000000000 _gfortran_st_write
+0000000000000000         *UND*	0000000000000000 _gfortran_transfer_character_write
+0000000000000000         *UND*	0000000000000000 _gfortran_st_write_done
+0000000000000073 g     F .text	000000000000003d main
+0000000000000000         *UND*	0000000000000000 _gfortran_set_args
+0000000000000000         *UND*	0000000000000000 _gfortran_set_options
+
+
+
+Disassembly of section .text:
+
+0000000000000000 <MAIN__>:
+   0:	55                   	push   rbp
+   1:	48 89 e5             	mov    rbp,rsp
+   4:	48 81 ec e0 01 00 00 	sub    rsp,0x1e0
+   b:	48 8d 05 00 00 00 00 	lea    rax,[rip+0x0]        # 12 <MAIN__+0x12>
+			e: R_X86_64_PC32	.rodata-0x4
+  12:	48 89 85 28 fe ff ff 	mov    QWORD PTR [rbp-0x1d8],rax
+  19:	c7 85 30 fe ff ff 03 	mov    DWORD PTR [rbp-0x1d0],0x3
+  20:	00 00 00 
+  23:	c7 85 20 fe ff ff 80 	mov    DWORD PTR [rbp-0x1e0],0x80
+  2a:	00 00 00 
+  2d:	c7 85 24 fe ff ff 06 	mov    DWORD PTR [rbp-0x1dc],0x6
+  34:	00 00 00 
+  37:	48 8d 85 20 fe ff ff 	lea    rax,[rbp-0x1e0]
+  3e:	48 89 c7             	mov    rdi,rax
+  41:	e8 00 00 00 00       	call   46 <MAIN__+0x46>
+			42: R_X86_64_PLT32	_gfortran_st_write-0x4
+  46:	48 8d 85 20 fe ff ff 	lea    rax,[rbp-0x1e0]
+  4d:	ba 0c 00 00 00       	mov    edx,0xc
+  52:	48 8d 35 00 00 00 00 	lea    rsi,[rip+0x0]        # 59 <MAIN__+0x59>
+			55: R_X86_64_PC32	.rodata+0x6
+  59:	48 89 c7             	mov    rdi,rax
+  5c:	e8 00 00 00 00       	call   61 <MAIN__+0x61>
+			5d: R_X86_64_PLT32	_gfortran_transfer_character_write-0x4
+  61:	48 8d 85 20 fe ff ff 	lea    rax,[rbp-0x1e0]
+  68:	48 89 c7             	mov    rdi,rax
+  6b:	e8 00 00 00 00       	call   70 <MAIN__+0x70>
+			6c: R_X86_64_PLT32	_gfortran_st_write_done-0x4
+  70:	90                   	nop
+  71:	c9                   	leave  
+  72:	c3                   	ret    
+
+0000000000000073 <main>:
+  73:	55                   	push   rbp
+  74:	48 89 e5             	mov    rbp,rsp
+  77:	48 83 ec 10          	sub    rsp,0x10
+  7b:	89 7d fc             	mov    DWORD PTR [rbp-0x4],edi
+  7e:	48 89 75 f0          	mov    QWORD PTR [rbp-0x10],rsi
+  82:	48 8b 55 f0          	mov    rdx,QWORD PTR [rbp-0x10]
+  86:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+  89:	48 89 d6             	mov    rsi,rdx
+  8c:	89 c7                	mov    edi,eax
+  8e:	e8 00 00 00 00       	call   93 <main+0x20>
+			8f: R_X86_64_PLT32	_gfortran_set_args-0x4
+  93:	48 8d 35 00 00 00 00 	lea    rsi,[rip+0x0]        # 9a <main+0x27>
+			96: R_X86_64_PC32	.rodata+0x1c
+  9a:	bf 07 00 00 00       	mov    edi,0x7
+  9f:	e8 00 00 00 00       	call   a4 <main+0x31>
+			a0: R_X86_64_PLT32	_gfortran_set_options-0x4
+  a4:	e8 57 ff ff ff       	call   0 <MAIN__>
+  a9:	b8 00 00 00 00       	mov    eax,0x0
+  ae:	c9                   	leave  
+  af:	c3                   	ret    
+
+Disassembly of section .rodata:
+
+0000000000000000 <options.1.3502-0x20>:
+   0:	70 72                	jo     74 <main+0x1>
+   2:	69 6e 74 2e 66 30 38 	imul   ebp,DWORD PTR [rsi+0x74],0x3830662e
+   9:	00 48 65             	add    BYTE PTR [rax+0x65],cl
+   c:	6c                   	ins    BYTE PTR es:[rdi],dx
+   d:	6c                   	ins    BYTE PTR es:[rdi],dx
+   e:	6f                   	outs   dx,DWORD PTR ds:[rsi]
+   f:	20 57 6f             	and    BYTE PTR [rdi+0x6f],dl
+  12:	72 6c                	jb     80 <main+0xd>
+  14:	64 21 00             	and    DWORD PTR fs:[rax],eax
+	...
+
+0000000000000020 <options.1.3502>:
+  20:	44 00 00             	add    BYTE PTR [rax],r8b
+  23:	00 ff                	add    bh,bh
+  25:	03 00                	add    eax,DWORD PTR [rax]
+  27:	00 00                	add    BYTE PTR [rax],al
+  29:	00 00                	add    BYTE PTR [rax],al
+  2b:	00 01                	add    BYTE PTR [rcx],al
+  2d:	00 00                	add    BYTE PTR [rax],al
+  2f:	00 01                	add    BYTE PTR [rcx],al
+  31:	00 00                	add    BYTE PTR [rax],al
+  33:	00 00                	add    BYTE PTR [rax],al
+  35:	00 00                	add    BYTE PTR [rax],al
+  37:	00 1f                	add    BYTE PTR [rdi],bl
+  39:	00 00                	add    BYTE PTR [rax],al
+	...
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [rdi+0x43],al
+   3:	43 3a 20             	rex.XB cmp spl,BYTE PTR [r8]
+   6:	28 55 62             	sub    BYTE PTR [rbp+0x62],dl
+   9:	75 6e                	jne    79 <main+0x6>
+   b:	74 75                	je     82 <main+0xf>
+   d:	20 37                	and    BYTE PTR [rdi],dh
+   f:	2e 33 2e             	xor    ebp,DWORD PTR cs:[rsi]
+  12:	30 2d 32 37 75 62    	xor    BYTE PTR [rip+0x62753732],ch        # 6275374a <main+0x627536d7>
+  18:	75 6e                	jne    88 <main+0x15>
+  1a:	74 75                	je     91 <main+0x1e>
+  1c:	31 7e 31             	xor    DWORD PTR [rsi+0x31],edi
+  1f:	38 2e                	cmp    BYTE PTR [rsi],ch
+  21:	30 34 29             	xor    BYTE PTR [rcx+rbp*1],dh
+  24:	20 37                	and    BYTE PTR [rdi],dh
+  26:	2e 33 2e             	xor    ebp,DWORD PTR cs:[rsi]
+  29:	30 00                	xor    BYTE PTR [rax],al
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [rax],al
+   4:	00 00                	add    BYTE PTR [rax],al
+   6:	00 00                	add    BYTE PTR [rax],al
+   8:	01 7a 52             	add    DWORD PTR [rdx+0x52],edi
+   b:	00 01                	add    BYTE PTR [rcx],al
+   d:	78 10                	js     1f <.eh_frame+0x1f>
+   f:	01 1b                	add    DWORD PTR [rbx],ebx
+  11:	0c 07                	or     al,0x7
+  13:	08 90 01 00 00 1c    	or     BYTE PTR [rax+0x1c000001],dl
+  19:	00 00                	add    BYTE PTR [rax],al
+  1b:	00 1c 00             	add    BYTE PTR [rax+rax*1],bl
+  1e:	00 00                	add    BYTE PTR [rax],al
+  20:	00 00                	add    BYTE PTR [rax],al
+			20: R_X86_64_PC32	.text
+  22:	00 00                	add    BYTE PTR [rax],al
+  24:	73 00                	jae    26 <.eh_frame+0x26>
+  26:	00 00                	add    BYTE PTR [rax],al
+  28:	00 41 0e             	add    BYTE PTR [rcx+0xe],al
+  2b:	10 86 02 43 0d 06    	adc    BYTE PTR [rsi+0x60d4302],al
+  31:	02 6e 0c             	add    ch,BYTE PTR [rsi+0xc]
+  34:	07                   	(bad)  
+  35:	08 00                	or     BYTE PTR [rax],al
+  37:	00 1c 00             	add    BYTE PTR [rax+rax*1],bl
+  3a:	00 00                	add    BYTE PTR [rax],al
+  3c:	3c 00                	cmp    al,0x0
+  3e:	00 00                	add    BYTE PTR [rax],al
+  40:	00 00                	add    BYTE PTR [rax],al
+			40: R_X86_64_PC32	.text+0x73
+  42:	00 00                	add    BYTE PTR [rax],al
+  44:	3d 00 00 00 00       	cmp    eax,0x0
+  49:	41 0e                	rex.B (bad) 
+  4b:	10 86 02 43 0d 06    	adc    BYTE PTR [rsi+0x60d4302],al
+  51:	78 0c                	js     5f <options.1.3502+0x3f>
+  53:	07                   	(bad)  
+  54:	08 00                	or     BYTE PTR [rax],al
+	...
