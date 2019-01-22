@@ -1,0 +1,15 @@
+00000000 <_ada_add_int>:
+   0:	55                   	push   ebp
+   1:	89 e5                	mov    ebp,esp
+   3:	83 ec 18             	sub    esp,0x18
+   6:	e8 fc ff ff ff       	call   7 <_ada_add_int+0x7>
+			7: R_386_PC32	__x86.get_pc_thunk.ax
+   b:	05 01 00 00 00       	add    eax,0x1
+			c: R_386_GOTPC	_GLOBAL_OFFSET_TABLE_
+  10:	c7 45 f4 03 00 00 00 	mov    DWORD PTR [ebp-0xc],0x3
+  17:	c7 45 f0 05 00 00 00 	mov    DWORD PTR [ebp-0x10],0x5
+  1e:	c7 45 ec 08 00 00 00 	mov    DWORD PTR [ebp-0x14],0x8
+  25:	90                   	nop
+  26:	c9                   	leave  
+  27:	c3                   	ret    
+
