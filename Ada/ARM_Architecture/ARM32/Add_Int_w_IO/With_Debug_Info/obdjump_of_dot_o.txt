@@ -1,0 +1,834 @@
+
+add_int_w_io.o:     file format elf32-littlearm
+add_int_w_io.o
+architecture: arm, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+private flags = 5000000: [Version5 EABI]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000f4  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  00000000  00000000  00000128  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  00000128  2**0
+                  ALLOC
+  3 .rodata       000000a4  00000000  00000000  00000128  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .ARM.extab    0000000c  00000000  00000000  000001cc  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .ARM.exidx    00000008  00000000  00000000  000001d8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+  6 .debug_info   00000086  00000000  00000000  000001e0  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  7 .debug_abbrev 00000053  00000000  00000000  00000266  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_aranges 00000020  00000000  00000000  000002b9  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  9 .debug_line   00000064  00000000  00000000  000002d9  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 10 .debug_str    0000010f  00000000  00000000  0000033d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .comment      00000035  00000000  00000000  0000044c  2**0
+                  CONTENTS, READONLY
+ 12 .note.GNU-stack 00000000  00000000  00000000  00000481  2**0
+                  CONTENTS, READONLY
+ 13 .debug_frame  00000038  00000000  00000000  00000484  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 14 .ARM.attributes 0000002d  00000000  00000000  000004bc  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    df *ABS*	00000000 add_int_w_io.adb
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+00000000 l    d  .rodata	00000000 .rodata
+00000000 l    d  .ARM.extab	00000000 .ARM.extab
+00000000 l    d  .ARM.exidx	00000000 .ARM.exidx
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .note.GNU-stack	00000000 .note.GNU-stack
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 g     F .text	000000f4 _ada_add_int_w_io
+00000000         *UND*	00000000 gnat__io__put__6
+00000000         *UND*	00000000 gnat__io__get
+00000000         *UND*	00000000 __gnat_rcheck_CE_Overflow_Check
+00000000         *UND*	00000000 gnat__io__put__2
+00000000         *UND*	00000000 gnat__io__new_line__2
+00000000         *UND*	00000000 __aeabi_unwind_cpp_pr1
+
+
+Contents of section .text:
+ 0000 f0482de9 14b08de2 10d04de2 c4209fe5  .H-.......M.. ..
+ 0010 c4309fe5 0200a0e1 0310a0e1 feffffeb  .0..............
+ 0020 feffffeb 0030a0e1 18300be5 ac609fe5  .....0...0...`..
+ 0030 ac709fe5 0600a0e1 0710a0e1 feffffeb  .p..............
+ 0040 feffffeb 0030a0e1 1c300be5 1c301be5  .....0...0...0..
+ 0050 a33fa0e1 7320efe6 18101be5 1c301be5  .?..s .......0..
+ 0060 033081e0 0310a0e1 18301be5 030051e1  .0.......0....Q.
+ 0070 0130a0b3 0030a0a3 7330efe6 023023e0  .0...0..s0...0#.
+ 0080 7330efe6 000053e3 0200000a 1010a0e3  s0....S.........
+ 0090 50009fe5 feffffeb 18201be5 1c301be5  P........ ...0..
+ 00a0 033082e0 20300be5 3c409fe5 3c509fe5  .0.. 0..<@..<P..
+ 00b0 0400a0e1 0510a0e1 feffffeb 20001be5  ............ ...
+ 00c0 feffffeb 0100a0e3 feffffeb 0000a0e1  ................
+ 00d0 14d04be2 f088bde8 00000000 8c000000  ..K.............
+ 00e0 34000000 94000000 68000000 7c000000  4.......h...|...
+ 00f0 9c000000                             ....            
+Contents of section .rodata:
+ 0000 506c6561 73652065 6e746572 20666972  Please enter fir
+ 0010 73742069 6e746567 6572206e 6f772066  st integer now f
+ 0020 6f6c6c6f 77656420 6279203c 43523e20  ollowed by <CR> 
+ 0030 2d3e2000 506c6561 73652065 6e746572  -> .Please enter
+ 0040 20736563 6f6e6420 696e7465 67657220   second integer 
+ 0050 6e6f7720 666f6c6c 6f776564 20627920  now followed by 
+ 0060 3c43523e 202d3e20 6164645f 696e745f  <CR> -> add_int_
+ 0070 775f696f 2e616462 00000000 54686520  w_io.adb....The 
+ 0080 73756d20 6973203a 20000000 01000000  sum is : .......
+ 0090 33000000 01000000 34000000 01000000  3.......4.......
+ 00a0 0d000000                             ....            
+Contents of section .ARM.extab:
+ 0000 449b0181 b0b08f84 00000000           D...........    
+Contents of section .ARM.exidx:
+ 0000 00000000 00000000                    ........        
+Contents of section .debug_info:
+ 0000 82000000 04000000 00000401 26000000  ............&...
+ 0010 0d000000 00a40000 00000000 00f40000  ................
+ 0020 00000000 00021100 00000105 92000000  ................
+ 0030 00000000 f4000000 019c7e00 00000361  ..........~....a
+ 0040 0001067e 00000002 91640362 0001067e  ...~.....d.b...~
+ 0050 00000002 91600363 0001067e 00000002  .....`.c...~....
+ 0060 915c040c 00000014 00000004 2c000000  .\..........,...
+ 0070 14000000 04a80000 00140000 00000504  ................
+ 0080 051e0000 0000                        ......          
+Contents of section .debug_abbrev:
+ 0000 01110125 0e130b03 0e1b0e11 01120610  ...%............
+ 0010 17000002 2e013f19 030e3a0b 3b0b6e0e  ......?...:.;.n.
+ 0020 11011206 40189642 19011300 00033400  ....@..B......4.
+ 0030 03083a0b 3b0b4913 02180000 040b0011  ..:.;.I.........
+ 0040 01120600 00052400 0b0b3e0b 030e3419  ......$...>...4.
+ 0050 000000                               ...             
+Contents of section .debug_aranges:
+ 0000 1c000000 02000000 00000400 00000000  ................
+ 0010 00000000 f4000000 00000000 00000000  ................
+Contents of section .debug_line:
+ 0000 60000000 02002700 00000201 fb0e0d00  `.....'.........
+ 0010 01010101 00000001 00000100 6164645f  ............add_
+ 0020 696e745f 775f696f 2e616462 00000000  int_w_io.adb....
+ 0030 00000502 00000000 166b9f68 9f680002  .........k.h.h..
+ 0040 04010608 e4000204 02660002 04020684  .........f......
+ 0050 00020402 9f000204 024b0002 04024c02  .........K....L.
+ 0060 14000101                             ....            
+Contents of section .debug_str:
+ 0000 6164645f 696e745f 775f696f 2e616462  add_int_w_io.adb
+ 0010 00616464 5f696e74 5f775f69 6f00696e  .add_int_w_io.in
+ 0020 74656765 7200474e 55204164 6120362e  teger.GNU Ada 6.
+ 0030 332e3020 32303137 30353136 202d676e  3.0 20170516 -gn
+ 0040 6174657a 202d676e 61746561 202d6720  atez -gnatea -g 
+ 0050 2d676e61 74657a20 2d6d6172 63683d61  -gnatez -march=a
+ 0060 726d7636 202d6d66 6c6f6174 2d616269  rmv6 -mfloat-abi
+ 0070 3d686172 64202d6d 6670753d 76667020  =hard -mfpu=vfp 
+ 0080 2d6d746c 732d6469 616c6563 743d676e  -mtls-dialect=gn
+ 0090 75005f61 64615f61 64645f69 6e745f77  u._ada_add_int_w
+ 00a0 5f696f00 2f686f6d 652f7069 2f456e67  _io./home/pi/Eng
+ 00b0 696e6565 72696e67 2f474954 4855422f  ineering/GITHUB/
+ 00c0 44697361 7373656d 626c696e 672d4269  Disassembling-Bi
+ 00d0 6e617269 65732f41 64612f41 524d5f41  naries/Ada/ARM_A
+ 00e0 72636869 74656374 7572652f 41524d33  rchitecture/ARM3
+ 00f0 322f4164 645f496e 745f775f 494f2f57  2/Add_Int_w_IO/W
+ 0100 6974685f 44656275 675f496e 666f00    ith_Debug_Info. 
+Contents of section .comment:
+ 0000 00474343 3a202852 61737062 69616e20  .GCC: (Raspbian 
+ 0010 362e332e 302d3138 2b727069 312b6465  6.3.0-18+rpi1+de
+ 0020 62397531 2920362e 332e3020 32303137  b9u1) 6.3.0 2017
+ 0030 30353136 00                          0516.           
+Contents of section .debug_frame:
+ 0000 0c000000 ffffffff 0100027c 0e0c0d00  ...........|....
+ 0010 24000000 00000000 00000000 f4000000  $...............
+ 0020 420e1884 06850586 0487038b 028e0142  B..............B
+ 0030 0c0b0402 660c0d18                    ....f...        
+Contents of section .ARM.attributes:
+ 0000 412c0000 00616561 62690001 22000000  A,...aeabi.."...
+ 0010 05360006 06080109 010a0214 01150117  .6..............
+ 0020 03180119 011a021c 011e0622 01        ...........".   
+
+Disassembly of section .text:
+
+00000000 <_ada_add_int_w_io>:
+--
+-- Some numbers to come and go.  With IO.
+--
+with Gnat.Io; use Gnat.Io;
+procedure Add_Int_w_IO is
+   0:	e92d48f0 	push	{r4, r5, r6, r7, fp, lr}
+   4:	e28db014 	add	fp, sp, #20
+   8:	e24dd010 	sub	sp, sp, #16
+   a, b, c: Integer;
+
+begin
+
+   Put ("Please enter first integer now followed by <CR> -> ");
+   c:	e59f20c4 	ldr	r2, [pc, #196]	; d8 <_ada_add_int_w_io+0xd8>
+  10:	e59f30c4 	ldr	r3, [pc, #196]	; dc <_ada_add_int_w_io+0xdc>
+  14:	e1a00002 	mov	r0, r2
+  18:	e1a01003 	mov	r1, r3
+  1c:	ebfffffe 	bl	0 <gnat__io__put__6>
+			1c: R_ARM_CALL	gnat__io__put__6
+   Get (a);
+  20:	ebfffffe 	bl	0 <gnat__io__get>
+			20: R_ARM_CALL	gnat__io__get
+  24:	e1a03000 	mov	r3, r0
+  28:	e50b3018 	str	r3, [fp, #-24]	; 0xffffffe8
+
+   Put ("Please enter second integer now followed by <CR> -> ");
+  2c:	e59f60ac 	ldr	r6, [pc, #172]	; e0 <_ada_add_int_w_io+0xe0>
+  30:	e59f70ac 	ldr	r7, [pc, #172]	; e4 <_ada_add_int_w_io+0xe4>
+  34:	e1a00006 	mov	r0, r6
+  38:	e1a01007 	mov	r1, r7
+  3c:	ebfffffe 	bl	0 <gnat__io__put__6>
+			3c: R_ARM_CALL	gnat__io__put__6
+   Get (b);
+  40:	ebfffffe 	bl	0 <gnat__io__get>
+			40: R_ARM_CALL	gnat__io__get
+  44:	e1a03000 	mov	r3, r0
+  48:	e50b301c 	str	r3, [fp, #-28]	; 0xffffffe4
+
+   c := a + b;
+  4c:	e51b301c 	ldr	r3, [fp, #-28]	; 0xffffffe4
+  50:	e1a03fa3 	lsr	r3, r3, #31
+  54:	e6ef2073 	uxtb	r2, r3
+  58:	e51b1018 	ldr	r1, [fp, #-24]	; 0xffffffe8
+  5c:	e51b301c 	ldr	r3, [fp, #-28]	; 0xffffffe4
+  60:	e0813003 	add	r3, r1, r3
+  64:	e1a01003 	mov	r1, r3
+  68:	e51b3018 	ldr	r3, [fp, #-24]	; 0xffffffe8
+  6c:	e1510003 	cmp	r1, r3
+  70:	b3a03001 	movlt	r3, #1
+  74:	a3a03000 	movge	r3, #0
+  78:	e6ef3073 	uxtb	r3, r3
+  7c:	e0233002 	eor	r3, r3, r2
+  80:	e6ef3073 	uxtb	r3, r3
+  84:	e3530000 	cmp	r3, #0
+  88:	0a000002 	beq	98 <_ada_add_int_w_io+0x98>
+  8c:	e3a01010 	mov	r1, #16
+  90:	e59f0050 	ldr	r0, [pc, #80]	; e8 <_ada_add_int_w_io+0xe8>
+  94:	ebfffffe 	bl	0 <__gnat_rcheck_CE_Overflow_Check>
+			94: R_ARM_CALL	__gnat_rcheck_CE_Overflow_Check
+  98:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
+  9c:	e51b301c 	ldr	r3, [fp, #-28]	; 0xffffffe4
+  a0:	e0823003 	add	r3, r2, r3
+  a4:	e50b3020 	str	r3, [fp, #-32]	; 0xffffffe0
+
+   Put ("The sum is : ");
+  a8:	e59f403c 	ldr	r4, [pc, #60]	; ec <_ada_add_int_w_io+0xec>
+  ac:	e59f503c 	ldr	r5, [pc, #60]	; f0 <_ada_add_int_w_io+0xf0>
+  b0:	e1a00004 	mov	r0, r4
+  b4:	e1a01005 	mov	r1, r5
+  b8:	ebfffffe 	bl	0 <gnat__io__put__6>
+			b8: R_ARM_CALL	gnat__io__put__6
+   Put (c);
+  bc:	e51b0020 	ldr	r0, [fp, #-32]	; 0xffffffe0
+  c0:	ebfffffe 	bl	0 <gnat__io__put__2>
+			c0: R_ARM_CALL	gnat__io__put__2
+   New_Line;
+  c4:	e3a00001 	mov	r0, #1
+  c8:	ebfffffe 	bl	0 <gnat__io__new_line__2>
+			c8: R_ARM_CALL	gnat__io__new_line__2
+
+end Add_Int_w_IO;
+  cc:	e1a00000 	nop			; (mov r0, r0)
+  d0:	e24bd014 	sub	sp, fp, #20
+  d4:	e8bd88f0 	pop	{r4, r5, r6, r7, fp, pc}
+  d8:	00000000 	andeq	r0, r0, r0
+			d8: R_ARM_ABS32	.rodata
+  dc:	0000008c 	andeq	r0, r0, ip, lsl #1
+			dc: R_ARM_ABS32	.rodata
+  e0:	00000034 	andeq	r0, r0, r4, lsr r0
+			e0: R_ARM_ABS32	.rodata
+  e4:	00000094 	muleq	r0, r4, r0
+			e4: R_ARM_ABS32	.rodata
+  e8:	00000068 	andeq	r0, r0, r8, rrx
+			e8: R_ARM_ABS32	.rodata
+  ec:	0000007c 	andeq	r0, r0, ip, ror r0
+			ec: R_ARM_ABS32	.rodata
+  f0:	0000009c 	muleq	r0, ip, r0
+			f0: R_ARM_ABS32	.rodata
+
+Disassembly of section .rodata:
+
+00000000 <.rodata>:
+procedure Add_Int_w_IO is
+   0:	61656c50 	cmnvs	r5, r0, asr ip
+   4:	65206573 	strvs	r6, [r0, #-1395]!	; 0xfffffa8d
+   8:	7265746e 	rsbvc	r7, r5, #1845493760	; 0x6e000000
+   Put ("Please enter first integer now followed by <CR> -> ");
+   c:	72696620 	rsbvc	r6, r9, #32, 12	; 0x2000000
+  10:	69207473 	stmdbvs	r0!, {r0, r1, r4, r5, r6, sl, ip, sp, lr}
+  14:	6765746e 	strbvs	r7, [r5, -lr, ror #8]!
+  18:	6e207265 	cdpvs	2, 2, cr7, cr0, cr5, {3}
+  1c:	6620776f 	strtvs	r7, [r0], -pc, ror #14
+   Get (a);
+  20:	6f6c6c6f 	svcvs	0x006c6c6f
+  24:	20646577 	rsbcs	r6, r4, r7, ror r5
+  28:	3c207962 			; <UNDEFINED> instruction: 0x3c207962
+   Put ("Please enter second integer now followed by <CR> -> ");
+  2c:	203e5243 	eorscs	r5, lr, r3, asr #4
+  30:	00203e2d 	eoreq	r3, r0, sp, lsr #28
+  34:	61656c50 	cmnvs	r5, r0, asr ip
+  38:	65206573 	strvs	r6, [r0, #-1395]!	; 0xfffffa8d
+  3c:	7265746e 	rsbvc	r7, r5, #1845493760	; 0x6e000000
+   Get (b);
+  40:	63657320 	cmnvs	r5, #32, 6	; 0x80000000
+  44:	20646e6f 	rsbcs	r6, r4, pc, ror #28
+  48:	65746e69 	ldrbvs	r6, [r4, #-3689]!	; 0xfffff197
+   c := a + b;
+  4c:	20726567 	rsbscs	r6, r2, r7, ror #10
+  50:	20776f6e 	rsbscs	r6, r7, lr, ror #30
+  54:	6c6c6f66 	stclvs	15, cr6, [ip], #-408	; 0xfffffe68
+  58:	6465776f 	strbtvs	r7, [r5], #-1903	; 0xfffff891
+  5c:	20796220 	rsbscs	r6, r9, r0, lsr #4
+  60:	3e52433c 	mrccc	3, 2, r4, cr2, cr12, {1}
+  64:	203e2d20 	eorscs	r2, lr, r0, lsr #26
+  68:	5f646461 	svcpl	0x00646461
+  6c:	5f746e69 	svcpl	0x00746e69
+  70:	6f695f77 	svcvs	0x00695f77
+  74:	6264612e 	rsbvs	r6, r4, #-2147483637	; 0x8000000b
+  78:	00000000 	andeq	r0, r0, r0
+  7c:	20656854 	rsbcs	r6, r5, r4, asr r8
+  80:	206d7573 	rsbcs	r7, sp, r3, ror r5
+  84:	3a207369 	bcc	81ce30 <_ada_add_int_w_io+0x81ce30>
+  88:	00000020 	andeq	r0, r0, r0, lsr #32
+  8c:	00000001 	andeq	r0, r0, r1
+  90:	00000033 	andeq	r0, r0, r3, lsr r0
+  94:	00000001 	andeq	r0, r0, r1
+  98:	00000034 	andeq	r0, r0, r4, lsr r0
+  9c:	00000001 	andeq	r0, r0, r1
+  a0:	0000000d 	andeq	r0, r0, sp
+
+Disassembly of section .ARM.extab:
+
+00000000 <.ARM.extab>:
+procedure Add_Int_w_IO is
+   0:	81019b44 	tsthi	r1, r4, asr #22
+   4:	848fb0b0 	strhi	fp, [pc], #176	; c <_ada_add_int_w_io+0xc>
+   8:	00000000 	andeq	r0, r0, r0
+
+Disassembly of section .ARM.exidx:
+
+00000000 <.ARM.exidx>:
+	...
+			0: R_ARM_PREL31	.text
+			0: R_ARM_NONE	__aeabi_unwind_cpp_pr1
+			4: R_ARM_PREL31	.ARM.extab
+
+Disassembly of section .debug_info:
+
+00000000 <.debug_info>:
+   0:	00000082 	andeq	r0, r0, r2, lsl #1
+   4:	00000004 	andeq	r0, r0, r4
+			6: R_ARM_ABS32	.debug_abbrev
+   8:	01040000 	mrseq	r0, (UNDEF: 4)
+   Put ("Please enter first integer now followed by <CR> -> ");
+   c:	00000026 	andeq	r0, r0, r6, lsr #32
+			c: R_ARM_ABS32	.debug_str
+  10:	0000000d 	andeq	r0, r0, sp
+			11: R_ARM_ABS32	.debug_str
+  14:	0000a400 	andeq	sl, r0, r0, lsl #8
+			15: R_ARM_ABS32	.debug_str
+  18:	00000000 	andeq	r0, r0, r0
+			19: R_ARM_ABS32	.text
+  1c:	0000f400 	andeq	pc, r0, r0, lsl #8
+   Get (a);
+  20:	00000000 	andeq	r0, r0, r0
+			21: R_ARM_ABS32	.debug_line
+  24:	00110200 	andseq	r0, r1, r0, lsl #4
+			26: R_ARM_ABS32	.debug_str
+  28:	05010000 	streq	r0, [r1, #-0]
+   Put ("Please enter second integer now followed by <CR> -> ");
+  2c:	00000092 	muleq	r0, r2, r0
+			2c: R_ARM_ABS32	.debug_str
+  30:	00000000 	andeq	r0, r0, r0
+			30: R_ARM_ABS32	.text
+  34:	000000f4 	strdeq	r0, [r0], -r4
+  38:	007e9c01 	rsbseq	r9, lr, r1, lsl #24
+  3c:	61030000 	mrsvs	r0, (UNDEF: 3)
+   Get (b);
+  40:	7e060100 	adfvcs	f0, f6, f0
+  44:	02000000 	andeq	r0, r0, #0
+  48:	62036491 	andvs	r6, r3, #-1862270976	; 0x91000000
+   c := a + b;
+  4c:	7e060100 	adfvcs	f0, f6, f0
+  50:	02000000 	andeq	r0, r0, #0
+  54:	63036091 	movwvs	r6, #12433	; 0x3091
+  58:	7e060100 	adfvcs	f0, f6, f0
+  5c:	02000000 	andeq	r0, r0, #0
+  60:	0c045c91 	stceq	12, cr5, [r4], {145}	; 0x91
+			63: R_ARM_ABS32	.text
+  64:	14000000 	strne	r0, [r0], #-0
+  68:	04000000 	streq	r0, [r0], #-0
+  6c:	0000002c 	andeq	r0, r0, ip, lsr #32
+			6c: R_ARM_ABS32	.text
+  70:	00000014 	andeq	r0, r0, r4, lsl r0
+  74:	0000a804 	andeq	sl, r0, r4, lsl #16
+			75: R_ARM_ABS32	.text
+  78:	00001400 	andeq	r1, r0, r0, lsl #8
+  7c:	04050000 	streq	r0, [r5], #-0
+  80:	00001e05 	andeq	r1, r0, r5, lsl #28
+			81: R_ARM_ABS32	.debug_str
+	...
+
+Disassembly of section .debug_abbrev:
+
+00000000 <.debug_abbrev>:
+procedure Add_Int_w_IO is
+   0:	25011101 	strcs	r1, [r1, #-257]	; 0xfffffeff
+   4:	030b130e 	movweq	r1, #45838	; 0xb30e
+   8:	110e1b0e 	tstne	lr, lr, lsl #22
+   Put ("Please enter first integer now followed by <CR> -> ");
+   c:	10061201 	andne	r1, r6, r1, lsl #4
+  10:	02000017 	andeq	r0, r0, #23
+  14:	193f012e 	ldmdbne	pc!, {r1, r2, r3, r5, r8}	; <UNPREDICTABLE>
+  18:	0b3a0e03 	bleq	e8382c <_ada_add_int_w_io+0xe8382c>
+  1c:	0e6e0b3b 	vmoveq.8	d14[5], r0
+   Get (a);
+  20:	06120111 			; <UNDEFINED> instruction: 0x06120111
+  24:	42961840 	addsmi	r1, r6, #64, 16	; 0x400000
+  28:	00130119 	andseq	r0, r3, r9, lsl r1
+   Put ("Please enter second integer now followed by <CR> -> ");
+  2c:	00340300 	eorseq	r0, r4, r0, lsl #6
+  30:	0b3a0803 	bleq	e82044 <_ada_add_int_w_io+0xe82044>
+  34:	13490b3b 	movtne	r0, #39739	; 0x9b3b
+  38:	00001802 	andeq	r1, r0, r2, lsl #16
+  3c:	11000b04 	tstne	r0, r4, lsl #22
+   Get (b);
+  40:	00061201 	andeq	r1, r6, r1, lsl #4
+  44:	00240500 	eoreq	r0, r4, r0, lsl #10
+  48:	0b3e0b0b 	bleq	f82c7c <_ada_add_int_w_io+0xf82c7c>
+   c := a + b;
+  4c:	19340e03 	ldmdbne	r4!, {r0, r1, r9, sl, fp}
+  50:	Address 0x00000050 is out of bounds.
+
+
+Disassembly of section .debug_aranges:
+
+00000000 <.debug_aranges>:
+procedure Add_Int_w_IO is
+   0:	0000001c 	andeq	r0, r0, ip, lsl r0
+   4:	00000002 	andeq	r0, r0, r2
+			6: R_ARM_ABS32	.debug_info
+   8:	00040000 	andeq	r0, r4, r0
+	...
+			10: R_ARM_ABS32	.text
+   Put ("Please enter first integer now followed by <CR> -> ");
+  14:	000000f4 	strdeq	r0, [r0], -r4
+	...
+
+Disassembly of section .debug_line:
+
+00000000 <.debug_line>:
+procedure Add_Int_w_IO is
+   0:	00000060 	andeq	r0, r0, r0, rrx
+   4:	00270002 	eoreq	r0, r7, r2
+   8:	01020000 	mrseq	r0, (UNDEF: 2)
+   Put ("Please enter first integer now followed by <CR> -> ");
+   c:	000d0efb 	strdeq	r0, [sp], -fp
+  10:	01010101 	tsteq	r1, r1, lsl #2
+  14:	01000000 	mrseq	r0, (UNDEF: 0)
+  18:	00010000 	andeq	r0, r1, r0
+  1c:	5f646461 	svcpl	0x00646461
+   Get (a);
+  20:	5f746e69 	svcpl	0x00746e69
+  24:	6f695f77 	svcvs	0x00695f77
+  28:	6264612e 	rsbvs	r6, r4, #-2147483637	; 0x8000000b
+   Put ("Please enter second integer now followed by <CR> -> ");
+  2c:	00000000 	andeq	r0, r0, r0
+  30:	02050000 	andeq	r0, r5, #0
+  34:	00000000 	andeq	r0, r0, r0
+			34: R_ARM_ABS32	.text
+  38:	689f6b16 	ldmvs	pc, {r1, r2, r4, r8, r9, fp, sp, lr}	; <UNPREDICTABLE>
+  3c:	0200689f 	andeq	r6, r0, #10420224	; 0x9f0000
+   Get (b);
+  40:	08060104 	stmdaeq	r6, {r2, r8}
+  44:	040200e4 	streq	r0, [r2], #-228	; 0xffffff1c
+  48:	02006602 	andeq	r6, r0, #2097152	; 0x200000
+   c := a + b;
+  4c:	84060204 	strhi	r0, [r6], #-516	; 0xfffffdfc
+  50:	02040200 	andeq	r0, r4, #0, 4
+  54:	0402009f 	streq	r0, [r2], #-159	; 0xffffff61
+  58:	02004b02 	andeq	r4, r0, #2048	; 0x800
+  5c:	024c0204 	subeq	r0, ip, #4, 4	; 0x40000000
+  60:	01010014 	tsteq	r1, r4, lsl r0
+
+Disassembly of section .debug_str:
+
+00000000 <.debug_str>:
+procedure Add_Int_w_IO is
+   0:	5f646461 	svcpl	0x00646461
+   4:	5f746e69 	svcpl	0x00746e69
+   8:	6f695f77 	svcvs	0x00695f77
+   Put ("Please enter first integer now followed by <CR> -> ");
+   c:	6264612e 	rsbvs	r6, r4, #-2147483637	; 0x8000000b
+  10:	64646100 	strbtvs	r6, [r4], #-256	; 0xffffff00
+  14:	746e695f 	strbtvc	r6, [lr], #-2399	; 0xfffff6a1
+  18:	695f775f 	ldmdbvs	pc, {r0, r1, r2, r3, r4, r6, r8, r9, sl, ip, sp, lr}^	; <UNPREDICTABLE>
+  1c:	6e69006f 	cdpvs	0, 6, cr0, cr9, cr15, {3}
+   Get (a);
+  20:	65676574 	strbvs	r6, [r7, #-1396]!	; 0xfffffa8c
+  24:	4e470072 	mcrmi	0, 2, r0, cr7, cr2, {3}
+  28:	64412055 	strbvs	r2, [r1], #-85	; 0xffffffab
+   Put ("Please enter second integer now followed by <CR> -> ");
+  2c:	2e362061 	cdpcs	0, 3, cr2, cr6, cr1, {3}
+  30:	20302e33 	eorscs	r2, r0, r3, lsr lr
+  34:	37313032 			; <UNDEFINED> instruction: 0x37313032
+  38:	36313530 			; <UNDEFINED> instruction: 0x36313530
+  3c:	6e672d20 	cdpvs	13, 6, cr2, cr7, cr0, {1}
+   Get (b);
+  40:	7a657461 	bvc	195d1cc <_ada_add_int_w_io+0x195d1cc>
+  44:	6e672d20 	cdpvs	13, 6, cr2, cr7, cr0, {1}
+  48:	61657461 	cmnvs	r5, r1, ror #8
+   c := a + b;
+  4c:	20672d20 	rsbcs	r2, r7, r0, lsr #26
+  50:	616e672d 	cmnvs	lr, sp, lsr #14
+  54:	207a6574 	rsbscs	r6, sl, r4, ror r5
+  58:	72616d2d 	rsbvc	r6, r1, #2880	; 0xb40
+  5c:	613d6863 	teqvs	sp, r3, ror #16
+  60:	36766d72 			; <UNDEFINED> instruction: 0x36766d72
+  64:	666d2d20 	strbtvs	r2, [sp], -r0, lsr #26
+  68:	74616f6c 	strbtvc	r6, [r1], #-3948	; 0xfffff094
+  6c:	6962612d 	stmdbvs	r2!, {r0, r2, r3, r5, r8, sp, lr}^
+  70:	7261683d 	rsbvc	r6, r1, #3997696	; 0x3d0000
+  74:	6d2d2064 	stcvs	0, cr2, [sp, #-400]!	; 0xfffffe70
+  78:	3d757066 	ldclcc	0, cr7, [r5, #-408]!	; 0xfffffe68
+  7c:	20706676 	rsbscs	r6, r0, r6, ror r6
+  80:	6c746d2d 	ldclvs	13, cr6, [r4], #-180	; 0xffffff4c
+  84:	69642d73 	stmdbvs	r4!, {r0, r1, r4, r5, r6, r8, sl, fp, sp}^
+  88:	63656c61 	cmnvs	r5, #24832	; 0x6100
+  8c:	6e673d74 	mcrvs	13, 3, r3, cr7, cr4, {3}
+  90:	615f0075 	cmpvs	pc, r5, ror r0	; <UNPREDICTABLE>
+  94:	615f6164 	cmpvs	pc, r4, ror #2
+  98:	695f6464 	ldmdbvs	pc, {r2, r5, r6, sl, sp, lr}^	; <UNPREDICTABLE>
+  9c:	775f746e 	ldrbvc	r7, [pc, -lr, ror #8]
+  a0:	006f695f 	rsbeq	r6, pc, pc, asr r9	; <UNPREDICTABLE>
+  a4:	6d6f682f 	stclvs	8, cr6, [pc, #-188]!	; fffffff0 <_ada_add_int_w_io+0xfffffff0>
+   Put ("The sum is : ");
+  a8:	69702f65 	ldmdbvs	r0!, {r0, r2, r5, r6, r8, r9, sl, fp, sp}^
+  ac:	676e452f 	strbvs	r4, [lr, -pc, lsr #10]!
+  b0:	65656e69 	strbvs	r6, [r5, #-3689]!	; 0xfffff197
+  b4:	676e6972 			; <UNDEFINED> instruction: 0x676e6972
+  b8:	5449472f 	strbpl	r4, [r9], #-1839	; 0xfffff8d1
+   Put (c);
+  bc:	2f425548 	svccs	0x00425548
+  c0:	61736944 	cmnvs	r3, r4, asr #18
+   New_Line;
+  c4:	6d657373 	stclvs	3, cr7, [r5, #-460]!	; 0xfffffe34
+  c8:	6e696c62 	cdpvs	12, 6, cr6, cr9, cr2, {3}
+end Add_Int_w_IO;
+  cc:	69422d67 	stmdbvs	r2, {r0, r1, r2, r5, r6, r8, sl, fp, sp}^
+  d0:	6972616e 	ldmdbvs	r2!, {r1, r2, r3, r5, r6, r8, sp, lr}^
+  d4:	412f7365 			; <UNDEFINED> instruction: 0x412f7365
+  d8:	412f6164 			; <UNDEFINED> instruction: 0x412f6164
+  dc:	415f4d52 	cmpmi	pc, r2, asr sp	; <UNPREDICTABLE>
+  e0:	69686372 	stmdbvs	r8!, {r1, r4, r5, r6, r8, r9, sp, lr}^
+  e4:	74636574 	strbtvc	r6, [r3], #-1396	; 0xfffffa8c
+  e8:	2f657275 	svccs	0x00657275
+  ec:	334d5241 	movtcc	r5, #53825	; 0xd241
+  f0:	64412f32 	strbvs	r2, [r1], #-3890	; 0xfffff0ce
+  f4:	6e495f64 	cdpvs	15, 4, cr5, cr9, cr4, {3}
+  f8:	5f775f74 	svcpl	0x00775f74
+  fc:	572f4f49 	strpl	r4, [pc, -r9, asr #30]!
+ 100:	5f687469 	svcpl	0x00687469
+ 104:	75626544 	strbvc	r6, [r2, #-1348]!	; 0xfffffabc
+ 108:	6e495f67 	cdpvs	15, 4, cr5, cr9, cr7, {3}
+ 10c:	Address 0x0000010c is out of bounds.
+
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+procedure Add_Int_w_IO is
+   0:	43434700 	movtmi	r4, #14080	; 0x3700
+   4:	5228203a 	eorpl	r2, r8, #58	; 0x3a
+   8:	62707361 	rsbsvs	r7, r0, #-2080374783	; 0x84000001
+   Put ("Please enter first integer now followed by <CR> -> ");
+   c:	206e6169 	rsbcs	r6, lr, r9, ror #2
+  10:	2e332e36 	mrccs	14, 1, r2, cr3, cr6, {1}
+  14:	38312d30 	ldmdacc	r1!, {r4, r5, r8, sl, fp, sp}
+  18:	6970722b 	ldmdbvs	r0!, {r0, r1, r3, r5, r9, ip, sp, lr}^
+  1c:	65642b31 	strbvs	r2, [r4, #-2865]!	; 0xfffff4cf
+   Get (a);
+  20:	31753962 	cmncc	r5, r2, ror #18
+  24:	2e362029 	cdpcs	0, 3, cr2, cr6, cr9, {1}
+  28:	20302e33 	eorscs	r2, r0, r3, lsr lr
+   Put ("Please enter second integer now followed by <CR> -> ");
+  2c:	37313032 			; <UNDEFINED> instruction: 0x37313032
+  30:	36313530 			; <UNDEFINED> instruction: 0x36313530
+	...
+
+Disassembly of section .debug_frame:
+
+00000000 <.debug_frame>:
+procedure Add_Int_w_IO is
+   0:	0000000c 	andeq	r0, r0, ip
+   4:	ffffffff 			; <UNDEFINED> instruction: 0xffffffff
+   8:	7c020001 	stcvc	0, cr0, [r2], {1}
+   Put ("Please enter first integer now followed by <CR> -> ");
+   c:	000d0c0e 	andeq	r0, sp, lr, lsl #24
+  10:	00000024 	andeq	r0, r0, r4, lsr #32
+	...
+			14: R_ARM_ABS32	.debug_frame
+			18: R_ARM_ABS32	.text
+  1c:	000000f4 	strdeq	r0, [r0], -r4
+   Get (a);
+  20:	84180e42 	ldrhi	r0, [r8], #-3650	; 0xfffff1be
+  24:	86058506 	strhi	r8, [r5], -r6, lsl #10
+  28:	8b038704 	blhi	e1c40 <_ada_add_int_w_io+0xe1c40>
+   Put ("Please enter second integer now followed by <CR> -> ");
+  2c:	42018e02 	andmi	r8, r1, #2, 28
+  30:	02040b0c 	andeq	r0, r4, #12, 22	; 0x3000
+  34:	180d0c66 	stmdane	sp, {r1, r2, r5, r6, sl, fp}
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+procedure Add_Int_w_IO is
+   0:	00002c41 	andeq	r2, r0, r1, asr #24
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   Put ("Please enter first integer now followed by <CR> -> ");
+   c:	00000022 	andeq	r0, r0, r2, lsr #32
+  10:	06003605 	streq	r3, [r0], -r5, lsl #12
+  14:	09010806 	stmdbeq	r1, {r1, r2, fp}
+  18:	14020a01 	strne	r0, [r2], #-2561	; 0xfffff5ff
+  1c:	17011501 	strne	r1, [r1, -r1, lsl #10]
+   Get (a);
+  20:	19011803 	stmdbne	r1, {r0, r1, fp, ip}
+  24:	1c021a01 			; <UNDEFINED> instruction: 0x1c021a01
+  28:	22061e01 	andcs	r1, r6, #1, 28
+   Put ("Please enter second integer now followed by <CR> -> ");
+  2c:	Address 0x0000002c is out of bounds.
+
+Contents of the .debug_info section:
+
+  Compilation Unit @ offset 0x0:
+   Length:        0x82 (32-bit)
+   Version:       4
+   Abbrev Offset: 0x0
+   Pointer Size:  4
+ <0><b>: Abbrev Number: 1 (DW_TAG_compile_unit)
+    <c>   DW_AT_producer    : (indirect string, offset: 0x26): GNU Ada 6.3.0 20170516 -gnatez -gnatea -g -gnatez -march=armv6 -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu
+    <10>   DW_AT_language    : 13	(ADA 95)
+    <11>   DW_AT_name        : (indirect string, offset: 0x0): add_int_w_io.adb
+    <15>   DW_AT_comp_dir    : (indirect string, offset: 0xa4): /home/pi/Engineering/GITHUB/Disassembling-Binaries/Ada/ARM_Architecture/ARM32/Add_Int_w_IO/With_Debug_Info
+    <19>   DW_AT_low_pc      : 0x0
+    <1d>   DW_AT_high_pc     : 0xf4
+    <21>   DW_AT_stmt_list   : 0x0
+ <1><25>: Abbrev Number: 2 (DW_TAG_subprogram)
+    <26>   DW_AT_external    : 1
+    <26>   DW_AT_name        : (indirect string, offset: 0x11): add_int_w_io
+    <2a>   DW_AT_decl_file   : 1
+    <2b>   DW_AT_decl_line   : 5
+    <2c>   DW_AT_linkage_name: (indirect string, offset: 0x92): _ada_add_int_w_io
+    <30>   DW_AT_low_pc      : 0x0
+    <34>   DW_AT_high_pc     : 0xf4
+    <38>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
+    <3a>   DW_AT_GNU_all_tail_call_sites: 1
+    <3a>   DW_AT_sibling     : <0x7e>
+ <2><3e>: Abbrev Number: 3 (DW_TAG_variable)
+    <3f>   DW_AT_name        : a
+    <41>   DW_AT_decl_file   : 1
+    <42>   DW_AT_decl_line   : 6
+    <43>   DW_AT_type        : <0x7e>
+    <47>   DW_AT_location    : 2 byte block: 91 64 	(DW_OP_fbreg: -28)
+ <2><4a>: Abbrev Number: 3 (DW_TAG_variable)
+    <4b>   DW_AT_name        : b
+    <4d>   DW_AT_decl_file   : 1
+    <4e>   DW_AT_decl_line   : 6
+    <4f>   DW_AT_type        : <0x7e>
+    <53>   DW_AT_location    : 2 byte block: 91 60 	(DW_OP_fbreg: -32)
+ <2><56>: Abbrev Number: 3 (DW_TAG_variable)
+    <57>   DW_AT_name        : c
+    <59>   DW_AT_decl_file   : 1
+    <5a>   DW_AT_decl_line   : 6
+    <5b>   DW_AT_type        : <0x7e>
+    <5f>   DW_AT_location    : 2 byte block: 91 5c 	(DW_OP_fbreg: -36)
+ <2><62>: Abbrev Number: 4 (DW_TAG_lexical_block)
+    <63>   DW_AT_low_pc      : 0xc
+    <67>   DW_AT_high_pc     : 0x14
+ <2><6b>: Abbrev Number: 4 (DW_TAG_lexical_block)
+    <6c>   DW_AT_low_pc      : 0x2c
+    <70>   DW_AT_high_pc     : 0x14
+ <2><74>: Abbrev Number: 4 (DW_TAG_lexical_block)
+    <75>   DW_AT_low_pc      : 0xa8
+    <79>   DW_AT_high_pc     : 0x14
+ <2><7d>: Abbrev Number: 0
+ <1><7e>: Abbrev Number: 5 (DW_TAG_base_type)
+    <7f>   DW_AT_byte_size   : 4
+    <80>   DW_AT_encoding    : 5	(signed)
+    <81>   DW_AT_name        : (indirect string, offset: 0x1e): integer
+    <85>   DW_AT_artificial  : 1
+ <1><85>: Abbrev Number: 0
+
+Contents of the .debug_abbrev section:
+
+  Number TAG (0x0)
+   1      DW_TAG_compile_unit    [has children]
+    DW_AT_producer     DW_FORM_strp
+    DW_AT_language     DW_FORM_data1
+    DW_AT_name         DW_FORM_strp
+    DW_AT_comp_dir     DW_FORM_strp
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_data4
+    DW_AT_stmt_list    DW_FORM_sec_offset
+    DW_AT value: 0     DW_FORM value: 0
+   2      DW_TAG_subprogram    [has children]
+    DW_AT_external     DW_FORM_flag_present
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_linkage_name DW_FORM_strp
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_data4
+    DW_AT_frame_base   DW_FORM_exprloc
+    DW_AT_GNU_all_tail_call_sites DW_FORM_flag_present
+    DW_AT_sibling      DW_FORM_ref4
+    DW_AT value: 0     DW_FORM value: 0
+   3      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_location     DW_FORM_exprloc
+    DW_AT value: 0     DW_FORM value: 0
+   4      DW_TAG_lexical_block    [no children]
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_data4
+    DW_AT value: 0     DW_FORM value: 0
+   5      DW_TAG_base_type    [no children]
+    DW_AT_byte_size    DW_FORM_data1
+    DW_AT_encoding     DW_FORM_data1
+    DW_AT_name         DW_FORM_strp
+    DW_AT_artificial   DW_FORM_flag_present
+    DW_AT value: 0     DW_FORM value: 0
+
+Contents of the .debug_aranges section:
+
+  Length:                   28
+  Version:                  2
+  Offset into .debug_info:  0x0
+  Pointer Size:             4
+  Segment Size:             0
+
+    Address    Length
+    00000000 000000f4 
+    00000000 00000000 
+
+Raw dump of debug contents of section .debug_line:
+
+  Offset:                      0x0
+  Length:                      96
+  DWARF Version:               2
+  Prologue Length:             39
+  Minimum Instruction Length:  2
+  Initial value of 'is_stmt':  1
+  Line Base:                   -5
+  Line Range:                  14
+  Opcode Base:                 13
+
+ Opcodes:
+  Opcode 1 has 0 args
+  Opcode 2 has 1 args
+  Opcode 3 has 1 args
+  Opcode 4 has 1 args
+  Opcode 5 has 1 args
+  Opcode 6 has 0 args
+  Opcode 7 has 0 args
+  Opcode 8 has 0 args
+  Opcode 9 has 1 args
+  Opcode 10 has 0 args
+  Opcode 11 has 0 args
+  Opcode 12 has 1 args
+
+ The Directory Table is empty.
+
+ The File Name Table (offset 0x1c):
+  Entry	Dir	Time	Size	Name
+  1	0	0	0	add_int_w_io.adb
+
+ Line Number Statements:
+  [0x00000031]  Extended opcode 2: set Address to 0x0
+  [0x00000038]  Special opcode 9: advance Address by 0 to 0x0 and Line by 4 to 5
+  [0x00000039]  Special opcode 94: advance Address by 12 to 0xc and Line by 5 to 10
+  [0x0000003a]  Special opcode 146: advance Address by 20 to 0x20 and Line by 1 to 11
+  [0x0000003b]  Special opcode 91: advance Address by 12 to 0x2c and Line by 2 to 13
+  [0x0000003c]  Special opcode 146: advance Address by 20 to 0x40 and Line by 1 to 14
+  [0x0000003d]  Special opcode 91: advance Address by 12 to 0x4c and Line by 2 to 16
+  [0x0000003e]  Extended opcode 4: set Discriminator to 1
+  [0x00000042]  Set is_stmt to 0
+  [0x00000043]  Advance PC by constant 34 to 0x6e
+  [0x00000044]  Special opcode 215: advance Address by 30 to 0x8c and Line by 0 to 16
+  [0x00000045]  Extended opcode 4: set Discriminator to 2
+  [0x00000049]  Special opcode 89: advance Address by 12 to 0x98 and Line by 0 to 16
+  [0x0000004a]  Extended opcode 4: set Discriminator to 2
+  [0x0000004e]  Set is_stmt to 1
+  [0x0000004f]  Special opcode 119: advance Address by 16 to 0xa8 and Line by 2 to 18
+  [0x00000050]  Extended opcode 4: set Discriminator to 2
+  [0x00000054]  Special opcode 146: advance Address by 20 to 0xbc and Line by 1 to 19
+  [0x00000055]  Extended opcode 4: set Discriminator to 2
+  [0x00000059]  Special opcode 62: advance Address by 8 to 0xc4 and Line by 1 to 20
+  [0x0000005a]  Extended opcode 4: set Discriminator to 2
+  [0x0000005e]  Special opcode 63: advance Address by 8 to 0xcc and Line by 2 to 22
+  [0x0000005f]  Advance PC by 40 to 0xf4
+  [0x00000061]  Extended opcode 1: End of Sequence
+
+
+Contents of the .debug_str section:
+
+  0x00000000 6164645f 696e745f 775f696f 2e616462 add_int_w_io.adb
+  0x00000010 00616464 5f696e74 5f775f69 6f00696e .add_int_w_io.in
+  0x00000020 74656765 7200474e 55204164 6120362e teger.GNU Ada 6.
+  0x00000030 332e3020 32303137 30353136 202d676e 3.0 20170516 -gn
+  0x00000040 6174657a 202d676e 61746561 202d6720 atez -gnatea -g 
+  0x00000050 2d676e61 74657a20 2d6d6172 63683d61 -gnatez -march=a
+  0x00000060 726d7636 202d6d66 6c6f6174 2d616269 rmv6 -mfloat-abi
+  0x00000070 3d686172 64202d6d 6670753d 76667020 =hard -mfpu=vfp 
+  0x00000080 2d6d746c 732d6469 616c6563 743d676e -mtls-dialect=gn
+  0x00000090 75005f61 64615f61 64645f69 6e745f77 u._ada_add_int_w
+  0x000000a0 5f696f00 2f686f6d 652f7069 2f456e67 _io./home/pi/Eng
+  0x000000b0 696e6565 72696e67 2f474954 4855422f ineering/GITHUB/
+  0x000000c0 44697361 7373656d 626c696e 672d4269 Disassembling-Bi
+  0x000000d0 6e617269 65732f41 64612f41 524d5f41 naries/Ada/ARM_A
+  0x000000e0 72636869 74656374 7572652f 41524d33 rchitecture/ARM3
+  0x000000f0 322f4164 645f496e 745f775f 494f2f57 2/Add_Int_w_IO/W
+  0x00000100 6974685f 44656275 675f496e 666f00   ith_Debug_Info.
+
+Contents of the .debug_frame section:
+
+00000000 0000000c ffffffff CIE
+  Version:               1
+  Augmentation:          ""
+  Code alignment factor: 2
+  Data alignment factor: -4
+  Return address column: 14
+
+  DW_CFA_def_cfa: r13 ofs 0
+
+00000010 00000024 00000000 FDE cie=00000000 pc=00000000..000000f4
+  DW_CFA_advance_loc: 4 to 00000004
+  DW_CFA_def_cfa_offset: 24
+  DW_CFA_offset: r4 at cfa-24
+  DW_CFA_offset: r5 at cfa-20
+  DW_CFA_offset: r6 at cfa-16
+  DW_CFA_offset: r7 at cfa-12
+  DW_CFA_offset: r11 at cfa-8
+  DW_CFA_offset: r14 at cfa-4
+  DW_CFA_advance_loc: 4 to 00000008
+  DW_CFA_def_cfa: r11 ofs 4
+  DW_CFA_advance_loc1: 204 to 000000d4
+  DW_CFA_def_cfa: r13 ofs 24
+
