@@ -1,0 +1,9 @@
+In top directory:
+fpc -al mult_int.pp	// generates .o and .s files + exe file
+objdump -x -D -s -t mult_int.o > objdump_of_dot_o.txt
+objdump -x -D -s -t mult_int_Pascal_aarch64 > objdump_of_dot_exe.txt
+
+In With_Debug_Info directory:
+fpc -al -g mult_int.pp	// -g adds debug info
+objdump -x -D -S -s -g -t mult_int.o > objdump_of_dot_o.txt
+objdump -x -D -S -s -g -t mult_int_Pascal_aarch64_g > objdump_of_dot_exe.txt
