@@ -1,0 +1,9 @@
+In top directory:
+fpc -al add.pp	// generates .o and .s files + exe file
+objdump -x -D -s -t add.o > objdump_of_dot_o.txt
+objdump -x -D -s -t add_int_Pascal_aarch64 > objdump_of_dot_exe.txt
+
+In With_Debug_Info directory:
+fpc -al -g add.pp	// -g adds debug info
+objdump -x -D -S -s -g -t add.o > objdump_of_dot_o.txt
+objdump -x -D -S -s -g -t add_Pascal_aarch64_g > objdump_of_dot_exe.txt
