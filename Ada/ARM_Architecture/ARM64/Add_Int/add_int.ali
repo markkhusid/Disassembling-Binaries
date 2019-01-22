@@ -1,5 +1,7 @@
 V "GNAT Lib v7"
 M P W=b
+A -mlittle-endian
+A -mabi=lp64
 P ZX
 
 RN
@@ -9,7 +11,7 @@ U add_int%b		add_int.adb		1d6f8efa NE OO SU
 W gnat%s		gnat.ads		gnat.ali
 W gnat.io%s		g-io.adb		g-io.ali
 
-D add_int.adb		20190120004146 8262b448 add_int%b
+D add_int.adb		20190120184116 8262b448 add_int%b
 D gnat.ads		20140801083227 fd2ad2f1 gnat%s
 D g-io.ads		20110801150502 9f0d3ab2 gnat.io%s
 D system.ads		20170512155834 77e65b42 system%s
