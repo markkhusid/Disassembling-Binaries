@@ -1,4 +1,4 @@
-	.file	"add.c"
+	.file	"add_float.c"
 	.text
 	.globl	main
 	.type	main, @function
@@ -12,12 +12,13 @@ main:
 	.cfi_def_cfa_register 6
 	movl	%edi, -20(%rbp)
 	movq	%rsi, -32(%rbp)
-	movl	$1, -12(%rbp)
-	movl	$9, -8(%rbp)
-	movl	-12(%rbp), %edx
-	movl	-8(%rbp), %eax
-	addl	%edx, %eax
-	movl	%eax, -4(%rbp)
+	movss	.LC0(%rip), %xmm0
+	movss	%xmm0, -12(%rbp)
+	movss	.LC1(%rip), %xmm0
+	movss	%xmm0, -8(%rbp)
+	movss	-12(%rbp), %xmm0
+	addss	-8(%rbp), %xmm0
+	movss	%xmm0, -4(%rbp)
 	movl	$0, %eax
 	popq	%rbp
 	.cfi_def_cfa 7, 8
@@ -25,5 +26,12 @@ main:
 	.cfi_endproc
 .LFE0:
 	.size	main, .-main
-	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.11) 5.4.0 20160609"
+	.section	.rodata
+	.align 4
+.LC0:
+	.long	1074580685
+	.align 4
+.LC1:
+	.long	1079194419
+	.ident	"GCC: (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0"
 	.section	.note.GNU-stack,"",@progbits
