@@ -1,6 +1,65 @@
 
-add.o:     file format elf32-littlearm
+add_int.o:     file format elf32-littlearm
+add_int.o
+architecture: arm, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+private flags = 5000000: [Version5 EABI]
 
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000080  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  00000000  00000000  000000b4  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  000000b4  2**0
+                  ALLOC
+  3 .rodata       00000024  00000000  00000000  000000b4  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .comment      00000035  00000000  00000000  000000d8  2**0
+                  CONTENTS, READONLY
+  5 .note.GNU-stack 00000000  00000000  00000000  0000010d  2**0
+                  CONTENTS, READONLY
+  6 .ARM.attributes 0000002d  00000000  00000000  0000010d  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    df *ABS*	00000000 add.f08
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+00000000 l     F .text	0000003c MAIN__
+00000000 l     O .rodata	00000024 options.0.4702
+00000000 l    d  .rodata	00000000 .rodata
+00000000 l    d  .note.GNU-stack	00000000 .note.GNU-stack
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+0000003c g     F .text	00000044 main
+00000000         *UND*	00000000 _gfortran_set_args
+00000000         *UND*	00000000 _gfortran_set_options
+
+
+Contents of section .text:
+ 0000 04b02de5 00b08de2 14d04de2 0130a0e3  ..-.......M..0..
+ 0010 08300be5 0930a0e3 0c300be5 08201be5  .0...0...0... ..
+ 0020 0c301be5 033082e0 10300be5 0000a0e1  .0...0...0......
+ 0030 00d08be2 04b09de4 1eff2fe1 00482de9  ........../..H-.
+ 0040 04b08de2 08d04de2 08000be5 0c100be5  ......M.........
+ 0050 0c101be5 08001be5 feffffeb 18109fe5  ................
+ 0060 0900a0e3 feffffeb e4ffffeb 0030a0e3  .............0..
+ 0070 0300a0e1 04d04be2 0088bde8 00000000  ......K.........
+Contents of section .rodata:
+ 0000 44000000 ff030000 00000000 00000000  D...............
+ 0010 01000000 01000000 00000000 00000000  ................
+ 0020 1f000000                             ....            
+Contents of section .comment:
+ 0000 00474343 3a202852 61737062 69616e20  .GCC: (Raspbian 
+ 0010 362e332e 302d3138 2b727069 312b6465  6.3.0-18+rpi1+de
+ 0020 62397531 2920362e 332e3020 32303137  b9u1) 6.3.0 2017
+ 0030 30353136 00                          0516.           
+Contents of section .ARM.attributes:
+ 0000 412c0000 00616561 62690001 22000000  A,...aeabi.."...
+ 0010 05360006 06080109 010a0214 01150117  .6..............
+ 0020 03180119 011a021c 011e0622 01        ...........".   
 
 Disassembly of section .text:
 
@@ -30,12 +89,61 @@ Disassembly of section .text:
   50:	e51b100c 	ldr	r1, [fp, #-12]
   54:	e51b0008 	ldr	r0, [fp, #-8]
   58:	ebfffffe 	bl	0 <_gfortran_set_args>
+			58: R_ARM_CALL	_gfortran_set_args
   5c:	e59f1018 	ldr	r1, [pc, #24]	; 7c <main+0x40>
   60:	e3a00009 	mov	r0, #9
   64:	ebfffffe 	bl	0 <_gfortran_set_options>
+			64: R_ARM_CALL	_gfortran_set_options
   68:	ebffffe4 	bl	0 <MAIN__>
   6c:	e3a03000 	mov	r3, #0
   70:	e1a00003 	mov	r0, r3
   74:	e24bd004 	sub	sp, fp, #4
   78:	e8bd8800 	pop	{fp, pc}
-  7c:	00000000 	.word	0x00000000
+  7c:	00000000 	andeq	r0, r0, r0
+			7c: R_ARM_ABS32	.rodata
+
+Disassembly of section .rodata:
+
+00000000 <options.0.4702>:
+   0:	00000044 	andeq	r0, r0, r4, asr #32
+   4:	000003ff 	strdeq	r0, [r0], -pc	; <UNPREDICTABLE>
+	...
+  10:	00000001 	andeq	r0, r0, r1
+  14:	00000001 	andeq	r0, r0, r1
+	...
+  20:	0000001f 	andeq	r0, r0, pc, lsl r0
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	43434700 	movtmi	r4, #14080	; 0x3700
+   4:	5228203a 	eorpl	r2, r8, #58	; 0x3a
+   8:	62707361 	rsbsvs	r7, r0, #-2080374783	; 0x84000001
+   c:	206e6169 	rsbcs	r6, lr, r9, ror #2
+  10:	2e332e36 	mrccs	14, 1, r2, cr3, cr6, {1}
+  14:	38312d30 	ldmdacc	r1!, {r4, r5, r8, sl, fp, sp}
+  18:	6970722b 	ldmdbvs	r0!, {r0, r1, r3, r5, r9, ip, sp, lr}^
+  1c:	65642b31 	strbvs	r2, [r4, #-2865]!	; 0xfffff4cf
+  20:	31753962 	cmncc	r5, r2, ror #18
+  24:	2e362029 	cdpcs	0, 3, cr2, cr6, cr9, {1}
+  28:	20302e33 	eorscs	r2, r0, r3, lsr lr
+  2c:	37313032 			; <UNDEFINED> instruction: 0x37313032
+  30:	36313530 			; <UNDEFINED> instruction: 0x36313530
+	...
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002c41 	andeq	r2, r0, r1, asr #24
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	00000022 	andeq	r0, r0, r2, lsr #32
+  10:	06003605 	streq	r3, [r0], -r5, lsl #12
+  14:	09010806 	stmdbeq	r1, {r1, r2, fp}
+  18:	14020a01 	strne	r0, [r2], #-2561	; 0xfffff5ff
+  1c:	17011501 	strne	r1, [r1, -r1, lsl #10]
+  20:	19011803 	stmdbne	r1, {r0, r1, fp, ip}
+  24:	1c021a01 			; <UNDEFINED> instruction: 0x1c021a01
+  28:	22061e01 	andcs	r1, r6, #1, 28
+  2c:	Address 0x0000002c is out of bounds.
+

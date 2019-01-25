@@ -1,6 +1,6 @@
 
-add_int_Fortran_ARM32:     file format elf32-littlearm
-add_int_Fortran_ARM32
+add_int_Fortran_ARM32_ggdb3:     file format elf32-littlearm
+add_int_Fortran_ARM32_ggdb3
 architecture: arm, flags 0x00000112:
 EXEC_P, HAS_SYMS, D_PAGED
 start address 0x00010438
@@ -120,13 +120,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  28 .debug_abbrev 00000084  00000000  00000000  00001161  2**0
                   CONTENTS, READONLY, DEBUGGING
- 29 .debug_line   0000003b  00000000  00000000  000011e5  2**0
+ 29 .debug_line   0000003f  00000000  00000000  000011e5  2**0
                   CONTENTS, READONLY, DEBUGGING
- 30 .debug_frame  00000050  00000000  00000000  00001220  2**2
+ 30 .debug_frame  00000050  00000000  00000000  00001224  2**2
                   CONTENTS, READONLY, DEBUGGING
- 31 .debug_str    00000130  00000000  00000000  00001270  2**0
+ 31 .debug_str    0000014d  00000000  00000000  00001274  2**0
                   CONTENTS, READONLY, DEBUGGING
- 32 .debug_macro  0000000c  00000000  00000000  000013a0  2**0
+ 32 .debug_macro  0000000c  00000000  00000000  000013c1  2**0
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 00010154 l    d  .interp	00000000              .interp
@@ -175,7 +175,7 @@ SYMBOL TABLE:
 00020ef8 l     O .fini_array	00000000              __do_global_dtors_aux_fini_array_entry
 00010528 l     F .text	00000000              frame_dummy
 00020ef4 l     O .init_array	00000000              __frame_dummy_init_array_entry
-00000000 l    df *ABS*	00000000              add.f08
+00000000 l    df *ABS*	00000000              add_int.f08
 00010560 l     F .text	0000003c              MAIN__
 00010650 l     O .rodata	00000024              options.0.4702
 00000000 l    df *ABS*	00000000              elf-init.oS
@@ -223,8 +223,8 @@ Contents of section .note.ABI-tag:
  10180 00000000 03000000 02000000 00000000  ................
 Contents of section .note.gnu.build-id:
  10190 04000000 14000000 03000000 474e5500  ............GNU.
- 101a0 f5450339 d75d57e5 e8d7e53f 6a3fd9c7  .E.9.]W....?j?..
- 101b0 ae48a641                             .H.A            
+ 101a0 fe074ae9 c305d1da ef3c9ae1 377b82e2  ..J......<..7{..
+ 101b0 8bf51a46                             ...F            
 Contents of section .gnu.hash:
  101b4 03000000 05000000 01000000 05000000  ................
  101c4 004c0262 05000000 07000000 08000000  .L.b............
@@ -363,14 +363,14 @@ Contents of section .debug_aranges:
  0000 1c000000 02000000 00000400 00000000  ................
  0010 60050100 80000000 00000000 00000000  `...............
 Contents of section .debug_info:
- 0000 ae000000 04000000 00000401 39000000  ............9...
- 0010 0e022c00 0000de00 00006005 01008000  ..,.......`.....
- 0020 00000000 00000000 00000234 00000001  ...........4....
+ 0000 ae000000 04000000 00000401 a3000000  ................
+ 0010 0e020000 00002300 00006005 01008000  ......#...`.....
+ 0020 00000000 00000000 0000029e 00000001  ................
  0030 0c610000 009c0501 00440000 00019c61  .a.......D.....a
- 0040 00000003 17000000 010c6800 00000291  ..........h.....
- 0050 74030000 0000010c 6d000000 03917006  t.......m.....p.
- 0060 00040405 1c000000 05610000 00060473  .........a.....s
- 0070 00000004 01080500 00000761 64640001  ...........add..
+ 0040 00000003 1e000000 010c6800 00000291  ..........h.....
+ 0050 74034801 0000010c 6d000000 03917006  t.H.....m.....p.
+ 0060 00040405 8e000000 05610000 00060473  .........a.....s
+ 0070 00000004 01080c00 00000761 64640001  ...........add..
  0080 01026005 01003c00 0000019c 08610001  ..`...<......a..
  0090 05610000 00029174 08620001 05610000  .a.....t.b...a..
  00a0 00029170 08630001 05610000 0002916c  ...p.c...a.....l
@@ -386,10 +386,10 @@ Contents of section .debug_abbrev:
  0070 42190000 08340003 083a0b3b 0b491302  B....4...:.;.I..
  0080 18000000                             ....            
 Contents of section .debug_line:
- 0000 37000000 02001e00 00000201 fb0e0d00  7...............
- 0010 01010101 00000001 00000100 6164642e  ............add.
- 0020 66303800 00000000 00050260 05010001  f08........`....
- 0030 6c4b4c84 829e0218 000101             lKL........     
+ 0000 3b000000 02002200 00000201 fb0e0d00  ;.....".........
+ 0010 01010101 00000001 00000100 6164645f  ............add_
+ 0020 696e742e 66303800 00000000 00050260  int.f08........`
+ 0030 05010001 6c4b4c84 829e0218 000101    ....lKL........ 
 Contents of section .debug_frame:
  0000 0c000000 ffffffff 0100027c 0e0c0d00  ...........|....
  0010 1c000000 00000000 60050100 3c000000  ........`...<...
@@ -397,25 +397,27 @@ Contents of section .debug_frame:
  0030 1c000000 00000000 9c050100 44000000  ............D...
  0040 420e088b 028e0142 0c0b045a 0c0d0800  B......B...Z....
 Contents of section .debug_str:
- 0000 61726776 00636861 72616374 6572286b  argv.character(k
- 0010 696e643d 31290061 72676300 696e7465  ind=1).argc.inte
- 0020 67657228 6b696e64 3d342900 6164642e  ger(kind=4).add.
- 0030 66303800 6d61696e 00474e55 20466f72  f08.main.GNU For
- 0040 7472616e 32303038 20362e33 2e302032  tran2008 6.3.0 2
- 0050 30313730 35313620 2d6d6172 63683d61  0170516 -march=a
- 0060 726d7636 202d6d66 6c6f6174 2d616269  rmv6 -mfloat-abi
- 0070 3d686172 64202d6d 6670753d 76667020  =hard -mfpu=vfp 
- 0080 2d6d746c 732d6469 616c6563 743d676e  -mtls-dialect=gn
- 0090 75202d67 67646233 202d6669 6e747269  u -ggdb3 -fintri
- 00a0 6e736963 2d6d6f64 756c6573 2d706174  nsic-modules-pat
- 00b0 68202f75 73722f6c 69622f67 63632f61  h /usr/lib/gcc/a
- 00c0 726d2d6c 696e7578 2d676e75 65616269  rm-linux-gnueabi
- 00d0 68662f36 2f66696e 636c7564 65002f68  hf/6/finclude./h
- 00e0 6f6d652f 70692f45 6e67696e 65657269  ome/pi/Engineeri
- 00f0 6e672f47 49544855 422f4469 73617373  ng/GITHUB/Disass
- 0100 656d626c 696e672d 42696e61 72696573  embling-Binaries
- 0110 2f466f72 7472616e 2f41524d 5f617263  /Fortran/ARM_arc
- 0120 68697465 63747572 652f4152 4d333200  hitecture/ARM32.
+ 0000 6164645f 696e742e 66303800 63686172  add_int.f08.char
+ 0010 61637465 72286b69 6e643d31 29006172  acter(kind=1).ar
+ 0020 6763002f 686f6d65 2f70692f 456e6769  gc./home/pi/Engi
+ 0030 6e656572 696e672f 47495448 55422f44  neering/GITHUB/D
+ 0040 69736173 73656d62 6c696e67 2d42696e  isassembling-Bin
+ 0050 61726965 732f466f 72747261 6e2f4152  aries/Fortran/AR
+ 0060 4d5f6172 63686974 65637475 72652f41  M_architecture/A
+ 0070 524d3332 2f416464 5f496e74 732f5769  RM32/Add_Ints/Wi
+ 0080 74685f44 65627567 5f496e66 6f00696e  th_Debug_Info.in
+ 0090 74656765 72286b69 6e643d34 29006d61  teger(kind=4).ma
+ 00a0 696e0047 4e552046 6f727472 616e3230  in.GNU Fortran20
+ 00b0 30382036 2e332e30 20323031 37303531  08 6.3.0 2017051
+ 00c0 36202d6d 61726368 3d61726d 7636202d  6 -march=armv6 -
+ 00d0 6d666c6f 61742d61 62693d68 61726420  mfloat-abi=hard 
+ 00e0 2d6d6670 753d7666 70202d6d 746c732d  -mfpu=vfp -mtls-
+ 00f0 6469616c 6563743d 676e7520 2d676764  dialect=gnu -ggd
+ 0100 6233202d 66696e74 72696e73 69632d6d  b3 -fintrinsic-m
+ 0110 6f64756c 65732d70 61746820 2f757372  odules-path /usr
+ 0120 2f6c6962 2f676363 2f61726d 2d6c696e  /lib/gcc/arm-lin
+ 0130 75782d67 6e756561 62696866 2f362f66  ux-gnueabihf/6/f
+ 0140 696e636c 75646500 61726776 00        include.argv.   
 Contents of section .debug_macro:
  0000 04000200 00000003 00010400           ............    
 
@@ -449,11 +451,11 @@ Disassembly of section .note.gnu.build-id:
    10194:	00000014 	andeq	r0, r0, r4, lsl r0
    10198:	00000003 	andeq	r0, r0, r3
    1019c:	00554e47 	subseq	r4, r5, r7, asr #28
-   101a0:	390345f5 	stmdbcc	r3, {r0, r2, r4, r5, r6, r7, r8, sl, lr}
-   101a4:	e5575dd7 	ldrb	r5, [r7, #-3543]	; 0xfffff229
-   101a8:	3fe5d7e8 	svccc	0x00e5d7e8
-   101ac:	c7d93f6a 	ldrbgt	r3, [r9, sl, ror #30]
-   101b0:	41a648ae 			; <UNDEFINED> instruction: 0x41a648ae
+   101a0:	e94a07fe 	stmdb	sl, {r1, r2, r3, r4, r5, r6, r7, r8, r9, sl}^
+   101a4:	dad105c3 	ble	ff4518b8 <__bss_end__+0xff430888>
+   101a8:	e19a3cef 	orrs	r3, sl, pc, ror #25
+   101ac:	e2827b37 	add	r7, r2, #56320	; 0xdc00
+   101b0:	461af58b 	ldrmi	pc, [sl], -fp, lsl #11
 
 Disassembly of section .gnu.hash:
 
@@ -741,17 +743,29 @@ Disassembly of section .text:
    1055c:	00000000 	andeq	r0, r0, r0
 
 00010560 <MAIN__>:
+program add
    10560:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
    10564:	e28db000 	add	fp, sp, #0
    10568:	e24dd014 	sub	sp, sp, #20
+
+	implicit none
+
+	integer		:: a, b, c
+
+	a = 1
    1056c:	e3a03001 	mov	r3, #1
    10570:	e50b3008 	str	r3, [fp, #-8]
+	b = 9
    10574:	e3a03009 	mov	r3, #9
    10578:	e50b300c 	str	r3, [fp, #-12]
+
+	c = a + b
    1057c:	e51b2008 	ldr	r2, [fp, #-8]
    10580:	e51b300c 	ldr	r3, [fp, #-12]
    10584:	e0823003 	add	r3, r2, r3
    10588:	e50b3010 	str	r3, [fp, #-16]
+
+end program add
    1058c:	e1a00000 	nop			; (mov r0, r0)
    10590:	e28bd000 	add	sp, fp, #0
    10594:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
@@ -984,32 +998,32 @@ Disassembly of section .debug_info:
    0:	000000ae 	andeq	r0, r0, lr, lsr #1
    4:	00000004 	andeq	r0, r0, r4
    8:	01040000 	mrseq	r0, (UNDEF: 4)
-   c:	00000039 	andeq	r0, r0, r9, lsr r0
-  10:	002c020e 	eoreq	r0, ip, lr, lsl #4
-  14:	00de0000 	sbcseq	r0, lr, r0
+   c:	000000a3 	andeq	r0, r0, r3, lsr #1
+  10:	0000020e 	andeq	r0, r0, lr, lsl #4
+  14:	00230000 	eoreq	r0, r3, r0
   18:	05600000 	strbeq	r0, [r0, #-0]!
   1c:	00800001 	addeq	r0, r0, r1
 	...
-  28:	34020000 	strcc	r0, [r2], #-0
+  28:	9e020000 	cdpls	0, 0, cr0, cr2, cr0, {0}
   2c:	01000000 	mrseq	r0, (UNDEF: 0)
   30:	0000610c 	andeq	r6, r0, ip, lsl #2
   34:	01059c00 	tsteq	r5, r0, lsl #24
   38:	00004400 	andeq	r4, r0, r0, lsl #8
   3c:	619c0100 	orrsvs	r0, ip, r0, lsl #2
   40:	03000000 	movweq	r0, #0
-  44:	00000017 	andeq	r0, r0, r7, lsl r0
+  44:	0000001e 	andeq	r0, r0, lr, lsl r0
   48:	00680c01 	rsbeq	r0, r8, r1, lsl #24
   4c:	91020000 	mrsls	r0, (UNDEF: 2)
-  50:	00000374 	andeq	r0, r0, r4, ror r3
+  50:	01480374 	hvceq	32820	; 0x8034
   54:	0c010000 	stceq	0, cr0, [r1], {-0}
   58:	0000006d 	andeq	r0, r0, sp, rrx
   5c:	06709103 	ldrbteq	r9, [r0], -r3, lsl #2
   60:	05040400 	streq	r0, [r4, #-1024]	; 0xfffffc00
-  64:	0000001c 	andeq	r0, r0, ip, lsl r0
+  64:	0000008e 	andeq	r0, r0, lr, lsl #1
   68:	00006105 	andeq	r6, r0, r5, lsl #2
   6c:	73040600 	movwvc	r0, #17920	; 0x4600
   70:	04000000 	streq	r0, [r0], #-0
-  74:	00050801 	andeq	r0, r5, r1, lsl #16
+  74:	000c0801 	andeq	r0, ip, r1, lsl #16
   78:	61070000 	mrsvs	r0, (UNDEF: 7)
   7c:	01006464 	tsteq	r0, r4, ror #8
   80:	05600201 	strbeq	r0, [r0, #-513]!	; 0xfffffdff
@@ -1066,21 +1080,22 @@ Disassembly of section .debug_abbrev:
 Disassembly of section .debug_line:
 
 00000000 <.debug_line>:
-   0:	00000037 	andeq	r0, r0, r7, lsr r0
-   4:	001e0002 	andseq	r0, lr, r2
+   0:	0000003b 	andeq	r0, r0, fp, lsr r0
+   4:	00220002 	eoreq	r0, r2, r2
    8:	01020000 	mrseq	r0, (UNDEF: 2)
    c:	000d0efb 	strdeq	r0, [sp], -fp
   10:	01010101 	tsteq	r1, r1, lsl #2
   14:	01000000 	mrseq	r0, (UNDEF: 0)
   18:	00010000 	andeq	r0, r1, r0
-  1c:	2e646461 	cdpcs	4, 6, cr6, cr4, cr1, {3}
-  20:	00383066 	eorseq	r3, r8, r6, rrx
-  24:	00000000 	andeq	r0, r0, r0
-  28:	60020500 	andvs	r0, r2, r0, lsl #10
-  2c:	01000105 	tsteq	r0, r5, lsl #2
-  30:	844c4b6c 	strbhi	r4, [ip], #-2924	; 0xfffff494
-  34:	18029e82 	stmdane	r2, {r1, r7, r9, sl, fp, ip, pc}
-  38:	Address 0x00000038 is out of bounds.
+  1c:	5f646461 	svcpl	0x00646461
+  20:	2e746e69 	cdpcs	14, 7, cr6, cr4, cr9, {3}
+  24:	00383066 	eorseq	r3, r8, r6, rrx
+  28:	00000000 	andeq	r0, r0, r0
+  2c:	60020500 	andvs	r0, r2, r0, lsl #10
+  30:	01000105 	tsteq	r0, r5, lsl #2
+  34:	844c4b6c 	strbhi	r4, [ip], #-2924	; 0xfffff494
+  38:	18029e82 	stmdane	r2, {r1, r7, r9, sl, fp, ip, pc}
+  3c:	Address 0x0000003c is out of bounds.
 
 
 Disassembly of section .debug_frame:
@@ -1110,82 +1125,90 @@ Disassembly of section .debug_frame:
 Disassembly of section .debug_str:
 
 00000000 <.debug_str>:
-   0:	76677261 	strbtvc	r7, [r7], -r1, ror #4
-   4:	61686300 	cmnvs	r8, r0, lsl #6
-   8:	74636172 	strbtvc	r6, [r3], #-370	; 0xfffffe8e
-   c:	6b287265 	blvs	a1c9a8 <__bss_end__+0x9fb978>
-  10:	3d646e69 	stclcc	14, cr6, [r4, #-420]!	; 0xfffffe5c
-  14:	61002931 	tstvs	r0, r1, lsr r9
-  18:	00636772 	rsbeq	r6, r3, r2, ror r7
-  1c:	65746e69 	ldrbvs	r6, [r4, #-3689]!	; 0xfffff197
-  20:	28726567 	ldmdacs	r2!, {r0, r1, r2, r5, r6, r8, sl, sp, lr}^
-  24:	646e696b 	strbtvs	r6, [lr], #-2411	; 0xfffff695
-  28:	0029343d 	eoreq	r3, r9, sp, lsr r4
-  2c:	2e646461 	cdpcs	4, 6, cr6, cr4, cr1, {3}
-  30:	00383066 	eorseq	r3, r8, r6, rrx
-  34:	6e69616d 	powvsez	f6, f1, #5.0
-  38:	554e4700 	strbpl	r4, [lr, #-1792]	; 0xfffff900
-  3c:	726f4620 	rsbvc	r4, pc, #32, 12	; 0x2000000
-  40:	6e617274 	mcrvs	2, 3, r7, cr1, cr4, {3}
-  44:	38303032 	ldmdacc	r0!, {r1, r4, r5, ip, sp}
-  48:	332e3620 			; <UNDEFINED> instruction: 0x332e3620
-  4c:	3220302e 	eorcc	r3, r0, #46	; 0x2e
-  50:	30373130 	eorscc	r3, r7, r0, lsr r1
-  54:	20363135 	eorscs	r3, r6, r5, lsr r1
-  58:	72616d2d 	rsbvc	r6, r1, #2880	; 0xb40
-  5c:	613d6863 	teqvs	sp, r3, ror #16
-  60:	36766d72 			; <UNDEFINED> instruction: 0x36766d72
-  64:	666d2d20 	strbtvs	r2, [sp], -r0, lsr #26
-  68:	74616f6c 	strbtvc	r6, [r1], #-3948	; 0xfffff094
-  6c:	6962612d 	stmdbvs	r2!, {r0, r2, r3, r5, r8, sp, lr}^
-  70:	7261683d 	rsbvc	r6, r1, #3997696	; 0x3d0000
-  74:	6d2d2064 	stcvs	0, cr2, [sp, #-400]!	; 0xfffffe70
-  78:	3d757066 	ldclcc	0, cr7, [r5, #-408]!	; 0xfffffe68
-  7c:	20706676 	rsbscs	r6, r0, r6, ror r6
-  80:	6c746d2d 	ldclvs	13, cr6, [r4], #-180	; 0xffffff4c
-  84:	69642d73 	stmdbvs	r4!, {r0, r1, r4, r5, r6, r8, sl, fp, sp}^
-  88:	63656c61 	cmnvs	r5, #24832	; 0x6100
-  8c:	6e673d74 	mcrvs	13, 3, r3, cr7, cr4, {3}
-  90:	672d2075 			; <UNDEFINED> instruction: 0x672d2075
-  94:	33626467 	cmncc	r2, #1728053248	; 0x67000000
-  98:	69662d20 	stmdbvs	r6!, {r5, r8, sl, fp, sp}^
-  9c:	6972746e 	ldmdbvs	r2!, {r1, r2, r3, r5, r6, sl, ip, sp, lr}^
-  a0:	6369736e 	cmnvs	r9, #-1207959551	; 0xb8000001
-  a4:	646f6d2d 	strbtvs	r6, [pc], #-3373	; ac <_init-0x10330>
-  a8:	73656c75 	cmnvc	r5, #29952	; 0x7500
-  ac:	7461702d 	strbtvc	r7, [r1], #-45	; 0xffffffd3
-  b0:	752f2068 	strvc	r2, [pc, #-104]!	; 50 <_init-0x1038c>
-  b4:	6c2f7273 	sfmvs	f7, 4, [pc], #-460	; fffffef0 <__bss_end__+0xfffdeec0>
-  b8:	672f6269 	strvs	r6, [pc, -r9, ror #4]!
-  bc:	612f6363 			; <UNDEFINED> instruction: 0x612f6363
-  c0:	6c2d6d72 	stcvs	13, cr6, [sp], #-456	; 0xfffffe38
-  c4:	78756e69 	ldmdavc	r5!, {r0, r3, r5, r6, r9, sl, fp, sp, lr}^
-  c8:	756e672d 	strbvc	r6, [lr, #-1837]!	; 0xfffff8d3
-  cc:	69626165 	stmdbvs	r2!, {r0, r2, r5, r6, r8, sp, lr}^
-  d0:	362f6668 	strtcc	r6, [pc], -r8, ror #12
-  d4:	6e69662f 	cdpvs	6, 6, cr6, cr9, cr15, {1}
-  d8:	64756c63 	ldrbtvs	r6, [r5], #-3171	; 0xfffff39d
-  dc:	682f0065 	stmdavs	pc!, {r0, r2, r5, r6}	; <UNPREDICTABLE>
-  e0:	2f656d6f 	svccs	0x00656d6f
-  e4:	452f6970 	strmi	r6, [pc, #-2416]!	; fffff77c <__bss_end__+0xfffde74c>
-  e8:	6e69676e 	cdpvs	7, 6, cr6, cr9, cr14, {3}
-  ec:	69726565 	ldmdbvs	r2!, {r0, r2, r5, r6, r8, sl, sp, lr}^
-  f0:	472f676e 	strmi	r6, [pc, -lr, ror #14]!
-  f4:	55485449 	strbpl	r5, [r8, #-1097]	; 0xfffffbb7
-  f8:	69442f42 	stmdbvs	r4, {r1, r6, r8, r9, sl, fp, sp}^
-  fc:	73736173 	cmnvc	r3, #-1073741796	; 0xc000001c
- 100:	6c626d65 	stclvs	13, cr6, [r2], #-404	; 0xfffffe6c
- 104:	2d676e69 	stclcs	14, cr6, [r7, #-420]!	; 0xfffffe5c
- 108:	616e6942 	cmnvs	lr, r2, asr #18
- 10c:	73656972 	cmnvc	r5, #1867776	; 0x1c8000
- 110:	726f462f 	rsbvc	r4, pc, #49283072	; 0x2f00000
- 114:	6e617274 	mcrvs	2, 3, r7, cr1, cr4, {3}
- 118:	4d52412f 	ldfmie	f4, [r2, #-188]	; 0xffffff44
- 11c:	6372615f 	cmnvs	r2, #-1073741801	; 0xc0000017
- 120:	65746968 	ldrbvs	r6, [r4, #-2408]!	; 0xfffff698
- 124:	72757463 	rsbsvc	r7, r5, #1660944384	; 0x63000000
- 128:	52412f65 	subpl	r2, r1, #404	; 0x194
- 12c:	0032334d 	eorseq	r3, r2, sp, asr #6
+   0:	5f646461 	svcpl	0x00646461
+   4:	2e746e69 	cdpcs	14, 7, cr6, cr4, cr9, {3}
+   8:	00383066 	eorseq	r3, r8, r6, rrx
+   c:	72616863 	rsbvc	r6, r1, #6488064	; 0x630000
+  10:	65746361 	ldrbvs	r6, [r4, #-865]!	; 0xfffffc9f
+  14:	696b2872 	stmdbvs	fp!, {r1, r4, r5, r6, fp, sp}^
+  18:	313d646e 	teqcc	sp, lr, ror #8
+  1c:	72610029 	rsbvc	r0, r1, #41	; 0x29
+  20:	2f006367 	svccs	0x00006367
+  24:	656d6f68 	strbvs	r6, [sp, #-3944]!	; 0xfffff098
+  28:	2f69702f 	svccs	0x0069702f
+  2c:	69676e45 	stmdbvs	r7!, {r0, r2, r6, r9, sl, fp, sp, lr}^
+  30:	7265656e 	rsbvc	r6, r5, #461373440	; 0x1b800000
+  34:	2f676e69 	svccs	0x00676e69
+  38:	48544947 	ldmdami	r4, {r0, r1, r2, r6, r8, fp, lr}^
+  3c:	442f4255 	strtmi	r4, [pc], #-597	; 44 <_init-0x10398>
+  40:	73617369 	cmnvc	r1, #-1543503871	; 0xa4000001
+  44:	626d6573 	rsbvs	r6, sp, #482344960	; 0x1cc00000
+  48:	676e696c 	strbvs	r6, [lr, -ip, ror #18]!
+  4c:	6e69422d 	cdpvs	2, 6, cr4, cr9, cr13, {1}
+  50:	65697261 	strbvs	r7, [r9, #-609]!	; 0xfffffd9f
+  54:	6f462f73 	svcvs	0x00462f73
+  58:	61727472 	cmnvs	r2, r2, ror r4
+  5c:	52412f6e 	subpl	r2, r1, #440	; 0x1b8
+  60:	72615f4d 	rsbvc	r5, r1, #308	; 0x134
+  64:	74696863 	strbtvc	r6, [r9], #-2147	; 0xfffff79d
+  68:	75746365 	ldrbvc	r6, [r4, #-869]!	; 0xfffffc9b
+  6c:	412f6572 			; <UNDEFINED> instruction: 0x412f6572
+  70:	32334d52 	eorscc	r4, r3, #5248	; 0x1480
+  74:	6464412f 	strbtvs	r4, [r4], #-303	; 0xfffffed1
+  78:	746e495f 	strbtvc	r4, [lr], #-2399	; 0xfffff6a1
+  7c:	69572f73 	ldmdbvs	r7, {r0, r1, r4, r5, r6, r8, r9, sl, fp, sp}^
+  80:	445f6874 	ldrbmi	r6, [pc], #-2164	; 88 <_init-0x10354>
+  84:	67756265 	ldrbvs	r6, [r5, -r5, ror #4]!
+  88:	666e495f 			; <UNDEFINED> instruction: 0x666e495f
+  8c:	6e69006f 	cdpvs	0, 6, cr0, cr9, cr15, {3}
+  90:	65676574 	strbvs	r6, [r7, #-1396]!	; 0xfffffa8c
+  94:	696b2872 	stmdbvs	fp!, {r1, r4, r5, r6, fp, sp}^
+  98:	343d646e 	ldrtcc	r6, [sp], #-1134	; 0xfffffb92
+  9c:	616d0029 	cmnvs	sp, r9, lsr #32
+  a0:	47006e69 	strmi	r6, [r0, -r9, ror #28]
+  a4:	4620554e 	strtmi	r5, [r0], -lr, asr #10
+  a8:	7274726f 	rsbsvc	r7, r4, #-268435450	; 0xf0000006
+  ac:	30326e61 	eorscc	r6, r2, r1, ror #28
+  b0:	36203830 			; <UNDEFINED> instruction: 0x36203830
+  b4:	302e332e 	eorcc	r3, lr, lr, lsr #6
+  b8:	31303220 	teqcc	r0, r0, lsr #4
+  bc:	31353037 	teqcc	r5, r7, lsr r0
+  c0:	6d2d2036 	stcvs	0, cr2, [sp, #-216]!	; 0xffffff28
+  c4:	68637261 	stmdavs	r3!, {r0, r5, r6, r9, ip, sp, lr}^
+  c8:	6d72613d 	ldfvse	f6, [r2, #-244]!	; 0xffffff0c
+  cc:	2d203676 	stccs	6, cr3, [r0, #-472]!	; 0xfffffe28
+  d0:	6f6c666d 	svcvs	0x006c666d
+  d4:	612d7461 			; <UNDEFINED> instruction: 0x612d7461
+  d8:	683d6962 	ldmdavs	sp!, {r1, r5, r6, r8, fp, sp, lr}
+  dc:	20647261 	rsbcs	r7, r4, r1, ror #4
+  e0:	70666d2d 	rsbvc	r6, r6, sp, lsr #26
+  e4:	66763d75 			; <UNDEFINED> instruction: 0x66763d75
+  e8:	6d2d2070 	stcvs	0, cr2, [sp, #-448]!	; 0xfffffe40
+  ec:	2d736c74 	ldclcs	12, cr6, [r3, #-464]!	; 0xfffffe30
+  f0:	6c616964 			; <UNDEFINED> instruction: 0x6c616964
+  f4:	3d746365 	ldclcc	3, cr6, [r4, #-404]!	; 0xfffffe6c
+  f8:	20756e67 	rsbscs	r6, r5, r7, ror #28
+  fc:	6467672d 	strbtvs	r6, [r7], #-1837	; 0xfffff8d3
+ 100:	2d203362 	stccs	3, cr3, [r0, #-392]!	; 0xfffffe78
+ 104:	746e6966 	strbtvc	r6, [lr], #-2406	; 0xfffff69a
+ 108:	736e6972 	cmnvc	lr, #1867776	; 0x1c8000
+ 10c:	6d2d6369 	stcvs	3, cr6, [sp, #-420]!	; 0xfffffe5c
+ 110:	6c75646f 	cfldrdvs	mvd6, [r5], #-444	; 0xfffffe44
+ 114:	702d7365 	eorvc	r7, sp, r5, ror #6
+ 118:	20687461 	rsbcs	r7, r8, r1, ror #8
+ 11c:	7273752f 	rsbsvc	r7, r3, #197132288	; 0xbc00000
+ 120:	62696c2f 	rsbvs	r6, r9, #12032	; 0x2f00
+ 124:	6363672f 	cmnvs	r3, #12320768	; 0xbc0000
+ 128:	6d72612f 	ldfvse	f6, [r2, #-188]!	; 0xffffff44
+ 12c:	6e696c2d 	cdpvs	12, 6, cr6, cr9, cr13, {1}
+ 130:	672d7875 			; <UNDEFINED> instruction: 0x672d7875
+ 134:	6165756e 	cmnvs	r5, lr, ror #10
+ 138:	66686962 	strbtvs	r6, [r8], -r2, ror #18
+ 13c:	662f362f 	strtvs	r3, [pc], -pc, lsr #12
+ 140:	6c636e69 	stclvs	14, cr6, [r3], #-420	; 0xfffffe5c
+ 144:	00656475 	rsbeq	r6, r5, r5, ror r4
+ 148:	76677261 	strbtvc	r7, [r7], -r1, ror #4
+	...
 
 Disassembly of section .debug_macro:
 
@@ -1193,3 +1216,283 @@ Disassembly of section .debug_macro:
    0:	00020004 	andeq	r0, r2, r4
    4:	03000000 	movweq	r0, #0
    8:	00040100 	andeq	r0, r4, r0, lsl #2
+Contents of the .eh_frame section:
+
+00000000 ZERO terminator
+
+
+Contents of the .debug_aranges section:
+
+  Length:                   28
+  Version:                  2
+  Offset into .debug_info:  0x0
+  Pointer Size:             4
+  Segment Size:             0
+
+    Address    Length
+    00010560 00000080 
+    00000000 00000000 
+
+Contents of the .debug_info section:
+
+  Compilation Unit @ offset 0x0:
+   Length:        0xae (32-bit)
+   Version:       4
+   Abbrev Offset: 0x0
+   Pointer Size:  4
+ <0><b>: Abbrev Number: 1 (DW_TAG_compile_unit)
+    <c>   DW_AT_producer    : (indirect string, offset: 0xa3): GNU Fortran2008 6.3.0 20170516 -march=armv6 -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -ggdb3 -fintrinsic-modules-path /usr/lib/gcc/arm-linux-gnueabihf/6/finclude
+    <10>   DW_AT_language    : 14	(Fortran 95)
+    <11>   DW_AT_identifier_case: 2	(down_case)
+    <12>   DW_AT_name        : (indirect string, offset: 0x0): add_int.f08
+    <16>   DW_AT_comp_dir    : (indirect string, offset: 0x23): /home/pi/Engineering/GITHUB/Disassembling-Binaries/Fortran/ARM_architecture/ARM32/Add_Ints/With_Debug_Info
+    <1a>   DW_AT_low_pc      : 0x10560
+    <1e>   DW_AT_high_pc     : 0x80
+    <22>   DW_AT_stmt_list   : 0x0
+    <26>   DW_AT_GNU_macros  : 0x0
+ <1><2a>: Abbrev Number: 2 (DW_TAG_subprogram)
+    <2b>   DW_AT_external    : 1
+    <2b>   DW_AT_name        : (indirect string, offset: 0x9e): main
+    <2f>   DW_AT_decl_file   : 1
+    <30>   DW_AT_decl_line   : 12
+    <31>   DW_AT_type        : <0x61>
+    <35>   DW_AT_low_pc      : 0x1059c
+    <39>   DW_AT_high_pc     : 0x44
+    <3d>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
+    <3f>   DW_AT_GNU_all_tail_call_sites: 1
+    <3f>   DW_AT_sibling     : <0x61>
+ <2><43>: Abbrev Number: 3 (DW_TAG_formal_parameter)
+    <44>   DW_AT_name        : (indirect string, offset: 0x1e): argc
+    <48>   DW_AT_decl_file   : 1
+    <49>   DW_AT_decl_line   : 12
+    <4a>   DW_AT_type        : <0x68>
+    <4e>   DW_AT_location    : 2 byte block: 91 74 	(DW_OP_fbreg: -12)
+ <2><51>: Abbrev Number: 3 (DW_TAG_formal_parameter)
+    <52>   DW_AT_name        : (indirect string, offset: 0x148): argv
+    <56>   DW_AT_decl_file   : 1
+    <57>   DW_AT_decl_line   : 12
+    <58>   DW_AT_type        : <0x6d>
+    <5c>   DW_AT_location    : 3 byte block: 91 70 6 	(DW_OP_fbreg: -16; DW_OP_deref)
+ <2><60>: Abbrev Number: 0
+ <1><61>: Abbrev Number: 4 (DW_TAG_base_type)
+    <62>   DW_AT_byte_size   : 4
+    <63>   DW_AT_encoding    : 5	(signed)
+    <64>   DW_AT_name        : (indirect string, offset: 0x8e): integer(kind=4)
+ <1><68>: Abbrev Number: 5 (DW_TAG_const_type)
+    <69>   DW_AT_type        : <0x61>
+ <1><6d>: Abbrev Number: 6 (DW_TAG_pointer_type)
+    <6e>   DW_AT_byte_size   : 4
+    <6f>   DW_AT_type        : <0x73>
+ <1><73>: Abbrev Number: 4 (DW_TAG_base_type)
+    <74>   DW_AT_byte_size   : 1
+    <75>   DW_AT_encoding    : 8	(unsigned char)
+    <76>   DW_AT_name        : (indirect string, offset: 0xc): character(kind=1)
+ <1><7a>: Abbrev Number: 7 (DW_TAG_subprogram)
+    <7b>   DW_AT_name        : add
+    <7f>   DW_AT_decl_file   : 1
+    <80>   DW_AT_decl_line   : 1
+    <81>   DW_AT_main_subprogram: 1
+    <81>   DW_AT_calling_convention: 2	(program)
+    <82>   DW_AT_low_pc      : 0x10560
+    <86>   DW_AT_high_pc     : 0x3c
+    <8a>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
+    <8c>   DW_AT_GNU_all_call_sites: 1
+ <2><8c>: Abbrev Number: 8 (DW_TAG_variable)
+    <8d>   DW_AT_name        : a
+    <8f>   DW_AT_decl_file   : 1
+    <90>   DW_AT_decl_line   : 5
+    <91>   DW_AT_type        : <0x61>
+    <95>   DW_AT_location    : 2 byte block: 91 74 	(DW_OP_fbreg: -12)
+ <2><98>: Abbrev Number: 8 (DW_TAG_variable)
+    <99>   DW_AT_name        : b
+    <9b>   DW_AT_decl_file   : 1
+    <9c>   DW_AT_decl_line   : 5
+    <9d>   DW_AT_type        : <0x61>
+    <a1>   DW_AT_location    : 2 byte block: 91 70 	(DW_OP_fbreg: -16)
+ <2><a4>: Abbrev Number: 8 (DW_TAG_variable)
+    <a5>   DW_AT_name        : c
+    <a7>   DW_AT_decl_file   : 1
+    <a8>   DW_AT_decl_line   : 5
+    <a9>   DW_AT_type        : <0x61>
+    <ad>   DW_AT_location    : 2 byte block: 91 6c 	(DW_OP_fbreg: -20)
+ <2><b0>: Abbrev Number: 0
+ <1><b1>: Abbrev Number: 0
+
+Contents of the .debug_abbrev section:
+
+  Number TAG (0x0)
+   1      DW_TAG_compile_unit    [has children]
+    DW_AT_producer     DW_FORM_strp
+    DW_AT_language     DW_FORM_data1
+    DW_AT_identifier_case DW_FORM_data1
+    DW_AT_name         DW_FORM_strp
+    DW_AT_comp_dir     DW_FORM_strp
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_data4
+    DW_AT_stmt_list    DW_FORM_sec_offset
+    DW_AT_GNU_macros   DW_FORM_sec_offset
+    DW_AT value: 0     DW_FORM value: 0
+   2      DW_TAG_subprogram    [has children]
+    DW_AT_external     DW_FORM_flag_present
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_data4
+    DW_AT_frame_base   DW_FORM_exprloc
+    DW_AT_GNU_all_tail_call_sites DW_FORM_flag_present
+    DW_AT_sibling      DW_FORM_ref4
+    DW_AT value: 0     DW_FORM value: 0
+   3      DW_TAG_formal_parameter    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_location     DW_FORM_exprloc
+    DW_AT value: 0     DW_FORM value: 0
+   4      DW_TAG_base_type    [no children]
+    DW_AT_byte_size    DW_FORM_data1
+    DW_AT_encoding     DW_FORM_data1
+    DW_AT_name         DW_FORM_strp
+    DW_AT value: 0     DW_FORM value: 0
+   5      DW_TAG_const_type    [no children]
+    DW_AT_type         DW_FORM_ref4
+    DW_AT value: 0     DW_FORM value: 0
+   6      DW_TAG_pointer_type    [no children]
+    DW_AT_byte_size    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT value: 0     DW_FORM value: 0
+   7      DW_TAG_subprogram    [has children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_main_subprogram DW_FORM_flag_present
+    DW_AT_calling_convention DW_FORM_data1
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_data4
+    DW_AT_frame_base   DW_FORM_exprloc
+    DW_AT_GNU_all_call_sites DW_FORM_flag_present
+    DW_AT value: 0     DW_FORM value: 0
+   8      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_location     DW_FORM_exprloc
+    DW_AT value: 0     DW_FORM value: 0
+
+Raw dump of debug contents of section .debug_line:
+
+  Offset:                      0x0
+  Length:                      59
+  DWARF Version:               2
+  Prologue Length:             34
+  Minimum Instruction Length:  2
+  Initial value of 'is_stmt':  1
+  Line Base:                   -5
+  Line Range:                  14
+  Opcode Base:                 13
+
+ Opcodes:
+  Opcode 1 has 0 args
+  Opcode 2 has 1 args
+  Opcode 3 has 1 args
+  Opcode 4 has 1 args
+  Opcode 5 has 1 args
+  Opcode 6 has 0 args
+  Opcode 7 has 0 args
+  Opcode 8 has 0 args
+  Opcode 9 has 1 args
+  Opcode 10 has 0 args
+  Opcode 11 has 0 args
+  Opcode 12 has 1 args
+
+ The Directory Table is empty.
+
+ The File Name Table (offset 0x1c):
+  Entry	Dir	Time	Size	Name
+  1	0	0	0	add_int.f08
+
+ Line Number Statements:
+  [0x0000002c]  Extended opcode 2: set Address to 0x10560
+  [0x00000033]  Copy
+  [0x00000034]  Special opcode 95: advance Address by 12 to 0x1056c and Line by 6 to 7
+  [0x00000035]  Special opcode 62: advance Address by 8 to 0x10574 and Line by 1 to 8
+  [0x00000036]  Special opcode 63: advance Address by 8 to 0x1057c and Line by 2 to 10
+  [0x00000037]  Special opcode 119: advance Address by 16 to 0x1058c and Line by 2 to 12
+  [0x00000038]  Special opcode 117: advance Address by 16 to 0x1059c and Line by 0 to 12
+  [0x00000039]  Special opcode 145: advance Address by 20 to 0x105b0 and Line by 0 to 12
+  [0x0000003a]  Advance PC by 48 to 0x105e0
+  [0x0000003c]  Extended opcode 1: End of Sequence
+
+
+Contents of the .debug_frame section:
+
+00000000 0000000c ffffffff CIE
+  Version:               1
+  Augmentation:          ""
+  Code alignment factor: 2
+  Data alignment factor: -4
+  Return address column: 14
+
+  DW_CFA_def_cfa: r13 ofs 0
+
+00000010 0000001c 00000000 FDE cie=00000000 pc=00010560..0001059c
+  DW_CFA_advance_loc: 4 to 00010564
+  DW_CFA_def_cfa_offset: 4
+  DW_CFA_offset: r11 at cfa-4
+  DW_CFA_advance_loc: 4 to 00010568
+  DW_CFA_def_cfa_register: r11
+  DW_CFA_advance_loc: 44 to 00010594
+  DW_CFA_def_cfa_register: r13
+  DW_CFA_advance_loc: 4 to 00010598
+  DW_CFA_restore: r11
+  DW_CFA_def_cfa_offset: 0
+  DW_CFA_nop
+
+00000030 0000001c 00000000 FDE cie=00000000 pc=0001059c..000105e0
+  DW_CFA_advance_loc: 4 to 000105a0
+  DW_CFA_def_cfa_offset: 8
+  DW_CFA_offset: r11 at cfa-8
+  DW_CFA_offset: r14 at cfa-4
+  DW_CFA_advance_loc: 4 to 000105a4
+  DW_CFA_def_cfa: r11 ofs 4
+  DW_CFA_advance_loc: 52 to 000105d8
+  DW_CFA_def_cfa: r13 ofs 8
+  DW_CFA_nop
+
+Contents of the .debug_str section:
+
+  0x00000000 6164645f 696e742e 66303800 63686172 add_int.f08.char
+  0x00000010 61637465 72286b69 6e643d31 29006172 acter(kind=1).ar
+  0x00000020 6763002f 686f6d65 2f70692f 456e6769 gc./home/pi/Engi
+  0x00000030 6e656572 696e672f 47495448 55422f44 neering/GITHUB/D
+  0x00000040 69736173 73656d62 6c696e67 2d42696e isassembling-Bin
+  0x00000050 61726965 732f466f 72747261 6e2f4152 aries/Fortran/AR
+  0x00000060 4d5f6172 63686974 65637475 72652f41 M_architecture/A
+  0x00000070 524d3332 2f416464 5f496e74 732f5769 RM32/Add_Ints/Wi
+  0x00000080 74685f44 65627567 5f496e66 6f00696e th_Debug_Info.in
+  0x00000090 74656765 72286b69 6e643d34 29006d61 teger(kind=4).ma
+  0x000000a0 696e0047 4e552046 6f727472 616e3230 in.GNU Fortran20
+  0x000000b0 30382036 2e332e30 20323031 37303531 08 6.3.0 2017051
+  0x000000c0 36202d6d 61726368 3d61726d 7636202d 6 -march=armv6 -
+  0x000000d0 6d666c6f 61742d61 62693d68 61726420 mfloat-abi=hard 
+  0x000000e0 2d6d6670 753d7666 70202d6d 746c732d -mfpu=vfp -mtls-
+  0x000000f0 6469616c 6563743d 676e7520 2d676764 dialect=gnu -ggd
+  0x00000100 6233202d 66696e74 72696e73 69632d6d b3 -fintrinsic-m
+  0x00000110 6f64756c 65732d70 61746820 2f757372 odules-path /usr
+  0x00000120 2f6c6962 2f676363 2f61726d 2d6c696e /lib/gcc/arm-lin
+  0x00000130 75782d67 6e756561 62696866 2f362f66 ux-gnueabihf/6/f
+  0x00000140 696e636c 75646500 61726776 00       include.argv.
+
+Contents of the .debug_macro section:
+
+  Offset:                      0x0
+  Version:                     4
+  Offset size:                 4
+  Offset into .debug_line:     0x0
+
+ DW_MACRO_GNU_start_file - lineno: 0 filenum: 1 filename: add_int.f08
+ DW_MACRO_GNU_end_file
+

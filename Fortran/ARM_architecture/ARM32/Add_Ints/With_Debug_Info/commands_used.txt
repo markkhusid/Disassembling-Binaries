@@ -1,0 +1,4 @@
+objdump -x -D -S -s -g -t add_int.o > objdump_of_dot_o.txt
+
+objdump -x -D -S -s -g -t add_int_Fortran_ARM32_ggdb3 > objdump_of_dot_exe.txt
+
