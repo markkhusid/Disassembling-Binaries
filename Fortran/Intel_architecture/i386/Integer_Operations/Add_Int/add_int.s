@@ -1,4 +1,4 @@
-	.file	"add.f08"
+	.file	"add_int.f08"
 	.text
 	.type	MAIN__, @function
 MAIN__:
@@ -51,7 +51,7 @@ main:
 	call	_gfortran_set_args@PLT
 	addl	$16, %esp
 	subl	$8, %esp
-	leal	options.0.3423@GOTOFF(%ebx), %eax
+	leal	options.0.3693@GOTOFF(%ebx), %eax
 	pushl	%eax
 	pushl	$7
 	call	_gfortran_set_options@PLT
@@ -74,11 +74,11 @@ main:
 	.size	main, .-main
 	.section	.rodata
 	.align 4
-	.type	options.0.3423, @object
-	.size	options.0.3423, 28
-options.0.3423:
+	.type	options.0.3693, @object
+	.size	options.0.3693, 28
+options.0.3693:
 	.long	68
-	.long	1023
+	.long	8191
 	.long	0
 	.long	1
 	.long	1
@@ -106,5 +106,5 @@ __x86.get_pc_thunk.bx:
 	ret
 	.cfi_endproc
 .LFE3:
-	.ident	"GCC: (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0"
+	.ident	"GCC: (Debian 8.2.0-14) 8.2.0"
 	.section	.note.GNU-stack,"",@progbits

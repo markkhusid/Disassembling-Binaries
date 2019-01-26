@@ -1,0 +1,4 @@
+objdump -x -D -S -s -g -t -Mintel add_int.o > objdump_of_dot_o.txt
+
+objdump -x -D -S -s -g -t -Mintel add_int_Fortran_i386_ggdb3 > objdump_of_dot_exe.txt
+

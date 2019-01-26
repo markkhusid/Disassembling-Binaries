@@ -1,6 +1,6 @@
 
-add.o:     file format elf32-i386
-add.o
+add_int.o:     file format elf32-i386
+add_int.o
 architecture: i386, flags 0x00000011:
 HAS_RELOC, HAS_SYMS
 start address 0x00000000
@@ -23,19 +23,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   7 .text.__x86.get_pc_thunk.bx 00000004  00000000  00000000  000000e4  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  8 .comment      0000002b  00000000  00000000  000000e8  2**0
+  8 .comment      0000001e  00000000  00000000  000000e8  2**0
                   CONTENTS, READONLY
-  9 .note.GNU-stack 00000000  00000000  00000000  00000113  2**0
+  9 .note.GNU-stack 00000000  00000000  00000000  00000106  2**0
                   CONTENTS, READONLY
- 10 .eh_frame     00000094  00000000  00000000  00000114  2**2
+ 10 .eh_frame     00000094  00000000  00000000  00000108  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
 SYMBOL TABLE:
-00000000 l    df *ABS*	00000000 add.f08
+00000000 l    df *ABS*	00000000 add_int.f08
 00000000 l    d  .text	00000000 .text
 00000000 l    d  .data	00000000 .data
 00000000 l    d  .bss	00000000 .bss
 00000000 l     F .text	0000002c MAIN__
-00000000 l     O .rodata	0000001c options.0.3423
+00000000 l     O .rodata	0000001c options.0.3693
 00000000 l    d  .rodata	00000000 .rodata
 00000000 l    d  .text.__x86.get_pc_thunk.ax	00000000 .text.__x86.get_pc_thunk.ax
 00000000 l    d  .text.__x86.get_pc_thunk.bx	00000000 .text.__x86.get_pc_thunk.bx
@@ -52,6 +52,40 @@ SYMBOL TABLE:
 00000000         *UND*	00000000 _gfortran_set_options
 
 
+Contents of section .group:
+ 0000 01000000 08000000                    ........        
+Contents of section .group:
+ 0000 01000000 09000000                    ........        
+Contents of section .text:
+ 0000 5589e583 ec10e8fc ffffff05 01000000  U...............
+ 0010 c745fc01 000000c7 45f80900 00008b55  .E......E......U
+ 0020 fc8b45f8 01d08945 f490c9c3 8d4c2404  ..E....E.....L$.
+ 0030 83e4f0ff 71fc5589 e55351e8 fcffffff  ....q.U..SQ.....
+ 0040 81c30200 000089c8 83ec08ff 7004ff30  ............p..0
+ 0050 e8fcffff ff83c410 83ec088d 83000000  ................
+ 0060 00506a07 e8fcffff ff83c410 e88fffff  .Pj.............
+ 0070 ffb80000 00008d65 f8595b5d 8d61fcc3  .......e.Y[].a..
+Contents of section .rodata:
+ 0000 44000000 ff1f0000 00000000 01000000  D...............
+ 0010 01000000 00000000 1f000000           ............    
+Contents of section .text.__x86.get_pc_thunk.ax:
+ 0000 8b0424c3                             ..$.            
+Contents of section .text.__x86.get_pc_thunk.bx:
+ 0000 8b1c24c3                             ..$.            
+Contents of section .comment:
+ 0000 00474343 3a202844 65626961 6e20382e  .GCC: (Debian 8.
+ 0010 322e302d 31342920 382e322e 3000      2.0-14) 8.2.0.  
+Contents of section .eh_frame:
+ 0000 14000000 00000000 017a5200 017c0801  .........zR..|..
+ 0010 1b0c0404 88010000 1c000000 1c000000  ................
+ 0020 00000000 2c000000 00410e08 8502420d  ....,....A....B.
+ 0030 0568c50c 04040000 30000000 3c000000  .h......0...<...
+ 0040 2c000000 54000000 00440c01 00471005  ,...T....D...G..
+ 0050 02750044 0f037578 06100302 757c7fc1  .u.D..ux....u|..
+ 0060 0c010041 c341c543 0c040400 10000000  ...A.A.C........
+ 0070 70000000 00000000 04000000 00000000  p...............
+ 0080 10000000 84000000 00000000 04000000  ................
+ 0090 00000000                             ....            
 
 Disassembly of section .group:
 
@@ -127,20 +161,21 @@ Disassembly of section .text:
 
 Disassembly of section .rodata:
 
-00000000 <options.0.3423>:
+00000000 <options.0.3693>:
    0:	44                   	inc    esp
    1:	00 00                	add    BYTE PTR [eax],al
    3:	00 ff                	add    bh,bh
-   5:	03 00                	add    eax,DWORD PTR [eax]
-   7:	00 00                	add    BYTE PTR [eax],al
-   9:	00 00                	add    BYTE PTR [eax],al
-   b:	00 01                	add    BYTE PTR [ecx],al
-   d:	00 00                	add    BYTE PTR [eax],al
-   f:	00 01                	add    BYTE PTR [ecx],al
-  11:	00 00                	add    BYTE PTR [eax],al
-  13:	00 00                	add    BYTE PTR [eax],al
-  15:	00 00                	add    BYTE PTR [eax],al
-  17:	00 1f                	add    BYTE PTR [edi],bl
+   5:	1f                   	pop    ds
+   6:	00 00                	add    BYTE PTR [eax],al
+   8:	00 00                	add    BYTE PTR [eax],al
+   a:	00 00                	add    BYTE PTR [eax],al
+   c:	01 00                	add    DWORD PTR [eax],eax
+   e:	00 00                	add    BYTE PTR [eax],al
+  10:	01 00                	add    DWORD PTR [eax],eax
+  12:	00 00                	add    BYTE PTR [eax],al
+  14:	00 00                	add    BYTE PTR [eax],al
+  16:	00 00                	add    BYTE PTR [eax],al
+  18:	1f                   	pop    ds
   19:	00 00                	add    BYTE PTR [eax],al
 	...
 
@@ -162,20 +197,12 @@ Disassembly of section .comment:
    0:	00 47 43             	add    BYTE PTR [edi+0x43],al
    3:	43                   	inc    ebx
    4:	3a 20                	cmp    ah,BYTE PTR [eax]
-   6:	28 55 62             	sub    BYTE PTR [ebp+0x62],dl
-   9:	75 6e                	jne    79 <main+0x4d>
-   b:	74 75                	je     82 <main+0x56>
-   d:	20 37                	and    BYTE PTR [edi],dh
-   f:	2e 33 2e             	xor    ebp,DWORD PTR cs:[esi]
-  12:	30 2d 32 37 75 62    	xor    BYTE PTR ds:0x62753732,ch
-  18:	75 6e                	jne    88 <main+0x5c>
-  1a:	74 75                	je     91 <main+0x65>
-  1c:	31 7e 31             	xor    DWORD PTR [esi+0x31],edi
-  1f:	38 2e                	cmp    BYTE PTR [esi],ch
-  21:	30 34 29             	xor    BYTE PTR [ecx+ebp*1],dh
-  24:	20 37                	and    BYTE PTR [edi],dh
-  26:	2e 33 2e             	xor    ebp,DWORD PTR cs:[esi]
-  29:	30 00                	xor    BYTE PTR [eax],al
+   6:	28 44 65 62          	sub    BYTE PTR [ebp+eiz*2+0x62],al
+   a:	69 61 6e 20 38 2e 32 	imul   esp,DWORD PTR [ecx+0x6e],0x322e3820
+  11:	2e 30 2d 31 34 29 20 	xor    BYTE PTR cs:0x20293431,ch
+  18:	38 2e                	cmp    BYTE PTR [esi],ch
+  1a:	32 2e                	xor    ch,BYTE PTR [esi]
+  1c:	30 00                	xor    BYTE PTR [eax],al
 
 Disassembly of section .eh_frame:
 
