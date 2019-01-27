@@ -1,0 +1,105 @@
+
+mult_int.o:     file format elf32-littlearm
+mult_int.o
+architecture: arm, flags 0x00000010:
+HAS_SYMS
+start address 0x00000000
+private flags = 5000000: [Version5 EABI]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000048  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00000000  00000000  0000007c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  0000007c  2**0
+                  ALLOC
+  3 .comment      00000035  00000000  00000000  0000007c  2**0
+                  CONTENTS, READONLY
+  4 .note.GNU-stack 00000000  00000000  00000000  000000b1  2**0
+                  CONTENTS, READONLY
+  5 .ARM.attributes 0000002f  00000000  00000000  000000b1  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    df *ABS*	00000000 mult_int.c
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+00000000 l    d  .note.GNU-stack	00000000 .note.GNU-stack
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 g     F .text	00000048 main
+
+
+Contents of section .text:
+ 0000 04b02de5 00b08de2 1cd04de2 18000be5  ..-.......M.....
+ 0010 1c100be5 0230a0e3 08300be5 0330a0e3  .....0...0...0..
+ 0020 0c300be5 08301be5 0c201be5 920303e0  .0...0... ......
+ 0030 10300be5 0030a0e3 0300a0e1 00d08be2  .0...0..........
+ 0040 04b09de4 1eff2fe1                    ....../.        
+Contents of section .comment:
+ 0000 00474343 3a202852 61737062 69616e20  .GCC: (Raspbian 
+ 0010 362e332e 302d3138 2b727069 312b6465  6.3.0-18+rpi1+de
+ 0020 62397531 2920362e 332e3020 32303137  b9u1) 6.3.0 2017
+ 0030 30353136 00                          0516.           
+Contents of section .ARM.attributes:
+ 0000 412e0000 00616561 62690001 24000000  A....aeabi..$...
+ 0010 05360006 06080109 010a0212 04140115  .6..............
+ 0020 01170318 0119011a 021c011e 062201    .............". 
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
+   4:	e28db000 	add	fp, sp, #0
+   8:	e24dd01c 	sub	sp, sp, #28
+   c:	e50b0018 	str	r0, [fp, #-24]	; 0xffffffe8
+  10:	e50b101c 	str	r1, [fp, #-28]	; 0xffffffe4
+  14:	e3a03002 	mov	r3, #2
+  18:	e50b3008 	str	r3, [fp, #-8]
+  1c:	e3a03003 	mov	r3, #3
+  20:	e50b300c 	str	r3, [fp, #-12]
+  24:	e51b3008 	ldr	r3, [fp, #-8]
+  28:	e51b200c 	ldr	r2, [fp, #-12]
+  2c:	e0030392 	mul	r3, r2, r3
+  30:	e50b3010 	str	r3, [fp, #-16]
+  34:	e3a03000 	mov	r3, #0
+  38:	e1a00003 	mov	r0, r3
+  3c:	e28bd000 	add	sp, fp, #0
+  40:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
+  44:	e12fff1e 	bx	lr
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	43434700 	movtmi	r4, #14080	; 0x3700
+   4:	5228203a 	eorpl	r2, r8, #58	; 0x3a
+   8:	62707361 	rsbsvs	r7, r0, #-2080374783	; 0x84000001
+   c:	206e6169 	rsbcs	r6, lr, r9, ror #2
+  10:	2e332e36 	mrccs	14, 1, r2, cr3, cr6, {1}
+  14:	38312d30 	ldmdacc	r1!, {r4, r5, r8, sl, fp, sp}
+  18:	6970722b 	ldmdbvs	r0!, {r0, r1, r3, r5, r9, ip, sp, lr}^
+  1c:	65642b31 	strbvs	r2, [r4, #-2865]!	; 0xfffff4cf
+  20:	31753962 	cmncc	r5, r2, ror #18
+  24:	2e362029 	cdpcs	0, 3, cr2, cr6, cr9, {1}
+  28:	20302e33 	eorscs	r2, r0, r3, lsr lr
+  2c:	37313032 			; <UNDEFINED> instruction: 0x37313032
+  30:	36313530 			; <UNDEFINED> instruction: 0x36313530
+	...
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002e41 	andeq	r2, r0, r1, asr #28
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	00000024 	andeq	r0, r0, r4, lsr #32
+  10:	06003605 	streq	r3, [r0], -r5, lsl #12
+  14:	09010806 	stmdbeq	r1, {r1, r2, fp}
+  18:	12020a01 	andne	r0, r2, #4096	; 0x1000
+  1c:	15011404 	strne	r1, [r1, #-1028]	; 0xfffffbfc
+  20:	18031701 	stmdane	r3, {r0, r8, r9, sl, ip}
+  24:	1a011901 	bne	46430 <main+0x46430>
+  28:	1e011c02 	cdpne	12, 0, cr1, cr1, cr2, {0}
+  2c:	Address 0x0000002c is out of bounds.
+
