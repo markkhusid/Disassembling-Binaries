@@ -1,0 +1,10 @@
+gcc -S mult_int.c 
+
+gcc -c mult_int.s
+
+gcc mult_int.o -o mult_int_C_ARM64
+
+objdump -x -D -s -t mult_int.o > objdump_of_dot_o.txt 
+
+objdump -x -D -s -t mult_int_C_ARM64 > objdump_of_dot_exe.txt 
+

@@ -1,0 +1,10 @@
+gcc -S -ggdb3 mult_int.c 
+
+gcc -c -ggdb3 mult_int.s
+
+gcc -ggdb3 mult_int.o -o mult_int_C_ARM64_ggdb3
+ 
+objdump -x -D -S -s -g -t mult_int.o > objdump_of_dot_o.txt
+
+objdump -x -D -S -s -g -t mult_int_C_ARM64_ggdb3 > objdump_of_dot_exe.txt
+
