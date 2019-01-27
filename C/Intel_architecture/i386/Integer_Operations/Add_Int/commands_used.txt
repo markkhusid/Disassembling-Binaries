@@ -1,0 +1,10 @@
+gcc -m32 -S add_int.c 
+
+gcc -m32 -c add_int.s 
+
+gcc -m32 add_int.o -o add_int_C_i386
+
+objdump -x -D -s -t -Mintel add_int.o > objdump_of_dot_o.txt 
+
+objdump -x -D -s -t -Mintel add_int_C_i386 > objdump_of_dot_exe.txt 
+

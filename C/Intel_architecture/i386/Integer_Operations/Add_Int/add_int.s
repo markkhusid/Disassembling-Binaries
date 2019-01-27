@@ -1,4 +1,4 @@
-	.file	"add.c"
+	.file	"add_int.c"
 	.text
 	.globl	main
 	.type	main, @function
@@ -11,6 +11,8 @@ main:
 	movl	%esp, %ebp
 	.cfi_def_cfa_register 5
 	subl	$16, %esp
+	call	__x86.get_pc_thunk.ax
+	addl	$_GLOBAL_OFFSET_TABLE_, %eax
 	movl	$1, -12(%ebp)
 	movl	$9, -8(%ebp)
 	movl	-12(%ebp), %edx
@@ -25,5 +27,16 @@ main:
 	.cfi_endproc
 .LFE0:
 	.size	main, .-main
-	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.11) 5.4.0 20160609"
+	.section	.text.__x86.get_pc_thunk.ax,"axG",@progbits,__x86.get_pc_thunk.ax,comdat
+	.globl	__x86.get_pc_thunk.ax
+	.hidden	__x86.get_pc_thunk.ax
+	.type	__x86.get_pc_thunk.ax, @function
+__x86.get_pc_thunk.ax:
+.LFB1:
+	.cfi_startproc
+	movl	(%esp), %eax
+	ret
+	.cfi_endproc
+.LFE1:
+	.ident	"GCC: (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0"
 	.section	.note.GNU-stack,"",@progbits
