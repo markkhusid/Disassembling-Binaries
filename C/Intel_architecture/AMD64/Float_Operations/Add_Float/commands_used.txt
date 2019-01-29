@@ -1,0 +1,10 @@
+gcc -S add_float.c 
+
+gcc -c add_float.s 
+
+gcc add_float.o -o add_float_C_AMD64
+
+objdump -x -D -s -t -Mintel add_float.o > objdump_of_dot_o.txt
+
+objdump -x -D -s -t -Mintel add_float_C_AMD64 > objdump_of_dot_exe.txt
+
