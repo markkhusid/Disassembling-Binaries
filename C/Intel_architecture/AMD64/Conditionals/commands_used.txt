@@ -1,0 +1,10 @@
+gcc -S if_then.c 
+
+gcc -c if_then.s 
+
+gcc if_then.o -o if_then_C_AMD64
+
+objdump -x -D -s -t -Mintel if_then.o > objdump_of_dot_o.txt
+
+objdump -x -D -s -t -Mintel if_then_C_AMD64 > objdump_of_dot_exe.txt
+
