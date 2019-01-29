@@ -1,13 +1,15 @@
 PROGRAM add_functions_program(input, output, stderr);
 
-FUNCTION add_function(const f_a : integer, const f_b : integer) : integer;
+VAR
+	a, b, c : INTEGER;
+
+FUNCTION add_function(f_a : INTEGER; f_b : INTEGER) : INTEGER;
 
 BEGIN
 	add_function := f_a + f_b;
 END;
 
-VAR
-	a, b, c : integer;
+BEGIN
 
 	a := 2;
 	b := 3;
