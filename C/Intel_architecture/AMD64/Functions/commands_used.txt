@@ -1,0 +1,10 @@
+gcc -S functions.c
+
+gcc -c functions.s
+
+gcc functions.o -o functions_C_AMD64
+
+objdump -x -D -s -t -Mintel functions.o > objdump_of_dot_o.txt
+
+objdump -x -D -s -t -Mintel functions_C_AMD64 > objdump_of_dot_exe.txt
+

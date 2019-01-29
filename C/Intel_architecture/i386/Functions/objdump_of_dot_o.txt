@@ -1,0 +1,207 @@
+
+functions.o:     file format elf32-i386
+functions.o
+architecture: i386, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .group        00000008  00000000  00000000  00000034  2**2
+                  CONTENTS, READONLY, GROUP, LINK_ONCE_DISCARD
+  1 .text         00000061  00000000  00000000  0000003c  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .data         00000000  00000000  00000000  0000009d  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .bss          00000000  00000000  00000000  0000009d  2**0
+                  ALLOC
+  4 .text.__x86.get_pc_thunk.ax 00000004  00000000  00000000  0000009d  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  5 .comment      0000002b  00000000  00000000  000000a1  2**0
+                  CONTENTS, READONLY
+  6 .note.GNU-stack 00000000  00000000  00000000  000000cc  2**0
+                  CONTENTS, READONLY
+  7 .eh_frame     00000078  00000000  00000000  000000cc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+SYMBOL TABLE:
+00000000 l    df *ABS*	00000000 functions.c
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+00000000 l    d  .text.__x86.get_pc_thunk.ax	00000000 .text.__x86.get_pc_thunk.ax
+00000000 l    d  .note.GNU-stack	00000000 .note.GNU-stack
+00000000 l    d  .eh_frame	00000000 .eh_frame
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .group	00000000 .group
+00000000 g     F .text	0000004a main
+00000000 g     F .text.__x86.get_pc_thunk.ax	00000000 .hidden __x86.get_pc_thunk.ax
+00000000         *UND*	00000000 _GLOBAL_OFFSET_TABLE_
+0000004a g     F .text	00000017 sum
+
+
+Contents of section .group:
+ 0000 01000000 06000000                    ........        
+Contents of section .text:
+ 0000 8d4c2404 83e4f0ff 71fc5589 e55183ec  .L$.....q.U..Q..
+ 0010 14e8fcff ffff0501 000000c7 45ec0300  ............E...
+ 0020 0000c745 f0040000 0083ec08 ff75f0ff  ...E.........u..
+ 0030 75ece8fc ffffff83 c4108945 f4b80000  u..........E....
+ 0040 00008b4d fcc98d61 fcc35589 e5e8fcff  ...M...a..U.....
+ 0050 ffff0501 0000008b 55088b45 0c01d05d  ........U..E...]
+ 0060 c3                                   .               
+Contents of section .text.__x86.get_pc_thunk.ax:
+ 0000 8b0424c3                             ..$.            
+Contents of section .comment:
+ 0000 00474343 3a202855 62756e74 7520372e  .GCC: (Ubuntu 7.
+ 0010 332e302d 32377562 756e7475 317e3138  3.0-27ubuntu1~18
+ 0020 2e303429 20372e33 2e3000             .04) 7.3.0.     
+Contents of section .eh_frame:
+ 0000 14000000 00000000 017a5200 017c0801  .........zR..|..
+ 0010 1b0c0404 88010000 28000000 1c000000  ........(.......
+ 0020 00000000 4a000000 00440c01 00471005  ....J....D...G..
+ 0030 02750043 0f03757c 06770c01 0041c543  .u.C..u|.w...A.C
+ 0040 0c040400 1c000000 48000000 4a000000  ........H...J...
+ 0050 17000000 00410e08 8502420d 0553c50c  .....A....B..S..
+ 0060 04040000 10000000 68000000 00000000  ........h.......
+ 0070 04000000 00000000                    ........        
+
+Disassembly of section .group:
+
+00000000 <.group>:
+   0:	01 00                	add    DWORD PTR [eax],eax
+   2:	00 00                	add    BYTE PTR [eax],al
+   4:	06                   	push   es
+   5:	00 00                	add    BYTE PTR [eax],al
+	...
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	8d 4c 24 04          	lea    ecx,[esp+0x4]
+   4:	83 e4 f0             	and    esp,0xfffffff0
+   7:	ff 71 fc             	push   DWORD PTR [ecx-0x4]
+   a:	55                   	push   ebp
+   b:	89 e5                	mov    ebp,esp
+   d:	51                   	push   ecx
+   e:	83 ec 14             	sub    esp,0x14
+  11:	e8 fc ff ff ff       	call   12 <main+0x12>
+			12: R_386_PC32	__x86.get_pc_thunk.ax
+  16:	05 01 00 00 00       	add    eax,0x1
+			17: R_386_GOTPC	_GLOBAL_OFFSET_TABLE_
+  1b:	c7 45 ec 03 00 00 00 	mov    DWORD PTR [ebp-0x14],0x3
+  22:	c7 45 f0 04 00 00 00 	mov    DWORD PTR [ebp-0x10],0x4
+  29:	83 ec 08             	sub    esp,0x8
+  2c:	ff 75 f0             	push   DWORD PTR [ebp-0x10]
+  2f:	ff 75 ec             	push   DWORD PTR [ebp-0x14]
+  32:	e8 fc ff ff ff       	call   33 <main+0x33>
+			33: R_386_PC32	sum
+  37:	83 c4 10             	add    esp,0x10
+  3a:	89 45 f4             	mov    DWORD PTR [ebp-0xc],eax
+  3d:	b8 00 00 00 00       	mov    eax,0x0
+  42:	8b 4d fc             	mov    ecx,DWORD PTR [ebp-0x4]
+  45:	c9                   	leave  
+  46:	8d 61 fc             	lea    esp,[ecx-0x4]
+  49:	c3                   	ret    
+
+0000004a <sum>:
+  4a:	55                   	push   ebp
+  4b:	89 e5                	mov    ebp,esp
+  4d:	e8 fc ff ff ff       	call   4e <sum+0x4>
+			4e: R_386_PC32	__x86.get_pc_thunk.ax
+  52:	05 01 00 00 00       	add    eax,0x1
+			53: R_386_GOTPC	_GLOBAL_OFFSET_TABLE_
+  57:	8b 55 08             	mov    edx,DWORD PTR [ebp+0x8]
+  5a:	8b 45 0c             	mov    eax,DWORD PTR [ebp+0xc]
+  5d:	01 d0                	add    eax,edx
+  5f:	5d                   	pop    ebp
+  60:	c3                   	ret    
+
+Disassembly of section .text.__x86.get_pc_thunk.ax:
+
+00000000 <__x86.get_pc_thunk.ax>:
+   0:	8b 04 24             	mov    eax,DWORD PTR [esp]
+   3:	c3                   	ret    
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [edi+0x43],al
+   3:	43                   	inc    ebx
+   4:	3a 20                	cmp    ah,BYTE PTR [eax]
+   6:	28 55 62             	sub    BYTE PTR [ebp+0x62],dl
+   9:	75 6e                	jne    79 <sum+0x2f>
+   b:	74 75                	je     82 <sum+0x38>
+   d:	20 37                	and    BYTE PTR [edi],dh
+   f:	2e 33 2e             	xor    ebp,DWORD PTR cs:[esi]
+  12:	30 2d 32 37 75 62    	xor    BYTE PTR ds:0x62753732,ch
+  18:	75 6e                	jne    88 <sum+0x3e>
+  1a:	74 75                	je     91 <sum+0x47>
+  1c:	31 7e 31             	xor    DWORD PTR [esi+0x31],edi
+  1f:	38 2e                	cmp    BYTE PTR [esi],ch
+  21:	30 34 29             	xor    BYTE PTR [ecx+ebp*1],dh
+  24:	20 37                	and    BYTE PTR [edi],dh
+  26:	2e 33 2e             	xor    ebp,DWORD PTR cs:[esi]
+  29:	30 00                	xor    BYTE PTR [eax],al
+
+Disassembly of section .eh_frame:
+
+00000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [eax],al
+   4:	00 00                	add    BYTE PTR [eax],al
+   6:	00 00                	add    BYTE PTR [eax],al
+   8:	01 7a 52             	add    DWORD PTR [edx+0x52],edi
+   b:	00 01                	add    BYTE PTR [ecx],al
+   d:	7c 08                	jl     17 <.eh_frame+0x17>
+   f:	01 1b                	add    DWORD PTR [ebx],ebx
+  11:	0c 04                	or     al,0x4
+  13:	04 88                	add    al,0x88
+  15:	01 00                	add    DWORD PTR [eax],eax
+  17:	00 28                	add    BYTE PTR [eax],ch
+  19:	00 00                	add    BYTE PTR [eax],al
+  1b:	00 1c 00             	add    BYTE PTR [eax+eax*1],bl
+  1e:	00 00                	add    BYTE PTR [eax],al
+  20:	00 00                	add    BYTE PTR [eax],al
+			20: R_386_PC32	.text
+  22:	00 00                	add    BYTE PTR [eax],al
+  24:	4a                   	dec    edx
+  25:	00 00                	add    BYTE PTR [eax],al
+  27:	00 00                	add    BYTE PTR [eax],al
+  29:	44                   	inc    esp
+  2a:	0c 01                	or     al,0x1
+  2c:	00 47 10             	add    BYTE PTR [edi+0x10],al
+  2f:	05 02 75 00 43       	add    eax,0x43007502
+  34:	0f 03 75 7c          	lsl    esi,WORD PTR [ebp+0x7c]
+  38:	06                   	push   es
+  39:	77 0c                	ja     47 <.eh_frame+0x47>
+  3b:	01 00                	add    DWORD PTR [eax],eax
+  3d:	41                   	inc    ecx
+  3e:	c5 43 0c             	lds    eax,FWORD PTR [ebx+0xc]
+  41:	04 04                	add    al,0x4
+  43:	00 1c 00             	add    BYTE PTR [eax+eax*1],bl
+  46:	00 00                	add    BYTE PTR [eax],al
+  48:	48                   	dec    eax
+  49:	00 00                	add    BYTE PTR [eax],al
+  4b:	00 4a 00             	add    BYTE PTR [edx+0x0],cl
+			4c: R_386_PC32	.text
+  4e:	00 00                	add    BYTE PTR [eax],al
+  50:	17                   	pop    ss
+  51:	00 00                	add    BYTE PTR [eax],al
+  53:	00 00                	add    BYTE PTR [eax],al
+  55:	41                   	inc    ecx
+  56:	0e                   	push   cs
+  57:	08 85 02 42 0d 05    	or     BYTE PTR [ebp+0x50d4202],al
+  5d:	53                   	push   ebx
+  5e:	c5 0c 04             	lds    ecx,FWORD PTR [esp+eax*1]
+  61:	04 00                	add    al,0x0
+  63:	00 10                	add    BYTE PTR [eax],dl
+  65:	00 00                	add    BYTE PTR [eax],al
+  67:	00 68 00             	add    BYTE PTR [eax+0x0],ch
+  6a:	00 00                	add    BYTE PTR [eax],al
+  6c:	00 00                	add    BYTE PTR [eax],al
+			6c: R_386_PC32	.text.__x86.get_pc_thunk.ax
+  6e:	00 00                	add    BYTE PTR [eax],al
+  70:	04 00                	add    al,0x0
+  72:	00 00                	add    BYTE PTR [eax],al
+  74:	00 00                	add    BYTE PTR [eax],al
+	...

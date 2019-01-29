@@ -1,0 +1,10 @@
+gcc -m32 -S functions.c
+
+gcc -m32 -c functions.s
+
+gcc -m32 functions.o -o functions_C_i386
+
+objdump -x -D -s -t -Mintel functions.o > objdump_of_dot_o.txt
+
+objdump -x -D -s -t -Mintel functions_C_i386 > objdump_of_dot_exe.txt
+

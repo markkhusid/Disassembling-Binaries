@@ -1,0 +1,183 @@
+
+functions.o:     file format elf64-x86-64
+functions.o
+architecture: i386:x86-64, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x0000000000000000
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         0000004a  0000000000000000  0000000000000000  00000040  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  0000000000000000  0000000000000000  0000008a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  0000000000000000  0000000000000000  0000008a  2**0
+                  ALLOC
+  3 .comment      0000002b  0000000000000000  0000000000000000  0000008a  2**0
+                  CONTENTS, READONLY
+  4 .note.GNU-stack 00000000  0000000000000000  0000000000000000  000000b5  2**0
+                  CONTENTS, READONLY
+  5 .eh_frame     00000058  0000000000000000  0000000000000000  000000b8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 functions.c
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 l    d  .eh_frame	0000000000000000 .eh_frame
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000000 g     F .text	0000000000000036 main
+0000000000000036 g     F .text	0000000000000014 sum
+
+
+Contents of section .text:
+ 0000 554889e5 4883ec20 897dec48 8975e0c7  UH..H.. .}.H.u..
+ 0010 45f40300 0000c745 f8040000 008b55f8  E......E......U.
+ 0020 8b45f489 d689c7e8 00000000 8945fcb8  .E...........E..
+ 0030 00000000 c9c35548 89e5897d fc8975f8  ......UH...}..u.
+ 0040 8b55fc8b 45f801d0 5dc3               .U..E...].      
+Contents of section .comment:
+ 0000 00474343 3a202855 62756e74 7520372e  .GCC: (Ubuntu 7.
+ 0010 332e302d 32377562 756e7475 317e3138  3.0-27ubuntu1~18
+ 0020 2e303429 20372e33 2e3000             .04) 7.3.0.     
+Contents of section .eh_frame:
+ 0000 14000000 00000000 017a5200 01781001  .........zR..x..
+ 0010 1b0c0708 90010000 1c000000 1c000000  ................
+ 0020 00000000 36000000 00410e10 8602430d  ....6....A....C.
+ 0030 06710c07 08000000 1c000000 3c000000  .q..........<...
+ 0040 00000000 14000000 00410e10 8602430d  .........A....C.
+ 0050 064f0c07 08000000                    .O......        
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	55                   	push   rbp
+   1:	48 89 e5             	mov    rbp,rsp
+   4:	48 83 ec 20          	sub    rsp,0x20
+   8:	89 7d ec             	mov    DWORD PTR [rbp-0x14],edi
+   b:	48 89 75 e0          	mov    QWORD PTR [rbp-0x20],rsi
+   f:	c7 45 f4 03 00 00 00 	mov    DWORD PTR [rbp-0xc],0x3
+  16:	c7 45 f8 04 00 00 00 	mov    DWORD PTR [rbp-0x8],0x4
+  1d:	8b 55 f8             	mov    edx,DWORD PTR [rbp-0x8]
+  20:	8b 45 f4             	mov    eax,DWORD PTR [rbp-0xc]
+  23:	89 d6                	mov    esi,edx
+  25:	89 c7                	mov    edi,eax
+  27:	e8 00 00 00 00       	call   2c <main+0x2c>
+			28: R_X86_64_PC32	sum-0x4
+  2c:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+  2f:	b8 00 00 00 00       	mov    eax,0x0
+  34:	c9                   	leave  
+  35:	c3                   	ret    
+
+0000000000000036 <sum>:
+  36:	55                   	push   rbp
+  37:	48 89 e5             	mov    rbp,rsp
+  3a:	89 7d fc             	mov    DWORD PTR [rbp-0x4],edi
+  3d:	89 75 f8             	mov    DWORD PTR [rbp-0x8],esi
+  40:	8b 55 fc             	mov    edx,DWORD PTR [rbp-0x4]
+  43:	8b 45 f8             	mov    eax,DWORD PTR [rbp-0x8]
+  46:	01 d0                	add    eax,edx
+  48:	5d                   	pop    rbp
+  49:	c3                   	ret    
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [rdi+0x43],al
+   3:	43 3a 20             	rex.XB cmp spl,BYTE PTR [r8]
+   6:	28 55 62             	sub    BYTE PTR [rbp+0x62],dl
+   9:	75 6e                	jne    79 <sum+0x43>
+   b:	74 75                	je     82 <sum+0x4c>
+   d:	20 37                	and    BYTE PTR [rdi],dh
+   f:	2e 33 2e             	xor    ebp,DWORD PTR cs:[rsi]
+  12:	30 2d 32 37 75 62    	xor    BYTE PTR [rip+0x62753732],ch        # 6275374a <sum+0x62753714>
+  18:	75 6e                	jne    88 <sum+0x52>
+  1a:	74 75                	je     91 <sum+0x5b>
+  1c:	31 7e 31             	xor    DWORD PTR [rsi+0x31],edi
+  1f:	38 2e                	cmp    BYTE PTR [rsi],ch
+  21:	30 34 29             	xor    BYTE PTR [rcx+rbp*1],dh
+  24:	20 37                	and    BYTE PTR [rdi],dh
+  26:	2e 33 2e             	xor    ebp,DWORD PTR cs:[rsi]
+  29:	30 00                	xor    BYTE PTR [rax],al
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [rax],al
+   4:	00 00                	add    BYTE PTR [rax],al
+   6:	00 00                	add    BYTE PTR [rax],al
+   8:	01 7a 52             	add    DWORD PTR [rdx+0x52],edi
+   b:	00 01                	add    BYTE PTR [rcx],al
+   d:	78 10                	js     1f <.eh_frame+0x1f>
+   f:	01 1b                	add    DWORD PTR [rbx],ebx
+  11:	0c 07                	or     al,0x7
+  13:	08 90 01 00 00 1c    	or     BYTE PTR [rax+0x1c000001],dl
+  19:	00 00                	add    BYTE PTR [rax],al
+  1b:	00 1c 00             	add    BYTE PTR [rax+rax*1],bl
+  1e:	00 00                	add    BYTE PTR [rax],al
+  20:	00 00                	add    BYTE PTR [rax],al
+			20: R_X86_64_PC32	.text
+  22:	00 00                	add    BYTE PTR [rax],al
+  24:	36 00 00             	add    BYTE PTR ss:[rax],al
+  27:	00 00                	add    BYTE PTR [rax],al
+  29:	41 0e                	rex.B (bad) 
+  2b:	10 86 02 43 0d 06    	adc    BYTE PTR [rsi+0x60d4302],al
+  31:	71 0c                	jno    3f <.eh_frame+0x3f>
+  33:	07                   	(bad)  
+  34:	08 00                	or     BYTE PTR [rax],al
+  36:	00 00                	add    BYTE PTR [rax],al
+  38:	1c 00                	sbb    al,0x0
+  3a:	00 00                	add    BYTE PTR [rax],al
+  3c:	3c 00                	cmp    al,0x0
+  3e:	00 00                	add    BYTE PTR [rax],al
+  40:	00 00                	add    BYTE PTR [rax],al
+			40: R_X86_64_PC32	.text+0x36
+  42:	00 00                	add    BYTE PTR [rax],al
+  44:	14 00                	adc    al,0x0
+  46:	00 00                	add    BYTE PTR [rax],al
+  48:	00 41 0e             	add    BYTE PTR [rcx+0xe],al
+  4b:	10 86 02 43 0d 06    	adc    BYTE PTR [rsi+0x60d4302],al
+  51:	4f 0c 07             	rex.WRXB or al,0x7
+  54:	08 00                	or     BYTE PTR [rax],al
+	...
+Contents of the .eh_frame section:
+
+
+00000000 0000000000000014 00000000 CIE
+  Version:               1
+  Augmentation:          "zR"
+  Code alignment factor: 1
+  Data alignment factor: -8
+  Return address column: 16
+  Augmentation data:     1b
+  DW_CFA_def_cfa: r7 (rsp) ofs 8
+  DW_CFA_offset: r16 (rip) at cfa-8
+  DW_CFA_nop
+  DW_CFA_nop
+
+00000018 000000000000001c 0000001c FDE cie=00000000 pc=0000000000000000..0000000000000036
+  DW_CFA_advance_loc: 1 to 0000000000000001
+  DW_CFA_def_cfa_offset: 16
+  DW_CFA_offset: r6 (rbp) at cfa-16
+  DW_CFA_advance_loc: 3 to 0000000000000004
+  DW_CFA_def_cfa_register: r6 (rbp)
+  DW_CFA_advance_loc: 49 to 0000000000000035
+  DW_CFA_def_cfa: r7 (rsp) ofs 8
+  DW_CFA_nop
+  DW_CFA_nop
+  DW_CFA_nop
+
+00000038 000000000000001c 0000003c FDE cie=00000000 pc=0000000000000036..000000000000004a
+  DW_CFA_advance_loc: 1 to 0000000000000037
+  DW_CFA_def_cfa_offset: 16
+  DW_CFA_offset: r6 (rbp) at cfa-16
+  DW_CFA_advance_loc: 3 to 000000000000003a
+  DW_CFA_def_cfa_register: r6 (rbp)
+  DW_CFA_advance_loc: 15 to 0000000000000049
+  DW_CFA_def_cfa: r7 (rsp) ofs 8
+  DW_CFA_nop
+  DW_CFA_nop
+  DW_CFA_nop
+
