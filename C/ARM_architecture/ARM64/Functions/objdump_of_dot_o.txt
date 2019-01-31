@@ -1,0 +1,91 @@
+
+functions.o:     file format elf64-littleaarch64
+functions.o
+architecture: aarch64, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x0000000000000000
+private flags = 0:
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         0000005c  0000000000000000  0000000000000000  00000040  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  0000000000000000  0000000000000000  0000009c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  0000000000000000  0000000000000000  0000009c  2**0
+                  ALLOC
+  3 .comment      00000032  0000000000000000  0000000000000000  0000009c  2**0
+                  CONTENTS, READONLY
+  4 .note.GNU-stack 00000000  0000000000000000  0000000000000000  000000ce  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 functions.c
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000000 g     F .text	000000000000003c main
+000000000000003c g     F .text	0000000000000020 sum
+
+
+Contents of section .text:
+ 0000 fd7bbda9 fd030091 a01f00b9 a10b00f9  .{..............
+ 0010 60008052 a02700b9 80008052 a02b00b9  `..R.'.....R.+..
+ 0020 a12b40b9 a02740b9 00000094 a02f00b9  .+@..'@....../..
+ 0030 00008052 fd7bc3a8 c0035fd6 ff4300d1  ...R.{...._..C..
+ 0040 e00f00b9 e10b00b9 e10f40b9 e00b40b9  ..........@...@.
+ 0050 2000000b ff430091 c0035fd6            ....C...._.    
+Contents of section .comment:
+ 0000 00474343 3a202855 62756e74 752f4c69  .GCC: (Ubuntu/Li
+ 0010 6e61726f 20372e33 2e302d32 37756275  naro 7.3.0-27ubu
+ 0020 6e747531 7e31382e 30342920 372e332e  ntu1~18.04) 7.3.
+ 0030 3000                                 0.              
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+   4:	910003fd 	mov	x29, sp
+   8:	b9001fa0 	str	w0, [x29, #28]
+   c:	f9000ba1 	str	x1, [x29, #16]
+  10:	52800060 	mov	w0, #0x3                   	// #3
+  14:	b90027a0 	str	w0, [x29, #36]
+  18:	52800080 	mov	w0, #0x4                   	// #4
+  1c:	b9002ba0 	str	w0, [x29, #40]
+  20:	b9402ba1 	ldr	w1, [x29, #40]
+  24:	b94027a0 	ldr	w0, [x29, #36]
+  28:	94000000 	bl	3c <sum>
+			28: R_AARCH64_CALL26	sum
+  2c:	b9002fa0 	str	w0, [x29, #44]
+  30:	52800000 	mov	w0, #0x0                   	// #0
+  34:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  38:	d65f03c0 	ret
+
+000000000000003c <sum>:
+  3c:	d10043ff 	sub	sp, sp, #0x10
+  40:	b9000fe0 	str	w0, [sp, #12]
+  44:	b9000be1 	str	w1, [sp, #8]
+  48:	b9400fe1 	ldr	w1, [sp, #12]
+  4c:	b9400be0 	ldr	w0, [sp, #8]
+  50:	0b000020 	add	w0, w1, w0
+  54:	910043ff 	add	sp, sp, #0x10
+  58:	d65f03c0 	ret
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	43434700 	.inst	0x43434700 ; undefined
+   4:	5528203a 	.inst	0x5528203a ; undefined
+   8:	746e7562 	.inst	0x746e7562 ; undefined
+   c:	694c2f75 	ldpsw	x21, x11, [x27, #96]
+  10:	6f72616e 	umlsl2	v14.4s, v11.8h, v2.h[3]
+  14:	332e3720 	.inst	0x332e3720 ; undefined
+  18:	322d302e 	orr	w14, w1, #0xfff80000
+  1c:	75627537 	.inst	0x75627537 ; undefined
+  20:	3175746e 	adds	w14, w3, #0xd5d, lsl #12
+  24:	2e38317e 	usubw	v30.8h, v11.8h, v24.8b
+  28:	20293430 	.inst	0x20293430 ; undefined
+  2c:	2e332e37 	uqsub	v23.8b, v17.8b, v19.8b
+  30:	Address 0x0000000000000030 is out of bounds.
+
