@@ -1,0 +1,9 @@
+gfortran -S if_then.f08 
+
+gfortran -c if_then.s 
+
+gfortran if_then.o -o if_then_Fortran_ARM64
+
+objdump -x -D -s -t if_then.o > objdump_of_dot_o.txt
+
+objdump -x -D -s -t if_then_Fortran_ARM64 > objdump_of_dot_exe.txt

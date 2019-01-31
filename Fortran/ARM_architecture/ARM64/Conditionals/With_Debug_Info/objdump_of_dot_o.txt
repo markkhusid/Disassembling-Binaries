@@ -1,0 +1,950 @@
+
+if_then.o:     file format elf64-littleaarch64
+if_then.o
+architecture: aarch64, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x0000000000000000
+private flags = 0:
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         0000013c  0000000000000000  0000000000000000  00000040  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  0000000000000000  0000000000000000  0000017c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  0000000000000000  0000000000000000  0000017c  2**0
+                  ALLOC
+  3 .rodata       00000074  0000000000000000  0000000000000000  00000180  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .debug_info   000000f7  0000000000000000  0000000000000000  000001f4  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  5 .debug_abbrev 0000009c  0000000000000000  0000000000000000  000002eb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_aranges 00000030  0000000000000000  0000000000000000  00000387  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  7 .debug_macro  0000000c  0000000000000000  0000000000000000  000003b7  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  8 .debug_line   00000047  0000000000000000  0000000000000000  000003c3  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  9 .debug_str    0000013d  0000000000000000  0000000000000000  0000040a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .comment      00000032  0000000000000000  0000000000000000  00000547  2**0
+                  CONTENTS, READONLY
+ 11 .note.GNU-stack 00000000  0000000000000000  0000000000000000  00000579  2**0
+                  CONTENTS, READONLY
+ 12 .debug_frame  00000068  0000000000000000  0000000000000000  00000580  2**3
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 if_then.f08
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l    d  .rodata	0000000000000000 .rodata
+0000000000000000 l     F .text	00000000000000fc MAIN__
+0000000000000058 l     O .rodata	000000000000001c options.3.2564
+0000000000000000 l    d  .debug_info	0000000000000000 .debug_info
+0000000000000000 l    d  .debug_abbrev	0000000000000000 .debug_abbrev
+0000000000000000 l    d  .debug_aranges	0000000000000000 .debug_aranges
+0000000000000000 l    d  .debug_macro	0000000000000000 .debug_macro
+0000000000000000 l    d  .debug_line	0000000000000000 .debug_line
+0000000000000000 l    d  .debug_str	0000000000000000 .debug_str
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 l    d  .debug_frame	0000000000000000 .debug_frame
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000000         *UND*	0000000000000000 _gfortran_st_write
+0000000000000000         *UND*	0000000000000000 _gfortran_transfer_character_write
+0000000000000000         *UND*	0000000000000000 _gfortran_st_write_done
+0000000000000000         *UND*	0000000000000000 _gfortran_st_read
+0000000000000000         *UND*	0000000000000000 _gfortran_transfer_integer
+0000000000000000         *UND*	0000000000000000 _gfortran_st_read_done
+00000000000000fc g     F .text	0000000000000040 main
+0000000000000000         *UND*	0000000000000000 _gfortran_set_args
+0000000000000000         *UND*	0000000000000000 _gfortran_set_options
+
+
+Contents of section .text:
+ 0000 ff0308d1 fd7b00a9 fd030091 00000090  .....{..........
+ 0010 00000091 a01300f9 00018052 a02b00b9  ...........R.+..
+ 0020 00108052 a01b00b9 c0008052 a01f00b9  ...R.......R....
+ 0030 a0630091 00000094 00000090 01000091  .c..............
+ 0040 a0630091 62048052 00000094 a0630091  .c..b..R.....c..
+ 0050 00000094 00000090 00000091 a01300f9  ................
+ 0060 20018052 a02b00b9 00108052 a01b00b9   ..R.+.....R....
+ 0070 a0008052 a01f00b9 a0630091 00000094  ...R.....c......
+ 0080 a1f30791 a0630091 82008052 00000094  .....c.....R....
+ 0090 a0630091 00000094 a0ff41b9 1f140071  .c........A....q
+ 00a0 6d020054 00000090 00000091 a01300f9  m..T............
+ 00b0 80018052 a02b00b9 00108052 a01b00b9  ...R.+.....R....
+ 00c0 c0008052 a01f00b9 a0630091 00000094  ...R.....c......
+ 00d0 00000090 01000091 a0630091 c2038052  .........c.....R
+ 00e0 00000094 a0630091 00000094 1f2003d5  .....c....... ..
+ 00f0 fd7b40a9 ff030891 c0035fd6 fd7bbea9  .{@......._..{..
+ 0100 fd030091 a01f00b9 a10b00f9 a10b40f9  ..............@.
+ 0110 a01f40b9 00000094 00000090 00000091  ..@.............
+ 0120 e10300aa e0008052 00000094 b5ffff97  .......R........
+ 0130 00008052 fd7bc2a8 c0035fd6           ...R.{...._.    
+Contents of section .rodata:
+ 0000 69665f74 68656e2e 66303800 00000000  if_then.f08.....
+ 0010 456e7465 72206120 6e756d62 65722062  Enter a number b
+ 0020 65747765 656e2031 20616e64 20313020  etween 1 and 10 
+ 0030 2d3e2000 00000000 4e756d62 65722065  -> .....Number e
+ 0040 6e746572 65642067 72656174 65722074  ntered greater t
+ 0050 68616e20 35210000 44000000 ff030000  han 5!..D.......
+ 0060 00000000 01000000 01000000 00000000  ................
+ 0070 1f000000                             ....            
+Contents of section .debug_info:
+ 0000 f3000000 04000000 00000801 00000000  ................
+ 0010 0e020000 00000000 00000000 00000000  ................
+ 0020 00003c01 00000000 00000000 00000000  ..<.............
+ 0030 00000204 05000000 00033200 00000400  ..........2.....
+ 0040 00000001 0f320000 00000000 00000000  .....2..........
+ 0050 00400000 00000000 00019c7d 00000005  .@.........}....
+ 0060 00000000 010f3900 00000291 7c050000  ......9.....|...
+ 0070 0000010f 7d000000 03917006 00060883  ....}.....p.....
+ 0080 00000002 01080000 00000700 00000001  ................
+ 0090 01020000 00000000 0000fc00 00000000  ................
+ 00a0 0000019c 08000000 00010532 00000002  ...........2....
+ 00b0 917c0900 00000000 00000048 00000000  .|.........H....
+ 00c0 00000009 00000000 00000000 44000000  ............D...
+ 00d0 00000000 09000000 00000000 00480000  .............H..
+ 00e0 00000000 000a0000 00000106 39000000  ............9...
+ 00f0 04050000 000000                      .......         
+Contents of section .debug_abbrev:
+ 0000 01110125 0e130b42 0b030e1b 0e110112  ...%...B........
+ 0010 07101799 42170000 0224000b 0b3e0b03  ....B....$...>..
+ 0020 0e000003 26004913 0000042e 013f1903  ....&.I......?..
+ 0030 0e3a0b3b 0b491311 01120740 18964219  .:.;.I.....@..B.
+ 0040 01130000 05050003 0e3a0b3b 0b491302  .........:.;.I..
+ 0050 18000006 0f000b0b 49130000 072e0103  ........I.......
+ 0060 0e3a0b3b 0b6a1936 0b110112 07401896  .:.;.j.6.....@..
+ 0070 42190000 08340003 0e3a0b3b 0b491302  B....4...:.;.I..
+ 0080 18000009 0b001101 12070000 0a270003  .............'..
+ 0090 0e3a0b3b 0b49131c 0a000000           .:.;.I......    
+Contents of section .debug_aranges:
+ 0000 2c000000 02000000 00000800 00000000  ,...............
+ 0010 00000000 00000000 3c010000 00000000  ........<.......
+ 0020 00000000 00000000 00000000 00000000  ................
+Contents of section .debug_macro:
+ 0000 04000200 00000003 00010400           ............    
+Contents of section .debug_line:
+ 0000 43000000 02002200 00000401 fb0e0d00  C.....".........
+ 0010 01010101 00000001 00000100 69665f74  ............if_t
+ 0020 68656e2e 66303800 00000000 00090200  hen.f08.........
+ 0030 00000000 00000001 43082108 143d0823  ........C.!..=.#
+ 0040 4a4a020c 000101                      JJ.....         
+Contents of section .debug_str:
+ 0000 2f686f6d 652f7562 756e7475 2f456e67  /home/ubuntu/Eng
+ 0010 696e6565 72696e67 2f474954 4855422f  ineering/GITHUB/
+ 0020 44697361 7373656d 626c696e 672d4269  Disassembling-Bi
+ 0030 6e617269 65732f46 6f727472 616e2f41  naries/Fortran/A
+ 0040 524d5f61 72636869 74656374 7572652f  RM_architecture/
+ 0050 41524d36 342f436f 6e646974 696f6e61  ARM64/Conditiona
+ 0060 6c732f57 6974685f 44656275 675f496e  ls/With_Debug_In
+ 0070 666f0069 665f7468 656e0069 665f7468  fo.if_then.if_th
+ 0080 656e2e66 30380063 68617261 63746572  en.f08.character
+ 0090 286b696e 643d3129 00617267 63006d61  (kind=1).argc.ma
+ 00a0 696e006e 756d3100 6e756d32 00696e74  in.num1.num2.int
+ 00b0 65676572 286b696e 643d3429 00474e55  eger(kind=4).GNU
+ 00c0 20466f72 7472616e 32303038 20372e33   Fortran2008 7.3
+ 00d0 2e30202d 6d6c6974 746c652d 656e6469  .0 -mlittle-endi
+ 00e0 616e202d 6d616269 3d6c7036 34202d67  an -mabi=lp64 -g
+ 00f0 67646233 202d6669 6e747269 6e736963  gdb3 -fintrinsic
+ 0100 2d6d6f64 756c6573 2d706174 68202f75  -modules-path /u
+ 0110 73722f6c 69622f67 63632f61 61726368  sr/lib/gcc/aarch
+ 0120 36342d6c 696e7578 2d676e75 2f372f66  64-linux-gnu/7/f
+ 0130 696e636c 75646500 61726776 00        include.argv.   
+Contents of section .comment:
+ 0000 00474343 3a202855 62756e74 752f4c69  .GCC: (Ubuntu/Li
+ 0010 6e61726f 20372e33 2e302d32 37756275  naro 7.3.0-27ubu
+ 0020 6e747531 7e31382e 30342920 372e332e  ntu1~18.04) 7.3.
+ 0030 3000                                 0.              
+Contents of section .debug_frame:
+ 0000 0c000000 ffffffff 01000478 1e0c1f00  ...........x....
+ 0010 2c000000 00000000 00000000 00000000  ,...............
+ 0020 fc000000 00000000 410e8004 419d409e  ........A...A.@.
+ 0030 3f410d1d 7bddde0c 1f000000 00000000  ?A..{...........
+ 0040 24000000 00000000 00000000 00000000  $...............
+ 0050 40000000 00000000 410e209d 049e0341  @.......A. ....A
+ 0060 0d1d4dde dd0c1f00                    ..M.....        
+
+Disassembly of section .text:
+
+0000000000000000 <MAIN__>:
+program if_then
+   0:	d10803ff 	sub	sp, sp, #0x200
+   4:	a9007bfd 	stp	x29, x30, [sp]
+   8:	910003fd 	mov	x29, sp
+      implicit none
+
+      integer                   ::      num1
+      integer, parameter        ::      num2 = 5
+
+      print *, "Enter a number between 1 and 10 -> "
+   c:	90000000 	adrp	x0, 0 <MAIN__>
+			c: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+  10:	91000000 	add	x0, x0, #0x0
+			10: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+  14:	f90013a0 	str	x0, [x29, #32]
+  18:	52800100 	mov	w0, #0x8                   	// #8
+  1c:	b9002ba0 	str	w0, [x29, #40]
+  20:	52801000 	mov	w0, #0x80                  	// #128
+  24:	b9001ba0 	str	w0, [x29, #24]
+  28:	528000c0 	mov	w0, #0x6                   	// #6
+  2c:	b9001fa0 	str	w0, [x29, #28]
+  30:	910063a0 	add	x0, x29, #0x18
+  34:	94000000 	bl	0 <_gfortran_st_write>
+			34: R_AARCH64_CALL26	_gfortran_st_write
+  38:	90000000 	adrp	x0, 0 <MAIN__>
+			38: R_AARCH64_ADR_PREL_PG_HI21	.rodata+0x10
+  3c:	91000001 	add	x1, x0, #0x0
+			3c: R_AARCH64_ADD_ABS_LO12_NC	.rodata+0x10
+  40:	910063a0 	add	x0, x29, #0x18
+  44:	52800462 	mov	w2, #0x23                  	// #35
+  48:	94000000 	bl	0 <_gfortran_transfer_character_write>
+			48: R_AARCH64_CALL26	_gfortran_transfer_character_write
+  4c:	910063a0 	add	x0, x29, #0x18
+  50:	94000000 	bl	0 <_gfortran_st_write_done>
+			50: R_AARCH64_CALL26	_gfortran_st_write_done
+      read *, num1
+  54:	90000000 	adrp	x0, 0 <MAIN__>
+			54: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+  58:	91000000 	add	x0, x0, #0x0
+			58: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+  5c:	f90013a0 	str	x0, [x29, #32]
+  60:	52800120 	mov	w0, #0x9                   	// #9
+  64:	b9002ba0 	str	w0, [x29, #40]
+  68:	52801000 	mov	w0, #0x80                  	// #128
+  6c:	b9001ba0 	str	w0, [x29, #24]
+  70:	528000a0 	mov	w0, #0x5                   	// #5
+  74:	b9001fa0 	str	w0, [x29, #28]
+  78:	910063a0 	add	x0, x29, #0x18
+  7c:	94000000 	bl	0 <_gfortran_st_read>
+			7c: R_AARCH64_CALL26	_gfortran_st_read
+  80:	9107f3a1 	add	x1, x29, #0x1fc
+  84:	910063a0 	add	x0, x29, #0x18
+  88:	52800082 	mov	w2, #0x4                   	// #4
+  8c:	94000000 	bl	0 <_gfortran_transfer_integer>
+			8c: R_AARCH64_CALL26	_gfortran_transfer_integer
+  90:	910063a0 	add	x0, x29, #0x18
+  94:	94000000 	bl	0 <_gfortran_st_read_done>
+			94: R_AARCH64_CALL26	_gfortran_st_read_done
+
+      if (num1 > num2) then
+  98:	b941ffa0 	ldr	w0, [x29, #508]
+  9c:	7100141f 	cmp	w0, #0x5
+  a0:	5400026d 	b.le	ec <MAIN__+0xec>
+              print *, "Number entered greater than 5!"
+  a4:	90000000 	adrp	x0, 0 <MAIN__>
+			a4: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+  a8:	91000000 	add	x0, x0, #0x0
+			a8: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+  ac:	f90013a0 	str	x0, [x29, #32]
+  b0:	52800180 	mov	w0, #0xc                   	// #12
+  b4:	b9002ba0 	str	w0, [x29, #40]
+  b8:	52801000 	mov	w0, #0x80                  	// #128
+  bc:	b9001ba0 	str	w0, [x29, #24]
+  c0:	528000c0 	mov	w0, #0x6                   	// #6
+  c4:	b9001fa0 	str	w0, [x29, #28]
+  c8:	910063a0 	add	x0, x29, #0x18
+  cc:	94000000 	bl	0 <_gfortran_st_write>
+			cc: R_AARCH64_CALL26	_gfortran_st_write
+  d0:	90000000 	adrp	x0, 0 <MAIN__>
+			d0: R_AARCH64_ADR_PREL_PG_HI21	.rodata+0x38
+  d4:	91000001 	add	x1, x0, #0x0
+			d4: R_AARCH64_ADD_ABS_LO12_NC	.rodata+0x38
+  d8:	910063a0 	add	x0, x29, #0x18
+  dc:	528003c2 	mov	w2, #0x1e                  	// #30
+  e0:	94000000 	bl	0 <_gfortran_transfer_character_write>
+			e0: R_AARCH64_CALL26	_gfortran_transfer_character_write
+  e4:	910063a0 	add	x0, x29, #0x18
+  e8:	94000000 	bl	0 <_gfortran_st_write_done>
+			e8: R_AARCH64_CALL26	_gfortran_st_write_done
+      end if
+
+end program if_then
+  ec:	d503201f 	nop
+  f0:	a9407bfd 	ldp	x29, x30, [sp]
+  f4:	910803ff 	add	sp, sp, #0x200
+  f8:	d65f03c0 	ret
+
+00000000000000fc <main>:
+  fc:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+ 100:	910003fd 	mov	x29, sp
+ 104:	b9001fa0 	str	w0, [x29, #28]
+ 108:	f9000ba1 	str	x1, [x29, #16]
+ 10c:	f9400ba1 	ldr	x1, [x29, #16]
+ 110:	b9401fa0 	ldr	w0, [x29, #28]
+ 114:	94000000 	bl	0 <_gfortran_set_args>
+			114: R_AARCH64_CALL26	_gfortran_set_args
+ 118:	90000000 	adrp	x0, 0 <MAIN__>
+			118: R_AARCH64_ADR_PREL_PG_HI21	.rodata+0x58
+ 11c:	91000000 	add	x0, x0, #0x0
+			11c: R_AARCH64_ADD_ABS_LO12_NC	.rodata+0x58
+ 120:	aa0003e1 	mov	x1, x0
+ 124:	528000e0 	mov	w0, #0x7                   	// #7
+ 128:	94000000 	bl	0 <_gfortran_set_options>
+			128: R_AARCH64_CALL26	_gfortran_set_options
+ 12c:	97ffffb5 	bl	0 <MAIN__>
+ 130:	52800000 	mov	w0, #0x0                   	// #0
+ 134:	a8c27bfd 	ldp	x29, x30, [sp], #32
+ 138:	d65f03c0 	ret
+
+Disassembly of section .rodata:
+
+0000000000000000 <options.3.2564-0x58>:
+   0:	745f6669 	.word	0x745f6669
+   4:	2e6e6568 	.word	0x2e6e6568
+   8:	00383066 	.word	0x00383066
+   c:	00000000 	.word	0x00000000
+  10:	65746e45 	.word	0x65746e45
+  14:	20612072 	.word	0x20612072
+  18:	626d756e 	.word	0x626d756e
+  1c:	62207265 	.word	0x62207265
+  20:	65777465 	.word	0x65777465
+  24:	31206e65 	.word	0x31206e65
+  28:	646e6120 	.word	0x646e6120
+  2c:	20303120 	.word	0x20303120
+  30:	00203e2d 	.word	0x00203e2d
+  34:	00000000 	.word	0x00000000
+  38:	626d754e 	.word	0x626d754e
+  3c:	65207265 	.word	0x65207265
+  40:	7265746e 	.word	0x7265746e
+  44:	67206465 	.word	0x67206465
+  48:	74616572 	.word	0x74616572
+  4c:	74207265 	.word	0x74207265
+  50:	206e6168 	.word	0x206e6168
+  54:	00002135 	.word	0x00002135
+
+0000000000000058 <options.3.2564>:
+  58:	00000044 	.word	0x00000044
+  5c:	000003ff 	.word	0x000003ff
+  60:	00000000 	.word	0x00000000
+  64:	00000001 	.word	0x00000001
+  68:	00000001 	.word	0x00000001
+  6c:	00000000 	.word	0x00000000
+  70:	0000001f 	.word	0x0000001f
+
+Disassembly of section .debug_info:
+
+0000000000000000 <.debug_info>:
+program if_then
+   0:	000000f3 	.inst	0x000000f3 ; undefined
+   4:	00000004 	.inst	0x00000004 ; undefined
+			6: R_AARCH64_ABS32	.debug_abbrev
+   8:	01080000 	.inst	0x01080000 ; undefined
+      print *, "Enter a number between 1 and 10 -> "
+   c:	00000000 	.inst	0x00000000 ; undefined
+			c: R_AARCH64_ABS32	.debug_str+0xbd
+  10:	0000020e 	.inst	0x0000020e ; undefined
+			12: R_AARCH64_ABS32	.debug_str+0x7b
+	...
+			16: R_AARCH64_ABS32	.debug_str
+			1a: R_AARCH64_ABS64	.text
+  20:	013c0000 	.inst	0x013c0000 ; undefined
+	...
+			2a: R_AARCH64_ABS32	.debug_line
+			2e: R_AARCH64_ABS32	.debug_macro
+  30:	04020000 	.inst	0x04020000 ; undefined
+  34:	00000005 	.inst	0x00000005 ; undefined
+			35: R_AARCH64_ABS32	.debug_str+0xad
+  38:	00320300 	.inst	0x00320300 ; NYI
+  3c:	00040000 	.inst	0x00040000 ; undefined
+			3f: R_AARCH64_ABS32	.debug_str+0x9e
+  40:	01000000 	.inst	0x01000000 ; undefined
+  44:	0000320f 	.inst	0x0000320f ; undefined
+	...
+			49: R_AARCH64_ABS64	.text+0xfc
+  50:	00004000 	.inst	0x00004000 ; undefined
+      read *, num1
+  54:	00000000 	.inst	0x00000000 ; undefined
+  58:	7d9c0100 	.inst	0x7d9c0100 ; undefined
+  5c:	05000000 	orr	z0.s, z0.s, #0x1
+  60:	00000000 	.inst	0x00000000 ; undefined
+			60: R_AARCH64_ABS32	.debug_str+0x99
+  64:	00390f01 	.inst	0x00390f01 ; NYI
+  68:	91020000 	add	x0, x0, #0x80
+  6c:	0000057c 	.inst	0x0000057c ; undefined
+			6e: R_AARCH64_ABS32	.debug_str+0x138
+  70:	0f010000 	.inst	0x0f010000 ; undefined
+  74:	0000007d 	.inst	0x0000007d ; undefined
+  78:	06709103 	.inst	0x06709103 ; undefined
+  7c:	83080600 	.inst	0x83080600 ; undefined
+  80:	02000000 	.inst	0x02000000 ; undefined
+  84:	00000801 	.inst	0x00000801 ; undefined
+			86: R_AARCH64_ABS32	.debug_str+0x87
+  88:	00070000 	.inst	0x00070000 ; undefined
+			8b: R_AARCH64_ABS32	.debug_str+0x73
+  8c:	01000000 	.inst	0x01000000 ; undefined
+  90:	00000201 	.inst	0x00000201 ; undefined
+			92: R_AARCH64_ABS64	.text
+  94:	00000000 	.inst	0x00000000 ; undefined
+      if (num1 > num2) then
+  98:	00fc0000 	.inst	0x00fc0000 ; undefined
+  9c:	00000000 	.inst	0x00000000 ; undefined
+  a0:	9c010000 	ldr	q0, 20a0 <main+0x1fa4>
+              print *, "Number entered greater than 5!"
+  a4:	00000008 	.inst	0x00000008 ; undefined
+			a5: R_AARCH64_ABS32	.debug_str+0xa3
+  a8:	32050100 	orr	w0, w8, #0x8000000
+  ac:	02000000 	.inst	0x02000000 ; undefined
+  b0:	00097c91 	.inst	0x00097c91 ; undefined
+			b3: R_AARCH64_ABS64	.text+0xc
+  b4:	00000000 	.inst	0x00000000 ; undefined
+  b8:	48000000 	stxrh	w0, w0, [x0]
+  bc:	00000000 	.inst	0x00000000 ; undefined
+  c0:	09000000 	.inst	0x09000000 ; undefined
+	...
+			c4: R_AARCH64_ABS64	.text+0x54
+  cc:	00000044 	.inst	0x00000044 ; undefined
+  d0:	00000000 	.inst	0x00000000 ; undefined
+  d4:	00000009 	.inst	0x00000009 ; undefined
+			d5: R_AARCH64_ABS64	.text+0xa4
+  d8:	00000000 	.inst	0x00000000 ; undefined
+  dc:	00004800 	.inst	0x00004800 ; undefined
+  e0:	00000000 	.inst	0x00000000 ; undefined
+  e4:	00000a00 	.inst	0x00000a00 ; undefined
+			e6: R_AARCH64_ABS32	.debug_str+0xa8
+  e8:	06010000 	.inst	0x06010000 ; undefined
+end program if_then
+  ec:	00000039 	.inst	0x00000039 ; undefined
+  f0:	00000504 	.inst	0x00000504 ; undefined
+  f4:	Address 0x00000000000000f4 is out of bounds.
+
+
+Disassembly of section .debug_abbrev:
+
+0000000000000000 <.debug_abbrev>:
+program if_then
+   0:	25011101 	cmpge	p1.b, p4/z, z8.b, #1
+   4:	420b130e 	.inst	0x420b130e ; undefined
+   8:	1b0e030b 	madd	w11, w24, w14, w0
+      print *, "Enter a number between 1 and 10 -> "
+   c:	1201110e 	and	w14, w8, #0x8000000f
+  10:	99171007 	stlur	w7, [x0, #-143]
+  14:	00001742 	.inst	0x00001742 ; undefined
+  18:	0b002402 	add	w2, w0, w0, lsl #9
+  1c:	030b3e0b 	.inst	0x030b3e0b ; undefined
+  20:	0300000e 	.inst	0x0300000e ; undefined
+  24:	13490026 	.inst	0x13490026 ; undefined
+  28:	2e040000 	ext	v0.8b, v0.8b, v4.8b, #0
+  2c:	03193f01 	.inst	0x03193f01 ; undefined
+  30:	3b0b3a0e 	.inst	0x3b0b3a0e ; undefined
+  34:	1113490b 	add	w11, w8, #0x4d2
+  38:	40071201 	.inst	0x40071201 ; undefined
+  3c:	19429618 	.inst	0x19429618 ; undefined
+  40:	00001301 	.inst	0x00001301 ; undefined
+  44:	03000505 	.inst	0x03000505 ; undefined
+  48:	3b0b3a0e 	.inst	0x3b0b3a0e ; undefined
+  4c:	0213490b 	.inst	0x0213490b ; undefined
+  50:	06000018 	.inst	0x06000018 ; undefined
+      read *, num1
+  54:	0b0b000f 	add	w15, w0, w11
+  58:	00001349 	.inst	0x00001349 ; undefined
+  5c:	03012e07 	.inst	0x03012e07 ; undefined
+  60:	3b0b3a0e 	.inst	0x3b0b3a0e ; undefined
+  64:	36196a0b 	tbz	w11, #3, 2da4 <main+0x2ca8>
+  68:	1201110b 	and	w11, w8, #0x8000000f
+  6c:	96184007 	bl	fffffffff8610088 <main+0xfffffffff860ff8c>
+  70:	00001942 	.inst	0x00001942 ; undefined
+  74:	03003408 	.inst	0x03003408 ; undefined
+  78:	3b0b3a0e 	.inst	0x3b0b3a0e ; undefined
+  7c:	0213490b 	.inst	0x0213490b ; undefined
+  80:	09000018 	.inst	0x09000018 ; undefined
+  84:	0111000b 	.inst	0x0111000b ; undefined
+  88:	00000712 	.inst	0x00000712 ; undefined
+  8c:	0300270a 	.inst	0x0300270a ; undefined
+  90:	3b0b3a0e 	.inst	0x3b0b3a0e ; undefined
+  94:	1c13490b 	ldr	s11, 269b4 <main+0x268b8>
+      if (num1 > num2) then
+  98:	0000000a 	.inst	0x0000000a ; undefined
+
+Disassembly of section .debug_aranges:
+
+0000000000000000 <.debug_aranges>:
+program if_then
+   0:	0000002c 	.inst	0x0000002c ; undefined
+   4:	00000002 	.inst	0x00000002 ; undefined
+			6: R_AARCH64_ABS32	.debug_info
+   8:	00080000 	.inst	0x00080000 ; undefined
+	...
+			10: R_AARCH64_ABS64	.text
+      print *, "Enter a number between 1 and 10 -> "
+  18:	0000013c 	.inst	0x0000013c ; undefined
+	...
+
+Disassembly of section .debug_macro:
+
+0000000000000000 <.debug_macro>:
+program if_then
+   0:	00020004 	.inst	0x00020004 ; undefined
+			3: R_AARCH64_ABS32	.debug_line
+   4:	03000000 	.inst	0x03000000 ; undefined
+   8:	00040100 	.inst	0x00040100 ; undefined
+
+Disassembly of section .debug_line:
+
+0000000000000000 <.debug_line>:
+   0:	00000043 	.inst	0x00000043 ; undefined
+   4:	00220002 	.inst	0x00220002 ; NYI
+   8:	01040000 	.inst	0x01040000 ; undefined
+      print *, "Enter a number between 1 and 10 -> "
+   c:	000d0efb 	.inst	0x000d0efb ; undefined
+  10:	01010101 	.inst	0x01010101 ; undefined
+  14:	01000000 	.inst	0x01000000 ; undefined
+  18:	00010000 	.inst	0x00010000 ; undefined
+  1c:	745f6669 	.inst	0x745f6669 ; undefined
+  20:	2e6e6568 	umax	v8.4h, v11.4h, v14.4h
+  24:	00383066 	.inst	0x00383066 ; NYI
+  28:	00000000 	.inst	0x00000000 ; undefined
+  2c:	00020900 	.inst	0x00020900 ; undefined
+			2f: R_AARCH64_ABS64	.text
+  30:	00000000 	.inst	0x00000000 ; undefined
+  34:	01000000 	.inst	0x01000000 ; undefined
+  38:	08210843 	.inst	0x08210843 ; undefined
+  3c:	23083d14 	.inst	0x23083d14 ; undefined
+  40:	0c024a4a 	.inst	0x0c024a4a ; undefined
+  44:	Address 0x0000000000000044 is out of bounds.
+
+
+Disassembly of section .debug_str:
+
+0000000000000000 <.debug_str>:
+program if_then
+   0:	6d6f682f 	ldp	d15, d26, [x1, #-272]
+   4:	62752f65 	.inst	0x62752f65 ; undefined
+   8:	75746e75 	.inst	0x75746e75 ; undefined
+      print *, "Enter a number between 1 and 10 -> "
+   c:	676e452f 	.inst	0x676e452f ; undefined
+  10:	65656e69 	fnmls	z9.h, p3/m, z19.h, z5.h
+  14:	676e6972 	.inst	0x676e6972 ; undefined
+  18:	5449472f 	b.nv	928fc <main+0x92800>
+  1c:	2f425548 	.inst	0x2f425548 ; undefined
+  20:	61736944 	.inst	0x61736944 ; undefined
+  24:	6d657373 	ldp	d19, d28, [x27, #-432]
+  28:	6e696c62 	umin	v2.8h, v3.8h, v9.8h
+  2c:	69422d67 	ldpsw	x7, x11, [x11, #16]
+  30:	6972616e 	ldpsw	x14, x24, [x11, #-112]
+  34:	462f7365 	.inst	0x462f7365 ; undefined
+  38:	7274726f 	.inst	0x7274726f ; undefined
+  3c:	412f6e61 	.inst	0x412f6e61 ; undefined
+  40:	615f4d52 	.inst	0x615f4d52 ; undefined
+  44:	69686372 	ldpsw	x18, x24, [x27, #-192]
+  48:	74636574 	.inst	0x74636574 ; undefined
+  4c:	2f657275 	fcmla	v21.4h, v19.4h, v5.h[1], #270
+  50:	364d5241 	tbz	w1, #9, ffffffffffffaa98 <main+0xffffffffffffa99c>
+      read *, num1
+  54:	6f432f34 	.inst	0x6f432f34 ; undefined
+  58:	7469646e 	.inst	0x7469646e ; undefined
+  5c:	616e6f69 	.inst	0x616e6f69 ; undefined
+  60:	572f736c 	.inst	0x572f736c ; undefined
+  64:	5f687469 	sqshl	d9, d3, #40
+  68:	75626544 	.inst	0x75626544 ; undefined
+  6c:	6e495f67 	.inst	0x6e495f67 ; undefined
+  70:	69006f66 	.inst	0x69006f66 ; undefined
+  74:	68745f66 	.inst	0x68745f66 ; undefined
+  78:	69006e65 	.inst	0x69006e65 ; undefined
+  7c:	68745f66 	.inst	0x68745f66 ; undefined
+  80:	662e6e65 	.inst	0x662e6e65 ; undefined
+  84:	63003830 	.inst	0x63003830 ; undefined
+  88:	61726168 	.inst	0x61726168 ; undefined
+  8c:	72657463 	.inst	0x72657463 ; undefined
+  90:	6e696b28 	.inst	0x6e696b28 ; undefined
+  94:	29313d64 	stp	w4, w15, [x11, #-120]
+      if (num1 > num2) then
+  98:	67726100 	.inst	0x67726100 ; undefined
+  9c:	616d0063 	.inst	0x616d0063 ; undefined
+  a0:	6e006e69 	.inst	0x6e006e69 ; undefined
+              print *, "Number entered greater than 5!"
+  a4:	00316d75 	.inst	0x00316d75 ; NYI
+  a8:	326d756e 	.inst	0x326d756e ; undefined
+  ac:	746e6900 	.inst	0x746e6900 ; undefined
+  b0:	72656765 	.inst	0x72656765 ; undefined
+  b4:	6e696b28 	.inst	0x6e696b28 ; undefined
+  b8:	29343d64 	stp	w4, w15, [x11, #-96]
+  bc:	554e4700 	.inst	0x554e4700 ; undefined
+  c0:	726f4620 	.inst	0x726f4620 ; undefined
+  c4:	6e617274 	uabdl2	v20.4s, v19.8h, v1.8h
+  c8:	38303032 	ldsetb	w16, w18, [x1]
+  cc:	332e3720 	.inst	0x332e3720 ; undefined
+  d0:	2d20302e 	stp	s14, s12, [x1, #-256]
+  d4:	74696c6d 	.inst	0x74696c6d ; undefined
+  d8:	2d656c74 	ldp	s20, s27, [x3, #-216]
+  dc:	69646e65 	ldpsw	x5, x27, [x19, #-224]
+  e0:	2d206e61 	stp	s1, s27, [x19, #-256]
+  e4:	6962616d 	ldpsw	x13, x24, [x11, #-240]
+  e8:	36706c3d 	tbz	w29, #14, e6c <main+0xd70>
+end program if_then
+  ec:	672d2034 	.inst	0x672d2034 ; undefined
+  f0:	33626467 	.inst	0x33626467 ; undefined
+  f4:	69662d20 	ldpsw	x0, x11, [x9, #-208]
+  f8:	6972746e 	ldpsw	x14, x29, [x3, #-112]
+  fc:	6369736e 	.inst	0x6369736e ; undefined
+ 100:	646f6d2d 	.inst	0x646f6d2d ; undefined
+ 104:	73656c75 	.inst	0x73656c75 ; undefined
+ 108:	7461702d 	.inst	0x7461702d ; undefined
+ 10c:	752f2068 	.inst	0x752f2068 ; undefined
+ 110:	6c2f7273 	stnp	d19, d28, [x19, #-272]
+ 114:	672f6269 	.inst	0x672f6269 ; undefined
+ 118:	612f6363 	.inst	0x612f6363 ; undefined
+ 11c:	68637261 	.inst	0x68637261 ; undefined
+ 120:	6c2d3436 	stnp	d22, d13, [x1, #-304]
+ 124:	78756e69 	.inst	0x78756e69 ; undefined
+ 128:	756e672d 	.inst	0x756e672d ; undefined
+ 12c:	662f372f 	.inst	0x662f372f ; undefined
+ 130:	6c636e69 	ldnp	d9, d27, [x19, #-464]
+ 134:	00656475 	.inst	0x00656475 ; undefined
+ 138:	76677261 	.inst	0x76677261 ; undefined
+	...
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+program if_then
+   0:	43434700 	.inst	0x43434700 ; undefined
+   4:	5528203a 	.inst	0x5528203a ; undefined
+   8:	746e7562 	.inst	0x746e7562 ; undefined
+      print *, "Enter a number between 1 and 10 -> "
+   c:	694c2f75 	ldpsw	x21, x11, [x27, #96]
+  10:	6f72616e 	umlsl2	v14.4s, v11.8h, v2.h[3]
+  14:	332e3720 	.inst	0x332e3720 ; undefined
+  18:	322d302e 	orr	w14, w1, #0xfff80000
+  1c:	75627537 	.inst	0x75627537 ; undefined
+  20:	3175746e 	adds	w14, w3, #0xd5d, lsl #12
+  24:	2e38317e 	usubw	v30.8h, v11.8h, v24.8b
+  28:	20293430 	.inst	0x20293430 ; undefined
+  2c:	2e332e37 	uqsub	v23.8b, v17.8b, v19.8b
+  30:	Address 0x0000000000000030 is out of bounds.
+
+
+Disassembly of section .debug_frame:
+
+0000000000000000 <.debug_frame>:
+program if_then
+   0:	0000000c 	.inst	0x0000000c ; undefined
+   4:	ffffffff 	.inst	0xffffffff ; undefined
+   8:	78040001 	sturh	w1, [x0, #64]
+      print *, "Enter a number between 1 and 10 -> "
+   c:	001f0c1e 	.inst	0x001f0c1e ; undefined
+  10:	0000002c 	.inst	0x0000002c ; undefined
+	...
+			14: R_AARCH64_ABS32	.debug_frame
+			18: R_AARCH64_ABS64	.text
+  20:	000000fc 	.inst	0x000000fc ; undefined
+  24:	00000000 	.inst	0x00000000 ; undefined
+  28:	04800e41 	add	z1.s, p3/m, z1.s, z18.s
+  2c:	9e409d41 	.inst	0x9e409d41 ; undefined
+  30:	1d0d413f 	.inst	0x1d0d413f ; undefined
+  34:	0cdedd7b 	.inst	0x0cdedd7b ; undefined
+  38:	0000001f 	.inst	0x0000001f ; undefined
+  3c:	00000000 	.inst	0x00000000 ; undefined
+  40:	00000024 	.inst	0x00000024 ; undefined
+	...
+			44: R_AARCH64_ABS32	.debug_frame
+			48: R_AARCH64_ABS64	.text+0xfc
+  50:	00000040 	.inst	0x00000040 ; undefined
+      read *, num1
+  54:	00000000 	.inst	0x00000000 ; undefined
+  58:	9d200e41 	.inst	0x9d200e41 ; undefined
+  5c:	41039e04 	.inst	0x41039e04 ; undefined
+  60:	de4d1d0d 	.inst	0xde4d1d0d ; undefined
+  64:	001f0cdd 	.inst	0x001f0cdd ; undefined
+Contents of the .debug_info section:
+
+  Compilation Unit @ offset 0x0:
+   Length:        0xf3 (32-bit)
+   Version:       4
+   Abbrev Offset: 0x0
+   Pointer Size:  8
+ <0><b>: Abbrev Number: 1 (DW_TAG_compile_unit)
+    <c>   DW_AT_producer    : (indirect string, offset: 0xbd): GNU Fortran2008 7.3.0 -mlittle-endian -mabi=lp64 -ggdb3 -fintrinsic-modules-path /usr/lib/gcc/aarch64-linux-gnu/7/finclude
+    <10>   DW_AT_language    : 14	(Fortran 95)
+    <11>   DW_AT_identifier_case: 2	(down_case)
+    <12>   DW_AT_name        : (indirect string, offset: 0x7b): if_then.f08
+    <16>   DW_AT_comp_dir    : (indirect string, offset: 0x0): /home/ubuntu/Engineering/GITHUB/Disassembling-Binaries/Fortran/ARM_architecture/ARM64/Conditionals/With_Debug_Info
+    <1a>   DW_AT_low_pc      : 0x0
+    <22>   DW_AT_high_pc     : 0x13c
+    <2a>   DW_AT_stmt_list   : 0x0
+    <2e>   DW_AT_GNU_macros  : 0x0
+ <1><32>: Abbrev Number: 2 (DW_TAG_base_type)
+    <33>   DW_AT_byte_size   : 4
+    <34>   DW_AT_encoding    : 5	(signed)
+    <35>   DW_AT_name        : (indirect string, offset: 0xad): integer(kind=4)
+ <1><39>: Abbrev Number: 3 (DW_TAG_const_type)
+    <3a>   DW_AT_type        : <0x32>
+ <1><3e>: Abbrev Number: 4 (DW_TAG_subprogram)
+    <3f>   DW_AT_external    : 1
+    <3f>   DW_AT_name        : (indirect string, offset: 0x9e): main
+    <43>   DW_AT_decl_file   : 1
+    <44>   DW_AT_decl_line   : 15
+    <45>   DW_AT_type        : <0x32>
+    <49>   DW_AT_low_pc      : 0xfc
+    <51>   DW_AT_high_pc     : 0x40
+    <59>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
+    <5b>   DW_AT_GNU_all_tail_call_sites: 1
+    <5b>   DW_AT_sibling     : <0x7d>
+ <2><5f>: Abbrev Number: 5 (DW_TAG_formal_parameter)
+    <60>   DW_AT_name        : (indirect string, offset: 0x99): argc
+    <64>   DW_AT_decl_file   : 1
+    <65>   DW_AT_decl_line   : 15
+    <66>   DW_AT_type        : <0x39>
+    <6a>   DW_AT_location    : 2 byte block: 91 7c 	(DW_OP_fbreg: -4)
+ <2><6d>: Abbrev Number: 5 (DW_TAG_formal_parameter)
+    <6e>   DW_AT_name        : (indirect string, offset: 0x138): argv
+    <72>   DW_AT_decl_file   : 1
+    <73>   DW_AT_decl_line   : 15
+    <74>   DW_AT_type        : <0x7d>
+    <78>   DW_AT_location    : 3 byte block: 91 70 6 	(DW_OP_fbreg: -16; DW_OP_deref)
+ <2><7c>: Abbrev Number: 0
+ <1><7d>: Abbrev Number: 6 (DW_TAG_pointer_type)
+    <7e>   DW_AT_byte_size   : 8
+    <7f>   DW_AT_type        : <0x83>
+ <1><83>: Abbrev Number: 2 (DW_TAG_base_type)
+    <84>   DW_AT_byte_size   : 1
+    <85>   DW_AT_encoding    : 8	(unsigned char)
+    <86>   DW_AT_name        : (indirect string, offset: 0x87): character(kind=1)
+ <1><8a>: Abbrev Number: 7 (DW_TAG_subprogram)
+    <8b>   DW_AT_name        : (indirect string, offset: 0x73): if_then
+    <8f>   DW_AT_decl_file   : 1
+    <90>   DW_AT_decl_line   : 1
+    <91>   DW_AT_main_subprogram: 1
+    <91>   DW_AT_calling_convention: 2	(program)
+    <92>   DW_AT_low_pc      : 0x0
+    <9a>   DW_AT_high_pc     : 0xfc
+    <a2>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
+    <a4>   DW_AT_GNU_all_tail_call_sites: 1
+ <2><a4>: Abbrev Number: 8 (DW_TAG_variable)
+    <a5>   DW_AT_name        : (indirect string, offset: 0xa3): num1
+    <a9>   DW_AT_decl_file   : 1
+    <aa>   DW_AT_decl_line   : 5
+    <ab>   DW_AT_type        : <0x32>
+    <af>   DW_AT_location    : 2 byte block: 91 7c 	(DW_OP_fbreg: -4)
+ <2><b2>: Abbrev Number: 9 (DW_TAG_lexical_block)
+    <b3>   DW_AT_low_pc      : 0xc
+    <bb>   DW_AT_high_pc     : 0x48
+ <2><c3>: Abbrev Number: 9 (DW_TAG_lexical_block)
+    <c4>   DW_AT_low_pc      : 0x54
+    <cc>   DW_AT_high_pc     : 0x44
+ <2><d4>: Abbrev Number: 9 (DW_TAG_lexical_block)
+    <d5>   DW_AT_low_pc      : 0xa4
+    <dd>   DW_AT_high_pc     : 0x48
+ <2><e5>: Abbrev Number: 10 (DW_TAG_constant)
+    <e6>   DW_AT_name        : (indirect string, offset: 0xa8): num2
+    <ea>   DW_AT_decl_file   : 1
+    <eb>   DW_AT_decl_line   : 6
+    <ec>   DW_AT_type        : <0x39>
+    <f0>   DW_AT_const_value : 4 byte block: 5 0 0 0 
+ <2><f5>: Abbrev Number: 0
+ <1><f6>: Abbrev Number: 0
+
+Contents of the .debug_abbrev section:
+
+  Number TAG (0x0)
+   1      DW_TAG_compile_unit    [has children]
+    DW_AT_producer     DW_FORM_strp
+    DW_AT_language     DW_FORM_data1
+    DW_AT_identifier_case DW_FORM_data1
+    DW_AT_name         DW_FORM_strp
+    DW_AT_comp_dir     DW_FORM_strp
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_data8
+    DW_AT_stmt_list    DW_FORM_sec_offset
+    DW_AT_GNU_macros   DW_FORM_sec_offset
+    DW_AT value: 0     DW_FORM value: 0
+   2      DW_TAG_base_type    [no children]
+    DW_AT_byte_size    DW_FORM_data1
+    DW_AT_encoding     DW_FORM_data1
+    DW_AT_name         DW_FORM_strp
+    DW_AT value: 0     DW_FORM value: 0
+   3      DW_TAG_const_type    [no children]
+    DW_AT_type         DW_FORM_ref4
+    DW_AT value: 0     DW_FORM value: 0
+   4      DW_TAG_subprogram    [has children]
+    DW_AT_external     DW_FORM_flag_present
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_data8
+    DW_AT_frame_base   DW_FORM_exprloc
+    DW_AT_GNU_all_tail_call_sites DW_FORM_flag_present
+    DW_AT_sibling      DW_FORM_ref4
+    DW_AT value: 0     DW_FORM value: 0
+   5      DW_TAG_formal_parameter    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_location     DW_FORM_exprloc
+    DW_AT value: 0     DW_FORM value: 0
+   6      DW_TAG_pointer_type    [no children]
+    DW_AT_byte_size    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT value: 0     DW_FORM value: 0
+   7      DW_TAG_subprogram    [has children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_main_subprogram DW_FORM_flag_present
+    DW_AT_calling_convention DW_FORM_data1
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_data8
+    DW_AT_frame_base   DW_FORM_exprloc
+    DW_AT_GNU_all_tail_call_sites DW_FORM_flag_present
+    DW_AT value: 0     DW_FORM value: 0
+   8      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_location     DW_FORM_exprloc
+    DW_AT value: 0     DW_FORM value: 0
+   9      DW_TAG_lexical_block    [no children]
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_data8
+    DW_AT value: 0     DW_FORM value: 0
+   10      DW_TAG_constant    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_const_value  DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+
+Contents of the .debug_aranges section:
+
+  Length:                   44
+  Version:                  2
+  Offset into .debug_info:  0x0
+  Pointer Size:             8
+  Segment Size:             0
+
+    Address            Length
+    0000000000000000 000000000000013c 
+    0000000000000000 0000000000000000 
+
+Contents of the .debug_macro section:
+
+  Offset:                      0x0
+  Version:                     4
+  Offset size:                 4
+  Offset into .debug_line:     0x0
+
+ DW_MACRO_start_file - lineno: 0 filenum: 1 filename: if_then.f08
+ DW_MACRO_end_file
+
+Raw dump of debug contents of section .debug_line:
+
+  Offset:                      0x0
+  Length:                      67
+  DWARF Version:               2
+  Prologue Length:             34
+  Minimum Instruction Length:  4
+  Initial value of 'is_stmt':  1
+  Line Base:                   -5
+  Line Range:                  14
+  Opcode Base:                 13
+
+ Opcodes:
+  Opcode 1 has 0 args
+  Opcode 2 has 1 arg
+  Opcode 3 has 1 arg
+  Opcode 4 has 1 arg
+  Opcode 5 has 1 arg
+  Opcode 6 has 0 args
+  Opcode 7 has 0 args
+  Opcode 8 has 0 args
+  Opcode 9 has 1 arg
+  Opcode 10 has 0 args
+  Opcode 11 has 0 args
+  Opcode 12 has 1 arg
+
+ The Directory Table is empty.
+
+ The File Name Table (offset 0x1c):
+  Entry	Dir	Time	Size	Name
+  1	0	0	0	if_then.f08
+
+ Line Number Statements:
+  [0x0000002c]  Extended opcode 2: set Address to 0x0
+  [0x00000037]  Copy
+  [0x00000038]  Special opcode 54: advance Address by 12 to 0xc and Line by 7 to 8
+  [0x00000039]  Advance PC by constant 68 to 0x50
+  [0x0000003a]  Special opcode 20: advance Address by 4 to 0x54 and Line by 1 to 9
+  [0x0000003b]  Advance PC by constant 68 to 0x98
+  [0x0000003c]  Special opcode 7: advance Address by 0 to 0x98 and Line by 2 to 11
+  [0x0000003d]  Special opcode 48: advance Address by 12 to 0xa4 and Line by 1 to 12
+  [0x0000003e]  Advance PC by constant 68 to 0xe8
+  [0x0000003f]  Special opcode 22: advance Address by 4 to 0xec and Line by 3 to 15
+  [0x00000040]  Special opcode 61: advance Address by 16 to 0xfc and Line by 0 to 15
+  [0x00000041]  Special opcode 61: advance Address by 16 to 0x10c and Line by 0 to 15
+  [0x00000042]  Advance PC by 48 to 0x13c
+  [0x00000044]  Extended opcode 1: End of Sequence
+
+
+Contents of the .debug_str section:
+
+  0x00000000 2f686f6d 652f7562 756e7475 2f456e67 /home/ubuntu/Eng
+  0x00000010 696e6565 72696e67 2f474954 4855422f ineering/GITHUB/
+  0x00000020 44697361 7373656d 626c696e 672d4269 Disassembling-Bi
+  0x00000030 6e617269 65732f46 6f727472 616e2f41 naries/Fortran/A
+  0x00000040 524d5f61 72636869 74656374 7572652f RM_architecture/
+  0x00000050 41524d36 342f436f 6e646974 696f6e61 ARM64/Conditiona
+  0x00000060 6c732f57 6974685f 44656275 675f496e ls/With_Debug_In
+  0x00000070 666f0069 665f7468 656e0069 665f7468 fo.if_then.if_th
+  0x00000080 656e2e66 30380063 68617261 63746572 en.f08.character
+  0x00000090 286b696e 643d3129 00617267 63006d61 (kind=1).argc.ma
+  0x000000a0 696e006e 756d3100 6e756d32 00696e74 in.num1.num2.int
+  0x000000b0 65676572 286b696e 643d3429 00474e55 eger(kind=4).GNU
+  0x000000c0 20466f72 7472616e 32303038 20372e33  Fortran2008 7.3
+  0x000000d0 2e30202d 6d6c6974 746c652d 656e6469 .0 -mlittle-endi
+  0x000000e0 616e202d 6d616269 3d6c7036 34202d67 an -mabi=lp64 -g
+  0x000000f0 67646233 202d6669 6e747269 6e736963 gdb3 -fintrinsic
+  0x00000100 2d6d6f64 756c6573 2d706174 68202f75 -modules-path /u
+  0x00000110 73722f6c 69622f67 63632f61 61726368 sr/lib/gcc/aarch
+  0x00000120 36342d6c 696e7578 2d676e75 2f372f66 64-linux-gnu/7/f
+  0x00000130 696e636c 75646500 61726776 00       include.argv.
+
+Contents of the .debug_frame section:
+
+
+00000000 000000000000000c ffffffff CIE
+  Version:               1
+  Augmentation:          ""
+  Code alignment factor: 4
+  Data alignment factor: -8
+  Return address column: 30
+
+  DW_CFA_def_cfa: r31 (sp) ofs 0
+
+00000010 000000000000002c 00000000 FDE cie=00000000 pc=0000000000000000..00000000000000fc
+  DW_CFA_advance_loc: 4 to 0000000000000004
+  DW_CFA_def_cfa_offset: 512
+  DW_CFA_advance_loc: 4 to 0000000000000008
+  DW_CFA_offset: r29 (x29) at cfa-512
+  DW_CFA_offset: r30 (x30) at cfa-504
+  DW_CFA_advance_loc: 4 to 000000000000000c
+  DW_CFA_def_cfa_register: r29 (x29)
+  DW_CFA_advance_loc: 236 to 00000000000000f8
+  DW_CFA_restore: r29 (x29)
+  DW_CFA_restore: r30 (x30)
+  DW_CFA_def_cfa: r31 (sp) ofs 0
+  DW_CFA_nop
+  DW_CFA_nop
+  DW_CFA_nop
+  DW_CFA_nop
+  DW_CFA_nop
+  DW_CFA_nop
+
+00000040 0000000000000024 00000000 FDE cie=00000000 pc=00000000000000fc..000000000000013c
+  DW_CFA_advance_loc: 4 to 0000000000000100
+  DW_CFA_def_cfa_offset: 32
+  DW_CFA_offset: r29 (x29) at cfa-32
+  DW_CFA_offset: r30 (x30) at cfa-24
+  DW_CFA_advance_loc: 4 to 0000000000000104
+  DW_CFA_def_cfa_register: r29 (x29)
+  DW_CFA_advance_loc: 52 to 0000000000000138
+  DW_CFA_restore: r30 (x30)
+  DW_CFA_restore: r29 (x29)
+  DW_CFA_def_cfa: r31 (sp) ofs 0
+

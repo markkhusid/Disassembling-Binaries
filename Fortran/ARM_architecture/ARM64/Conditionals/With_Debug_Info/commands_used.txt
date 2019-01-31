@@ -1,0 +1,10 @@
+gfortran -ggdb3 -S if_then.f08 
+
+gfortran -ggdb3 -c if_then.s 
+
+gfortran -ggdb3 if_then.o -o if_then_Fortran_ARM64_ggbd3 
+
+objdump -x -D -S -s -g -t if_then.o > objdump_of_dot_o.txt
+
+objdump -x -D -S -s -g -t if_then_Fortran_ARM64_ggbd3 > objdump_of_dot_exe.txt
+

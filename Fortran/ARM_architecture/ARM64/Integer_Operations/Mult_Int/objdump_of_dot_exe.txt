@@ -1,0 +1,1042 @@
+
+mult_int_Fortran_ARM64:     file format elf64-littleaarch64
+mult_int_Fortran_ARM64
+architecture: aarch64, flags 0x00000150:
+HAS_SYMS, DYNAMIC, D_PAGED
+start address 0x00000000000006c0
+
+Program Header:
+    PHDR off    0x0000000000000040 vaddr 0x0000000000000040 paddr 0x0000000000000040 align 2**3
+         filesz 0x00000000000001c0 memsz 0x00000000000001c0 flags r--
+  INTERP off    0x0000000000000200 vaddr 0x0000000000000200 paddr 0x0000000000000200 align 2**0
+         filesz 0x000000000000001b memsz 0x000000000000001b flags r--
+    LOAD off    0x0000000000000000 vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**16
+         filesz 0x00000000000008f8 memsz 0x00000000000008f8 flags r-x
+    LOAD off    0x0000000000000d68 vaddr 0x0000000000010d68 paddr 0x0000000000010d68 align 2**16
+         filesz 0x00000000000002a8 memsz 0x00000000000002b0 flags rw-
+ DYNAMIC off    0x0000000000000d78 vaddr 0x0000000000010d78 paddr 0x0000000000010d78 align 2**3
+         filesz 0x0000000000000200 memsz 0x0000000000000200 flags rw-
+    NOTE off    0x000000000000021c vaddr 0x000000000000021c paddr 0x000000000000021c align 2**2
+         filesz 0x0000000000000044 memsz 0x0000000000000044 flags r--
+   STACK off    0x0000000000000000 vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**4
+         filesz 0x0000000000000000 memsz 0x0000000000000000 flags rw-
+   RELRO off    0x0000000000000d68 vaddr 0x0000000000010d68 paddr 0x0000000000010d68 align 2**0
+         filesz 0x0000000000000298 memsz 0x0000000000000298 flags r--
+
+Dynamic Section:
+  NEEDED               libgfortran.so.4
+  NEEDED               libc.so.6
+  INIT                 0x0000000000000628
+  FINI                 0x00000000000008bc
+  INIT_ARRAY           0x0000000000010d68
+  INIT_ARRAYSZ         0x0000000000000008
+  FINI_ARRAY           0x0000000000010d70
+  FINI_ARRAYSZ         0x0000000000000008
+  GNU_HASH             0x0000000000000260
+  STRTAB               0x0000000000000388
+  SYMTAB               0x0000000000000280
+  STRSZ                0x00000000000000c7
+  SYMENT               0x0000000000000018
+  DEBUG                0x0000000000000000
+  PLTGOT               0x0000000000010f78
+  PLTRELSZ             0x0000000000000090
+  PLTREL               0x0000000000000007
+  JMPREL               0x0000000000000598
+  RELA                 0x00000000000004a8
+  RELASZ               0x00000000000000f0
+  RELAENT              0x0000000000000018
+  FLAGS                0x0000000000000008
+  FLAGS_1              0x0000000008000001
+  VERNEED              0x0000000000000468
+  VERNEEDNUM           0x0000000000000002
+  VERSYM               0x0000000000000450
+  RELACOUNT            0x0000000000000006
+
+Version References:
+  required from libc.so.6:
+    0x06969197 0x00 03 GLIBC_2.17
+  required from libgfortran.so.4:
+    0x0792f967 0x00 02 GFORTRAN_7
+private flags = 0:
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .interp       0000001b  0000000000000200  0000000000000200  00000200  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .note.ABI-tag 00000020  000000000000021c  000000000000021c  0000021c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .note.gnu.build-id 00000024  000000000000023c  000000000000023c  0000023c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .gnu.hash     0000001c  0000000000000260  0000000000000260  00000260  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .dynsym       00000108  0000000000000280  0000000000000280  00000280  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .dynstr       000000c7  0000000000000388  0000000000000388  00000388  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  6 .gnu.version  00000016  0000000000000450  0000000000000450  00000450  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  7 .gnu.version_r 00000040  0000000000000468  0000000000000468  00000468  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  8 .rela.dyn     000000f0  00000000000004a8  00000000000004a8  000004a8  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  9 .rela.plt     00000090  0000000000000598  0000000000000598  00000598  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 10 .init         00000014  0000000000000628  0000000000000628  00000628  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 11 .plt          00000080  0000000000000640  0000000000000640  00000640  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 12 .text         000001fc  00000000000006c0  00000000000006c0  000006c0  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .fini         00000010  00000000000008bc  00000000000008bc  000008bc  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .rodata       00000024  00000000000008d0  00000000000008d0  000008d0  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 15 .eh_frame     00000004  00000000000008f4  00000000000008f4  000008f4  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 16 .init_array   00000008  0000000000010d68  0000000000010d68  00000d68  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 17 .fini_array   00000008  0000000000010d70  0000000000010d70  00000d70  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 18 .dynamic      00000200  0000000000010d78  0000000000010d78  00000d78  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 19 .got          00000088  0000000000010f78  0000000000010f78  00000f78  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 20 .data         00000010  0000000000011000  0000000000011000  00001000  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 21 .bss          00000008  0000000000011010  0000000000011010  00001010  2**0
+                  ALLOC
+ 22 .comment      00000031  0000000000000000  0000000000000000  00001010  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+0000000000000200 l    d  .interp	0000000000000000              .interp
+000000000000021c l    d  .note.ABI-tag	0000000000000000              .note.ABI-tag
+000000000000023c l    d  .note.gnu.build-id	0000000000000000              .note.gnu.build-id
+0000000000000260 l    d  .gnu.hash	0000000000000000              .gnu.hash
+0000000000000280 l    d  .dynsym	0000000000000000              .dynsym
+0000000000000388 l    d  .dynstr	0000000000000000              .dynstr
+0000000000000450 l    d  .gnu.version	0000000000000000              .gnu.version
+0000000000000468 l    d  .gnu.version_r	0000000000000000              .gnu.version_r
+00000000000004a8 l    d  .rela.dyn	0000000000000000              .rela.dyn
+0000000000000598 l    d  .rela.plt	0000000000000000              .rela.plt
+0000000000000628 l    d  .init	0000000000000000              .init
+0000000000000640 l    d  .plt	0000000000000000              .plt
+00000000000006c0 l    d  .text	0000000000000000              .text
+00000000000008bc l    d  .fini	0000000000000000              .fini
+00000000000008d0 l    d  .rodata	0000000000000000              .rodata
+00000000000008f4 l    d  .eh_frame	0000000000000000              .eh_frame
+0000000000010d68 l    d  .init_array	0000000000000000              .init_array
+0000000000010d70 l    d  .fini_array	0000000000000000              .fini_array
+0000000000010d78 l    d  .dynamic	0000000000000000              .dynamic
+0000000000010f78 l    d  .got	0000000000000000              .got
+0000000000011000 l    d  .data	0000000000000000              .data
+0000000000011010 l    d  .bss	0000000000000000              .bss
+0000000000000000 l    d  .comment	0000000000000000              .comment
+0000000000000000 l    df *ABS*	0000000000000000              /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/Scrt1.o
+0000000000000000 l    df *ABS*	0000000000000000              /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crti.o
+00000000000006f8 l     F .text	0000000000000014              call_weak_fn
+0000000000000000 l    df *ABS*	0000000000000000              /usr/lib/gcc/aarch64-linux-gnu/7/../../../aarch64-linux-gnu/crtn.o
+0000000000000000 l    df *ABS*	0000000000000000              crtstuff.c
+0000000000000710 l     F .text	0000000000000000              deregister_tm_clones
+0000000000000740 l     F .text	0000000000000000              register_tm_clones
+0000000000000778 l     F .text	0000000000000000              __do_global_dtors_aux
+0000000000011010 l     O .bss	0000000000000001              completed.8499
+0000000000010d70 l     O .fini_array	0000000000000000              __do_global_dtors_aux_fini_array_entry
+00000000000007c0 l     F .text	0000000000000000              frame_dummy
+0000000000010d68 l     O .init_array	0000000000000000              __frame_dummy_init_array_entry
+0000000000000000 l    df *ABS*	0000000000000000              mult.f08
+00000000000007c4 l     F .text	0000000000000030              MAIN__
+00000000000008d8 l     O .rodata	000000000000001c              options.0.2561
+0000000000000000 l    df *ABS*	0000000000000000              elf-init.oS
+0000000000000000 l    df *ABS*	0000000000000000              crtstuff.c
+00000000000008f4 l     O .eh_frame	0000000000000000              __FRAME_END__
+0000000000000000 l    df *ABS*	0000000000000000              
+0000000000010fc0 l     O *ABS*	0000000000000000              _GLOBAL_OFFSET_TABLE_
+0000000000010d70 l       .init_array	0000000000000000              __init_array_end
+0000000000010d68 l       .init_array	0000000000000000              __init_array_start
+0000000000010d78 l     O *ABS*	0000000000000000              _DYNAMIC
+0000000000011000  w      .data	0000000000000000              data_start
+00000000000008b8 g     F .text	0000000000000004              __libc_csu_fini
+0000000000000000       F *UND*	0000000000000000              _gfortran_set_args@@GFORTRAN_7
+00000000000006c0 g     F .text	0000000000000000              _start
+0000000000000000       F *UND*	0000000000000000              __libc_start_main@@GLIBC_2.17
+0000000000000000  w      *UND*	0000000000000000              __gmon_start__
+00000000000008bc g     F .fini	0000000000000000              _fini
+0000000000000000  w    F *UND*	0000000000000000              __cxa_finalize@@GLIBC_2.17
+0000000000000000  w      *UND*	0000000000000000              _ITM_deregisterTMCloneTable
+00000000000008d0 g     O .rodata	0000000000000004              _IO_stdin_used
+0000000000000000  w      *UND*	0000000000000000              _ITM_registerTMCloneTable
+0000000000011000 g       .data	0000000000000000              __data_start
+0000000000000000       F *UND*	0000000000000000              abort@@GLIBC_2.17
+0000000000011010 g       .bss	0000000000000000              __bss_start__
+0000000000011010 g     O .data	0000000000000000              .hidden __TMC_END__
+0000000000011008 g     O .data	0000000000000000              .hidden __dso_handle
+0000000000000000       F *UND*	0000000000000000              _gfortran_set_options@@GFORTRAN_7
+0000000000011018 g       .bss	0000000000000000              __end__
+0000000000000838 g     F .text	0000000000000080              __libc_csu_init
+0000000000011018 g       .bss	0000000000000000              __bss_end__
+0000000000011010 g       .bss	0000000000000000              __bss_start
+0000000000011018 g       .bss	0000000000000000              _bss_end__
+0000000000011018 g       .bss	0000000000000000              _end
+0000000000011010 g       .data	0000000000000000              _edata
+00000000000007f4 g     F .text	0000000000000040              main
+0000000000000628 g     F .init	0000000000000000              _init
+
+
+Contents of section .interp:
+ 0200 2f6c6962 2f6c642d 6c696e75 782d6161  /lib/ld-linux-aa
+ 0210 72636836 342e736f 2e3100             rch64.so.1.     
+Contents of section .note.ABI-tag:
+ 021c 04000000 10000000 01000000 474e5500  ............GNU.
+ 022c 00000000 03000000 07000000 00000000  ................
+Contents of section .note.gnu.build-id:
+ 023c 04000000 14000000 03000000 474e5500  ............GNU.
+ 024c a39899e1 2e1a15e5 5d709120 1260c916  ........]p. .`..
+ 025c d74a213a                             .J!:            
+Contents of section .gnu.hash:
+ 0260 01000000 01000000 01000000 00000000  ................
+ 0270 00000000 00000000 00000000           ............    
+Contents of section .dynsym:
+ 0280 00000000 00000000 00000000 00000000  ................
+ 0290 00000000 00000000 00000000 03000b00  ................
+ 02a0 28060000 00000000 00000000 00000000  (...............
+ 02b0 00000000 03001500 00100100 00000000  ................
+ 02c0 00000000 00000000 6d000000 12000000  ........m.......
+ 02d0 00000000 00000000 00000000 00000000  ................
+ 02e0 99000000 12000000 00000000 00000000  ................
+ 02f0 00000000 00000000 2e000000 20000000  ............ ...
+ 0300 00000000 00000000 00000000 00000000  ................
+ 0310 8a000000 22000000 00000000 00000000  ...."...........
+ 0320 00000000 00000000 12000000 20000000  ............ ...
+ 0330 00000000 00000000 00000000 00000000  ................
+ 0340 3d000000 20000000 00000000 00000000  =... ...........
+ 0350 00000000 00000000 ab000000 12000000  ................
+ 0360 00000000 00000000 00000000 00000000  ................
+ 0370 57000000 12000000 00000000 00000000  W...............
+ 0380 00000000 00000000                    ........        
+Contents of section .dynstr:
+ 0388 006c6962 67666f72 7472616e 2e736f2e  .libgfortran.so.
+ 0398 34005f49 544d5f64 65726567 69737465  4._ITM_deregiste
+ 03a8 72544d43 6c6f6e65 5461626c 65005f5f  rTMCloneTable.__
+ 03b8 676d6f6e 5f737461 72745f5f 005f4954  gmon_start__._IT
+ 03c8 4d5f7265 67697374 6572544d 436c6f6e  M_registerTMClon
+ 03d8 65546162 6c65005f 67666f72 7472616e  eTable._gfortran
+ 03e8 5f736574 5f6f7074 696f6e73 005f6766  _set_options._gf
+ 03f8 6f727472 616e5f73 65745f61 72677300  ortran_set_args.
+ 0408 6c696263 2e736f2e 36005f5f 6378615f  libc.so.6.__cxa_
+ 0418 66696e61 6c697a65 005f5f6c 6962635f  finalize.__libc_
+ 0428 73746172 745f6d61 696e0061 626f7274  start_main.abort
+ 0438 00474c49 42435f32 2e313700 47464f52  .GLIBC_2.17.GFOR
+ 0448 5452414e 5f3700                      TRAN_7.         
+Contents of section .gnu.version:
+ 0450 00000000 00000200 03000000 03000000  ................
+ 0460 00000300 0200                        ......          
+Contents of section .gnu.version_r:
+ 0468 01000100 80000000 10000000 20000000  ............ ...
+ 0478 97919606 00000300 b1000000 00000000  ................
+ 0488 01000100 01000000 10000000 00000000  ................
+ 0498 67f99207 00000200 bc000000 00000000  g...............
+Contents of section .rela.dyn:
+ 04a8 680d0100 00000000 03040000 00000000  h...............
+ 04b8 c0070000 00000000 700d0100 00000000  ........p.......
+ 04c8 03040000 00000000 78070000 00000000  ........x.......
+ 04d8 c80f0100 00000000 03040000 00000000  ................
+ 04e8 b8080000 00000000 f00f0100 00000000  ................
+ 04f8 03040000 00000000 38080000 00000000  ........8.......
+ 0508 f80f0100 00000000 03040000 00000000  ................
+ 0518 f4070000 00000000 08100100 00000000  ................
+ 0528 03040000 00000000 08100100 00000000  ................
+ 0538 d00f0100 00000000 01040000 05000000  ................
+ 0548 00000000 00000000 d80f0100 00000000  ................
+ 0558 01040000 06000000 00000000 00000000  ................
+ 0568 e00f0100 00000000 01040000 07000000  ................
+ 0578 00000000 00000000 e80f0100 00000000  ................
+ 0588 01040000 08000000 00000000 00000000  ................
+Contents of section .rela.plt:
+ 0598 900f0100 00000000 02040000 03000000  ................
+ 05a8 00000000 00000000 980f0100 00000000  ................
+ 05b8 02040000 04000000 00000000 00000000  ................
+ 05c8 a00f0100 00000000 02040000 05000000  ................
+ 05d8 00000000 00000000 a80f0100 00000000  ................
+ 05e8 02040000 06000000 00000000 00000000  ................
+ 05f8 b00f0100 00000000 02040000 09000000  ................
+ 0608 00000000 00000000 b80f0100 00000000  ................
+ 0618 02040000 0a000000 00000000 00000000  ................
+Contents of section .init:
+ 0628 fd7bbfa9 fd030091 32000094 fd7bc1a8  .{......2....{..
+ 0638 c0035fd6                             .._.            
+Contents of section .plt:
+ 0640 f07bbfa9 90000090 11c647f9 10223e91  .{........G..">.
+ 0650 20021fd6 1f2003d5 1f2003d5 1f2003d5   .... ... ... ..
+ 0660 90000090 11ca47f9 10423e91 20021fd6  ......G..B>. ...
+ 0670 90000090 11ce47f9 10623e91 20021fd6  ......G..b>. ...
+ 0680 90000090 11d247f9 10823e91 20021fd6  ......G...>. ...
+ 0690 90000090 11d647f9 10a23e91 20021fd6  ......G...>. ...
+ 06a0 90000090 11da47f9 10c23e91 20021fd6  ......G...>. ...
+ 06b0 90000090 11de47f9 10e23e91 20021fd6  ......G...>. ...
+Contents of section .text:
+ 06c0 1d0080d2 1e0080d2 e50300aa e10340f9  ..............@.
+ 06d0 e2230091 e6030091 80000090 00fc47f9  .#............G.
+ 06e0 83000090 63f847f9 84000090 84e447f9  ....c.G.......G.
+ 06f0 e0ffff97 ebffff97 80000090 00e847f9  ..............G.
+ 0700 400000b4 dfffff17 c0035fd6 00000000  @........._.....
+ 0710 800000b0 00400091 810000b0 21400091  .....@......!@..
+ 0720 3f0000eb a0000054 81000090 21f047f9  ?......T....!.G.
+ 0730 410000b4 20001fd6 c0035fd6 1f2003d5  A... ....._.. ..
+ 0740 800000b0 00400091 810000b0 21400091  .....@......!@..
+ 0750 210000cb 21fc4393 21fc418b 21fc4193  !...!.C.!.A.!.A.
+ 0760 a10000b4 82000090 42f447f9 420000b4  ........B.G.B...
+ 0770 40001fd6 c0035fd6 fd7bbea9 fd030091  @....._..{......
+ 0780 f30b00f9 930000b0 60424039 40010035  ........`B@9@..5
+ 0790 80000090 00ec47f9 800000b4 800000b0  ......G.........
+ 07a0 000440f9 bbffff97 daffff97 20008052  ..@......... ..R
+ 07b0 60420039 f30b40f9 fd7bc2a8 c0035fd6  `B.9..@..{...._.
+ 07c0 e0ffff17 ff4300d1 40008052 e00f00b9  .....C..@..R....
+ 07d0 60008052 e00b00b9 e10f40b9 e00b40b9  `..R......@...@.
+ 07e0 207c001b e00700b9 1f2003d5 ff430091   |....... ...C..
+ 07f0 c0035fd6 fd7bbea9 fd030091 a01f00b9  .._..{..........
+ 0800 a10b00f9 a10b40f9 a01f40b9 95ffff97  ......@...@.....
+ 0810 00000090 00602391 e10300aa e0008052  .....`#........R
+ 0820 a4ffff97 e8ffff97 00008052 fd7bc2a8  ...........R.{..
+ 0830 c0035fd6 00000000 fd7bbca9 fd030091  .._......{......
+ 0840 f4d701a9 94000090 95000090 94c23591  ..............5.
+ 0850 b5a23591 f6df02a9 940215cb f81f00f9  ..5.............
+ 0860 f603002a f70301aa 94fe4393 f80302aa  ...*......C.....
+ 0870 6effff97 940100b4 b30b00f9 130080d2  n...............
+ 0880 a37a73f8 e20318aa e10317aa e003162a  .zs............*
+ 0890 73060091 60003fd6 9f0213eb 21ffff54  s...`.?.....!..T
+ 08a0 b30b40f9 f4d741a9 f6df42a9 f81f40f9  ..@...A...B...@.
+ 08b0 fd7bc4a8 c0035fd6 c0035fd6           .{...._..._.    
+Contents of section .fini:
+ 08bc fd7bbfa9 fd030091 fd7bc1a8 c0035fd6  .{.......{...._.
+Contents of section .rodata:
+ 08d0 01000200 00000000 44000000 ff030000  ........D.......
+ 08e0 00000000 01000000 01000000 00000000  ................
+ 08f0 1f000000                             ....            
+Contents of section .eh_frame:
+ 08f4 00000000                             ....            
+Contents of section .init_array:
+ 10d68 c0070000 00000000                    ........        
+Contents of section .fini_array:
+ 10d70 78070000 00000000                    x.......        
+Contents of section .dynamic:
+ 10d78 01000000 00000000 01000000 00000000  ................
+ 10d88 01000000 00000000 80000000 00000000  ................
+ 10d98 0c000000 00000000 28060000 00000000  ........(.......
+ 10da8 0d000000 00000000 bc080000 00000000  ................
+ 10db8 19000000 00000000 680d0100 00000000  ........h.......
+ 10dc8 1b000000 00000000 08000000 00000000  ................
+ 10dd8 1a000000 00000000 700d0100 00000000  ........p.......
+ 10de8 1c000000 00000000 08000000 00000000  ................
+ 10df8 f5feff6f 00000000 60020000 00000000  ...o....`.......
+ 10e08 05000000 00000000 88030000 00000000  ................
+ 10e18 06000000 00000000 80020000 00000000  ................
+ 10e28 0a000000 00000000 c7000000 00000000  ................
+ 10e38 0b000000 00000000 18000000 00000000  ................
+ 10e48 15000000 00000000 00000000 00000000  ................
+ 10e58 03000000 00000000 780f0100 00000000  ........x.......
+ 10e68 02000000 00000000 90000000 00000000  ................
+ 10e78 14000000 00000000 07000000 00000000  ................
+ 10e88 17000000 00000000 98050000 00000000  ................
+ 10e98 07000000 00000000 a8040000 00000000  ................
+ 10ea8 08000000 00000000 f0000000 00000000  ................
+ 10eb8 09000000 00000000 18000000 00000000  ................
+ 10ec8 1e000000 00000000 08000000 00000000  ................
+ 10ed8 fbffff6f 00000000 01000008 00000000  ...o............
+ 10ee8 feffff6f 00000000 68040000 00000000  ...o....h.......
+ 10ef8 ffffff6f 00000000 02000000 00000000  ...o............
+ 10f08 f0ffff6f 00000000 50040000 00000000  ...o....P.......
+ 10f18 f9ffff6f 00000000 06000000 00000000  ...o............
+ 10f28 00000000 00000000 00000000 00000000  ................
+ 10f38 00000000 00000000 00000000 00000000  ................
+ 10f48 00000000 00000000 00000000 00000000  ................
+ 10f58 00000000 00000000 00000000 00000000  ................
+ 10f68 00000000 00000000 00000000 00000000  ................
+Contents of section .got:
+ 10f78 00000000 00000000 00000000 00000000  ................
+ 10f88 00000000 00000000 40060000 00000000  ........@.......
+ 10f98 40060000 00000000 40060000 00000000  @.......@.......
+ 10fa8 40060000 00000000 40060000 00000000  @.......@.......
+ 10fb8 40060000 00000000 780d0100 00000000  @.......x.......
+ 10fc8 b8080000 00000000 00000000 00000000  ................
+ 10fd8 00000000 00000000 00000000 00000000  ................
+ 10fe8 00000000 00000000 38080000 00000000  ........8.......
+ 10ff8 f4070000 00000000                    ........        
+Contents of section .data:
+ 11000 00000000 00000000 08100100 00000000  ................
+Contents of section .comment:
+ 0000 4743433a 20285562 756e7475 2f4c696e  GCC: (Ubuntu/Lin
+ 0010 61726f20 372e332e 302d3237 7562756e  aro 7.3.0-27ubun
+ 0020 7475317e 31382e30 34292037 2e332e30  tu1~18.04) 7.3.0
+ 0030 00                                   .               
+
+Disassembly of section .interp:
+
+0000000000000200 <.interp>:
+ 200:	62696c2f 	.inst	0x62696c2f ; undefined
+ 204:	2d646c2f 	ldp	s15, s27, [x1, #-224]
+ 208:	756e696c 	.inst	0x756e696c ; undefined
+ 20c:	61612d78 	.inst	0x61612d78 ; undefined
+ 210:	36686372 	tbz	w18, #13, e7c <__FRAME_END__+0x588>
+ 214:	6f732e34 	.inst	0x6f732e34 ; undefined
+ 218:	Address 0x0000000000000218 is out of bounds.
+
+
+Disassembly of section .note.ABI-tag:
+
+000000000000021c <.note.ABI-tag>:
+ 21c:	00000004 	.word	0x00000004
+ 220:	00000010 	.word	0x00000010
+ 224:	00000001 	.word	0x00000001
+ 228:	00554e47 	.word	0x00554e47
+ 22c:	00000000 	.word	0x00000000
+ 230:	00000003 	.word	0x00000003
+ 234:	00000007 	.word	0x00000007
+ 238:	00000000 	.word	0x00000000
+
+Disassembly of section .note.gnu.build-id:
+
+000000000000023c <.note.gnu.build-id>:
+ 23c:	00000004 	.inst	0x00000004 ; undefined
+ 240:	00000014 	.inst	0x00000014 ; undefined
+ 244:	00000003 	.inst	0x00000003 ; undefined
+ 248:	00554e47 	.inst	0x00554e47 ; undefined
+ 24c:	e19998a3 	.inst	0xe19998a3 ; undefined
+ 250:	e5151a2e 	.inst	0xe5151a2e ; undefined
+ 254:	2091705d 	.inst	0x2091705d ; undefined
+ 258:	16c96012 	b	fffffffffb2582a0 <__bss_end__+0xfffffffffb247288>
+ 25c:	3a214ad7 	.inst	0x3a214ad7 ; undefined
+
+Disassembly of section .gnu.hash:
+
+0000000000000260 <.gnu.hash>:
+ 260:	00000001 	.inst	0x00000001 ; undefined
+ 264:	00000001 	.inst	0x00000001 ; undefined
+ 268:	00000001 	.inst	0x00000001 ; undefined
+	...
+
+Disassembly of section .dynsym:
+
+0000000000000280 <.dynsym>:
+	...
+ 29c:	000b0003 	.inst	0x000b0003 ; undefined
+ 2a0:	00000628 	.inst	0x00000628 ; undefined
+	...
+ 2b4:	00150003 	.inst	0x00150003 ; undefined
+ 2b8:	00011000 	.inst	0x00011000 ; undefined
+	...
+ 2c8:	0000006d 	.inst	0x0000006d ; undefined
+ 2cc:	00000012 	.inst	0x00000012 ; undefined
+	...
+ 2e0:	00000099 	.inst	0x00000099 ; undefined
+ 2e4:	00000012 	.inst	0x00000012 ; undefined
+	...
+ 2f8:	0000002e 	.inst	0x0000002e ; undefined
+ 2fc:	00000020 	.inst	0x00000020 ; undefined
+	...
+ 310:	0000008a 	.inst	0x0000008a ; undefined
+ 314:	00000022 	.inst	0x00000022 ; undefined
+	...
+ 328:	00000012 	.inst	0x00000012 ; undefined
+ 32c:	00000020 	.inst	0x00000020 ; undefined
+	...
+ 340:	0000003d 	.inst	0x0000003d ; undefined
+ 344:	00000020 	.inst	0x00000020 ; undefined
+	...
+ 358:	000000ab 	.inst	0x000000ab ; undefined
+ 35c:	00000012 	.inst	0x00000012 ; undefined
+	...
+ 370:	00000057 	.inst	0x00000057 ; undefined
+ 374:	00000012 	.inst	0x00000012 ; undefined
+	...
+
+Disassembly of section .dynstr:
+
+0000000000000388 <.dynstr>:
+ 388:	62696c00 	.inst	0x62696c00 ; undefined
+ 38c:	726f6667 	.inst	0x726f6667 ; undefined
+ 390:	6e617274 	uabdl2	v20.4s, v19.8h, v1.8h
+ 394:	2e6f732e 	uabdl	v14.4s, v25.4h, v15.4h
+ 398:	495f0034 	.inst	0x495f0034 ; undefined
+ 39c:	645f4d54 	fcmla	z20.h, p3/m, z10.h, z31.h, #180
+ 3a0:	67657265 	.inst	0x67657265 ; undefined
+ 3a4:	65747369 	fnmls	z9.h, p4/m, z27.h, z20.h
+ 3a8:	434d5472 	.inst	0x434d5472 ; undefined
+ 3ac:	656e6f6c 	fnmls	z12.h, p3/m, z27.h, z14.h
+ 3b0:	6c626154 	ldnp	d20, d24, [x10, #-480]
+ 3b4:	5f5f0065 	.inst	0x5f5f0065 ; undefined
+ 3b8:	6e6f6d67 	umin	v7.8h, v11.8h, v15.8h
+ 3bc:	6174735f 	.inst	0x6174735f ; undefined
+ 3c0:	5f5f7472 	sqshl	d18, d3, #31
+ 3c4:	54495f00 	b.eq	92fa4 <__bss_end__+0x81f8c>  // b.none
+ 3c8:	65725f4d 	fnmla	z13.h, p7/m, z26.h, z18.h
+ 3cc:	74736967 	.inst	0x74736967 ; undefined
+ 3d0:	4d547265 	.inst	0x4d547265 ; undefined
+ 3d4:	6e6f6c43 	umin	v3.8h, v2.8h, v15.8h
+ 3d8:	62615465 	.inst	0x62615465 ; undefined
+ 3dc:	5f00656c 	.inst	0x5f00656c ; undefined
+ 3e0:	726f6667 	.inst	0x726f6667 ; undefined
+ 3e4:	6e617274 	uabdl2	v20.4s, v19.8h, v1.8h
+ 3e8:	7465735f 	.inst	0x7465735f ; undefined
+ 3ec:	74706f5f 	.inst	0x74706f5f ; undefined
+ 3f0:	736e6f69 	.inst	0x736e6f69 ; undefined
+ 3f4:	66675f00 	.inst	0x66675f00 ; undefined
+ 3f8:	7274726f 	.inst	0x7274726f ; undefined
+ 3fc:	735f6e61 	.inst	0x735f6e61 ; undefined
+ 400:	615f7465 	.inst	0x615f7465 ; undefined
+ 404:	00736772 	.inst	0x00736772 ; undefined
+ 408:	6362696c 	.inst	0x6362696c ; undefined
+ 40c:	2e6f732e 	uabdl	v14.4s, v25.4h, v15.4h
+ 410:	5f5f0036 	.inst	0x5f5f0036 ; undefined
+ 414:	5f617863 	sqdmlsl	s3, h3, v1.h[6]
+ 418:	616e6966 	.inst	0x616e6966 ; undefined
+ 41c:	657a696c 	fnmls	z12.h, p2/m, z11.h, z26.h
+ 420:	6c5f5f00 	ldnp	d0, d23, [x24, #496]
+ 424:	5f636269 	.inst	0x5f636269 ; undefined
+ 428:	72617473 	.inst	0x72617473 ; undefined
+ 42c:	616d5f74 	.inst	0x616d5f74 ; undefined
+ 430:	61006e69 	.inst	0x61006e69 ; undefined
+ 434:	74726f62 	.inst	0x74726f62 ; undefined
+ 438:	494c4700 	.inst	0x494c4700 ; undefined
+ 43c:	325f4342 	.inst	0x325f4342 ; undefined
+ 440:	0037312e 	.inst	0x0037312e ; NYI
+ 444:	524f4647 	.inst	0x524f4647 ; undefined
+ 448:	4e415254 	.inst	0x4e415254 ; undefined
+ 44c:	Address 0x000000000000044c is out of bounds.
+
+
+Disassembly of section .gnu.version:
+
+0000000000000450 <.gnu.version>:
+ 450:	00000000 	.inst	0x00000000 ; undefined
+ 454:	00020000 	.inst	0x00020000 ; undefined
+ 458:	00000003 	.inst	0x00000003 ; undefined
+ 45c:	00000003 	.inst	0x00000003 ; undefined
+ 460:	00030000 	.inst	0x00030000 ; undefined
+ 464:	Address 0x0000000000000464 is out of bounds.
+
+
+Disassembly of section .gnu.version_r:
+
+0000000000000468 <.gnu.version_r>:
+ 468:	00010001 	.inst	0x00010001 ; undefined
+ 46c:	00000080 	.inst	0x00000080 ; undefined
+ 470:	00000010 	.inst	0x00000010 ; undefined
+ 474:	00000020 	.inst	0x00000020 ; undefined
+ 478:	06969197 	.inst	0x06969197 ; undefined
+ 47c:	00030000 	.inst	0x00030000 ; undefined
+ 480:	000000b1 	.inst	0x000000b1 ; undefined
+ 484:	00000000 	.inst	0x00000000 ; undefined
+ 488:	00010001 	.inst	0x00010001 ; undefined
+ 48c:	00000001 	.inst	0x00000001 ; undefined
+ 490:	00000010 	.inst	0x00000010 ; undefined
+ 494:	00000000 	.inst	0x00000000 ; undefined
+ 498:	0792f967 	.inst	0x0792f967 ; undefined
+ 49c:	00020000 	.inst	0x00020000 ; undefined
+ 4a0:	000000bc 	.inst	0x000000bc ; undefined
+ 4a4:	00000000 	.inst	0x00000000 ; undefined
+
+Disassembly of section .rela.dyn:
+
+00000000000004a8 <.rela.dyn>:
+ 4a8:	00010d68 	.inst	0x00010d68 ; undefined
+ 4ac:	00000000 	.inst	0x00000000 ; undefined
+ 4b0:	00000403 	.inst	0x00000403 ; undefined
+ 4b4:	00000000 	.inst	0x00000000 ; undefined
+ 4b8:	000007c0 	.inst	0x000007c0 ; undefined
+ 4bc:	00000000 	.inst	0x00000000 ; undefined
+ 4c0:	00010d70 	.inst	0x00010d70 ; undefined
+ 4c4:	00000000 	.inst	0x00000000 ; undefined
+ 4c8:	00000403 	.inst	0x00000403 ; undefined
+ 4cc:	00000000 	.inst	0x00000000 ; undefined
+ 4d0:	00000778 	.inst	0x00000778 ; undefined
+ 4d4:	00000000 	.inst	0x00000000 ; undefined
+ 4d8:	00010fc8 	.inst	0x00010fc8 ; undefined
+ 4dc:	00000000 	.inst	0x00000000 ; undefined
+ 4e0:	00000403 	.inst	0x00000403 ; undefined
+ 4e4:	00000000 	.inst	0x00000000 ; undefined
+ 4e8:	000008b8 	.inst	0x000008b8 ; undefined
+ 4ec:	00000000 	.inst	0x00000000 ; undefined
+ 4f0:	00010ff0 	.inst	0x00010ff0 ; undefined
+ 4f4:	00000000 	.inst	0x00000000 ; undefined
+ 4f8:	00000403 	.inst	0x00000403 ; undefined
+ 4fc:	00000000 	.inst	0x00000000 ; undefined
+ 500:	00000838 	.inst	0x00000838 ; undefined
+ 504:	00000000 	.inst	0x00000000 ; undefined
+ 508:	00010ff8 	.inst	0x00010ff8 ; undefined
+ 50c:	00000000 	.inst	0x00000000 ; undefined
+ 510:	00000403 	.inst	0x00000403 ; undefined
+ 514:	00000000 	.inst	0x00000000 ; undefined
+ 518:	000007f4 	.inst	0x000007f4 ; undefined
+ 51c:	00000000 	.inst	0x00000000 ; undefined
+ 520:	00011008 	.inst	0x00011008 ; undefined
+ 524:	00000000 	.inst	0x00000000 ; undefined
+ 528:	00000403 	.inst	0x00000403 ; undefined
+ 52c:	00000000 	.inst	0x00000000 ; undefined
+ 530:	00011008 	.inst	0x00011008 ; undefined
+ 534:	00000000 	.inst	0x00000000 ; undefined
+ 538:	00010fd0 	.inst	0x00010fd0 ; undefined
+ 53c:	00000000 	.inst	0x00000000 ; undefined
+ 540:	00000401 	.inst	0x00000401 ; undefined
+ 544:	00000005 	.inst	0x00000005 ; undefined
+	...
+ 550:	00010fd8 	.inst	0x00010fd8 ; undefined
+ 554:	00000000 	.inst	0x00000000 ; undefined
+ 558:	00000401 	.inst	0x00000401 ; undefined
+ 55c:	00000006 	.inst	0x00000006 ; undefined
+	...
+ 568:	00010fe0 	.inst	0x00010fe0 ; undefined
+ 56c:	00000000 	.inst	0x00000000 ; undefined
+ 570:	00000401 	.inst	0x00000401 ; undefined
+ 574:	00000007 	.inst	0x00000007 ; undefined
+	...
+ 580:	00010fe8 	.inst	0x00010fe8 ; undefined
+ 584:	00000000 	.inst	0x00000000 ; undefined
+ 588:	00000401 	.inst	0x00000401 ; undefined
+ 58c:	00000008 	.inst	0x00000008 ; undefined
+	...
+
+Disassembly of section .rela.plt:
+
+0000000000000598 <.rela.plt>:
+ 598:	00010f90 	.inst	0x00010f90 ; undefined
+ 59c:	00000000 	.inst	0x00000000 ; undefined
+ 5a0:	00000402 	.inst	0x00000402 ; undefined
+ 5a4:	00000003 	.inst	0x00000003 ; undefined
+	...
+ 5b0:	00010f98 	.inst	0x00010f98 ; undefined
+ 5b4:	00000000 	.inst	0x00000000 ; undefined
+ 5b8:	00000402 	.inst	0x00000402 ; undefined
+ 5bc:	00000004 	.inst	0x00000004 ; undefined
+	...
+ 5c8:	00010fa0 	.inst	0x00010fa0 ; undefined
+ 5cc:	00000000 	.inst	0x00000000 ; undefined
+ 5d0:	00000402 	.inst	0x00000402 ; undefined
+ 5d4:	00000005 	.inst	0x00000005 ; undefined
+	...
+ 5e0:	00010fa8 	.inst	0x00010fa8 ; undefined
+ 5e4:	00000000 	.inst	0x00000000 ; undefined
+ 5e8:	00000402 	.inst	0x00000402 ; undefined
+ 5ec:	00000006 	.inst	0x00000006 ; undefined
+	...
+ 5f8:	00010fb0 	.inst	0x00010fb0 ; undefined
+ 5fc:	00000000 	.inst	0x00000000 ; undefined
+ 600:	00000402 	.inst	0x00000402 ; undefined
+ 604:	00000009 	.inst	0x00000009 ; undefined
+	...
+ 610:	00010fb8 	.inst	0x00010fb8 ; undefined
+ 614:	00000000 	.inst	0x00000000 ; undefined
+ 618:	00000402 	.inst	0x00000402 ; undefined
+ 61c:	0000000a 	.inst	0x0000000a ; undefined
+	...
+
+Disassembly of section .init:
+
+0000000000000628 <_init>:
+ 628:	a9bf7bfd 	stp	x29, x30, [sp, #-16]!
+ 62c:	910003fd 	mov	x29, sp
+ 630:	94000032 	bl	6f8 <call_weak_fn>
+ 634:	a8c17bfd 	ldp	x29, x30, [sp], #16
+ 638:	d65f03c0 	ret
+
+Disassembly of section .plt:
+
+0000000000000640 <.plt>:
+ 640:	a9bf7bf0 	stp	x16, x30, [sp, #-16]!
+ 644:	90000090 	adrp	x16, 10000 <__FRAME_END__+0xf70c>
+ 648:	f947c611 	ldr	x17, [x16, #3976]
+ 64c:	913e2210 	add	x16, x16, #0xf88
+ 650:	d61f0220 	br	x17
+ 654:	d503201f 	nop
+ 658:	d503201f 	nop
+ 65c:	d503201f 	nop
+
+0000000000000660 <_gfortran_set_args@plt>:
+ 660:	90000090 	adrp	x16, 10000 <__FRAME_END__+0xf70c>
+ 664:	f947ca11 	ldr	x17, [x16, #3984]
+ 668:	913e4210 	add	x16, x16, #0xf90
+ 66c:	d61f0220 	br	x17
+
+0000000000000670 <__libc_start_main@plt>:
+ 670:	90000090 	adrp	x16, 10000 <__FRAME_END__+0xf70c>
+ 674:	f947ce11 	ldr	x17, [x16, #3992]
+ 678:	913e6210 	add	x16, x16, #0xf98
+ 67c:	d61f0220 	br	x17
+
+0000000000000680 <__gmon_start__@plt>:
+ 680:	90000090 	adrp	x16, 10000 <__FRAME_END__+0xf70c>
+ 684:	f947d211 	ldr	x17, [x16, #4000]
+ 688:	913e8210 	add	x16, x16, #0xfa0
+ 68c:	d61f0220 	br	x17
+
+0000000000000690 <__cxa_finalize@plt>:
+ 690:	90000090 	adrp	x16, 10000 <__FRAME_END__+0xf70c>
+ 694:	f947d611 	ldr	x17, [x16, #4008]
+ 698:	913ea210 	add	x16, x16, #0xfa8
+ 69c:	d61f0220 	br	x17
+
+00000000000006a0 <abort@plt>:
+ 6a0:	90000090 	adrp	x16, 10000 <__FRAME_END__+0xf70c>
+ 6a4:	f947da11 	ldr	x17, [x16, #4016]
+ 6a8:	913ec210 	add	x16, x16, #0xfb0
+ 6ac:	d61f0220 	br	x17
+
+00000000000006b0 <_gfortran_set_options@plt>:
+ 6b0:	90000090 	adrp	x16, 10000 <__FRAME_END__+0xf70c>
+ 6b4:	f947de11 	ldr	x17, [x16, #4024]
+ 6b8:	913ee210 	add	x16, x16, #0xfb8
+ 6bc:	d61f0220 	br	x17
+
+Disassembly of section .text:
+
+00000000000006c0 <_start>:
+ 6c0:	d280001d 	mov	x29, #0x0                   	// #0
+ 6c4:	d280001e 	mov	x30, #0x0                   	// #0
+ 6c8:	aa0003e5 	mov	x5, x0
+ 6cc:	f94003e1 	ldr	x1, [sp]
+ 6d0:	910023e2 	add	x2, sp, #0x8
+ 6d4:	910003e6 	mov	x6, sp
+ 6d8:	90000080 	adrp	x0, 10000 <__FRAME_END__+0xf70c>
+ 6dc:	f947fc00 	ldr	x0, [x0, #4088]
+ 6e0:	90000083 	adrp	x3, 10000 <__FRAME_END__+0xf70c>
+ 6e4:	f947f863 	ldr	x3, [x3, #4080]
+ 6e8:	90000084 	adrp	x4, 10000 <__FRAME_END__+0xf70c>
+ 6ec:	f947e484 	ldr	x4, [x4, #4040]
+ 6f0:	97ffffe0 	bl	670 <__libc_start_main@plt>
+ 6f4:	97ffffeb 	bl	6a0 <abort@plt>
+
+00000000000006f8 <call_weak_fn>:
+ 6f8:	90000080 	adrp	x0, 10000 <__FRAME_END__+0xf70c>
+ 6fc:	f947e800 	ldr	x0, [x0, #4048]
+ 700:	b4000040 	cbz	x0, 708 <call_weak_fn+0x10>
+ 704:	17ffffdf 	b	680 <__gmon_start__@plt>
+ 708:	d65f03c0 	ret
+ 70c:	00000000 	.inst	0x00000000 ; undefined
+
+0000000000000710 <deregister_tm_clones>:
+ 710:	b0000080 	adrp	x0, 11000 <__data_start>
+ 714:	91004000 	add	x0, x0, #0x10
+ 718:	b0000081 	adrp	x1, 11000 <__data_start>
+ 71c:	91004021 	add	x1, x1, #0x10
+ 720:	eb00003f 	cmp	x1, x0
+ 724:	540000a0 	b.eq	738 <deregister_tm_clones+0x28>  // b.none
+ 728:	90000081 	adrp	x1, 10000 <__FRAME_END__+0xf70c>
+ 72c:	f947f021 	ldr	x1, [x1, #4064]
+ 730:	b4000041 	cbz	x1, 738 <deregister_tm_clones+0x28>
+ 734:	d61f0020 	br	x1
+ 738:	d65f03c0 	ret
+ 73c:	d503201f 	nop
+
+0000000000000740 <register_tm_clones>:
+ 740:	b0000080 	adrp	x0, 11000 <__data_start>
+ 744:	91004000 	add	x0, x0, #0x10
+ 748:	b0000081 	adrp	x1, 11000 <__data_start>
+ 74c:	91004021 	add	x1, x1, #0x10
+ 750:	cb000021 	sub	x1, x1, x0
+ 754:	9343fc21 	asr	x1, x1, #3
+ 758:	8b41fc21 	add	x1, x1, x1, lsr #63
+ 75c:	9341fc21 	asr	x1, x1, #1
+ 760:	b40000a1 	cbz	x1, 774 <register_tm_clones+0x34>
+ 764:	90000082 	adrp	x2, 10000 <__FRAME_END__+0xf70c>
+ 768:	f947f442 	ldr	x2, [x2, #4072]
+ 76c:	b4000042 	cbz	x2, 774 <register_tm_clones+0x34>
+ 770:	d61f0040 	br	x2
+ 774:	d65f03c0 	ret
+
+0000000000000778 <__do_global_dtors_aux>:
+ 778:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+ 77c:	910003fd 	mov	x29, sp
+ 780:	f9000bf3 	str	x19, [sp, #16]
+ 784:	b0000093 	adrp	x19, 11000 <__data_start>
+ 788:	39404260 	ldrb	w0, [x19, #16]
+ 78c:	35000140 	cbnz	w0, 7b4 <__do_global_dtors_aux+0x3c>
+ 790:	90000080 	adrp	x0, 10000 <__FRAME_END__+0xf70c>
+ 794:	f947ec00 	ldr	x0, [x0, #4056]
+ 798:	b4000080 	cbz	x0, 7a8 <__do_global_dtors_aux+0x30>
+ 79c:	b0000080 	adrp	x0, 11000 <__data_start>
+ 7a0:	f9400400 	ldr	x0, [x0, #8]
+ 7a4:	97ffffbb 	bl	690 <__cxa_finalize@plt>
+ 7a8:	97ffffda 	bl	710 <deregister_tm_clones>
+ 7ac:	52800020 	mov	w0, #0x1                   	// #1
+ 7b0:	39004260 	strb	w0, [x19, #16]
+ 7b4:	f9400bf3 	ldr	x19, [sp, #16]
+ 7b8:	a8c27bfd 	ldp	x29, x30, [sp], #32
+ 7bc:	d65f03c0 	ret
+
+00000000000007c0 <frame_dummy>:
+ 7c0:	17ffffe0 	b	740 <register_tm_clones>
+
+00000000000007c4 <MAIN__>:
+ 7c4:	d10043ff 	sub	sp, sp, #0x10
+ 7c8:	52800040 	mov	w0, #0x2                   	// #2
+ 7cc:	b9000fe0 	str	w0, [sp, #12]
+ 7d0:	52800060 	mov	w0, #0x3                   	// #3
+ 7d4:	b9000be0 	str	w0, [sp, #8]
+ 7d8:	b9400fe1 	ldr	w1, [sp, #12]
+ 7dc:	b9400be0 	ldr	w0, [sp, #8]
+ 7e0:	1b007c20 	mul	w0, w1, w0
+ 7e4:	b90007e0 	str	w0, [sp, #4]
+ 7e8:	d503201f 	nop
+ 7ec:	910043ff 	add	sp, sp, #0x10
+ 7f0:	d65f03c0 	ret
+
+00000000000007f4 <main>:
+ 7f4:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+ 7f8:	910003fd 	mov	x29, sp
+ 7fc:	b9001fa0 	str	w0, [x29, #28]
+ 800:	f9000ba1 	str	x1, [x29, #16]
+ 804:	f9400ba1 	ldr	x1, [x29, #16]
+ 808:	b9401fa0 	ldr	w0, [x29, #28]
+ 80c:	97ffff95 	bl	660 <_gfortran_set_args@plt>
+ 810:	90000000 	adrp	x0, 0 <_init-0x628>
+ 814:	91236000 	add	x0, x0, #0x8d8
+ 818:	aa0003e1 	mov	x1, x0
+ 81c:	528000e0 	mov	w0, #0x7                   	// #7
+ 820:	97ffffa4 	bl	6b0 <_gfortran_set_options@plt>
+ 824:	97ffffe8 	bl	7c4 <MAIN__>
+ 828:	52800000 	mov	w0, #0x0                   	// #0
+ 82c:	a8c27bfd 	ldp	x29, x30, [sp], #32
+ 830:	d65f03c0 	ret
+ 834:	00000000 	.inst	0x00000000 ; undefined
+
+0000000000000838 <__libc_csu_init>:
+ 838:	a9bc7bfd 	stp	x29, x30, [sp, #-64]!
+ 83c:	910003fd 	mov	x29, sp
+ 840:	a901d7f4 	stp	x20, x21, [sp, #24]
+ 844:	90000094 	adrp	x20, 10000 <__FRAME_END__+0xf70c>
+ 848:	90000095 	adrp	x21, 10000 <__FRAME_END__+0xf70c>
+ 84c:	9135c294 	add	x20, x20, #0xd70
+ 850:	9135a2b5 	add	x21, x21, #0xd68
+ 854:	a902dff6 	stp	x22, x23, [sp, #40]
+ 858:	cb150294 	sub	x20, x20, x21
+ 85c:	f9001ff8 	str	x24, [sp, #56]
+ 860:	2a0003f6 	mov	w22, w0
+ 864:	aa0103f7 	mov	x23, x1
+ 868:	9343fe94 	asr	x20, x20, #3
+ 86c:	aa0203f8 	mov	x24, x2
+ 870:	97ffff6e 	bl	628 <_init>
+ 874:	b4000194 	cbz	x20, 8a4 <__libc_csu_init+0x6c>
+ 878:	f9000bb3 	str	x19, [x29, #16]
+ 87c:	d2800013 	mov	x19, #0x0                   	// #0
+ 880:	f8737aa3 	ldr	x3, [x21, x19, lsl #3]
+ 884:	aa1803e2 	mov	x2, x24
+ 888:	aa1703e1 	mov	x1, x23
+ 88c:	2a1603e0 	mov	w0, w22
+ 890:	91000673 	add	x19, x19, #0x1
+ 894:	d63f0060 	blr	x3
+ 898:	eb13029f 	cmp	x20, x19
+ 89c:	54ffff21 	b.ne	880 <__libc_csu_init+0x48>  // b.any
+ 8a0:	f9400bb3 	ldr	x19, [x29, #16]
+ 8a4:	a941d7f4 	ldp	x20, x21, [sp, #24]
+ 8a8:	a942dff6 	ldp	x22, x23, [sp, #40]
+ 8ac:	f9401ff8 	ldr	x24, [sp, #56]
+ 8b0:	a8c47bfd 	ldp	x29, x30, [sp], #64
+ 8b4:	d65f03c0 	ret
+
+00000000000008b8 <__libc_csu_fini>:
+ 8b8:	d65f03c0 	ret
+
+Disassembly of section .fini:
+
+00000000000008bc <_fini>:
+ 8bc:	a9bf7bfd 	stp	x29, x30, [sp, #-16]!
+ 8c0:	910003fd 	mov	x29, sp
+ 8c4:	a8c17bfd 	ldp	x29, x30, [sp], #16
+ 8c8:	d65f03c0 	ret
+
+Disassembly of section .rodata:
+
+00000000000008d0 <_IO_stdin_used>:
+ 8d0:	00020001 	.word	0x00020001
+ 8d4:	00000000 	.word	0x00000000
+
+00000000000008d8 <options.0.2561>:
+ 8d8:	00000044 	.word	0x00000044
+ 8dc:	000003ff 	.word	0x000003ff
+ 8e0:	00000000 	.word	0x00000000
+ 8e4:	00000001 	.word	0x00000001
+ 8e8:	00000001 	.word	0x00000001
+ 8ec:	00000000 	.word	0x00000000
+ 8f0:	0000001f 	.word	0x0000001f
+
+Disassembly of section .eh_frame:
+
+00000000000008f4 <__FRAME_END__>:
+ 8f4:	00000000 	.word	0x00000000
+
+Disassembly of section .init_array:
+
+0000000000010d68 <__frame_dummy_init_array_entry>:
+   10d68:	000007c0 	.word	0x000007c0
+   10d6c:	00000000 	.word	0x00000000
+
+Disassembly of section .fini_array:
+
+0000000000010d70 <__do_global_dtors_aux_fini_array_entry>:
+   10d70:	00000778 	.word	0x00000778
+   10d74:	00000000 	.word	0x00000000
+
+Disassembly of section .dynamic:
+
+0000000000010d78 <.dynamic>:
+   10d78:	00000001 	.inst	0x00000001 ; undefined
+   10d7c:	00000000 	.inst	0x00000000 ; undefined
+   10d80:	00000001 	.inst	0x00000001 ; undefined
+   10d84:	00000000 	.inst	0x00000000 ; undefined
+   10d88:	00000001 	.inst	0x00000001 ; undefined
+   10d8c:	00000000 	.inst	0x00000000 ; undefined
+   10d90:	00000080 	.inst	0x00000080 ; undefined
+   10d94:	00000000 	.inst	0x00000000 ; undefined
+   10d98:	0000000c 	.inst	0x0000000c ; undefined
+   10d9c:	00000000 	.inst	0x00000000 ; undefined
+   10da0:	00000628 	.inst	0x00000628 ; undefined
+   10da4:	00000000 	.inst	0x00000000 ; undefined
+   10da8:	0000000d 	.inst	0x0000000d ; undefined
+   10dac:	00000000 	.inst	0x00000000 ; undefined
+   10db0:	000008bc 	.inst	0x000008bc ; undefined
+   10db4:	00000000 	.inst	0x00000000 ; undefined
+   10db8:	00000019 	.inst	0x00000019 ; undefined
+   10dbc:	00000000 	.inst	0x00000000 ; undefined
+   10dc0:	00010d68 	.inst	0x00010d68 ; undefined
+   10dc4:	00000000 	.inst	0x00000000 ; undefined
+   10dc8:	0000001b 	.inst	0x0000001b ; undefined
+   10dcc:	00000000 	.inst	0x00000000 ; undefined
+   10dd0:	00000008 	.inst	0x00000008 ; undefined
+   10dd4:	00000000 	.inst	0x00000000 ; undefined
+   10dd8:	0000001a 	.inst	0x0000001a ; undefined
+   10ddc:	00000000 	.inst	0x00000000 ; undefined
+   10de0:	00010d70 	.inst	0x00010d70 ; undefined
+   10de4:	00000000 	.inst	0x00000000 ; undefined
+   10de8:	0000001c 	.inst	0x0000001c ; undefined
+   10dec:	00000000 	.inst	0x00000000 ; undefined
+   10df0:	00000008 	.inst	0x00000008 ; undefined
+   10df4:	00000000 	.inst	0x00000000 ; undefined
+   10df8:	6ffffef5 	.inst	0x6ffffef5 ; undefined
+   10dfc:	00000000 	.inst	0x00000000 ; undefined
+   10e00:	00000260 	.inst	0x00000260 ; undefined
+   10e04:	00000000 	.inst	0x00000000 ; undefined
+   10e08:	00000005 	.inst	0x00000005 ; undefined
+   10e0c:	00000000 	.inst	0x00000000 ; undefined
+   10e10:	00000388 	.inst	0x00000388 ; undefined
+   10e14:	00000000 	.inst	0x00000000 ; undefined
+   10e18:	00000006 	.inst	0x00000006 ; undefined
+   10e1c:	00000000 	.inst	0x00000000 ; undefined
+   10e20:	00000280 	.inst	0x00000280 ; undefined
+   10e24:	00000000 	.inst	0x00000000 ; undefined
+   10e28:	0000000a 	.inst	0x0000000a ; undefined
+   10e2c:	00000000 	.inst	0x00000000 ; undefined
+   10e30:	000000c7 	.inst	0x000000c7 ; undefined
+   10e34:	00000000 	.inst	0x00000000 ; undefined
+   10e38:	0000000b 	.inst	0x0000000b ; undefined
+   10e3c:	00000000 	.inst	0x00000000 ; undefined
+   10e40:	00000018 	.inst	0x00000018 ; undefined
+   10e44:	00000000 	.inst	0x00000000 ; undefined
+   10e48:	00000015 	.inst	0x00000015 ; undefined
+	...
+   10e58:	00000003 	.inst	0x00000003 ; undefined
+   10e5c:	00000000 	.inst	0x00000000 ; undefined
+   10e60:	00010f78 	.inst	0x00010f78 ; undefined
+   10e64:	00000000 	.inst	0x00000000 ; undefined
+   10e68:	00000002 	.inst	0x00000002 ; undefined
+   10e6c:	00000000 	.inst	0x00000000 ; undefined
+   10e70:	00000090 	.inst	0x00000090 ; undefined
+   10e74:	00000000 	.inst	0x00000000 ; undefined
+   10e78:	00000014 	.inst	0x00000014 ; undefined
+   10e7c:	00000000 	.inst	0x00000000 ; undefined
+   10e80:	00000007 	.inst	0x00000007 ; undefined
+   10e84:	00000000 	.inst	0x00000000 ; undefined
+   10e88:	00000017 	.inst	0x00000017 ; undefined
+   10e8c:	00000000 	.inst	0x00000000 ; undefined
+   10e90:	00000598 	.inst	0x00000598 ; undefined
+   10e94:	00000000 	.inst	0x00000000 ; undefined
+   10e98:	00000007 	.inst	0x00000007 ; undefined
+   10e9c:	00000000 	.inst	0x00000000 ; undefined
+   10ea0:	000004a8 	.inst	0x000004a8 ; undefined
+   10ea4:	00000000 	.inst	0x00000000 ; undefined
+   10ea8:	00000008 	.inst	0x00000008 ; undefined
+   10eac:	00000000 	.inst	0x00000000 ; undefined
+   10eb0:	000000f0 	.inst	0x000000f0 ; undefined
+   10eb4:	00000000 	.inst	0x00000000 ; undefined
+   10eb8:	00000009 	.inst	0x00000009 ; undefined
+   10ebc:	00000000 	.inst	0x00000000 ; undefined
+   10ec0:	00000018 	.inst	0x00000018 ; undefined
+   10ec4:	00000000 	.inst	0x00000000 ; undefined
+   10ec8:	0000001e 	.inst	0x0000001e ; undefined
+   10ecc:	00000000 	.inst	0x00000000 ; undefined
+   10ed0:	00000008 	.inst	0x00000008 ; undefined
+   10ed4:	00000000 	.inst	0x00000000 ; undefined
+   10ed8:	6ffffffb 	.inst	0x6ffffffb ; undefined
+   10edc:	00000000 	.inst	0x00000000 ; undefined
+   10ee0:	08000001 	stxrb	w0, w1, [x0]
+   10ee4:	00000000 	.inst	0x00000000 ; undefined
+   10ee8:	6ffffffe 	.inst	0x6ffffffe ; undefined
+   10eec:	00000000 	.inst	0x00000000 ; undefined
+   10ef0:	00000468 	.inst	0x00000468 ; undefined
+   10ef4:	00000000 	.inst	0x00000000 ; undefined
+   10ef8:	6fffffff 	.inst	0x6fffffff ; undefined
+   10efc:	00000000 	.inst	0x00000000 ; undefined
+   10f00:	00000002 	.inst	0x00000002 ; undefined
+   10f04:	00000000 	.inst	0x00000000 ; undefined
+   10f08:	6ffffff0 	.inst	0x6ffffff0 ; undefined
+   10f0c:	00000000 	.inst	0x00000000 ; undefined
+   10f10:	00000450 	.inst	0x00000450 ; undefined
+   10f14:	00000000 	.inst	0x00000000 ; undefined
+   10f18:	6ffffff9 	.inst	0x6ffffff9 ; undefined
+   10f1c:	00000000 	.inst	0x00000000 ; undefined
+   10f20:	00000006 	.inst	0x00000006 ; undefined
+	...
+
+Disassembly of section .got:
+
+0000000000010f78 <.got>:
+	...
+   10f90:	00000640 	.inst	0x00000640 ; undefined
+   10f94:	00000000 	.inst	0x00000000 ; undefined
+   10f98:	00000640 	.inst	0x00000640 ; undefined
+   10f9c:	00000000 	.inst	0x00000000 ; undefined
+   10fa0:	00000640 	.inst	0x00000640 ; undefined
+   10fa4:	00000000 	.inst	0x00000000 ; undefined
+   10fa8:	00000640 	.inst	0x00000640 ; undefined
+   10fac:	00000000 	.inst	0x00000000 ; undefined
+   10fb0:	00000640 	.inst	0x00000640 ; undefined
+   10fb4:	00000000 	.inst	0x00000000 ; undefined
+   10fb8:	00000640 	.inst	0x00000640 ; undefined
+   10fbc:	00000000 	.inst	0x00000000 ; undefined
+   10fc0:	00010d78 	.inst	0x00010d78 ; undefined
+   10fc4:	00000000 	.inst	0x00000000 ; undefined
+   10fc8:	000008b8 	.inst	0x000008b8 ; undefined
+	...
+   10ff0:	00000838 	.inst	0x00000838 ; undefined
+   10ff4:	00000000 	.inst	0x00000000 ; undefined
+   10ff8:	000007f4 	.inst	0x000007f4 ; undefined
+   10ffc:	00000000 	.inst	0x00000000 ; undefined
+
+Disassembly of section .data:
+
+0000000000011000 <__data_start>:
+	...
+
+0000000000011008 <__dso_handle>:
+   11008:	00011008 	.word	0x00011008
+   1100c:	00000000 	.word	0x00000000
+
+Disassembly of section .bss:
+
+0000000000011010 <__bss_start>:
+	...
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	3a434347 	ccmn	w26, w3, #0x7, mi  // mi = first
+   4:	62552820 	.inst	0x62552820 ; undefined
+   8:	75746e75 	.inst	0x75746e75 ; undefined
+   c:	6e694c2f 	uqshl	v15.8h, v1.8h, v9.8h
+  10:	206f7261 	.inst	0x206f7261 ; undefined
+  14:	2e332e37 	uqsub	v23.8b, v17.8b, v19.8b
+  18:	37322d30 	tbnz	w16, #6, 45bc <__FRAME_END__+0x3cc8>
+  1c:	6e756275 	rsubhn2	v21.8h, v19.4s, v21.4s
+  20:	7e317574 	.inst	0x7e317574 ; undefined
+  24:	302e3831 	adr	x17, 5c729 <__bss_end__+0x4b711>
+  28:	37202934 	tbnz	w20, #4, 54c <_init-0xdc>
+  2c:	302e332e 	adr	x14, 5c691 <__bss_end__+0x4b679>
+	...

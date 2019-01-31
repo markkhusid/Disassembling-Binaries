@@ -1,0 +1,239 @@
+
+if_then.o:     file format elf64-littleaarch64
+if_then.o
+architecture: aarch64, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x0000000000000000
+private flags = 0:
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         0000013c  0000000000000000  0000000000000000  00000040  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  0000000000000000  0000000000000000  0000017c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  0000000000000000  0000000000000000  0000017c  2**0
+                  ALLOC
+  3 .rodata       00000074  0000000000000000  0000000000000000  00000180  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .comment      00000032  0000000000000000  0000000000000000  000001f4  2**0
+                  CONTENTS, READONLY
+  5 .note.GNU-stack 00000000  0000000000000000  0000000000000000  00000226  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 if_then.f08
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l    d  .rodata	0000000000000000 .rodata
+0000000000000000 l     F .text	00000000000000fc MAIN__
+0000000000000058 l     O .rodata	000000000000001c options.3.2564
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000000         *UND*	0000000000000000 _gfortran_st_write
+0000000000000000         *UND*	0000000000000000 _gfortran_transfer_character_write
+0000000000000000         *UND*	0000000000000000 _gfortran_st_write_done
+0000000000000000         *UND*	0000000000000000 _gfortran_st_read
+0000000000000000         *UND*	0000000000000000 _gfortran_transfer_integer
+0000000000000000         *UND*	0000000000000000 _gfortran_st_read_done
+00000000000000fc g     F .text	0000000000000040 main
+0000000000000000         *UND*	0000000000000000 _gfortran_set_args
+0000000000000000         *UND*	0000000000000000 _gfortran_set_options
+
+
+Contents of section .text:
+ 0000 ff0308d1 fd7b00a9 fd030091 00000090  .....{..........
+ 0010 00000091 a01300f9 00018052 a02b00b9  ...........R.+..
+ 0020 00108052 a01b00b9 c0008052 a01f00b9  ...R.......R....
+ 0030 a0630091 00000094 00000090 01000091  .c..............
+ 0040 a0630091 62048052 00000094 a0630091  .c..b..R.....c..
+ 0050 00000094 00000090 00000091 a01300f9  ................
+ 0060 20018052 a02b00b9 00108052 a01b00b9   ..R.+.....R....
+ 0070 a0008052 a01f00b9 a0630091 00000094  ...R.....c......
+ 0080 a1f30791 a0630091 82008052 00000094  .....c.....R....
+ 0090 a0630091 00000094 a0ff41b9 1f140071  .c........A....q
+ 00a0 6d020054 00000090 00000091 a01300f9  m..T............
+ 00b0 80018052 a02b00b9 00108052 a01b00b9  ...R.+.....R....
+ 00c0 c0008052 a01f00b9 a0630091 00000094  ...R.....c......
+ 00d0 00000090 01000091 a0630091 c2038052  .........c.....R
+ 00e0 00000094 a0630091 00000094 1f2003d5  .....c....... ..
+ 00f0 fd7b40a9 ff030891 c0035fd6 fd7bbea9  .{@......._..{..
+ 0100 fd030091 a01f00b9 a10b00f9 a10b40f9  ..............@.
+ 0110 a01f40b9 00000094 00000090 00000091  ..@.............
+ 0120 e10300aa e0008052 00000094 b5ffff97  .......R........
+ 0130 00008052 fd7bc2a8 c0035fd6           ...R.{...._.    
+Contents of section .rodata:
+ 0000 69665f74 68656e2e 66303800 00000000  if_then.f08.....
+ 0010 456e7465 72206120 6e756d62 65722062  Enter a number b
+ 0020 65747765 656e2031 20616e64 20313020  etween 1 and 10 
+ 0030 2d3e2000 00000000 4e756d62 65722065  -> .....Number e
+ 0040 6e746572 65642067 72656174 65722074  ntered greater t
+ 0050 68616e20 35210000 44000000 ff030000  han 5!..D.......
+ 0060 00000000 01000000 01000000 00000000  ................
+ 0070 1f000000                             ....            
+Contents of section .comment:
+ 0000 00474343 3a202855 62756e74 752f4c69  .GCC: (Ubuntu/Li
+ 0010 6e61726f 20372e33 2e302d32 37756275  naro 7.3.0-27ubu
+ 0020 6e747531 7e31382e 30342920 372e332e  ntu1~18.04) 7.3.
+ 0030 3000                                 0.              
+
+Disassembly of section .text:
+
+0000000000000000 <MAIN__>:
+   0:	d10803ff 	sub	sp, sp, #0x200
+   4:	a9007bfd 	stp	x29, x30, [sp]
+   8:	910003fd 	mov	x29, sp
+   c:	90000000 	adrp	x0, 0 <MAIN__>
+			c: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+  10:	91000000 	add	x0, x0, #0x0
+			10: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+  14:	f90013a0 	str	x0, [x29, #32]
+  18:	52800100 	mov	w0, #0x8                   	// #8
+  1c:	b9002ba0 	str	w0, [x29, #40]
+  20:	52801000 	mov	w0, #0x80                  	// #128
+  24:	b9001ba0 	str	w0, [x29, #24]
+  28:	528000c0 	mov	w0, #0x6                   	// #6
+  2c:	b9001fa0 	str	w0, [x29, #28]
+  30:	910063a0 	add	x0, x29, #0x18
+  34:	94000000 	bl	0 <_gfortran_st_write>
+			34: R_AARCH64_CALL26	_gfortran_st_write
+  38:	90000000 	adrp	x0, 0 <MAIN__>
+			38: R_AARCH64_ADR_PREL_PG_HI21	.rodata+0x10
+  3c:	91000001 	add	x1, x0, #0x0
+			3c: R_AARCH64_ADD_ABS_LO12_NC	.rodata+0x10
+  40:	910063a0 	add	x0, x29, #0x18
+  44:	52800462 	mov	w2, #0x23                  	// #35
+  48:	94000000 	bl	0 <_gfortran_transfer_character_write>
+			48: R_AARCH64_CALL26	_gfortran_transfer_character_write
+  4c:	910063a0 	add	x0, x29, #0x18
+  50:	94000000 	bl	0 <_gfortran_st_write_done>
+			50: R_AARCH64_CALL26	_gfortran_st_write_done
+  54:	90000000 	adrp	x0, 0 <MAIN__>
+			54: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+  58:	91000000 	add	x0, x0, #0x0
+			58: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+  5c:	f90013a0 	str	x0, [x29, #32]
+  60:	52800120 	mov	w0, #0x9                   	// #9
+  64:	b9002ba0 	str	w0, [x29, #40]
+  68:	52801000 	mov	w0, #0x80                  	// #128
+  6c:	b9001ba0 	str	w0, [x29, #24]
+  70:	528000a0 	mov	w0, #0x5                   	// #5
+  74:	b9001fa0 	str	w0, [x29, #28]
+  78:	910063a0 	add	x0, x29, #0x18
+  7c:	94000000 	bl	0 <_gfortran_st_read>
+			7c: R_AARCH64_CALL26	_gfortran_st_read
+  80:	9107f3a1 	add	x1, x29, #0x1fc
+  84:	910063a0 	add	x0, x29, #0x18
+  88:	52800082 	mov	w2, #0x4                   	// #4
+  8c:	94000000 	bl	0 <_gfortran_transfer_integer>
+			8c: R_AARCH64_CALL26	_gfortran_transfer_integer
+  90:	910063a0 	add	x0, x29, #0x18
+  94:	94000000 	bl	0 <_gfortran_st_read_done>
+			94: R_AARCH64_CALL26	_gfortran_st_read_done
+  98:	b941ffa0 	ldr	w0, [x29, #508]
+  9c:	7100141f 	cmp	w0, #0x5
+  a0:	5400026d 	b.le	ec <MAIN__+0xec>
+  a4:	90000000 	adrp	x0, 0 <MAIN__>
+			a4: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+  a8:	91000000 	add	x0, x0, #0x0
+			a8: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+  ac:	f90013a0 	str	x0, [x29, #32]
+  b0:	52800180 	mov	w0, #0xc                   	// #12
+  b4:	b9002ba0 	str	w0, [x29, #40]
+  b8:	52801000 	mov	w0, #0x80                  	// #128
+  bc:	b9001ba0 	str	w0, [x29, #24]
+  c0:	528000c0 	mov	w0, #0x6                   	// #6
+  c4:	b9001fa0 	str	w0, [x29, #28]
+  c8:	910063a0 	add	x0, x29, #0x18
+  cc:	94000000 	bl	0 <_gfortran_st_write>
+			cc: R_AARCH64_CALL26	_gfortran_st_write
+  d0:	90000000 	adrp	x0, 0 <MAIN__>
+			d0: R_AARCH64_ADR_PREL_PG_HI21	.rodata+0x38
+  d4:	91000001 	add	x1, x0, #0x0
+			d4: R_AARCH64_ADD_ABS_LO12_NC	.rodata+0x38
+  d8:	910063a0 	add	x0, x29, #0x18
+  dc:	528003c2 	mov	w2, #0x1e                  	// #30
+  e0:	94000000 	bl	0 <_gfortran_transfer_character_write>
+			e0: R_AARCH64_CALL26	_gfortran_transfer_character_write
+  e4:	910063a0 	add	x0, x29, #0x18
+  e8:	94000000 	bl	0 <_gfortran_st_write_done>
+			e8: R_AARCH64_CALL26	_gfortran_st_write_done
+  ec:	d503201f 	nop
+  f0:	a9407bfd 	ldp	x29, x30, [sp]
+  f4:	910803ff 	add	sp, sp, #0x200
+  f8:	d65f03c0 	ret
+
+00000000000000fc <main>:
+  fc:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+ 100:	910003fd 	mov	x29, sp
+ 104:	b9001fa0 	str	w0, [x29, #28]
+ 108:	f9000ba1 	str	x1, [x29, #16]
+ 10c:	f9400ba1 	ldr	x1, [x29, #16]
+ 110:	b9401fa0 	ldr	w0, [x29, #28]
+ 114:	94000000 	bl	0 <_gfortran_set_args>
+			114: R_AARCH64_CALL26	_gfortran_set_args
+ 118:	90000000 	adrp	x0, 0 <MAIN__>
+			118: R_AARCH64_ADR_PREL_PG_HI21	.rodata+0x58
+ 11c:	91000000 	add	x0, x0, #0x0
+			11c: R_AARCH64_ADD_ABS_LO12_NC	.rodata+0x58
+ 120:	aa0003e1 	mov	x1, x0
+ 124:	528000e0 	mov	w0, #0x7                   	// #7
+ 128:	94000000 	bl	0 <_gfortran_set_options>
+			128: R_AARCH64_CALL26	_gfortran_set_options
+ 12c:	97ffffb5 	bl	0 <MAIN__>
+ 130:	52800000 	mov	w0, #0x0                   	// #0
+ 134:	a8c27bfd 	ldp	x29, x30, [sp], #32
+ 138:	d65f03c0 	ret
+
+Disassembly of section .rodata:
+
+0000000000000000 <options.3.2564-0x58>:
+   0:	745f6669 	.word	0x745f6669
+   4:	2e6e6568 	.word	0x2e6e6568
+   8:	00383066 	.word	0x00383066
+   c:	00000000 	.word	0x00000000
+  10:	65746e45 	.word	0x65746e45
+  14:	20612072 	.word	0x20612072
+  18:	626d756e 	.word	0x626d756e
+  1c:	62207265 	.word	0x62207265
+  20:	65777465 	.word	0x65777465
+  24:	31206e65 	.word	0x31206e65
+  28:	646e6120 	.word	0x646e6120
+  2c:	20303120 	.word	0x20303120
+  30:	00203e2d 	.word	0x00203e2d
+  34:	00000000 	.word	0x00000000
+  38:	626d754e 	.word	0x626d754e
+  3c:	65207265 	.word	0x65207265
+  40:	7265746e 	.word	0x7265746e
+  44:	67206465 	.word	0x67206465
+  48:	74616572 	.word	0x74616572
+  4c:	74207265 	.word	0x74207265
+  50:	206e6168 	.word	0x206e6168
+  54:	00002135 	.word	0x00002135
+
+0000000000000058 <options.3.2564>:
+  58:	00000044 	.word	0x00000044
+  5c:	000003ff 	.word	0x000003ff
+  60:	00000000 	.word	0x00000000
+  64:	00000001 	.word	0x00000001
+  68:	00000001 	.word	0x00000001
+  6c:	00000000 	.word	0x00000000
+  70:	0000001f 	.word	0x0000001f
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	43434700 	.inst	0x43434700 ; undefined
+   4:	5528203a 	.inst	0x5528203a ; undefined
+   8:	746e7562 	.inst	0x746e7562 ; undefined
+   c:	694c2f75 	ldpsw	x21, x11, [x27, #96]
+  10:	6f72616e 	umlsl2	v14.4s, v11.8h, v2.h[3]
+  14:	332e3720 	.inst	0x332e3720 ; undefined
+  18:	322d302e 	orr	w14, w1, #0xfff80000
+  1c:	75627537 	.inst	0x75627537 ; undefined
+  20:	3175746e 	adds	w14, w3, #0xd5d, lsl #12
+  24:	2e38317e 	usubw	v30.8h, v11.8h, v24.8b
+  28:	20293430 	.inst	0x20293430 ; undefined
+  2c:	2e332e37 	uqsub	v23.8b, v17.8b, v19.8b
+  30:	Address 0x0000000000000030 is out of bounds.
+
