@@ -1,0 +1,10 @@
+gfortran -m32 -S if_then.f08 
+
+gfortran -m32 -c if_then.s 
+
+gfortran -m32 if_then.o -o if_then_Fortran_i386
+
+objdump -x -D -s -t -Mintel if_then.o > objdump_of_dot_o.txt
+
+objdump -x -D -s -t -Mintel if_then_Fortran_i386 > objdump_of_dot_exe.txt
+
