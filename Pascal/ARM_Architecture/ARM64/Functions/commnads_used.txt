@@ -1,0 +1,8 @@
+fpc -al add_functions.pp 
+
+mv add_functions add_functions_Pascal_ARM64
+
+objdump -x -D -s -t add_functions.o > objdump_of_dot_o.txt
+
+objdump -x -D -s -t add_functions_Pascal_ARM64 > objdump_of_dot_exe.txt
+

@@ -1,0 +1,8 @@
+fpc -al -g add_floats.pp 
+
+mv add_floats add_floats_Pascal_ARM64_g
+
+objdump -x -D -S -s -g -t add_floats.o > objdump_of_dot_o.txt
+
+objdump -x -D -S -s -g -t add_floats_Pascal_ARM64_g > objdump_of_dot_exe.txt
+

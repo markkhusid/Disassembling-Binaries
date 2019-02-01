@@ -1,0 +1,634 @@
+
+add_floats.o:     file format elf64-littleaarch64
+add_floats.o
+architecture: aarch64, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x0000000000000000
+private flags = 0:
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         00000000  0000000000000000  0000000000000000  00000040  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  0000000000000000  0000000000000000  00000040  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000018  0000000000000000  0000000000000000  00000040  2**3
+                  ALLOC
+  3 .debug_line   0000005c  0000000000000000  0000000000000000  00000040  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  4 .debug_abbrev 0000004b  0000000000000000  0000000000000000  0000009c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .text.b_DEBUGSTART_$P$ADD_FLOATS 00000000  0000000000000000  0000000000000000  000000e7  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  6 .text.n_main  00000070  0000000000000000  0000000000000000  000000e8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  7 .fpc.n_links  00000010  0000000000000000  0000000000000000  00000158  2**0
+                  CONTENTS, RELOC, READONLY
+  8 .data.n_INITFINAL 00000020  0000000000000000  0000000000000000  00000168  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+  9 .data.n_FPC_THREADVARTABLES 0000000c  0000000000000000  0000000000000000  00000188  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+ 10 .data.n_FPC_RESOURCESTRINGTABLES 00000008  0000000000000000  0000000000000000  00000198  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 11 .data.n_FPC_WIDEINITTABLES 00000008  0000000000000000  0000000000000000  000001a0  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 12 .data.n_FPC_RESSTRINITTABLES 00000008  0000000000000000  0000000000000000  000001a8  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 13 .fpc.n_version 00000039  0000000000000000  0000000000000000  000001b0  2**3
+                  CONTENTS, READONLY
+ 14 .data.n___stklen 00000008  0000000000000000  0000000000000000  000001f0  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 15 .data.n___heapsize 00000008  0000000000000000  0000000000000000  000001f8  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 16 .data.n___fpc_valgrind 00000001  0000000000000000  0000000000000000  00000200  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 17 .data.n_FPC_RESLOCATION 00000008  0000000000000000  0000000000000000  00000208  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 18 .rodata.n__$ADD_FLOATS$_Ld1 00000008  0000000000000000  0000000000000000  00000210  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 19 .rodata.n__$ADD_FLOATS$_Ld2 00000008  0000000000000000  0000000000000000  00000218  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 20 .debug_info   0000014a  0000000000000000  0000000000000000  00000220  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 21 .text.z_DEBUGEND_$P$ADD_FLOATS 00000000  0000000000000000  0000000000000000  0000036a  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .note.GNU-stack 00000000  0000000000000000  0000000000000000  0000036a  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 add_floats.pp
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l    d  .debug_line	0000000000000000 .debug_line
+0000000000000000 l    d  .debug_abbrev	0000000000000000 .debug_abbrev
+0000000000000000 l    d  .text.b_DEBUGSTART_$P$ADD_FLOATS	0000000000000000 .text.b_DEBUGSTART_$P$ADD_FLOATS
+0000000000000000 l    d  .text.n_main	0000000000000000 .text.n_main
+0000000000000000 l     O .bss	0000000000000008 U_$P$ADD_FLOATS_$$_A
+0000000000000008 l     O .bss	0000000000000008 U_$P$ADD_FLOATS_$$_B
+0000000000000010 l     O .bss	0000000000000008 U_$P$ADD_FLOATS_$$_C
+0000000000000000 l    d  .fpc.n_links	0000000000000000 .fpc.n_links
+0000000000000000 l    d  .data.n_INITFINAL	0000000000000000 .data.n_INITFINAL
+0000000000000000 l    d  .data.n_FPC_THREADVARTABLES	0000000000000000 .data.n_FPC_THREADVARTABLES
+0000000000000000 l    d  .data.n_FPC_RESOURCESTRINGTABLES	0000000000000000 .data.n_FPC_RESOURCESTRINGTABLES
+0000000000000000 l    d  .data.n_FPC_WIDEINITTABLES	0000000000000000 .data.n_FPC_WIDEINITTABLES
+0000000000000000 l    d  .data.n_FPC_RESSTRINITTABLES	0000000000000000 .data.n_FPC_RESSTRINITTABLES
+0000000000000000 l    d  .fpc.n_version	0000000000000000 .fpc.n_version
+0000000000000000 l    d  .data.n___stklen	0000000000000000 .data.n___stklen
+0000000000000000 l    d  .data.n___heapsize	0000000000000000 .data.n___heapsize
+0000000000000000 l    d  .data.n___fpc_valgrind	0000000000000000 .data.n___fpc_valgrind
+0000000000000000 l    d  .data.n_FPC_RESLOCATION	0000000000000000 .data.n_FPC_RESLOCATION
+0000000000000000 l    d  .rodata.n__$ADD_FLOATS$_Ld1	0000000000000000 .rodata.n__$ADD_FLOATS$_Ld1
+0000000000000000 l    d  .rodata.n__$ADD_FLOATS$_Ld2	0000000000000000 .rodata.n__$ADD_FLOATS$_Ld2
+0000000000000000 l    d  .debug_info	0000000000000000 .debug_info
+0000000000000000 l    d  .text.z_DEBUGEND_$P$ADD_FLOATS	0000000000000000 .text.z_DEBUGEND_$P$ADD_FLOATS
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 g     O .text.b_DEBUGSTART_$P$ADD_FLOATS	0000000000000000 DEBUGSTART_$P$ADD_FLOATS
+0000000000000000 g     F .text.n_main	0000000000000000 PASCALMAIN
+0000000000000000 g     F .text.n_main	0000000000000070 main
+0000000000000000         *UND*	0000000000000000 FPC_INITIALIZEUNITS
+0000000000000000 g       .rodata.n__$ADD_FLOATS$_Ld1	0000000000000000 _$ADD_FLOATS$_Ld1
+0000000000000000 g       .rodata.n__$ADD_FLOATS$_Ld2	0000000000000000 _$ADD_FLOATS$_Ld2
+0000000000000000         *UND*	0000000000000000 FPC_DO_EXIT
+0000000000000000 g     O .text.z_DEBUGEND_$P$ADD_FLOATS	0000000000000000 DEBUGEND_$P$ADD_FLOATS
+0000000000000000 g     O .data.n_INITFINAL	0000000000000020 INITFINAL
+0000000000000000         *UND*	0000000000000000 INIT$_$SYSTEM
+0000000000000000 g     O .data.n_FPC_THREADVARTABLES	000000000000000c FPC_THREADVARTABLES
+0000000000000000         *UND*	0000000000000000 THREADVARLIST_$SYSTEM
+0000000000000000 g     O .data.n_FPC_RESOURCESTRINGTABLES	0000000000000008 FPC_RESOURCESTRINGTABLES
+0000000000000000 g     O .data.n_FPC_WIDEINITTABLES	0000000000000008 FPC_WIDEINITTABLES
+0000000000000000 g     O .data.n_FPC_RESSTRINITTABLES	0000000000000008 FPC_RESSTRINITTABLES
+0000000000000000 g     O .data.n___stklen	0000000000000000 __stklen
+0000000000000000 g     O .data.n___heapsize	0000000000000000 __heapsize
+0000000000000000 g     O .data.n___fpc_valgrind	0000000000000000 __fpc_valgrind
+0000000000000000 g     O .data.n_FPC_RESLOCATION	0000000000000000 FPC_RESLOCATION
+000000000000012a g     O .debug_info	0000000000000000 _$ADD_FLOATS$_Ld3
+0000000000000140 g     O .debug_info	0000000000000000 _$ADD_FLOATS$_Ld4
+
+
+Contents of section .debug_line:
+ 0000 58000000 02002400 00000101 01ff0d00  X.....$.........
+ 0010 01010101 00000001 00000100 6164645f  ............add_
+ 0020 666c6f61 74732e70 70000000 00000009  floats.pp.......
+ 0030 02000000 00000000 00050111 020c0502  ................
+ 0040 0e02180d 02180509 0d022805 010d0009  ..........(.....
+ 0050 02000000 00000000 00000101           ............    
+Contents of section .debug_abbrev:
+ 0000 01110103 0825081b 08130b42 0b100611  .....%.....B....
+ 0010 01120100 00023400 0308020a 49100000  ......4.....I...
+ 0020 032e0103 08270c3f 0c110112 01000004  .....'.?........
+ 0030 16000308 49100000 05240003 083e0b0b  ....I....$...>..
+ 0040 0b000006 10004910 000000             ......I....     
+Contents of section .text.n_main:
+ 0000 fd7bbfa9 fd030091 00000094 00000090  .{..............
+ 0010 000040f9 010040f8 00000090 00000091  ..@...@.........
+ 0020 010000f8 00000090 000040f9 010040f8  ..........@...@.
+ 0030 00000090 00000091 010000f8 00000090  ................
+ 0040 00000091 010040fc 00000090 00000091  ......@.........
+ 0050 000040fc 2028601e 00000090 00000091  ..@. (`.........
+ 0060 000000fc 00000094 fd7bc1a8 c0035fd6  .........{...._.
+Contents of section .fpc.n_links:
+ 0000 00000000 00000000 00000000 00000000  ................
+Contents of section .data.n_INITFINAL:
+ 0000 01000000 00000000 00000000 00000000  ................
+ 0010 00000000 00000000 00000000 00000000  ................
+Contents of section .data.n_FPC_THREADVARTABLES:
+ 0000 01000000 00000000 00000000           ............    
+Contents of section .data.n_FPC_RESOURCESTRINGTABLES:
+ 0000 00000000 00000000                    ........        
+Contents of section .data.n_FPC_WIDEINITTABLES:
+ 0000 00000000 00000000                    ........        
+Contents of section .data.n_FPC_RESSTRINITTABLES:
+ 0000 00000000 00000000                    ........        
+Contents of section .fpc.n_version:
+ 0000 46504320 332e302e 342b6466 73672d31  FPC 3.0.4+dfsg-1
+ 0010 38756275 6e747532 205b3230 31382f30  8ubuntu2 [2018/0
+ 0020 382f3239 5d20666f 72206161 72636836  8/29] for aarch6
+ 0030 34202d20 4c696e75 78                 4 - Linux       
+Contents of section .data.n___stklen:
+ 0000 00008000 00000000                    ........        
+Contents of section .data.n___heapsize:
+ 0000 00000000 00000000                    ........        
+Contents of section .data.n___fpc_valgrind:
+ 0000 00                                   .               
+Contents of section .data.n_FPC_RESLOCATION:
+ 0000 00000000 00000000                    ........        
+Contents of section .rodata.n__$ADD_FLOATS$_Ld1:
+ 0000 66666666 66660a40                    ffffff.@        
+Contents of section .rodata.n__$ADD_FLOATS$_Ld2:
+ 0000 66666666 66661640                    ffffff.@        
+Contents of section .debug_info:
+ 0000 46010000 02000000 00000801 6164645f  F...........add_
+ 0010 666c6f61 74732e70 70004672 65652050  floats.pp.Free P
+ 0020 61736361 6c20332e 302e342b 64667367  ascal 3.0.4+dfsg
+ 0030 2d313875 62756e74 75322032 3031382f  -18ubuntu2 2018/
+ 0040 30382f32 39002f68 6f6d652f 7562756e  08/29./home/ubun
+ 0050 74752f45 6e67696e 65657269 6e672f47  tu/Engineering/G
+ 0060 49544855 422f4469 73617373 656d626c  ITHUB/Disassembl
+ 0070 696e672d 42696e61 72696573 2f506173  ing-Binaries/Pas
+ 0080 63616c2f 41524d5f 41726368 69746563  cal/ARM_Architec
+ 0090 74757265 2f41524d 36342f52 65616c5f  ture/ARM64/Real_
+ 00a0 4f706572 6174696f 6e732f57 6974685f  Operations/With_
+ 00b0 44656275 675f496e 666f2f00 09030000  Debug_Info/.....
+ 00c0 00000000 00000000 00000000 00000000  ................
+ 00d0 00000241 00090300 00000000 00000000  ...A............
+ 00e0 00000000 00000002 42000903 00000000  ........B.......
+ 00f0 00000000 00000000 00000000 02430009  .............C..
+ 0100 03000000 00000000 00000000 00000000  ................
+ 0110 00036d61 696e0001 01000000 00000000  ..main..........
+ 0120 00000000 00000000 00000452 45414c00  ...........REAL.
+ 0130 00000000 00000000 05524541 4c000408  .........REAL...
+ 0140 06000000 00000000 0000               ..........      
+
+Disassembly of section .bss:
+
+0000000000000000 <U_$P$ADD_FLOATS_$$_A>:
+	...
+
+0000000000000008 <U_$P$ADD_FLOATS_$$_B>:
+	...
+
+0000000000000010 <U_$P$ADD_FLOATS_$$_C>:
+	...
+
+Disassembly of section .debug_line:
+
+0000000000000000 <.debug_line>:
+   0:	00000058 	.inst	0x00000058 ; undefined
+   4:	00240002 	.inst	0x00240002 ; NYI
+   8:	01010000 	.inst	0x01010000 ; undefined
+   c:	000dff01 	.inst	0x000dff01 ; undefined
+  10:	01010101 	.inst	0x01010101 ; undefined
+  14:	01000000 	.inst	0x01000000 ; undefined
+PROGRAM add_floats;
+
+VAR
+	a, b, c : REAL;
+
+BEGIN
+  18:	00010000 	.inst	0x00010000 ; undefined
+  1c:	5f646461 	.inst	0x5f646461 ; undefined
+  20:	616f6c66 	.inst	0x616f6c66 ; undefined
+
+	a := 3.3;
+  24:	702e7374 	adr	x20, 5ce93 <_$ADD_FLOATS$_Ld4+0x5cd53>
+  28:	00000070 	.inst	0x00000070 ; undefined
+  2c:	09000000 	.inst	0x09000000 ; undefined
+  30:	00000002 	.inst	0x00000002 ; undefined
+			31: R_AARCH64_ABS64	.text.n_main
+  34:	00000000 	.inst	0x00000000 ; undefined
+  38:	11010500 	add	w0, w8, #0x41
+	b := 5.6;
+  3c:	02050c02 	.inst	0x02050c02 ; undefined
+  40:	0d18020e 	.inst	0x0d18020e ; undefined
+  44:	09051802 	.inst	0x09051802 ; undefined
+  48:	0528020d 	ext	z13.b, z13.b, z16.b, #64
+  4c:	09000d01 	.inst	0x09000d01 ; undefined
+  50:	00000002 	.inst	0x00000002 ; undefined
+			51: R_AARCH64_ABS64	.text.n_main+0x70
+	c := a + b;
+  54:	00000000 	.inst	0x00000000 ; undefined
+  58:	01010000 	.inst	0x01010000 ; undefined
+
+Disassembly of section .debug_abbrev:
+
+0000000000000000 <.debug_abbrev>:
+   0:	03011101 	.inst	0x03011101 ; undefined
+   4:	1b082508 	madd	w8, w8, w8, w9
+   8:	420b1308 	.inst	0x420b1308 ; undefined
+   c:	1106100b 	add	w11, w0, #0x184
+  10:	00011201 	.inst	0x00011201 ; undefined
+  14:	00340200 	.inst	0x00340200 ; NYI
+BEGIN
+  18:	0a020803 	and	w3, w0, w2, lsl #2
+  1c:	00001049 	.inst	0x00001049 ; undefined
+  20:	03012e03 	.inst	0x03012e03 ; undefined
+	a := 3.3;
+  24:	3f0c2708 	.inst	0x3f0c2708 ; undefined
+  28:	1201110c 	and	w12, w8, #0x8000000f
+  2c:	04000001 	add	z1.b, p0/m, z1.b, z0.b
+  30:	08030016 	stxrb	w3, w22, [x0]
+  34:	00001049 	.inst	0x00001049 ; undefined
+  38:	03002405 	.inst	0x03002405 ; undefined
+	b := 5.6;
+  3c:	0b0b3e08 	add	w8, w16, w11, lsl #15
+  40:	0600000b 	.inst	0x0600000b ; undefined
+  44:	10490010 	adr	x16, 92044 <_$ADD_FLOATS$_Ld4+0x91f04>
+  48:	Address 0x0000000000000048 is out of bounds.
+
+
+Disassembly of section .text.n_main:
+
+0000000000000000 <main>:
+BEGIN
+   0:	a9bf7bfd 	stp	x29, x30, [sp, #-16]!
+   4:	910003fd 	mov	x29, sp
+   8:	94000000 	bl	0 <FPC_INITIALIZEUNITS>
+			8: R_AARCH64_CALL26	FPC_INITIALIZEUNITS
+	a := 3.3;
+   c:	90000000 	adrp	x0, 0 <main>
+			c: R_AARCH64_ADR_GOT_PAGE	_$ADD_FLOATS$_Ld1
+  10:	f9400000 	ldr	x0, [x0]
+			10: R_AARCH64_LD64_GOT_LO12_NC	_$ADD_FLOATS$_Ld1
+  14:	f8400001 	ldur	x1, [x0]
+  18:	90000000 	adrp	x0, 0 <main>
+			18: R_AARCH64_ADR_PREL_PG_HI21	.bss
+  1c:	91000000 	add	x0, x0, #0x0
+			1c: R_AARCH64_ADD_ABS_LO12_NC	.bss
+  20:	f8000001 	stur	x1, [x0]
+	b := 5.6;
+  24:	90000000 	adrp	x0, 0 <main>
+			24: R_AARCH64_ADR_GOT_PAGE	_$ADD_FLOATS$_Ld2
+  28:	f9400000 	ldr	x0, [x0]
+			28: R_AARCH64_LD64_GOT_LO12_NC	_$ADD_FLOATS$_Ld2
+  2c:	f8400001 	ldur	x1, [x0]
+  30:	90000000 	adrp	x0, 0 <main>
+			30: R_AARCH64_ADR_PREL_PG_HI21	.bss+0x8
+  34:	91000000 	add	x0, x0, #0x0
+			34: R_AARCH64_ADD_ABS_LO12_NC	.bss+0x8
+  38:	f8000001 	stur	x1, [x0]
+	c := a + b;
+  3c:	90000000 	adrp	x0, 0 <main>
+			3c: R_AARCH64_ADR_PREL_PG_HI21	.bss
+  40:	91000000 	add	x0, x0, #0x0
+			40: R_AARCH64_ADD_ABS_LO12_NC	.bss
+  44:	fc400001 	ldur	d1, [x0]
+  48:	90000000 	adrp	x0, 0 <main>
+			48: R_AARCH64_ADR_PREL_PG_HI21	.bss+0x8
+  4c:	91000000 	add	x0, x0, #0x0
+			4c: R_AARCH64_ADD_ABS_LO12_NC	.bss+0x8
+  50:	fc400000 	ldur	d0, [x0]
+  54:	1e602820 	fadd	d0, d1, d0
+  58:	90000000 	adrp	x0, 0 <main>
+			58: R_AARCH64_ADR_PREL_PG_HI21	.bss+0x10
+  5c:	91000000 	add	x0, x0, #0x0
+			5c: R_AARCH64_ADD_ABS_LO12_NC	.bss+0x10
+  60:	fc000000 	stur	d0, [x0]
+END.
+  64:	94000000 	bl	0 <FPC_DO_EXIT>
+			64: R_AARCH64_CALL26	FPC_DO_EXIT
+  68:	a8c17bfd 	ldp	x29, x30, [sp], #16
+  6c:	d65f03c0 	ret
+
+Disassembly of section .fpc.n_links:
+
+0000000000000000 <.fpc.n_links>:
+	...
+			0: R_AARCH64_ABS64	DEBUGSTART_$P$ADD_FLOATS
+			8: R_AARCH64_ABS64	DEBUGEND_$P$ADD_FLOATS
+
+Disassembly of section .data.n_INITFINAL:
+
+0000000000000000 <INITFINAL>:
+   0:	00000001 	.word	0x00000001
+	...
+			10: R_AARCH64_ABS64	INIT$_$SYSTEM
+
+Disassembly of section .data.n_FPC_THREADVARTABLES:
+
+0000000000000000 <FPC_THREADVARTABLES>:
+   0:	00000001 	.word	0x00000001
+	...
+			4: R_AARCH64_ABS64	THREADVARLIST_$SYSTEM
+
+Disassembly of section .data.n_FPC_RESOURCESTRINGTABLES:
+
+0000000000000000 <FPC_RESOURCESTRINGTABLES>:
+	...
+
+Disassembly of section .data.n_FPC_WIDEINITTABLES:
+
+0000000000000000 <FPC_WIDEINITTABLES>:
+	...
+
+Disassembly of section .data.n_FPC_RESSTRINITTABLES:
+
+0000000000000000 <FPC_RESSTRINITTABLES>:
+	...
+
+Disassembly of section .fpc.n_version:
+
+0000000000000000 <.fpc.n_version>:
+   0:	20435046 	.word	0x20435046
+   4:	2e302e33 	.word	0x2e302e33
+   8:	66642b34 	.word	0x66642b34
+   c:	312d6773 	.word	0x312d6773
+  10:	75627538 	.word	0x75627538
+  14:	3275746e 	.word	0x3275746e
+BEGIN
+  18:	30325b20 	.word	0x30325b20
+  1c:	302f3831 	.word	0x302f3831
+  20:	39322f38 	.word	0x39322f38
+	a := 3.3;
+  24:	6f66205d 	.word	0x6f66205d
+  28:	61612072 	.word	0x61612072
+  2c:	36686372 	.word	0x36686372
+  30:	202d2034 	.word	0x202d2034
+  34:	756e694c 	.word	0x756e694c
+  38:	Address 0x0000000000000038 is out of bounds.
+
+
+Disassembly of section .data.n___stklen:
+
+0000000000000000 <__stklen>:
+   0:	00800000 	.word	0x00800000
+   4:	00000000 	.word	0x00000000
+
+Disassembly of section .data.n___heapsize:
+
+0000000000000000 <__heapsize>:
+	...
+
+Disassembly of section .data.n___fpc_valgrind:
+
+0000000000000000 <__fpc_valgrind>:
+	...
+
+Disassembly of section .data.n_FPC_RESLOCATION:
+
+0000000000000000 <FPC_RESLOCATION>:
+	...
+
+Disassembly of section .rodata.n__$ADD_FLOATS$_Ld1:
+
+0000000000000000 <_$ADD_FLOATS$_Ld1>:
+   0:	66666666 	.word	0x66666666
+   4:	400a6666 	.word	0x400a6666
+
+Disassembly of section .rodata.n__$ADD_FLOATS$_Ld2:
+
+0000000000000000 <_$ADD_FLOATS$_Ld2>:
+   0:	66666666 	.word	0x66666666
+   4:	40166666 	.word	0x40166666
+
+Disassembly of section .debug_info:
+
+0000000000000000 <_$ADD_FLOATS$_Ld3-0x12a>:
+   0:	00000146 	.inst	0x00000146 ; undefined
+   4:	00000002 	.inst	0x00000002 ; undefined
+			6: R_AARCH64_ABS32	.debug_abbrev
+   8:	01080000 	.inst	0x01080000 ; undefined
+   c:	5f646461 	.inst	0x5f646461 ; undefined
+  10:	616f6c66 	.inst	0x616f6c66 ; undefined
+  14:	702e7374 	adr	x20, 5ce83 <_$ADD_FLOATS$_Ld4+0x5cd43>
+BEGIN
+  18:	72460070 	.inst	0x72460070 ; undefined
+  1c:	50206565 	adr	x5, 40cca <_$ADD_FLOATS$_Ld4+0x40b8a>
+  20:	61637361 	.inst	0x61637361 ; undefined
+	a := 3.3;
+  24:	2e33206c 	usubl	v12.8h, v3.8b, v19.8b
+  28:	2b342e30 	adds	w16, w17, w20, uxth #3
+  2c:	67736664 	.inst	0x67736664 ; undefined
+  30:	7538312d 	.inst	0x7538312d ; undefined
+  34:	746e7562 	.inst	0x746e7562 ; undefined
+  38:	32203275 	orr	w21, w19, #0x1fff
+	b := 5.6;
+  3c:	2f383130 	.inst	0x2f383130 ; undefined
+  40:	322f3830 	orr	w16, w1, #0xfffe0000
+  44:	682f0039 	.inst	0x682f0039 ; undefined
+  48:	2f656d6f 	.inst	0x2f656d6f ; undefined
+  4c:	6e756275 	rsubhn2	v21.8h, v19.4s, v21.4s
+  50:	452f7574 	.inst	0x452f7574 ; undefined
+	c := a + b;
+  54:	6e69676e 	umax	v14.8h, v27.8h, v9.8h
+  58:	69726565 	ldpsw	x5, x25, [x11, #-112]
+  5c:	472f676e 	.inst	0x472f676e ; undefined
+  60:	55485449 	.inst	0x55485449 ; undefined
+  64:	69442f42 	ldpsw	x2, x11, [x26, #32]
+  68:	73736173 	.inst	0x73736173 ; undefined
+  6c:	6c626d65 	ldnp	d5, d27, [x11, #-480]
+  70:	2d676e69 	ldp	s9, s27, [x19, #-200]
+  74:	616e6942 	.inst	0x616e6942 ; undefined
+  78:	73656972 	.inst	0x73656972 ; undefined
+END.
+  7c:	7361502f 	.inst	0x7361502f ; undefined
+  80:	2f6c6163 	umlsl	v3.4s, v11.4h, v12.h[2]
+  84:	5f4d5241 	.inst	0x5f4d5241 ; undefined
+  88:	68637241 	.inst	0x68637241 ; undefined
+  8c:	63657469 	.inst	0x63657469 ; undefined
+  90:	65727574 	fnmls	z20.h, p5/m, z11.h, z18.h
+  94:	4d52412f 	.inst	0x4d52412f ; undefined
+  98:	522f3436 	eor	w22, w1, #0x7ffe0000
+  9c:	5f6c6165 	.inst	0x5f6c6165 ; undefined
+  a0:	7265704f 	.inst	0x7265704f ; undefined
+  a4:	6f697461 	uqshl	v1.2d, v3.2d, #41
+  a8:	572f736e 	.inst	0x572f736e ; undefined
+  ac:	5f687469 	sqshl	d9, d3, #40
+  b0:	75626544 	.inst	0x75626544 ; undefined
+  b4:	6e495f67 	.inst	0x6e495f67 ; undefined
+  b8:	002f6f66 	.inst	0x002f6f66 ; NYI
+  bc:	00000309 	.inst	0x00000309 ; undefined
+			be: R_AARCH64_ABS32	.debug_line
+	...
+			c2: R_AARCH64_ABS64	DEBUGSTART_$P$ADD_FLOATS
+			ca: R_AARCH64_ABS64	DEBUGEND_$P$ADD_FLOATS
+  d0:	41020000 	.inst	0x41020000 ; undefined
+  d4:	00030900 	.inst	0x00030900 ; undefined
+			d7: R_AARCH64_ABS64	.bss
+	...
+			df: R_AARCH64_ABS64	_$ADD_FLOATS$_Ld3
+  e4:	02000000 	.inst	0x02000000 ; undefined
+  e8:	03090042 	.inst	0x03090042 ; undefined
+	...
+			ec: R_AARCH64_ABS64	.bss+0x8
+			f4: R_AARCH64_ABS64	_$ADD_FLOATS$_Ld3
+  fc:	09004302 	.inst	0x09004302 ; undefined
+ 100:	00000003 	.inst	0x00000003 ; undefined
+			101: R_AARCH64_ABS64	.bss+0x10
+	...
+			109: R_AARCH64_ABS64	_$ADD_FLOATS$_Ld3
+ 110:	616d0300 	.inst	0x616d0300 ; undefined
+ 114:	01006e69 	.inst	0x01006e69 ; undefined
+ 118:	00000001 	.inst	0x00000001 ; undefined
+			119: R_AARCH64_ABS64	main
+	...
+			121: R_AARCH64_ABS64	.text.n_main+0x70
+
+000000000000012a <_$ADD_FLOATS$_Ld3>:
+ 12a:	41455204 	.inst	0x41455204 ; undefined
+ 12e:	0000004c 	.inst	0x0000004c ; undefined
+			130: R_AARCH64_ABS64	.debug_info+0x138
+ 132:	00000000 	.inst	0x00000000 ; undefined
+ 136:	52050000 	eor	w0, w0, #0x8000000
+ 13a:	004c4145 	.inst	0x004c4145 ; undefined
+ 13e:	 	.inst	0x00060804 ; undefined
+			141: R_AARCH64_ABS64	_$ADD_FLOATS$_Ld3
+
+0000000000000140 <_$ADD_FLOATS$_Ld4>:
+ 140:	00000006 	.inst	0x00000006 ; undefined
+ 144:	00000000 	.inst	0x00000000 ; undefined
+	...
+Raw dump of debug contents of section .debug_line:
+
+  Offset:                      0x0
+  Length:                      88
+  DWARF Version:               2
+  Prologue Length:             36
+  Minimum Instruction Length:  1
+  Initial value of 'is_stmt':  1
+  Line Base:                   1
+  Line Range:                  255
+  Opcode Base:                 13
+
+ Opcodes:
+  Opcode 1 has 0 args
+  Opcode 2 has 1 arg
+  Opcode 3 has 1 arg
+  Opcode 4 has 1 arg
+  Opcode 5 has 1 arg
+  Opcode 6 has 0 args
+  Opcode 7 has 0 args
+  Opcode 8 has 0 args
+  Opcode 9 has 1 arg
+  Opcode 10 has 0 args
+  Opcode 11 has 0 args
+  Opcode 12 has 1 arg
+
+ The Directory Table is empty.
+
+ The File Name Table (offset 0x1c):
+  Entry	Dir	Time	Size	Name
+  1	0	0	0	add_floats.pp
+
+ Line Number Statements:
+  [0x0000002e]  Extended opcode 2: set Address to 0x0
+  [0x00000039]  Set column to 1
+  [0x0000003b]  Special opcode 4: advance Address by 0 to 0x0 and Line by 5 to 6
+  [0x0000003c]  Advance PC by 12 to 0xc
+  [0x0000003e]  Set column to 2
+  [0x00000040]  Special opcode 1: advance Address by 0 to 0xc and Line by 2 to 8
+  [0x00000041]  Advance PC by 24 to 0x24
+  [0x00000043]  Special opcode 0: advance Address by 0 to 0x24 and Line by 1 to 9
+  [0x00000044]  Advance PC by 24 to 0x3c
+  [0x00000046]  Set column to 9
+  [0x00000048]  Special opcode 0: advance Address by 0 to 0x3c and Line by 1 to 10
+  [0x00000049]  Advance PC by 40 to 0x64
+  [0x0000004b]  Set column to 1
+  [0x0000004d]  Special opcode 0: advance Address by 0 to 0x64 and Line by 1 to 11
+  [0x0000004e]  Extended opcode 2: set Address to 0x70
+  [0x00000059]  Extended opcode 1: End of Sequence
+
+
+Contents of the .debug_abbrev section:
+
+  Number TAG (0x0)
+   1      DW_TAG_compile_unit    [has children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_producer     DW_FORM_string
+    DW_AT_comp_dir     DW_FORM_string
+    DW_AT_language     DW_FORM_data1
+    DW_AT_identifier_case DW_FORM_data1
+    DW_AT_stmt_list    DW_FORM_data4
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_addr
+    DW_AT value: 0     DW_FORM value: 0
+   2      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_location     DW_FORM_block1
+    DW_AT_type         DW_FORM_ref_addr
+    DW_AT value: 0     DW_FORM value: 0
+   3      DW_TAG_subprogram    [has children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_prototyped   DW_FORM_flag
+    DW_AT_external     DW_FORM_flag
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_addr
+    DW_AT value: 0     DW_FORM value: 0
+   4      DW_TAG_typedef    [no children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_type         DW_FORM_ref_addr
+    DW_AT value: 0     DW_FORM value: 0
+   5      DW_TAG_base_type    [no children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_encoding     DW_FORM_data1
+    DW_AT_byte_size    DW_FORM_data1
+    DW_AT value: 0     DW_FORM value: 0
+   6      DW_TAG_reference_type    [no children]
+    DW_AT_type         DW_FORM_ref_addr
+    DW_AT value: 0     DW_FORM value: 0
+
+Contents of the .debug_info section:
+
+  Compilation Unit @ offset 0x0:
+   Length:        0x146 (32-bit)
+   Version:       2
+   Abbrev Offset: 0x0
+   Pointer Size:  8
+ <0><b>: Abbrev Number: 1 (DW_TAG_compile_unit)
+    <c>   DW_AT_name        : add_floats.pp
+    <1a>   DW_AT_producer    : Free Pascal 3.0.4+dfsg-18ubuntu2 2018/08/29
+    <46>   DW_AT_comp_dir    : /home/ubuntu/Engineering/GITHUB/Disassembling-Binaries/Pascal/ARM_Architecture/ARM64/Real_Operations/With_Debug_Info/
+    <bc>   DW_AT_language    : 9	(ANSI Pascal)
+    <bd>   DW_AT_identifier_case: 3	(case_insensitive)
+    <be>   DW_AT_stmt_list   : 0x0
+    <c2>   DW_AT_low_pc      : 0x0
+    <ca>   DW_AT_high_pc     : 0x0
+ <1><d2>: Abbrev Number: 2 (DW_TAG_variable)
+    <d3>   DW_AT_name        : A
+    <d5>   DW_AT_location    : 9 byte block: 3 0 0 0 0 0 0 0 0 	(DW_OP_addr: 0)
+    <df>   DW_AT_type        : <0x12a>
+ <1><e7>: Abbrev Number: 2 (DW_TAG_variable)
+    <e8>   DW_AT_name        : B
+    <ea>   DW_AT_location    : 9 byte block: 3 8 0 0 0 0 0 0 0 	(DW_OP_addr: 8)
+    <f4>   DW_AT_type        : <0x12a>
+ <1><fc>: Abbrev Number: 2 (DW_TAG_variable)
+    <fd>   DW_AT_name        : C
+    <ff>   DW_AT_location    : 9 byte block: 3 10 0 0 0 0 0 0 0 	(DW_OP_addr: 10)
+    <109>   DW_AT_type        : <0x12a>
+ <1><111>: Abbrev Number: 3 (DW_TAG_subprogram)
+    <112>   DW_AT_name        : main
+    <117>   DW_AT_prototyped  : 1
+    <118>   DW_AT_external    : 1
+    <119>   DW_AT_low_pc      : 0x0
+    <121>   DW_AT_high_pc     : 0x70
+ <2><129>: Abbrev Number: 0
+ <1><12a>: Abbrev Number: 4 (DW_TAG_typedef)
+    <12b>   DW_AT_name        : REAL
+    <130>   DW_AT_type        : <0x138>
+ <1><138>: Abbrev Number: 5 (DW_TAG_base_type)
+    <139>   DW_AT_name        : REAL
+    <13e>   DW_AT_encoding    : 4	(float)
+    <13f>   DW_AT_byte_size   : 8
+ <1><140>: Abbrev Number: 6 (DW_TAG_reference_type)
+    <141>   DW_AT_type        : <0x12a>
+ <1><149>: Abbrev Number: 0
+
