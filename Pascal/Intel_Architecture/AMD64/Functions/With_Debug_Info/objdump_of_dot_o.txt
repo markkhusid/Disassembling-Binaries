@@ -1,0 +1,945 @@
+
+add_functions.o:     file format elf64-x86-64
+add_functions.o
+architecture: i386:x86-64, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x0000000000000000
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         00000000  0000000000000000  0000000000000000  00000040  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  0000000000000000  0000000000000000  00000040  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000006  0000000000000000  0000000000000000  00000040  2**1
+                  ALLOC
+  3 .debug_line   00000085  0000000000000000  0000000000000000  00000040  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  4 .debug_abbrev 0000006b  0000000000000000  0000000000000000  000000c5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .text.b_DEBUGSTART_$P$ADD_FUNCTIONS_PROGRAM 00000000  0000000000000000  0000000000000000  00000130  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  6 .text.n_p$add_functions_program_$$_add_function$smallint$smallint$$smallint 00000027  0000000000000000  0000000000000000  00000130  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  7 .text.n_main  00000043  0000000000000000  0000000000000000  00000160  2**4
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .fpc.n_links  00000010  0000000000000000  0000000000000000  000001a3  2**0
+                  CONTENTS, RELOC, READONLY
+  9 .data.n_INITFINAL 00000020  0000000000000000  0000000000000000  000001b8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+ 10 .data.n_FPC_THREADVARTABLES 0000000c  0000000000000000  0000000000000000  000001d8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+ 11 .data.n_FPC_RESOURCESTRINGTABLES 00000008  0000000000000000  0000000000000000  000001e8  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 12 .data.n_FPC_WIDEINITTABLES 00000008  0000000000000000  0000000000000000  000001f0  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 13 .data.n_FPC_RESSTRINITTABLES 00000008  0000000000000000  0000000000000000  000001f8  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 14 .fpc.n_version 00000038  0000000000000000  0000000000000000  00000200  2**3
+                  CONTENTS, READONLY
+ 15 .data.n___stklen 00000008  0000000000000000  0000000000000000  00000238  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 16 .data.n___heapsize 00000008  0000000000000000  0000000000000000  00000240  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 17 .data.n___fpc_valgrind 00000001  0000000000000000  0000000000000000  00000248  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 18 .data.n_FPC_RESLOCATION 00000008  0000000000000000  0000000000000000  00000250  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 19 .debug_frame  00000064  0000000000000000  0000000000000000  00000258  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 20 .debug_info   000001c1  0000000000000000  0000000000000000  000002bc  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 21 .text.z_DEBUGEND_$P$ADD_FUNCTIONS_PROGRAM 00000000  0000000000000000  0000000000000000  0000047d  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .note.GNU-stack 00000000  0000000000000000  0000000000000000  0000047d  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 add_functions.pp
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l    d  .debug_line	0000000000000000 .debug_line
+0000000000000000 l    d  .debug_abbrev	0000000000000000 .debug_abbrev
+0000000000000000 l    d  .text.b_DEBUGSTART_$P$ADD_FUNCTIONS_PROGRAM	0000000000000000 .text.b_DEBUGSTART_$P$ADD_FUNCTIONS_PROGRAM
+0000000000000000 l    d  .text.n_p$add_functions_program_$$_add_function$smallint$smallint$$smallint	0000000000000000 .text.n_p$add_functions_program_$$_add_function$smallint$smallint$$smallint
+0000000000000000 l    d  .text.n_main	0000000000000000 .text.n_main
+0000000000000000 l     O .bss	0000000000000002 U_$P$ADD_FUNCTIONS_PROGRAM_$$_A
+0000000000000002 l     O .bss	0000000000000002 U_$P$ADD_FUNCTIONS_PROGRAM_$$_B
+0000000000000004 l     O .bss	0000000000000002 U_$P$ADD_FUNCTIONS_PROGRAM_$$_C
+0000000000000000 l    d  .fpc.n_links	0000000000000000 .fpc.n_links
+0000000000000000 l    d  .data.n_INITFINAL	0000000000000000 .data.n_INITFINAL
+0000000000000000 l    d  .data.n_FPC_THREADVARTABLES	0000000000000000 .data.n_FPC_THREADVARTABLES
+0000000000000000 l    d  .data.n_FPC_RESOURCESTRINGTABLES	0000000000000000 .data.n_FPC_RESOURCESTRINGTABLES
+0000000000000000 l    d  .data.n_FPC_WIDEINITTABLES	0000000000000000 .data.n_FPC_WIDEINITTABLES
+0000000000000000 l    d  .data.n_FPC_RESSTRINITTABLES	0000000000000000 .data.n_FPC_RESSTRINITTABLES
+0000000000000000 l    d  .fpc.n_version	0000000000000000 .fpc.n_version
+0000000000000000 l    d  .data.n___stklen	0000000000000000 .data.n___stklen
+0000000000000000 l    d  .data.n___heapsize	0000000000000000 .data.n___heapsize
+0000000000000000 l    d  .data.n___fpc_valgrind	0000000000000000 .data.n___fpc_valgrind
+0000000000000000 l    d  .data.n_FPC_RESLOCATION	0000000000000000 .data.n_FPC_RESLOCATION
+0000000000000000 l    d  .debug_frame	0000000000000000 .debug_frame
+0000000000000000 l    d  .debug_info	0000000000000000 .debug_info
+0000000000000000 l    d  .text.z_DEBUGEND_$P$ADD_FUNCTIONS_PROGRAM	0000000000000000 .text.z_DEBUGEND_$P$ADD_FUNCTIONS_PROGRAM
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 g     O .text.b_DEBUGSTART_$P$ADD_FUNCTIONS_PROGRAM	0000000000000000 DEBUGSTART_$P$ADD_FUNCTIONS_PROGRAM
+0000000000000000 g     F .text.n_p$add_functions_program_$$_add_function$smallint$smallint$$smallint	0000000000000027 P$ADD_FUNCTIONS_PROGRAM_$$_ADD_FUNCTION$SMALLINT$SMALLINT$$SMALLINT
+0000000000000000 g     F .text.n_main	0000000000000000 PASCALMAIN
+0000000000000000 g     F .text.n_main	0000000000000043 main
+0000000000000000         *UND*	0000000000000000 FPC_INITIALIZEUNITS
+0000000000000000         *UND*	0000000000000000 FPC_DO_EXIT
+0000000000000000 g     O .text.z_DEBUGEND_$P$ADD_FUNCTIONS_PROGRAM	0000000000000000 DEBUGEND_$P$ADD_FUNCTIONS_PROGRAM
+0000000000000000 g     O .data.n_INITFINAL	0000000000000020 INITFINAL
+0000000000000000         *UND*	0000000000000000 INIT$_$SYSTEM
+0000000000000000 g     O .data.n_FPC_THREADVARTABLES	000000000000000c FPC_THREADVARTABLES
+0000000000000000         *UND*	0000000000000000 THREADVARLIST_$SYSTEM
+0000000000000000 g     O .data.n_FPC_RESOURCESTRINGTABLES	0000000000000008 FPC_RESOURCESTRINGTABLES
+0000000000000000 g     O .data.n_FPC_WIDEINITTABLES	0000000000000008 FPC_WIDEINITTABLES
+0000000000000000 g     O .data.n_FPC_RESSTRINITTABLES	0000000000000008 FPC_RESSTRINITTABLES
+0000000000000000 g     O .data.n___stklen	0000000000000000 __stklen
+0000000000000000 g     O .data.n___heapsize	0000000000000000 __heapsize
+0000000000000000 g     O .data.n___fpc_valgrind	0000000000000000 __fpc_valgrind
+0000000000000000 g     O .data.n_FPC_RESLOCATION	0000000000000000 FPC_RESLOCATION
+0000000000000199 g     O .debug_info	0000000000000000 _$ADD_FUNCTIONS_PROGRAM$_Ld1
+00000000000001b7 g     O .debug_info	0000000000000000 _$ADD_FUNCTIONS_PROGRAM$_Ld2
+
+
+Contents of section .debug_line:
+ 0000 81000000 02002700 00000101 01ff0d00  ......'.........
+ 0010 01010101 00000001 00000100 6164645f  ............add_
+ 0020 66756e63 74696f6e 732e7070 00000000  functions.pp....
+ 0030 00000902 00000000 00000000 05011302  ................
+ 0040 1105120d 02100501 0d000902 00000000  ................
+ 0050 00000000 00010100 09020000 00000000  ................
+ 0060 00000501 17020905 020e020a 0d020a05  ................
+ 0070 070e021f 05010e00 09020000 00000000  ................
+ 0080 00000001 01                          .....           
+Contents of section .debug_abbrev:
+ 0000 01110103 0825081b 08130b42 0b100611  .....%.....B....
+ 0010 01120100 00023400 0308020a 49100000  ......4.....I...
+ 0020 032e0103 08270c36 0b3f0c11 01120100  .....'.6.?......
+ 0030 00042e01 0308270c 360b3f0c 49101101  ......'.6.?.I...
+ 0040 12010000 05050003 08020a49 10000006  ...........I....
+ 0050 16000308 49100000 07240003 083e0b0b  ....I....$...>..
+ 0060 0b000008 10004910 000000             ......I....     
+Contents of section .text.n_p$add_functions_program_$$_add_function$smallint$smallint$$smallint:
+ 0000 554889e5 488d6424 e066897d f8668975  UH..H.d$.f.}.f.u
+ 0010 f00fbf55 f80fbf45 f0678d04 02668945  ...U...E.g...f.E
+ 0020 ec0fbf45 ecc9c3                      ...E...         
+Contents of section .text.n_main:
+ 0000 554889e5 e8000000 0066c704 25000000  UH.......f..%...
+ 0010 00020066 c7042500 00000003 000fbf04  ...f..%.........
+ 0020 25000000 000fbf3c 25000000 0089c6e8  %......<%.......
+ 0030 00000000 66890425 00000000 e8000000  ....f..%........
+ 0040 00c9c3                               ...             
+Contents of section .fpc.n_links:
+ 0000 00000000 00000000 00000000 00000000  ................
+Contents of section .data.n_INITFINAL:
+ 0000 01000000 00000000 00000000 00000000  ................
+ 0010 00000000 00000000 00000000 00000000  ................
+Contents of section .data.n_FPC_THREADVARTABLES:
+ 0000 01000000 00000000 00000000           ............    
+Contents of section .data.n_FPC_RESOURCESTRINGTABLES:
+ 0000 00000000 00000000                    ........        
+Contents of section .data.n_FPC_WIDEINITTABLES:
+ 0000 00000000 00000000                    ........        
+Contents of section .data.n_FPC_RESSTRINITTABLES:
+ 0000 00000000 00000000                    ........        
+Contents of section .fpc.n_version:
+ 0000 46504320 332e302e 342b6466 73672d31  FPC 3.0.4+dfsg-1
+ 0010 38756275 6e747532 205b3230 31382f30  8ubuntu2 [2018/0
+ 0020 382f3239 5d20666f 72207838 365f3634  8/29] for x86_64
+ 0030 202d204c 696e7578                     - Linux        
+Contents of section .data.n___stklen:
+ 0000 00008000 00000000                    ........        
+Contents of section .data.n___heapsize:
+ 0000 00000000 00000000                    ........        
+Contents of section .data.n___fpc_valgrind:
+ 0000 00                                   .               
+Contents of section .data.n_FPC_RESLOCATION:
+ 0000 00000000 00000000                    ........        
+Contents of section .debug_frame:
+ 0000 10000000 ffffffff 0100017c 100c0708  ...........|....
+ 0010 05100200 24000000 00000000 00000000  ....$...........
+ 0020 00000000 00000000 27000000 00000000  ........'.......
+ 0030 410e1040 05060443 0d060000 24000000  A..@...C....$...
+ 0040 00000000 00000000 00000000 00000000  ................
+ 0050 43000000 00000000 410e1040 05060443  C.......A..@...C
+ 0060 0d060000                             ....            
+Contents of section .debug_info:
+ 0000 bd010000 02000000 00000801 6164645f  ............add_
+ 0010 66756e63 74696f6e 732e7070 00467265  functions.pp.Fre
+ 0020 65205061 7363616c 20332e30 2e342b64  e Pascal 3.0.4+d
+ 0030 6673672d 31387562 756e7475 32203230  fsg-18ubuntu2 20
+ 0040 31382f30 382f3239 002f686f 6d652f75  18/08/29./home/u
+ 0050 62756e74 752f456e 67696e65 6572696e  buntu/Engineerin
+ 0060 672f4469 73617373 656d626c 696e672d  g/Disassembling-
+ 0070 42696e61 72696573 2f506173 63616c2f  Binaries/Pascal/
+ 0080 496e7465 6c5f4172 63686974 65637475  Intel_Architectu
+ 0090 72652f41 4d443634 2f46756e 6374696f  re/AMD64/Functio
+ 00a0 6e732f57 6974685f 44656275 675f496e  ns/With_Debug_In
+ 00b0 666f2f00 09030000 00000000 00000000  fo/.............
+ 00c0 00000000 00000000 00000241 00090300  ...........A....
+ 00d0 00000000 00000000 00000000 00000002  ................
+ 00e0 42000903 00000000 00000000 00000000  B...............
+ 00f0 00000000 02430009 03000000 00000000  .....C..........
+ 0100 00000000 00000000 00036d61 696e0001  ..........main..
+ 0110 41010000 00000000 00000000 00000000  A...............
+ 0120 00000004 4144445f 46554e43 54494f4e  ....ADD_FUNCTION
+ 0130 00014101 00000000 00000000 00000000  ..A.............
+ 0140 00000000 00000000 00000000 05465f41  .............F_A
+ 0150 00027678 00000000 00000000 05465f42  ..vx.........F_B
+ 0160 00027670 00000000 00000000 02726573  ..vp.........res
+ 0170 756c7400 02766c00 00000000 00000002  ult..vl.........
+ 0180 4144445f 46554e43 54494f4e 0002766c  ADD_FUNCTION..vl
+ 0190 00000000 00000000 0006534d 414c4c49  ..........SMALLI
+ 01a0 4e540000 00000000 00000007 534d414c  NT..........SMAL
+ 01b0 4c494e54 00050208 00000000 00000000  LINT............
+ 01c0 00                                   .               
+
+Disassembly of section .bss:
+
+0000000000000000 <U_$P$ADD_FUNCTIONS_PROGRAM_$$_A>:
+	...
+
+0000000000000002 <U_$P$ADD_FUNCTIONS_PROGRAM_$$_B>:
+	...
+
+0000000000000004 <U_$P$ADD_FUNCTIONS_PROGRAM_$$_C>:
+	...
+
+Disassembly of section .debug_line:
+
+0000000000000000 <.debug_line>:
+   0:	81 00 00 00 02 00    	add    DWORD PTR [rax],0x20000
+   6:	27                   	(bad)  
+   7:	00 00                	add    BYTE PTR [rax],al
+   9:	00 01                	add    BYTE PTR [rcx],al
+   b:	01 01                	add    DWORD PTR [rcx],eax
+   d:	ff 0d 00 01 01 01    	dec    DWORD PTR [rip+0x1010100]        # 1010113 <_$ADD_FUNCTIONS_PROGRAM$_Ld2+0x100ff5c>
+VAR
+	a, b, c : INTEGER;
+
+FUNCTION add_function(f_a : INTEGER; f_b : INTEGER) : INTEGER;
+
+BEGIN
+  13:	01 00                	add    DWORD PTR [rax],eax
+  15:	00 00                	add    BYTE PTR [rax],al
+  17:	01 00                	add    DWORD PTR [rax],eax
+  19:	00 01                	add    BYTE PTR [rcx],al
+  1b:	00 61 64             	add    BYTE PTR [rcx+0x64],ah
+  1e:	64 5f                	fs pop rdi
+  20:	66 75 6e             	data16 jne 91 <U_$P$ADD_FUNCTIONS_PROGRAM_$$_C+0x8d>
+	add_function := f_a + f_b;
+  23:	63 74 69 6f          	movsxd esi,DWORD PTR [rcx+rbp*2+0x6f]
+  27:	6e                   	outs   dx,BYTE PTR ds:[rsi]
+  28:	73 2e                	jae    58 <.debug_line+0x58>
+  2a:	70 70                	jo     9c <U_$P$ADD_FUNCTIONS_PROGRAM_$$_C+0x98>
+  2c:	00 00                	add    BYTE PTR [rax],al
+  2e:	00 00                	add    BYTE PTR [rax],al
+  30:	00 00                	add    BYTE PTR [rax],al
+END;
+  32:	09 02                	or     DWORD PTR [rdx],eax
+	...
+			34: R_X86_64_64	.text.n_p$add_functions_program_$$_add_function$smallint$smallint$$smallint
+  3c:	05 01 13 02 11       	add    eax,0x11021301
+
+BEGIN
+  41:	05 12 0d 02 10       	add    eax,0x10020d12
+  46:	05 01 0d 00 09       	add    eax,0x9000d01
+
+	a := 2;
+  4b:	02 00                	add    al,BYTE PTR [rax]
+			4c: R_X86_64_64	.text.n_p$add_functions_program_$$_add_function$smallint$smallint$$smallint+0x27
+	...
+	b := 3;
+  55:	01 01                	add    DWORD PTR [rcx],eax
+  57:	00 09                	add    BYTE PTR [rcx],cl
+  59:	02 00                	add    al,BYTE PTR [rax]
+			5a: R_X86_64_64	.text.n_main
+  5b:	00 00                	add    BYTE PTR [rax],al
+
+	c := add_function(a, b);
+  5d:	00 00                	add    BYTE PTR [rax],al
+  5f:	00 00                	add    BYTE PTR [rax],al
+  61:	00 05 01 17 02 09    	add    BYTE PTR [rip+0x9021701],al        # 9021768 <_$ADD_FUNCTIONS_PROGRAM$_Ld2+0x90215b1>
+  67:	05 02 0e 02 0a       	add    eax,0xa020e02
+  6c:	0d 02 0a 05 07       	or     eax,0x7050a02
+  71:	0e                   	(bad)  
+  72:	02 1f                	add    bl,BYTE PTR [rdi]
+  74:	05 01 0e 00 09       	add    eax,0x9000e01
+  79:	02 00                	add    al,BYTE PTR [rax]
+			7a: R_X86_64_64	.text.n_main+0x43
+	...
+  83:	01 01                	add    DWORD PTR [rcx],eax
+
+Disassembly of section .debug_abbrev:
+
+0000000000000000 <.debug_abbrev>:
+   0:	01 11                	add    DWORD PTR [rcx],edx
+   2:	01 03                	add    DWORD PTR [rbx],eax
+   4:	08 25 08 1b 08 13    	or     BYTE PTR [rip+0x13081b08],ah        # 13081b12 <_$ADD_FUNCTIONS_PROGRAM$_Ld2+0x1308195b>
+   a:	0b 42 0b             	or     eax,DWORD PTR [rdx+0xb]
+   d:	10 06                	adc    BYTE PTR [rsi],al
+   f:	11 01                	adc    DWORD PTR [rcx],eax
+BEGIN
+  11:	12 01                	adc    al,BYTE PTR [rcx]
+  13:	00 00                	add    BYTE PTR [rax],al
+  15:	02 34 00             	add    dh,BYTE PTR [rax+rax*1]
+  18:	03 08                	add    ecx,DWORD PTR [rax]
+  1a:	02 0a                	add    cl,BYTE PTR [rdx]
+  1c:	49 10 00             	rex.WB adc BYTE PTR [r8],al
+  1f:	00 03                	add    BYTE PTR [rbx],al
+	add_function := f_a + f_b;
+  21:	2e 01 03             	add    DWORD PTR cs:[rbx],eax
+  24:	08 27                	or     BYTE PTR [rdi],ah
+  26:	0c 36                	or     al,0x36
+  28:	0b 3f                	or     edi,DWORD PTR [rdi]
+  2a:	0c 11                	or     al,0x11
+  2c:	01 12                	add    DWORD PTR [rdx],edx
+  2e:	01 00                	add    DWORD PTR [rax],eax
+  30:	00 04 2e             	add    BYTE PTR [rsi+rbp*1],al
+END;
+  33:	01 03                	add    DWORD PTR [rbx],eax
+  35:	08 27                	or     BYTE PTR [rdi],ah
+  37:	0c 36                	or     al,0x36
+  39:	0b 3f                	or     edi,DWORD PTR [rdi]
+  3b:	0c 49                	or     al,0x49
+  3d:	10 11                	adc    BYTE PTR [rcx],dl
+  3f:	01 12                	add    DWORD PTR [rdx],edx
+BEGIN
+  41:	01 00                	add    DWORD PTR [rax],eax
+  43:	00 05 05 00 03 08    	add    BYTE PTR [rip+0x8030005],al        # 803004e <_$ADD_FUNCTIONS_PROGRAM$_Ld2+0x802fe97>
+	a := 2;
+  49:	02 0a                	add    cl,BYTE PTR [rdx]
+  4b:	49 10 00             	rex.WB adc BYTE PTR [r8],al
+  4e:	00 06                	add    BYTE PTR [rsi],al
+  50:	16                   	(bad)  
+  51:	00 03                	add    BYTE PTR [rbx],al
+	b := 3;
+  53:	08 49 10             	or     BYTE PTR [rcx+0x10],cl
+  56:	00 00                	add    BYTE PTR [rax],al
+  58:	07                   	(bad)  
+  59:	24 00                	and    al,0x0
+  5b:	03 08                	add    ecx,DWORD PTR [rax]
+	c := add_function(a, b);
+  5d:	3e 0b 0b             	or     ecx,DWORD PTR ds:[rbx]
+  60:	0b 00                	or     eax,DWORD PTR [rax]
+  62:	00 08                	add    BYTE PTR [rax],cl
+  64:	10 00                	adc    BYTE PTR [rax],al
+  66:	49 10 00             	rex.WB adc BYTE PTR [r8],al
+	...
+
+Disassembly of section .text.n_p$add_functions_program_$$_add_function$smallint$smallint$$smallint:
+
+0000000000000000 <P$ADD_FUNCTIONS_PROGRAM_$$_ADD_FUNCTION$SMALLINT$SMALLINT$$SMALLINT>:
+BEGIN
+   0:	55                   	push   rbp
+   1:	48 89 e5             	mov    rbp,rsp
+   4:	48 8d 64 24 e0       	lea    rsp,[rsp-0x20]
+   9:	66 89 7d f8          	mov    WORD PTR [rbp-0x8],di
+   d:	66 89 75 f0          	mov    WORD PTR [rbp-0x10],si
+	add_function := f_a + f_b;
+  11:	0f bf 55 f8          	movsx  edx,WORD PTR [rbp-0x8]
+  15:	0f bf 45 f0          	movsx  eax,WORD PTR [rbp-0x10]
+  19:	67 8d 04 02          	lea    eax,[edx+eax*1]
+  1d:	66 89 45 ec          	mov    WORD PTR [rbp-0x14],ax
+END;
+  21:	0f bf 45 ec          	movsx  eax,WORD PTR [rbp-0x14]
+  25:	c9                   	leave  
+  26:	c3                   	ret    
+
+Disassembly of section .text.n_main:
+
+0000000000000000 <main>:
+BEGIN
+   0:	55                   	push   rbp
+   1:	48 89 e5             	mov    rbp,rsp
+   4:	e8 00 00 00 00       	call   9 <main+0x9>
+			5: R_X86_64_PC32	FPC_INITIALIZEUNITS-0x4
+	a := 2;
+   9:	66 c7 04 25 00 00 00 	mov    WORD PTR ds:0x0,0x2
+  10:	00 02 00 
+			d: R_X86_64_32S	.bss
+	b := 3;
+  13:	66 c7 04 25 00 00 00 	mov    WORD PTR ds:0x0,0x3
+  1a:	00 03 00 
+			17: R_X86_64_32S	.bss+0x2
+	c := add_function(a, b);
+  1d:	0f bf 04 25 00 00 00 	movsx  eax,WORD PTR ds:0x0
+  24:	00 
+			21: R_X86_64_32S	.bss+0x2
+  25:	0f bf 3c 25 00 00 00 	movsx  edi,WORD PTR ds:0x0
+  2c:	00 
+			29: R_X86_64_32S	.bss
+  2d:	89 c6                	mov    esi,eax
+  2f:	e8 00 00 00 00       	call   34 <main+0x34>
+			30: R_X86_64_PC32	P$ADD_FUNCTIONS_PROGRAM_$$_ADD_FUNCTION$SMALLINT$SMALLINT$$SMALLINT-0x4
+  34:	66 89 04 25 00 00 00 	mov    WORD PTR ds:0x0,ax
+  3b:	00 
+			38: R_X86_64_32S	.bss+0x4
+
+END.
+  3c:	e8 00 00 00 00       	call   41 <main+0x41>
+			3d: R_X86_64_PC32	FPC_DO_EXIT-0x4
+  41:	c9                   	leave  
+  42:	c3                   	ret    
+
+Disassembly of section .fpc.n_links:
+
+0000000000000000 <.fpc.n_links>:
+	...
+			0: R_X86_64_64	DEBUGSTART_$P$ADD_FUNCTIONS_PROGRAM
+			8: R_X86_64_64	DEBUGEND_$P$ADD_FUNCTIONS_PROGRAM
+
+Disassembly of section .data.n_INITFINAL:
+
+0000000000000000 <INITFINAL>:
+   0:	01 00                	add    DWORD PTR [rax],eax
+	...
+			10: R_X86_64_64	INIT$_$SYSTEM
+
+Disassembly of section .data.n_FPC_THREADVARTABLES:
+
+0000000000000000 <FPC_THREADVARTABLES>:
+   0:	01 00                	add    DWORD PTR [rax],eax
+	...
+			4: R_X86_64_64	THREADVARLIST_$SYSTEM
+
+Disassembly of section .data.n_FPC_RESOURCESTRINGTABLES:
+
+0000000000000000 <FPC_RESOURCESTRINGTABLES>:
+	...
+
+Disassembly of section .data.n_FPC_WIDEINITTABLES:
+
+0000000000000000 <FPC_WIDEINITTABLES>:
+	...
+
+Disassembly of section .data.n_FPC_RESSTRINITTABLES:
+
+0000000000000000 <FPC_RESSTRINITTABLES>:
+	...
+
+Disassembly of section .fpc.n_version:
+
+0000000000000000 <.fpc.n_version>:
+   0:	46 50                	rex.RX push rax
+   2:	43 20 33             	rex.XB and BYTE PTR [r11],sil
+   5:	2e 30 2e             	xor    BYTE PTR cs:[rsi],ch
+   8:	34 2b                	xor    al,0x2b
+   a:	64 66 73 67          	fs data16 jae 75 <U_$P$ADD_FUNCTIONS_PROGRAM_$$_C+0x71>
+   e:	2d 31 38 75 62       	sub    eax,0x62753831
+BEGIN
+  13:	75 6e                	jne    83 <U_$P$ADD_FUNCTIONS_PROGRAM_$$_C+0x7f>
+  15:	74 75                	je     8c <U_$P$ADD_FUNCTIONS_PROGRAM_$$_C+0x88>
+  17:	32 20                	xor    ah,BYTE PTR [rax]
+  19:	5b                   	pop    rbx
+  1a:	32 30                	xor    dh,BYTE PTR [rax]
+  1c:	31 38                	xor    DWORD PTR [rax],edi
+  1e:	2f                   	(bad)  
+  1f:	30 38                	xor    BYTE PTR [rax],bh
+	add_function := f_a + f_b;
+  21:	2f                   	(bad)  
+  22:	32 39                	xor    bh,BYTE PTR [rcx]
+  24:	5d                   	pop    rbp
+  25:	20 66 6f             	and    BYTE PTR [rsi+0x6f],ah
+  28:	72 20                	jb     4a <U_$P$ADD_FUNCTIONS_PROGRAM_$$_C+0x46>
+  2a:	78 38                	js     64 <U_$P$ADD_FUNCTIONS_PROGRAM_$$_C+0x60>
+  2c:	36 5f                	ss pop rdi
+  2e:	36 34 20             	ss xor al,0x20
+END;
+  31:	2d 20 4c 69 6e       	sub    eax,0x6e694c20
+  36:	75 78                	jne    b0 <U_$P$ADD_FUNCTIONS_PROGRAM_$$_C+0xac>
+
+Disassembly of section .data.n___stklen:
+
+0000000000000000 <__stklen>:
+   0:	00 00                	add    BYTE PTR [rax],al
+   2:	80 00 00             	add    BYTE PTR [rax],0x0
+   5:	00 00                	add    BYTE PTR [rax],al
+	...
+
+Disassembly of section .data.n___heapsize:
+
+0000000000000000 <__heapsize>:
+	...
+
+Disassembly of section .data.n___fpc_valgrind:
+
+0000000000000000 <__fpc_valgrind>:
+	...
+
+Disassembly of section .data.n_FPC_RESLOCATION:
+
+0000000000000000 <FPC_RESLOCATION>:
+	...
+
+Disassembly of section .debug_frame:
+
+0000000000000000 <.debug_frame>:
+   0:	10 00                	adc    BYTE PTR [rax],al
+   2:	00 00                	add    BYTE PTR [rax],al
+   4:	ff                   	(bad)  
+   5:	ff                   	(bad)  
+   6:	ff                   	(bad)  
+   7:	ff 01                	inc    DWORD PTR [rcx]
+   9:	00 01                	add    BYTE PTR [rcx],al
+   b:	7c 10                	jl     1d <.debug_frame+0x1d>
+   d:	0c 07                	or     al,0x7
+   f:	08 05 10 02 00 24    	or     BYTE PTR [rip+0x24000210],al        # 24000225 <_$ADD_FUNCTIONS_PROGRAM$_Ld2+0x2400006e>
+	...
+			18: R_X86_64_64	.debug_frame
+			20: R_X86_64_64	.text.n_p$add_functions_program_$$_add_function$smallint$smallint$$smallint
+	add_function := f_a + f_b;
+  25:	00 00                	add    BYTE PTR [rax],al
+  27:	00 27                	add    BYTE PTR [rdi],ah
+  29:	00 00                	add    BYTE PTR [rax],al
+  2b:	00 00                	add    BYTE PTR [rax],al
+  2d:	00 00                	add    BYTE PTR [rax],al
+  2f:	00 41 0e             	add    BYTE PTR [rcx+0xe],al
+END;
+  32:	10 40 05             	adc    BYTE PTR [rax+0x5],al
+  35:	06                   	(bad)  
+  36:	04 43                	add    al,0x43
+  38:	0d 06 00 00 24       	or     eax,0x24000006
+	...
+			40: R_X86_64_64	.debug_frame
+			48: R_X86_64_64	.text.n_main
+	a := 2;
+  4d:	00 00                	add    BYTE PTR [rax],al
+  4f:	00 43 00             	add    BYTE PTR [rbx+0x0],al
+  52:	00 00                	add    BYTE PTR [rax],al
+	b := 3;
+  54:	00 00                	add    BYTE PTR [rax],al
+  56:	00 00                	add    BYTE PTR [rax],al
+  58:	41 0e                	rex.B (bad) 
+  5a:	10 40 05             	adc    BYTE PTR [rax+0x5],al
+	c := add_function(a, b);
+  5d:	06                   	(bad)  
+  5e:	04 43                	add    al,0x43
+  60:	0d                   	.byte 0xd
+  61:	06                   	(bad)  
+	...
+
+Disassembly of section .debug_info:
+
+0000000000000000 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0x199>:
+   0:	bd 01 00 00 02       	mov    ebp,0x2000001
+   5:	00 00                	add    BYTE PTR [rax],al
+			6: R_X86_64_32	.debug_abbrev
+   7:	00 00                	add    BYTE PTR [rax],al
+   9:	00 08                	add    BYTE PTR [rax],cl
+   b:	01 61 64             	add    DWORD PTR [rcx+0x64],esp
+   e:	64 5f                	fs pop rdi
+BEGIN
+  10:	66 75 6e             	data16 jne 81 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0x118>
+  13:	63 74 69 6f          	movsxd esi,DWORD PTR [rcx+rbp*2+0x6f]
+  17:	6e                   	outs   dx,BYTE PTR ds:[rsi]
+  18:	73 2e                	jae    48 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0x151>
+  1a:	70 70                	jo     8c <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0x10d>
+  1c:	00 46 72             	add    BYTE PTR [rsi+0x72],al
+  1f:	65 65 20 50 61       	gs and BYTE PTR gs:[rax+0x61],dl
+	add_function := f_a + f_b;
+  24:	73 63                	jae    89 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0x110>
+  26:	61                   	(bad)  
+  27:	6c                   	ins    BYTE PTR es:[rdi],dx
+  28:	20 33                	and    BYTE PTR [rbx],dh
+  2a:	2e 30 2e             	xor    BYTE PTR cs:[rsi],ch
+  2d:	34 2b                	xor    al,0x2b
+  2f:	64 66 73 67          	fs data16 jae 9a <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0xff>
+END;
+  33:	2d 31 38 75 62       	sub    eax,0x62753831
+  38:	75 6e                	jne    a8 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0xf1>
+  3a:	74 75                	je     b1 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0xe8>
+  3c:	32 20                	xor    ah,BYTE PTR [rax]
+  3e:	32 30                	xor    dh,BYTE PTR [rax]
+BEGIN
+  40:	31 38                	xor    DWORD PTR [rax],edi
+  42:	2f                   	(bad)  
+  43:	30 38                	xor    BYTE PTR [rax],bh
+  45:	2f                   	(bad)  
+  46:	32 39                	xor    bh,BYTE PTR [rcx]
+  48:	00 2f                	add    BYTE PTR [rdi],ch
+	a := 2;
+  4a:	68 6f 6d 65 2f       	push   0x2f656d6f
+  4f:	75 62                	jne    b3 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0xe6>
+  51:	75 6e                	jne    c1 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0xd8>
+	b := 3;
+  53:	74 75                	je     ca <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0xcf>
+  55:	2f                   	(bad)  
+  56:	45 6e                	rex.RB outs dx,BYTE PTR ds:[rsi]
+  58:	67 69 6e 65 65 72 69 	imul   ebp,DWORD PTR [esi+0x65],0x6e697265
+  5f:	6e 
+	c := add_function(a, b);
+  60:	67 2f                	addr32 (bad) 
+  62:	44 69 73 61 73 73 65 	imul   r14d,DWORD PTR [rbx+0x61],0x6d657373
+  69:	6d 
+  6a:	62                   	(bad)  
+  6b:	6c                   	ins    BYTE PTR es:[rdi],dx
+  6c:	69 6e 67 2d 42 69 6e 	imul   ebp,DWORD PTR [rsi+0x67],0x6e69422d
+  73:	61                   	(bad)  
+  74:	72 69                	jb     df <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0xba>
+  76:	65 73 2f             	gs jae a8 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0xf1>
+  79:	50                   	push   rax
+  7a:	61                   	(bad)  
+  7b:	73 63                	jae    e0 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0xb9>
+END.
+  7d:	61                   	(bad)  
+  7e:	6c                   	ins    BYTE PTR es:[rdi],dx
+  7f:	2f                   	(bad)  
+  80:	49 6e                	rex.WB outs dx,BYTE PTR ds:[rsi]
+  82:	74 65                	je     e9 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0xb0>
+  84:	6c                   	ins    BYTE PTR es:[rdi],dx
+  85:	5f                   	pop    rdi
+  86:	41 72 63             	rex.B jb ec <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0xad>
+  89:	68 69 74 65 63       	push   0x63657469
+  8e:	74 75                	je     105 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0x94>
+  90:	72 65                	jb     f7 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0xa2>
+  92:	2f                   	(bad)  
+  93:	41                   	rex.B
+  94:	4d                   	rex.WRB
+  95:	44                   	rex.R
+  96:	36 34 2f             	ss xor al,0x2f
+  99:	46 75 6e             	rex.RX jne 10a <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0x8f>
+  9c:	63 74 69 6f          	movsxd esi,DWORD PTR [rcx+rbp*2+0x6f]
+  a0:	6e                   	outs   dx,BYTE PTR ds:[rsi]
+  a1:	73 2f                	jae    d2 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0xc7>
+  a3:	57                   	push   rdi
+  a4:	69 74 68 5f 44 65 62 	imul   esi,DWORD PTR [rax+rbp*2+0x5f],0x75626544
+  ab:	75 
+  ac:	67 5f                	addr32 pop rdi
+  ae:	49 6e                	rex.WB outs dx,BYTE PTR ds:[rsi]
+  b0:	66 6f                	outs   dx,WORD PTR ds:[rsi]
+  b2:	2f                   	(bad)  
+  b3:	00 09                	add    BYTE PTR [rcx],cl
+  b5:	03 00                	add    eax,DWORD PTR [rax]
+			b6: R_X86_64_32	.debug_line
+	...
+			ba: R_X86_64_64	DEBUGSTART_$P$ADD_FUNCTIONS_PROGRAM
+			c2: R_X86_64_64	DEBUGEND_$P$ADD_FUNCTIONS_PROGRAM
+  c7:	00 00                	add    BYTE PTR [rax],al
+  c9:	00 02                	add    BYTE PTR [rdx],al
+  cb:	41 00 09             	add    BYTE PTR [r9],cl
+  ce:	03 00                	add    eax,DWORD PTR [rax]
+			cf: R_X86_64_64	.bss
+	...
+			d7: R_X86_64_64	_$ADD_FUNCTIONS_PROGRAM$_Ld1
+  dc:	00 00                	add    BYTE PTR [rax],al
+  de:	00 02                	add    BYTE PTR [rdx],al
+  e0:	42 00 09             	rex.X add BYTE PTR [rcx],cl
+  e3:	03 00                	add    eax,DWORD PTR [rax]
+			e4: R_X86_64_64	.bss+0x2
+	...
+			ec: R_X86_64_64	_$ADD_FUNCTIONS_PROGRAM$_Ld1
+  f1:	00 00                	add    BYTE PTR [rax],al
+  f3:	00 02                	add    BYTE PTR [rdx],al
+  f5:	43 00 09             	rex.XB add BYTE PTR [r9],cl
+  f8:	03 00                	add    eax,DWORD PTR [rax]
+			f9: R_X86_64_64	.bss+0x4
+	...
+			101: R_X86_64_64	_$ADD_FUNCTIONS_PROGRAM$_Ld1
+ 106:	00 00                	add    BYTE PTR [rax],al
+ 108:	00 03                	add    BYTE PTR [rbx],al
+ 10a:	6d                   	ins    DWORD PTR es:[rdi],dx
+ 10b:	61                   	(bad)  
+ 10c:	69 6e 00 01 41 01 00 	imul   ebp,DWORD PTR [rsi+0x0],0x14101
+			112: R_X86_64_64	main
+	...
+			11a: R_X86_64_64	.text.n_main+0x43
+ 123:	04 41                	add    al,0x41
+ 125:	44                   	rex.R
+ 126:	44 5f                	rex.R pop rdi
+ 128:	46 55                	rex.RX push rbp
+ 12a:	4e                   	rex.WRX
+ 12b:	43 54                	rex.XB push r12
+ 12d:	49                   	rex.WB
+ 12e:	4f                   	rex.WRXB
+ 12f:	4e 00 01             	rex.WRX add BYTE PTR [rcx],r8b
+ 132:	41 01 00             	add    DWORD PTR [r8],eax
+			134: R_X86_64_64	_$ADD_FUNCTIONS_PROGRAM$_Ld1
+	...
+			13c: R_X86_64_64	P$ADD_FUNCTIONS_PROGRAM_$$_ADD_FUNCTION$SMALLINT$SMALLINT$$SMALLINT
+			144: R_X86_64_64	.text.n_p$add_functions_program_$$_add_function$smallint$smallint$$smallint+0x27
+ 149:	00 00                	add    BYTE PTR [rax],al
+ 14b:	00 05 46 5f 41 00    	add    BYTE PTR [rip+0x415f46],al        # 416097 <_$ADD_FUNCTIONS_PROGRAM$_Ld2+0x415ee0>
+ 151:	02 76 78             	add    dh,BYTE PTR [rsi+0x78]
+	...
+			154: R_X86_64_64	_$ADD_FUNCTIONS_PROGRAM$_Ld1
+ 15c:	05 46 5f 42 00       	add    eax,0x425f46
+ 161:	02 76 70             	add    dh,BYTE PTR [rsi+0x70]
+	...
+			164: R_X86_64_64	_$ADD_FUNCTIONS_PROGRAM$_Ld1
+ 16c:	02 72 65             	add    dh,BYTE PTR [rdx+0x65]
+ 16f:	73 75                	jae    1e6 <_$ADD_FUNCTIONS_PROGRAM$_Ld2+0x2f>
+ 171:	6c                   	ins    BYTE PTR es:[rdi],dx
+ 172:	74 00                	je     174 <_$ADD_FUNCTIONS_PROGRAM$_Ld1-0x25>
+ 174:	02 76 6c             	add    dh,BYTE PTR [rsi+0x6c]
+	...
+			177: R_X86_64_64	_$ADD_FUNCTIONS_PROGRAM$_Ld1
+ 17f:	02 41 44             	add    al,BYTE PTR [rcx+0x44]
+ 182:	44 5f                	rex.R pop rdi
+ 184:	46 55                	rex.RX push rbp
+ 186:	4e                   	rex.WRX
+ 187:	43 54                	rex.XB push r12
+ 189:	49                   	rex.WB
+ 18a:	4f                   	rex.WRXB
+ 18b:	4e 00 02             	rex.WRX add BYTE PTR [rdx],r8b
+ 18e:	76 6c                	jbe    1fc <_$ADD_FUNCTIONS_PROGRAM$_Ld2+0x45>
+	...
+			190: R_X86_64_64	_$ADD_FUNCTIONS_PROGRAM$_Ld1
+
+0000000000000199 <_$ADD_FUNCTIONS_PROGRAM$_Ld1>:
+ 199:	06                   	(bad)  
+ 19a:	53                   	push   rbx
+ 19b:	4d                   	rex.WRB
+ 19c:	41                   	rex.B
+ 19d:	4c                   	rex.WR
+ 19e:	4c                   	rex.WR
+ 19f:	49                   	rex.WB
+ 1a0:	4e 54                	rex.WRX push rsp
+	...
+			1a3: R_X86_64_64	.debug_info+0x1ab
+ 1aa:	00 07                	add    BYTE PTR [rdi],al
+ 1ac:	53                   	push   rbx
+ 1ad:	4d                   	rex.WRB
+ 1ae:	41                   	rex.B
+ 1af:	4c                   	rex.WR
+ 1b0:	4c                   	rex.WR
+ 1b1:	49                   	rex.WB
+ 1b2:	4e 54                	rex.WRX push rsp
+ 1b4:	00 05 02       	add    BYTE PTR [rip+0x802],al        # 9bc <_$ADD_FUNCTIONS_PROGRAM$_Ld2+0x805>
+			1b8: R_X86_64_64	_$ADD_FUNCTIONS_PROGRAM$_Ld1
+
+00000000000001b7 <_$ADD_FUNCTIONS_PROGRAM$_Ld2>:
+ 1b7:	08 00                	or     BYTE PTR [rax],al
+	...
+Raw dump of debug contents of section .debug_line:
+
+  Offset:                      0x0
+  Length:                      129
+  DWARF Version:               2
+  Prologue Length:             39
+  Minimum Instruction Length:  1
+  Initial value of 'is_stmt':  1
+  Line Base:                   1
+  Line Range:                  255
+  Opcode Base:                 13
+
+ Opcodes:
+  Opcode 1 has 0 args
+  Opcode 2 has 1 arg
+  Opcode 3 has 1 arg
+  Opcode 4 has 1 arg
+  Opcode 5 has 1 arg
+  Opcode 6 has 0 args
+  Opcode 7 has 0 args
+  Opcode 8 has 0 args
+  Opcode 9 has 1 arg
+  Opcode 10 has 0 args
+  Opcode 11 has 0 args
+  Opcode 12 has 1 arg
+
+ The Directory Table is empty.
+
+ The File Name Table (offset 0x1c):
+  Entry	Dir	Time	Size	Name
+  1	0	0	0	add_functions.pp
+
+ Line Number Statements:
+  [0x00000031]  Extended opcode 2: set Address to 0x0
+  [0x0000003c]  Set column to 1
+  [0x0000003e]  Special opcode 6: advance Address by 0 to 0x0 and Line by 7 to 8
+  [0x0000003f]  Advance PC by 17 to 0x11
+  [0x00000041]  Set column to 18
+  [0x00000043]  Special opcode 0: advance Address by 0 to 0x11 and Line by 1 to 9
+  [0x00000044]  Advance PC by 16 to 0x21
+  [0x00000046]  Set column to 1
+  [0x00000048]  Special opcode 0: advance Address by 0 to 0x21 and Line by 1 to 10
+  [0x00000049]  Extended opcode 2: set Address to 0x27
+  [0x00000054]  Extended opcode 1: End of Sequence
+
+  [0x00000057]  Extended opcode 2: set Address to 0x0
+  [0x00000062]  Set column to 1
+  [0x00000064]  Special opcode 10: advance Address by 0 to 0x0 and Line by 11 to 12
+  [0x00000065]  Advance PC by 9 to 0x9
+  [0x00000067]  Set column to 2
+  [0x00000069]  Special opcode 1: advance Address by 0 to 0x9 and Line by 2 to 14
+  [0x0000006a]  Advance PC by 10 to 0x13
+  [0x0000006c]  Special opcode 0: advance Address by 0 to 0x13 and Line by 1 to 15
+  [0x0000006d]  Advance PC by 10 to 0x1d
+  [0x0000006f]  Set column to 7
+  [0x00000071]  Special opcode 1: advance Address by 0 to 0x1d and Line by 2 to 17
+  [0x00000072]  Advance PC by 31 to 0x3c
+  [0x00000074]  Set column to 1
+  [0x00000076]  Special opcode 1: advance Address by 0 to 0x3c and Line by 2 to 19
+  [0x00000077]  Extended opcode 2: set Address to 0x43
+  [0x00000082]  Extended opcode 1: End of Sequence
+
+
+Contents of the .debug_abbrev section:
+
+  Number TAG (0x0)
+   1      DW_TAG_compile_unit    [has children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_producer     DW_FORM_string
+    DW_AT_comp_dir     DW_FORM_string
+    DW_AT_language     DW_FORM_data1
+    DW_AT_identifier_case DW_FORM_data1
+    DW_AT_stmt_list    DW_FORM_data4
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_addr
+    DW_AT value: 0     DW_FORM value: 0
+   2      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_location     DW_FORM_block1
+    DW_AT_type         DW_FORM_ref_addr
+    DW_AT value: 0     DW_FORM value: 0
+   3      DW_TAG_subprogram    [has children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_prototyped   DW_FORM_flag
+    DW_AT_calling_convention DW_FORM_data1
+    DW_AT_external     DW_FORM_flag
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_addr
+    DW_AT value: 0     DW_FORM value: 0
+   4      DW_TAG_subprogram    [has children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_prototyped   DW_FORM_flag
+    DW_AT_calling_convention DW_FORM_data1
+    DW_AT_external     DW_FORM_flag
+    DW_AT_type         DW_FORM_ref_addr
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_addr
+    DW_AT value: 0     DW_FORM value: 0
+   5      DW_TAG_formal_parameter    [no children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_location     DW_FORM_block1
+    DW_AT_type         DW_FORM_ref_addr
+    DW_AT value: 0     DW_FORM value: 0
+   6      DW_TAG_typedef    [no children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_type         DW_FORM_ref_addr
+    DW_AT value: 0     DW_FORM value: 0
+   7      DW_TAG_base_type    [no children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_encoding     DW_FORM_data1
+    DW_AT_byte_size    DW_FORM_data1
+    DW_AT value: 0     DW_FORM value: 0
+   8      DW_TAG_reference_type    [no children]
+    DW_AT_type         DW_FORM_ref_addr
+    DW_AT value: 0     DW_FORM value: 0
+
+Contents of the .debug_frame section:
+
+
+00000000 0000000000000010 ffffffff CIE
+  Version:               1
+  Augmentation:          ""
+  Code alignment factor: 1
+  Data alignment factor: -4
+  Return address column: 16
+
+  DW_CFA_def_cfa: r7 (rsp) ofs 8
+  DW_CFA_offset_extended: r16 (rip) at cfa-8
+  DW_CFA_nop
+
+00000014 0000000000000024 00000000 FDE cie=00000000 pc=0000000000000000..0000002700000000
+  DW_CFA_nop
+  DW_CFA_nop
+  DW_CFA_nop
+  DW_CFA_nop
+  DW_CFA_advance_loc: 1 to 0000000000000001
+  DW_CFA_def_cfa_offset: 16
+  DW_CFA_advance_loc: 0 to 0000000000000001
+  DW_CFA_offset_extended: r6 (rbp) at cfa-16
+  DW_CFA_advance_loc: 3 to 0000000000000004
+  DW_CFA_def_cfa_register: r6 (rbp)
+  DW_CFA_nop
+  DW_CFA_nop
+
+0000003c 0000000000000024 00000000 FDE cie=00000000 pc=0000000000000000..0000004300000000
+  DW_CFA_nop
+  DW_CFA_nop
+  DW_CFA_nop
+  DW_CFA_nop
+  DW_CFA_advance_loc: 1 to 0000000000000001
+  DW_CFA_def_cfa_offset: 16
+  DW_CFA_advance_loc: 0 to 0000000000000001
+  DW_CFA_offset_extended: r6 (rbp) at cfa-16
+  DW_CFA_advance_loc: 3 to 0000000000000004
+  DW_CFA_def_cfa_register: r6 (rbp)
+  DW_CFA_nop
+  DW_CFA_nop
+
+Contents of the .debug_info section:
+
+  Compilation Unit @ offset 0x0:
+   Length:        0x1bd (32-bit)
+   Version:       2
+   Abbrev Offset: 0x0
+   Pointer Size:  8
+ <0><b>: Abbrev Number: 1 (DW_TAG_compile_unit)
+    <c>   DW_AT_name        : add_functions.pp
+    <1d>   DW_AT_producer    : Free Pascal 3.0.4+dfsg-18ubuntu2 2018/08/29
+    <49>   DW_AT_comp_dir    : /home/ubuntu/Engineering/Disassembling-Binaries/Pascal/Intel_Architecture/AMD64/Functions/With_Debug_Info/
+    <b4>   DW_AT_language    : 9	(ANSI Pascal)
+    <b5>   DW_AT_identifier_case: 3	(case_insensitive)
+    <b6>   DW_AT_stmt_list   : 0x0
+    <ba>   DW_AT_low_pc      : 0x0
+    <c2>   DW_AT_high_pc     : 0x0
+ <1><ca>: Abbrev Number: 2 (DW_TAG_variable)
+    <cb>   DW_AT_name        : A
+    <cd>   DW_AT_location    : 9 byte block: 3 0 0 0 0 0 0 0 0 	(DW_OP_addr: 0)
+    <d7>   DW_AT_type        : <0x199>
+ <1><df>: Abbrev Number: 2 (DW_TAG_variable)
+    <e0>   DW_AT_name        : B
+    <e2>   DW_AT_location    : 9 byte block: 3 2 0 0 0 0 0 0 0 	(DW_OP_addr: 2)
+    <ec>   DW_AT_type        : <0x199>
+ <1><f4>: Abbrev Number: 2 (DW_TAG_variable)
+    <f5>   DW_AT_name        : C
+    <f7>   DW_AT_location    : 9 byte block: 3 4 0 0 0 0 0 0 0 	(DW_OP_addr: 4)
+    <101>   DW_AT_type        : <0x199>
+ <1><109>: Abbrev Number: 3 (DW_TAG_subprogram)
+    <10a>   DW_AT_name        : main
+    <10f>   DW_AT_prototyped  : 1
+    <110>   DW_AT_calling_convention: 65	(Borland fastcall i386)
+    <111>   DW_AT_external    : 1
+    <112>   DW_AT_low_pc      : 0x0
+    <11a>   DW_AT_high_pc     : 0x43
+ <2><122>: Abbrev Number: 0
+ <1><123>: Abbrev Number: 4 (DW_TAG_subprogram)
+    <124>   DW_AT_name        : ADD_FUNCTION
+    <131>   DW_AT_prototyped  : 1
+    <132>   DW_AT_calling_convention: 65	(Borland fastcall i386)
+    <133>   DW_AT_external    : 1
+    <134>   DW_AT_type        : <0x199>
+    <13c>   DW_AT_low_pc      : 0x0
+    <144>   DW_AT_high_pc     : 0x27
+ <2><14c>: Abbrev Number: 5 (DW_TAG_formal_parameter)
+    <14d>   DW_AT_name        : F_A
+    <151>   DW_AT_location    : 2 byte block: 76 78 	(DW_OP_breg6 (rbp): -8)
+    <154>   DW_AT_type        : <0x199>
+ <2><15c>: Abbrev Number: 5 (DW_TAG_formal_parameter)
+    <15d>   DW_AT_name        : F_B
+    <161>   DW_AT_location    : 2 byte block: 76 70 	(DW_OP_breg6 (rbp): -16)
+    <164>   DW_AT_type        : <0x199>
+ <2><16c>: Abbrev Number: 2 (DW_TAG_variable)
+    <16d>   DW_AT_name        : result
+    <174>   DW_AT_location    : 2 byte block: 76 6c 	(DW_OP_breg6 (rbp): -20)
+    <177>   DW_AT_type        : <0x199>
+ <2><17f>: Abbrev Number: 2 (DW_TAG_variable)
+    <180>   DW_AT_name        : ADD_FUNCTION
+    <18d>   DW_AT_location    : 2 byte block: 76 6c 	(DW_OP_breg6 (rbp): -20)
+    <190>   DW_AT_type        : <0x199>
+ <2><198>: Abbrev Number: 0
+ <1><199>: Abbrev Number: 6 (DW_TAG_typedef)
+    <19a>   DW_AT_name        : SMALLINT
+    <1a3>   DW_AT_type        : <0x1ab>
+ <1><1ab>: Abbrev Number: 7 (DW_TAG_base_type)
+    <1ac>   DW_AT_name        : SMALLINT
+    <1b5>   DW_AT_encoding    : 5	(signed)
+    <1b6>   DW_AT_byte_size   : 2
+ <1><1b7>: Abbrev Number: 8 (DW_TAG_reference_type)
+    <1b8>   DW_AT_type        : <0x199>
+ <1><1c0>: Abbrev Number: 0
+
