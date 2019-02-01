@@ -1,0 +1,8 @@
+fpc -al add_functions.pp
+
+mv add_functions add_functions_Pascal_AMD64
+
+objdump -x -D -s -t -Mintel add_functions.o > objdump_of_dot_o.txt
+
+objdump -x -D -s -t -Mintel add_functions_Pascal_AMD64 > objdump_of_dot_exe.txt
+
