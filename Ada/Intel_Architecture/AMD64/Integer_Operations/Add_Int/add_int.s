@@ -21,5 +21,5 @@ _ada_add_int:
 	.cfi_endproc
 .LFE1:
 	.size	_ada_add_int, .-_ada_add_int
-	.ident	"GCC: (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0"
+	.ident	"GCC: (Debian 8.2.0-14) 8.2.0"
 	.section	.note.GNU-stack,"",@progbits

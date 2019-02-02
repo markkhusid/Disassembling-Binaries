@@ -1,0 +1,26 @@
+V "GNAT Lib v8"
+M P W=b
+A -g
+P ZX
+
+RN
+RV SPARK_05
+
+U add_int%b		add_int.adb		1d6f8efa NE OO SU
+W gnat%s		gnat.ads		gnat.ali
+W gnat.io%s		g-io.adb		g-io.ali
+
+D add_int.adb		20190202043412 8262b448 add_int%b
+D gnat.ads		20180111085525 fd2ad2f1 gnat%s
+D g-io.ads		20180111085525 9f0d3ab2 gnat.io%s
+D system.ads		20180111085525 4635ec04 system%s
+X 1 add_int.adb
+5U11*Add_Int 5b11 15l5 15t12
+6i4 a{integer} 10m4 13r9
+6i7 b{integer} 11m4 13r13
+6i10 c{integer} 13m4
+X 2 gnat.ads
+34K9*GNAT 1|4r6 4r19 2|37e9
+X 3 g-io.ads
+41K14*IO 1|4w11 4r24 3|91e12
+

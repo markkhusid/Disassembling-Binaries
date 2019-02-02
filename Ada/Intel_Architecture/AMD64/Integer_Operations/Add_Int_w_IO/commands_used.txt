@@ -1,0 +1,10 @@
+gcc -c -S add_int_w_io.adb
+
+gnatmake add_int_w_io.adb 
+
+mv add_int_w_io add_int_w_io_Ada_AMD64 
+
+objdump -x -D -s -t -Mintel add_int_w_io.o > objdump_of_dot_o.txt
+
+objdump -x -D -s -t -Mintel add_int_w_io_Ada_AMD64 > objdump_of_dot_exe.txt
+

@@ -1,0 +1,95 @@
+
+add_int.o:     file format elf64-x86-64
+add_int.o
+architecture: i386:x86-64, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x0000000000000000
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         0000001c  0000000000000000  0000000000000000  00000040  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  0000000000000000  0000000000000000  0000005c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  0000000000000000  0000000000000000  0000005c  2**0
+                  ALLOC
+  3 .comment      0000001e  0000000000000000  0000000000000000  0000005c  2**0
+                  CONTENTS, READONLY
+  4 .note.GNU-stack 00000000  0000000000000000  0000000000000000  0000007a  2**0
+                  CONTENTS, READONLY
+  5 .eh_frame     00000038  0000000000000000  0000000000000000  00000080  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 add_int.adb
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 l    d  .eh_frame	0000000000000000 .eh_frame
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000000 g     F .text	000000000000001c _ada_add_int
+
+
+Contents of section .text:
+ 0000 554889e5 c745fc03 000000c7 45f80500  UH...E......E...
+ 0010 0000c745 f4080000 00905dc3           ...E......].    
+Contents of section .comment:
+ 0000 00474343 3a202844 65626961 6e20382e  .GCC: (Debian 8.
+ 0010 322e302d 31342920 382e322e 3000      2.0-14) 8.2.0.  
+Contents of section .eh_frame:
+ 0000 14000000 00000000 017a5200 01781001  .........zR..x..
+ 0010 1b0c0708 90010000 1c000000 1c000000  ................
+ 0020 00000000 1c000000 00410e10 8602430d  .........A....C.
+ 0030 06570c07 08000000                    .W......        
+
+Disassembly of section .text:
+
+0000000000000000 <_ada_add_int>:
+   0:	55                   	push   rbp
+   1:	48 89 e5             	mov    rbp,rsp
+   4:	c7 45 fc 03 00 00 00 	mov    DWORD PTR [rbp-0x4],0x3
+   b:	c7 45 f8 05 00 00 00 	mov    DWORD PTR [rbp-0x8],0x5
+  12:	c7 45 f4 08 00 00 00 	mov    DWORD PTR [rbp-0xc],0x8
+  19:	90                   	nop
+  1a:	5d                   	pop    rbp
+  1b:	c3                   	ret    
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [rdi+0x43],al
+   3:	43 3a 20             	rex.XB cmp spl,BYTE PTR [r8]
+   6:	28 44 65 62          	sub    BYTE PTR [rbp+riz*2+0x62],al
+   a:	69 61 6e 20 38 2e 32 	imul   esp,DWORD PTR [rcx+0x6e],0x322e3820
+  11:	2e 30 2d 31 34 29 20 	xor    BYTE PTR cs:[rip+0x20293431],ch        # 20293449 <_ada_add_int+0x20293449>
+  18:	38 2e                	cmp    BYTE PTR [rsi],ch
+  1a:	32 2e                	xor    ch,BYTE PTR [rsi]
+  1c:	30 00                	xor    BYTE PTR [rax],al
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [rax],al
+   4:	00 00                	add    BYTE PTR [rax],al
+   6:	00 00                	add    BYTE PTR [rax],al
+   8:	01 7a 52             	add    DWORD PTR [rdx+0x52],edi
+   b:	00 01                	add    BYTE PTR [rcx],al
+   d:	78 10                	js     1f <.eh_frame+0x1f>
+   f:	01 1b                	add    DWORD PTR [rbx],ebx
+  11:	0c 07                	or     al,0x7
+  13:	08 90 01 00 00 1c    	or     BYTE PTR [rax+0x1c000001],dl
+  19:	00 00                	add    BYTE PTR [rax],al
+  1b:	00 1c 00             	add    BYTE PTR [rax+rax*1],bl
+  1e:	00 00                	add    BYTE PTR [rax],al
+  20:	00 00                	add    BYTE PTR [rax],al
+			20: R_X86_64_PC32	.text
+  22:	00 00                	add    BYTE PTR [rax],al
+  24:	1c 00                	sbb    al,0x0
+  26:	00 00                	add    BYTE PTR [rax],al
+  28:	00 41 0e             	add    BYTE PTR [rcx+0xe],al
+  2b:	10 86 02 43 0d 06    	adc    BYTE PTR [rsi+0x60d4302],al
+  31:	57                   	push   rdi
+  32:	0c 07                	or     al,0x7
+  34:	08 00                	or     BYTE PTR [rax],al
+	...

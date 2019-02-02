@@ -1,8 +1,5 @@
-V "GNAT Lib v7"
+V "GNAT Lib v8"
 M P W=b
-A -O0
-A -mtune=generic
-A -march=x86-64
 P ZX
 
 RN
@@ -12,10 +9,10 @@ U add_int%b		add_int.adb		1d6f8efa NE OO SU
 W gnat%s		gnat.ads		gnat.ali
 W gnat.io%s		g-io.adb		g-io.ali
 
-D add_int.adb		20190120173010 8262b448 add_int%b
-D gnat.ads		20140801083227 fd2ad2f1 gnat%s
-D g-io.ads		20110801150502 9f0d3ab2 gnat.io%s
-D system.ads		20170510173650 4635ec04 system%s
+D add_int.adb		20190120211928 8262b448 add_int%b
+D gnat.ads		20180111085525 fd2ad2f1 gnat%s
+D g-io.ads		20180111085525 9f0d3ab2 gnat.io%s
+D system.ads		20180111085525 4635ec04 system%s
 X 1 add_int.adb
 5U11*Add_Int 5b11 15l5 15t12
 6i4 a{integer} 10m4 13r9
