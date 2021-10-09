@@ -1,0 +1,10 @@
+gfortran -S add_int.f08 
+
+gfortran -c add_int.s 
+
+gfortran add_int.o -o add_int_Fortran_AMD64
+
+objdump -x -D -s -t -Mintel add_int.o > objdump_of_dot_o.txt 
+
+objdump -x -D -s -t -Mintel add_int_Fortran_AMD64 > objdump_of_dot_exe.txt 
+

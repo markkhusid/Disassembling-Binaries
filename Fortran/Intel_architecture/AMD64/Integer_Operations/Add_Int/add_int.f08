@@ -1,4 +1,4 @@
-program add
+program add_int
 
 	implicit none
 
@@ -9,4 +9,4 @@ program add
 
 	c = a + b
 
-end program add
+end program add_int

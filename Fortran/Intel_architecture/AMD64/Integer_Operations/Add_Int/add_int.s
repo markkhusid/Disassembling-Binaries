@@ -1,4 +1,4 @@
-	.file	"add.f08"
+	.file	"add_int.f08"
 	.text
 	.type	MAIN__, @function
 MAIN__:
@@ -39,10 +39,10 @@ main:
 	movl	-4(%rbp), %eax
 	movq	%rdx, %rsi
 	movl	%eax, %edi
-	call	_gfortran_set_args
-	movl	$options.0.3388, %esi
-	movl	$9, %edi
-	call	_gfortran_set_options
+	call	_gfortran_set_args@PLT
+	leaq	options.0.3504(%rip), %rsi
+	movl	$7, %edi
+	call	_gfortran_set_options@PLT
 	call	MAIN__
 	movl	$0, %eax
 	leave
@@ -52,18 +52,16 @@ main:
 .LFE1:
 	.size	main, .-main
 	.section	.rodata
-	.align 32
-	.type	options.0.3388, @object
-	.size	options.0.3388, 36
-options.0.3388:
+	.align 16
+	.type	options.0.3504, @object
+	.size	options.0.3504, 28
+options.0.3504:
 	.long	68
 	.long	1023
 	.long	0
-	.long	0
 	.long	1
 	.long	1
-	.long	0
 	.long	0
 	.long	31
-	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.11) 5.4.0 20160609"
+	.ident	"GCC: (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0"
 	.section	.note.GNU-stack,"",@progbits
