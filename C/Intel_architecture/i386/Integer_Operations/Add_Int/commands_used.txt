@@ -1,10 +1,9 @@
-gcc -m32 -S add_int.c 
+gcc --sysroot=/ -m32 -S -fverbose-asm add_int.c 
 
-gcc -m32 -c add_int.s 
+gcc --sysroot=/ -m32 -c add_int.s 
 
-gcc -m32 add_int.o -o add_int_C_i386
+/usr/bin/gcc -m32 add_int.o -o add_int_C_i386
 
 objdump -x -D -s -t -Mintel add_int.o > objdump_of_dot_o.txt 
 
-objdump -x -D -s -t -Mintel add_int_C_i386 > objdump_of_dot_exe.txt 
-
+objdump -x -D -s -t -Mintel add_int_C_i386 > objdump_of_dot_exe.txt
