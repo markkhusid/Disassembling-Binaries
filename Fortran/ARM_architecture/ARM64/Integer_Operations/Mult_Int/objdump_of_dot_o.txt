@@ -4,7 +4,7 @@ mult_int.o
 architecture: aarch64, flags 0x00000011:
 HAS_RELOC, HAS_SYMS
 start address 0x0000000000000000
-private flags = 0:
+private flags = 0x0:
 
 Sections:
 Idx Name          Size      VMA               LMA               File off  Algn
@@ -16,11 +16,11 @@ Idx Name          Size      VMA               LMA               File off  Algn
                   ALLOC
   3 .rodata       0000001c  0000000000000000  0000000000000000  000000b0  2**3
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  4 .comment      00000028  0000000000000000  0000000000000000  000000cc  2**0
+  4 .comment      00000020  0000000000000000  0000000000000000  000000cc  2**0
                   CONTENTS, READONLY
-  5 .note.GNU-stack 00000000  0000000000000000  0000000000000000  000000f4  2**0
+  5 .note.GNU-stack 00000000  0000000000000000  0000000000000000  000000ec  2**0
                   CONTENTS, READONLY
-  6 .eh_frame     00000050  0000000000000000  0000000000000000  000000f8  2**3
+  6 .eh_frame     00000050  0000000000000000  0000000000000000  000000f0  2**3
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
 SYMBOL TABLE:
 0000000000000000 l    df *ABS*	0000000000000000 mult_int.f08
@@ -50,9 +50,8 @@ Contents of section .rodata:
  0000 44080000 ff0f0000 00000000 01000000  D...............
  0010 01000000 00000000 1f000000           ............    
 Contents of section .comment:
- 0000 00474343 3a202844 65626961 6e203130  .GCC: (Debian 10
- 0010 2e322e31 2d362920 31302e32 2e312032  .2.1-6) 10.2.1 2
- 0020 30323130 31313000                    0210110.        
+ 0000 00474343 3a202844 65626961 6e203132  .GCC: (Debian 12
+ 0010 2e322e30 2d313429 2031322e 322e3000  .2.0-14) 12.2.0.
 Contents of section .eh_frame:
  0000 10000000 00000000 017a5200 04781e01  .........zR..x..
  0010 1b0c1f00 14000000 18000000 00000000  ................
@@ -114,13 +113,11 @@ Disassembly of section .comment:
    0:	43434700 	.inst	0x43434700 ; undefined
    4:	4428203a 	.inst	0x4428203a ; undefined
    8:	61696265 	.inst	0x61696265 ; undefined
-   c:	3031206e 	adr	x14, 62419 <main+0x623e9>
-  10:	312e322e 	adds	w14, w17, #0xb8c
-  14:	2029362d 	.inst	0x2029362d ; undefined
-  18:	322e3031 	orr	w17, w1, #0x7ffc0000
-  1c:	3220312e 	orr	w14, w9, #0x1fff
-  20:	30313230 	adr	x16, 62665 <main+0x62635>
-  24:	00303131 	.inst	0x00303131 ; NYI
+   c:	3231206e 	orr	w14, w3, #0xff8000
+  10:	302e322e 	adr	x14, 5c655 <main+0x5c625>
+  14:	2934312d 	stp	w13, w12, [x9, #-96]
+  18:	2e323120 	usubw	v0.8h, v9.8h, v18.8b
+  1c:	00302e32 	.inst	0x00302e32 ; NYI
 
 Disassembly of section .eh_frame:
 

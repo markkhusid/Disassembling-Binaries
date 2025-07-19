@@ -65,5 +65,5 @@ options.0.0:
 	.word	1
 	.word	0
 	.word	31
-	.ident	"GCC: (Debian 10.2.1-6) 10.2.1 20210110"
+	.ident	"GCC: (Debian 12.2.0-14) 12.2.0"
 	.section	.note.GNU-stack,"",@progbits
