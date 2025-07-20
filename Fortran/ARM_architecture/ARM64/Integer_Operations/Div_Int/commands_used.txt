@@ -1,0 +1,10 @@
+gfortran -S div_int.f08
+
+gfortran -c div_int.s
+
+gfortran div_int.o -o div_int_Fortran_ARM64
+
+objdump -x -D -s -t div_int.o > objdump_of_dot_o.txt
+
+objdump -x -D -s -t div_int_Fortran_ARM64 > objdump_of_dot_exe.txt
+
