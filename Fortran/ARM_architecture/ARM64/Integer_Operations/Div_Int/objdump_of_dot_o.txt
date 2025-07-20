@@ -1,20 +1,64 @@
 
 div_int.o:     file format elf64-littleaarch64
+div_int.o
+architecture: aarch64, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x0000000000000000
+private flags = 0:
 
 Sections:
 Idx Name          Size      VMA               LMA               File off  Algn
-  0 .text         00000070  0000000000000000  0000000000000000  00000040  2**2
+  0 .text         0000006c  0000000000000000  0000000000000000  00000040  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  1 .data         00000000  0000000000000000  0000000000000000  000000b0  2**0
+  1 .data         00000000  0000000000000000  0000000000000000  000000ac  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          00000000  0000000000000000  0000000000000000  000000b0  2**0
+  2 .bss          00000000  0000000000000000  0000000000000000  000000ac  2**0
                   ALLOC
   3 .rodata       0000001c  0000000000000000  0000000000000000  000000b0  2**3
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  4 .comment      00000032  0000000000000000  0000000000000000  000000cc  2**0
+  4 .comment      00000028  0000000000000000  0000000000000000  000000cc  2**0
                   CONTENTS, READONLY
-  5 .note.GNU-stack 00000000  0000000000000000  0000000000000000  000000fe  2**0
+  5 .note.GNU-stack 00000000  0000000000000000  0000000000000000  000000f4  2**0
                   CONTENTS, READONLY
+  6 .eh_frame     00000050  0000000000000000  0000000000000000  000000f8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 div_int.f08
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l     F .text	0000000000000030 MAIN__
+0000000000000000 l     O .rodata	000000000000001c options.0.0
+0000000000000000 l    d  .rodata	0000000000000000 .rodata
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 l    d  .eh_frame	0000000000000000 .eh_frame
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000030 g     F .text	000000000000003c main
+0000000000000000         *UND*	0000000000000000 _gfortran_set_args
+0000000000000000         *UND*	0000000000000000 _gfortran_set_options
+
+
+Contents of section .text:
+ 0000 ff4300d1 40018052 e00f00b9 a0008052  .C..@..R.......R
+ 0010 e00b00b9 e10f40b9 e00b40b9 200cc01a  ......@...@. ...
+ 0020 e00700b9 1f2003d5 ff430091 c0035fd6  ..... ...C...._.
+ 0030 fd7bbea9 fd030091 e01f00b9 e10b00f9  .{..............
+ 0040 e10b40f9 e01f40b9 00000094 00000090  ..@...@.........
+ 0050 01000091 e0008052 00000094 e9ffff97  .......R........
+ 0060 00008052 fd7bc2a8 c0035fd6           ...R.{...._.    
+Contents of section .rodata:
+ 0000 44080000 ff0f0000 00000000 01000000  D...............
+ 0010 01000000 00000000 1f000000           ............    
+Contents of section .comment:
+ 0000 00474343 3a202844 65626961 6e203130  .GCC: (Debian 10
+ 0010 2e322e31 2d362920 31302e32 2e312032  .2.1-6) 10.2.1 2
+ 0020 30323130 31313000                    0210110.        
+Contents of section .eh_frame:
+ 0000 10000000 00000000 017a5200 04781e01  .........zR..x..
+ 0010 1b0c1f00 14000000 18000000 00000000  ................
+ 0020 30000000 00410e10 4a0e0000 20000000  0....A..J... ...
+ 0030 30000000 00000000 3c000000 00410e20  0.......<....A. 
+ 0040 9d049e03 4ddedd0e 00000000 00000000  ....M...........
 
 Disassembly of section .text:
 
@@ -35,46 +79,70 @@ Disassembly of section .text:
 0000000000000030 <main>:
   30:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
   34:	910003fd 	mov	x29, sp
-  38:	b9001fa0 	str	w0, [x29, #28]
-  3c:	f9000ba1 	str	x1, [x29, #16]
-  40:	f9400ba1 	ldr	x1, [x29, #16]
-  44:	b9401fa0 	ldr	w0, [x29, #28]
+  38:	b9001fe0 	str	w0, [sp, #28]
+  3c:	f9000be1 	str	x1, [sp, #16]
+  40:	f9400be1 	ldr	x1, [sp, #16]
+  44:	b9401fe0 	ldr	w0, [sp, #28]
   48:	94000000 	bl	0 <_gfortran_set_args>
+			48: R_AARCH64_CALL26	_gfortran_set_args
   4c:	90000000 	adrp	x0, 0 <MAIN__>
-  50:	91000000 	add	x0, x0, #0x0
-  54:	aa0003e1 	mov	x1, x0
-  58:	528000e0 	mov	w0, #0x7                   	// #7
-  5c:	94000000 	bl	0 <_gfortran_set_options>
-  60:	97ffffe8 	bl	0 <MAIN__>
-  64:	52800000 	mov	w0, #0x0                   	// #0
-  68:	a8c27bfd 	ldp	x29, x30, [sp], #32
-  6c:	d65f03c0 	ret
+			4c: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+  50:	91000001 	add	x1, x0, #0x0
+			50: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+  54:	528000e0 	mov	w0, #0x7                   	// #7
+  58:	94000000 	bl	0 <_gfortran_set_options>
+			58: R_AARCH64_CALL26	_gfortran_set_options
+  5c:	97ffffe9 	bl	0 <MAIN__>
+  60:	52800000 	mov	w0, #0x0                   	// #0
+  64:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  68:	d65f03c0 	ret
 
 Disassembly of section .rodata:
 
-0000000000000000 <options.0.2561>:
-   0:	00000044 	.word	0x00000044
-   4:	000003ff 	.word	0x000003ff
-   8:	00000000 	.word	0x00000000
-   c:	00000001 	.word	0x00000001
-  10:	00000001 	.word	0x00000001
-  14:	00000000 	.word	0x00000000
-  18:	0000001f 	.word	0x0000001f
+0000000000000000 <options.0.0>:
+   0:	00000844 	udf	#2116
+   4:	00000fff 	udf	#4095
+   8:	00000000 	udf	#0
+   c:	00000001 	udf	#1
+  10:	00000001 	udf	#1
+  14:	00000000 	udf	#0
+  18:	0000001f 	udf	#31
 
 Disassembly of section .comment:
 
 0000000000000000 <.comment>:
    0:	43434700 	.inst	0x43434700 ; undefined
-   4:	5528203a 	.inst	0x5528203a ; undefined
-   8:	746e7562 	.inst	0x746e7562 ; undefined
-   c:	694c2f75 	ldpsw	x21, x11, [x27, #96]
-  10:	6f72616e 	umlsl2	v14.4s, v11.8h, v2.h[3]
-  14:	332e3720 	.inst	0x332e3720 ; undefined
-  18:	322d302e 	orr	w14, w1, #0xfff80000
-  1c:	75627537 	.inst	0x75627537 ; undefined
-  20:	3175746e 	adds	w14, w3, #0xd5d, lsl #12
-  24:	2e38317e 	usubw	v30.8h, v11.8h, v24.8b
-  28:	20293430 	.inst	0x20293430 ; undefined
-  2c:	2e332e37 	uqsub	v23.8b, v17.8b, v19.8b
-  30:	Address 0x0000000000000030 is out of bounds.
+   4:	4428203a 	.inst	0x4428203a ; undefined
+   8:	61696265 	.inst	0x61696265 ; undefined
+   c:	3031206e 	adr	x14, 62419 <main+0x623e9>
+  10:	312e322e 	adds	w14, w17, #0xb8c
+  14:	2029362d 	.inst	0x2029362d ; undefined
+  18:	322e3031 	orr	w17, w1, #0x7ffc0000
+  1c:	3220312e 	orr	w14, w9, #0x1fff
+  20:	30313230 	adr	x16, 62665 <main+0x62635>
+  24:	00303131 	.inst	0x00303131 ; NYI
 
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	00000010 	udf	#16
+   4:	00000000 	udf	#0
+   8:	00527a01 	.inst	0x00527a01 ; undefined
+   c:	011e7804 	.inst	0x011e7804 ; undefined
+  10:	001f0c1b 	.inst	0x001f0c1b ; undefined
+  14:	00000014 	udf	#20
+  18:	00000018 	udf	#24
+  1c:	00000000 	udf	#0
+			1c: R_AARCH64_PREL32	.text
+  20:	00000030 	udf	#48
+  24:	100e4100 	adr	x0, 1c844 <main+0x1c814>
+  28:	00000e4a 	udf	#3658
+  2c:	00000020 	udf	#32
+  30:	00000030 	udf	#48
+  34:	00000000 	udf	#0
+			34: R_AARCH64_PREL32	.text+0x30
+  38:	0000003c 	udf	#60
+  3c:	200e4100 	.inst	0x200e4100 ; undefined
+  40:	039e049d 	.inst	0x039e049d ; undefined
+  44:	0eddde4d 	.inst	0x0eddde4d ; undefined
+	...
