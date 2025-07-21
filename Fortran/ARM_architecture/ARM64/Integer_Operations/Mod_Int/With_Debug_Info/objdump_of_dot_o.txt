@@ -1,758 +1,668 @@
 
-Can't get contents for section '.debug_info'.
-
-mod_int.o:     file format elf64-x86-64
+mod_int.o:     file format elf64-littleaarch64
 mod_int.o
-architecture: i386:x86-64, flags 0x00000011:
+architecture: aarch64, flags 0x00000011:
 HAS_RELOC, HAS_SYMS
 start address 0x0000000000000000
+private flags = 0:
 
 Sections:
 Idx Name          Size      VMA               LMA               File off  Algn
-  0 .text         0000005f  0000000000000000  0000000000000000  00000040  2**0
+  0 .text         00000078  0000000000000000  0000000000000000  00000040  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  1 .data         00000000  0000000000000000  0000000000000000  0000009f  2**0
+  1 .data         00000000  0000000000000000  0000000000000000  000000b8  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          00000000  0000000000000000  0000000000000000  0000009f  2**0
+  2 .bss          00000000  0000000000000000  0000000000000000  000000b8  2**0
                   ALLOC
-  3 .rodata       0000001c  0000000000000000  0000000000000000  000000a0  2**4
+  3 .rodata       0000001c  0000000000000000  0000000000000000  000000b8  2**3
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  4 .debug_info   00000083  0000000000000000  0000000000000000  000000c0  2**3
+  4 .debug_info   000000d1  0000000000000000  0000000000000000  000000d4  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
-  5 .debug_abbrev 0000008e  0000000000000000  0000000000000000  00000143  2**0
+  5 .debug_abbrev 0000008c  0000000000000000  0000000000000000  000001a5  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  6 .debug_aranges 0000002f  0000000000000000  0000000000000000  000001d8  2**3
+  6 .debug_aranges 00000030  0000000000000000  0000000000000000  00000231  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
-  7 .debug_macro  00000010  0000000000000000  0000000000000000  00000207  2**0
+  7 .debug_macro  00000010  0000000000000000  0000000000000000  00000261  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
-  8 .debug_line   0000006c  0000000000000000  0000000000000000  00000218  2**3
+  8 .debug_line   0000008e  0000000000000000  0000000000000000  00000271  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
-  9 .debug_str    000000f1  0000000000000000  0000000000000000  00000288  2**3
+  9 .debug_str    0000019f  0000000000000000  0000000000000000  000002ff  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 10 .debug_line_str 000000db  0000000000000000  0000000000000000  00000380  2**3
-                  CONTENTS, READONLY, DEBUGGING, OCTETS
- 11 .comment      00000028  0000000000000000  0000000000000000  0000045b  2**0
+ 10 .comment      00000028  0000000000000000  0000000000000000  0000049e  2**0
                   CONTENTS, READONLY
- 12 .note.GNU-stack 00000000  0000000000000000  0000000000000000  00000483  2**0
+ 11 .note.GNU-stack 00000000  0000000000000000  0000000000000000  000004c6  2**0
                   CONTENTS, READONLY
- 13 .note.gnu.property 00000030  0000000000000000  0000000000000000  00000488  2**3
-                  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 14 .eh_frame     00000058  0000000000000000  0000000000000000  000004b8  2**3
+ 12 .eh_frame     00000050  0000000000000000  0000000000000000  000004c8  2**3
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
 SYMBOL TABLE:
 0000000000000000 l    df *ABS*	0000000000000000 mod_int.f08
 0000000000000000 l    d  .text	0000000000000000 .text
-0000000000000000 l     F .text	000000000000001f MAIN__
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l     F .text	000000000000003c MAIN__
 0000000000000000 l     O .rodata	000000000000001c options.0.0
 0000000000000000 l    d  .rodata	0000000000000000 .rodata
 0000000000000000 l    d  .debug_info	0000000000000000 .debug_info
 0000000000000000 l    d  .debug_abbrev	0000000000000000 .debug_abbrev
+0000000000000000 l    d  .debug_aranges	0000000000000000 .debug_aranges
 0000000000000000 l    d  .debug_macro	0000000000000000 .debug_macro
 0000000000000000 l    d  .debug_line	0000000000000000 .debug_line
 0000000000000000 l    d  .debug_str	0000000000000000 .debug_str
-0000000000000000 l    d  .debug_line_str	0000000000000000 .debug_line_str
-000000000000001f g     F .text	0000000000000040 main
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 l    d  .eh_frame	0000000000000000 .eh_frame
+0000000000000000 l    d  .comment	0000000000000000 .comment
+000000000000003c g     F .text	000000000000003c main
 0000000000000000         *UND*	0000000000000000 _gfortran_set_args
 0000000000000000         *UND*	0000000000000000 _gfortran_set_options
 
 
 Contents of section .text:
- 0000 554889e5 c745fc0a 000000c7 45f80400  UH...E......E...
- 0010 00008b45 fc99f77d f88955f4 905dc355  ...E...}..U..].U
- 0020 4889e548 83ec1089 7dfc4889 75f0488b  H..H....}.H.u.H.
- 0030 55f08b45 fc4889d6 89c7e800 00000048  U..E.H.........H
- 0040 8d050000 00004889 c6bf0700 0000e800  ......H.........
- 0050 000000e8 a8ffffff b8000000 00c9c3    ............... 
+ 0000 ff4300d1 40018052 e00f00b9 80008052  .C..@..R.......R
+ 0010 e00b00b9 e00f40b9 e10b40b9 020cc11a  ......@...@.....
+ 0020 e10b40b9 417c011b 0000014b e00700b9  ..@.A|.....K....
+ 0030 1f2003d5 ff430091 c0035fd6 fd7bbea9  . ...C...._..{..
+ 0040 fd030091 e01f00b9 e10b00f9 e10b40f9  ..............@.
+ 0050 e01f40b9 00000094 00000090 01000091  ..@.............
+ 0060 e0008052 00000094 e6ffff97 00008052  ...R...........R
+ 0070 fd7bc2a8 c0035fd6                    .{...._.        
 Contents of section .rodata:
- 0000 44280000 ff3f0000 00000000 01000000  D(...?..........
+ 0000 44080000 ff0f0000 00000000 01000000  D...............
  0010 01000000 00000000 1f000000           ............    
 Contents of section .debug_info:
- 0000 01000000 00000000 c6000000 00000000  ................
- 0010 01000000 00000000 789c3bc4 c0c0c0ca  ........x.;.....
- 0020 c0c801a4 18584084 3213031a 8847e3b3  .....X@.2....G..
- 0030 8208461e e17c2431 0728cd38 07240a36  ..F..|$1.(.8.$.6
- 0040 a20cc498 98036657 0331f3c4 04360666  ......fW.1...6.f
- 0050 16b06e36 902a768e 469030c4 6e30c1c8  ..n6.*v.F.0.n0..
- 0060 c80fb75d 1e6e2263 22834c3e c430c624  ...].n"c".L>.0.$
- 0070 06790833 83319941 09c24c61 600000e4  .y.3.1.A..La`...
- 0080 1b0ddf                               ...             
+ 0000 cd000000 04000000 00000801 00000000  ................
+ 0010 0e020000 00000000 00000000 00000000  ................
+ 0020 00007800 00000000 00000000 00000000  ..x.............
+ 0030 00000200 00000001 0c137400 00000000  ..........t.....
+ 0040 00000000 00003c00 00000000 0000019c  ......<.........
+ 0050 74000000 03000000 00010c13 7b000000  t...........{...
+ 0060 02917c03 00000000 010c1380 00000003  ..|.............
+ 0070 91700600 04040500 00000005 74000000  .p..........t...
+ 0080 06088600 00000401 08000000 00070000  ................
+ 0090 00000101 0f020000 00000000 00003c00  ..............<.
+ 00a0 00000000 0000019c 08610001 051c7400  .........a....t.
+ 00b0 00000291 7c086200 01051f74 00000002  ....|.b....t....
+ 00c0 91780863 00010522 74000000 02917400  .x.c..."t.....t.
+ 00d0 00                                   .               
 Contents of section .debug_abbrev:
- 0000 01340003 083a2101 3b210539 0b491302  .4...:!.;!.9.I..
- 0010 18000002 0500030e 3a21013b 210c3921  ........:!.;!.9!
- 0020 13491302 18000003 24000b0b 3e0b030e  .I......$...>...
- 0030 00000411 01250e13 0b420b03 1f1b1f11  .....%...B......
- 0040 01120710 17791700 00052e01 3f19030e  .....y......?...
- 0050 3a0b3b0b 390b4913 11011207 40187c19  :.;.9.I.....@.|.
- 0060 01130000 06260049 13000007 0f000b0b  .....&.I........
- 0070 49130000 082e0103 0e3a0b3b 0b390b6a  I........:.;.9.j
- 0080 19360b11 01120740 187a1900 0000      .6.....@.z....  
+ 0000 01110125 0e130b42 0b030e1b 0e110112  ...%...B........
+ 0010 07101799 42170000 022e013f 19030e3a  ....B......?...:
+ 0020 0b3b0b39 0b491311 01120740 18964219  .;.9.I.....@..B.
+ 0030 01130000 03050003 0e3a0b3b 0b390b49  .........:.;.9.I
+ 0040 13021800 00042400 0b0b3e0b 030e0000  ......$...>.....
+ 0050 05260049 13000006 0f000b0b 49130000  .&.I........I...
+ 0060 072e0103 0e3a0b3b 0b390b6a 19360b11  .....:.;.9.j.6..
+ 0070 01120740 18974219 00000834 0003083a  ...@..B....4...:
+ 0080 0b3b0b39 0b491302 18000000           .;.9.I......    
 Contents of section .debug_aranges:
- 0000 01000000 00000000 30000000 00000000  ........0.......
- 0010 01000000 00000000 789cd361 60606062  ........x..a```b
- 0020 00010e06 6410cf80 1d000012 e00096    ....d.......... 
+ 0000 2c000000 02000000 00000800 00000000  ,...............
+ 0010 00000000 00000000 78000000 00000000  ........x.......
+ 0020 00000000 00000000 00000000 00000000  ................
 Contents of section .debug_macro:
- 0000 05000200 00000003 00010300 02040400  ................
+ 0000 04000200 00000003 00010300 02040400  ................
 Contents of section .debug_line:
- 0000 01000000 00000000 73000000 00000000  ........s.......
- 0010 01000000 00000000 789ccb67 60606065  ........x..g```e
- 0020 e0603006 d28c8c8c bff97841 14238807  .`0.......xA.#..
- 0030 16906762 80022620 9b9f9901 0530b2f2  ..gb..& .....0..
- 0040 33703221 787c01ac bca5aca2 65acc20b  3p2!x|......e...
- 0050 6c9e3030 b130b271 08012926 0e1b20c9  l.00.0.q..)&.. .
- 0060 1c11c1c4 04341300 499206cd           .....4..I...    
+ 0000 8a000000 03006300 00000401 fb0e0d00  ......c.........
+ 0010 01010101 00000001 0000012f 7573722f  .........../usr/
+ 0020 696e636c 7564652f 66696e63 6c756465  include/finclude
+ 0030 2f616172 63683634 2d6c696e 75782d67  /aarch64-linux-g
+ 0040 6e750000 6d6f645f 696e742e 66303800  nu..mod_int.f08.
+ 0050 0000006d 6174682d 76656374 6f722d66  ...math-vector-f
+ 0060 6f727472 616e2e68 00010000 00050f00  ortran.h........
+ 0070 09020000 00000000 00000105 0e26050d  .............&..
+ 0080 2f051530 0513763c 4a020b00 0101      /..0..v<J.....  
 Contents of section .debug_str:
- 0000 01000000 00000000 50010000 00000000  ........P.......
- 0010 01000000 00000000 789c7dd0 b152c330  ........x.}..R.0
- 0020 0c06603f 8a473a28 4a4ac875 c90a1b1b  ..`?.G:(JJ.u....
- 0030 73cf7114 db472cf7 14bb97be 3de65ad8  s.q..G,.....=.Z.
- 0040 60fc357c 927eeb8d 189b499e 3e03cf63  `.5|.~....I.>..c
- 0050 7750469c 558133b9 9f617f50 6fef1ffa  wPF.U.3..a.Po...
- 0060 354916c3 c7b63de9 eea5e99a 5643cc85  5I....=.....VC..
- 0070 6974c424 c1d668c4 fa713f0d 30f41a9c  it.$..h..q?.0...
- 0080 9ba7670d 4bc524f0 162cc434 979536b8  ..g.K.$..,.4..6.
- 0090 98ec35fa 1409bdd9 93603471 324b1247  ..5......`4q2K.G
- 00a0 3805c6a6 c1354ce8 acc58a9d 871e6ce2  8....5L.......l.
- 00b0 d9c01ab8 ece0b8e0 fd00acb6 5dcb4c75  ............].Lu
- 00c0 cb45081e 69fc9ffe 83dc6e9b a494b16c  .E..i.....n....l
- 00d0 820fe8d7 af4af670 259b93c0 722fa2f1  .....J.p%...r/..
- 00e0 2a9ac0aa 3e75ae2f 7e177755 5f4cdb73  *...>u./~.wU_L.s
- 00f0 a8                                   .               
-Contents of section .debug_line_str:
- 0000 01000000 00000000 92010000 00000000  ................
- 0010 01000000 00000000 789cc58f 314e0431  ........x...1N.1
- 0020 0c45e742 1953ac46 db820624 8a15120d  .E.B.S.F...$....
- 0030 6594c938 89a58d8d 1c070db7 27080af6  e..8........'...
- 0040 0474efbf ea7d2852 114a3844 6195d82b  .t...}(R.J8Da..+
- 0050 b23578e4 4c8ca8c4 19566aa1 35acdb75  .5x.L....Vj.5..u
- 0060 2cf7401c 94b0c193 a86960b8 7fbdf8a0  ,.@......i`.....
- 0070 b19061b4 aef82d96 133cb361 46f52fef  ..a...-..<.aF./.
- 0080 a8c148b8 c145763f 34bc9115 bfe2d6f3  ..H..Ev?4.......
- 0090 9849a63a 3cb1cde9 ee3cc1ff e7fc4da8  .I.:<....<....M.
- 00a0 a16e2189 66848d18 e6198ef3 e297938b  .n!.f...........
- 00b0 c27b7023 a11f2e73 87f6d954 c4a03705  .{p#...s...T..7.
- 00c0 e278ed3b 42fa859b 83371cac b88fd129  .x.;B....7.....)
- 00d0 ead24fff 5ca62ff6 9792fb             ..O.\./....     
+ 0000 2f686f6d 652f6d61 726b6b68 75736964  /home/markkhusid
+ 0010 2f446f63 756d656e 74732f45 6e67696e  /Documents/Engin
+ 0020 65657269 6e672f44 69736173 73656d62  eering/Disassemb
+ 0030 6c696e67 2d42696e 61726965 732f466f  ling-Binaries/Fo
+ 0040 72747261 6e2f4152 4d5f6172 63686974  rtran/ARM_archit
+ 0050 65637475 72652f41 524d3634 2f496e74  ecture/ARM64/Int
+ 0060 65676572 5f4f7065 72617469 6f6e732f  eger_Operations/
+ 0070 4d6f645f 496e742f 57697468 5f446562  Mod_Int/With_Deb
+ 0080 75675f49 6e666f00 63686172 61637465  ug_Info.characte
+ 0090 72286b69 6e643d31 29006172 6763006d  r(kind=1).argc.m
+ 00a0 6f645f69 6e742e66 30380069 6e746567  od_int.f08.integ
+ 00b0 6572286b 696e643d 3429006d 61696e00  er(kind=4).main.
+ 00c0 474e5520 466f7274 72616e32 30303820  GNU Fortran2008 
+ 00d0 31302e32 2e312032 30323130 31313020  10.2.1 20210110 
+ 00e0 2d6d6c69 74746c65 2d656e64 69616e20  -mlittle-endian 
+ 00f0 2d6d6162 693d6c70 3634202d 67676462  -mabi=lp64 -ggdb
+ 0100 33202d66 696e7472 696e7369 632d6d6f  3 -fintrinsic-mo
+ 0110 64756c65 732d7061 7468202f 7573722f  dules-path /usr/
+ 0120 6c69622f 6763632f 61617263 6836342d  lib/gcc/aarch64-
+ 0130 6c696e75 782d676e 752f3130 2f66696e  linux-gnu/10/fin
+ 0140 636c7564 65202d66 7072652d 696e636c  clude -fpre-incl
+ 0150 7564653d 2f757372 2f696e63 6c756465  ude=/usr/include
+ 0160 2f66696e 636c7564 652f6161 72636836  /finclude/aarch6
+ 0170 342d6c69 6e75782d 676e752f 6d617468  4-linux-gnu/math
+ 0180 2d766563 746f722d 666f7274 72616e2e  -vector-fortran.
+ 0190 68006d6f 645f696e 74006172 677600    h.mod_int.argv. 
 Contents of section .comment:
- 0000 00474343 3a202863 6f6e6461 2d666f72  .GCC: (conda-for
- 0010 67652067 63632031 352e312e 302d3329  ge gcc 15.1.0-3)
- 0020 2031352e 312e3000                     15.1.0.        
-Contents of section .note.gnu.property:
- 0000 04000000 20000000 05000000 474e5500  .... .......GNU.
- 0010 020001c0 04000000 01000000 00000000  ................
- 0020 010001c0 04000000 01000000 00000000  ................
+ 0000 00474343 3a202844 65626961 6e203130  .GCC: (Debian 10
+ 0010 2e322e31 2d362920 31302e32 2e312032  .2.1-6) 10.2.1 2
+ 0020 30323130 31313000                    0210110.        
 Contents of section .eh_frame:
- 0000 14000000 00000000 017a5200 01781001  .........zR..x..
- 0010 1b0c0708 90010000 1c000000 1c000000  ................
- 0020 00000000 1f000000 00410e10 8602430d  .........A....C.
- 0030 065a0c07 08000000 1c000000 3c000000  .Z..........<...
- 0040 00000000 40000000 00410e10 8602430d  ....@....A....C.
- 0050 067b0c07 08000000                    .{......        
+ 0000 10000000 00000000 017a5200 04781e01  .........zR..x..
+ 0010 1b0c1f00 14000000 18000000 00000000  ................
+ 0020 3c000000 00410e10 4d0e0000 20000000  <....A..M... ...
+ 0030 30000000 00000000 3c000000 00410e20  0.......<....A. 
+ 0040 9d049e03 4ddedd0e 00000000 00000000  ....M...........
 
 Disassembly of section .text:
 
 0000000000000000 <MAIN__>:
-   0:	55                   	push   %rbp
-   1:	48 89 e5             	mov    %rsp,%rbp
-   4:	c7 45 fc 0a 00 00 00 	movl   $0xa,-0x4(%rbp)
-   b:	c7 45 f8 04 00 00 00 	movl   $0x4,-0x8(%rbp)
-  12:	8b 45 fc             	mov    -0x4(%rbp),%eax
-  15:	99                   	cltd
-  16:	f7 7d f8             	idivl  -0x8(%rbp)
-  19:	89 55 f4             	mov    %edx,-0xc(%rbp)
-  1c:	90                   	nop
-  1d:	5d                   	pop    %rbp
-  1e:	c3                   	ret
+program mod_int
+   0:	d10043ff 	sub	sp, sp, #0x10
 
-000000000000001f <main>:
-  1f:	55                   	push   %rbp
-  20:	48 89 e5             	mov    %rsp,%rbp
-  23:	48 83 ec 10          	sub    $0x10,%rsp
-  27:	89 7d fc             	mov    %edi,-0x4(%rbp)
-  2a:	48 89 75 f0          	mov    %rsi,-0x10(%rbp)
-  2e:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
-  32:	8b 45 fc             	mov    -0x4(%rbp),%eax
-  35:	48 89 d6             	mov    %rdx,%rsi
-  38:	89 c7                	mov    %eax,%edi
-  3a:	e8 00 00 00 00       	call   3f <MAIN__+0x3f>
-			3b: R_X86_64_PLT32	_gfortran_set_args-0x4
-  3f:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 46 <MAIN__+0x46>
-			42: R_X86_64_PC32	.rodata-0x4
-  46:	48 89 c6             	mov    %rax,%rsi
-  49:	bf 07 00 00 00       	mov    $0x7,%edi
-  4e:	e8 00 00 00 00       	call   53 <MAIN__+0x53>
-			4f: R_X86_64_PLT32	_gfortran_set_options-0x4
-  53:	e8 a8 ff ff ff       	call   0 <MAIN__>
-  58:	b8 00 00 00 00       	mov    $0x0,%eax
-  5d:	c9                   	leave
-  5e:	c3                   	ret
+        implicit none
+
+        integer         :: a, b, c
+
+        a = 10
+   4:	52800140 	mov	w0, #0xa                   	// #10
+   8:	b9000fe0 	str	w0, [sp, #12]
+        b = 4
+   c:	52800080 	mov	w0, #0x4                   	// #4
+  10:	b9000be0 	str	w0, [sp, #8]
+
+        c = MOD(a, b)
+  14:	b9400fe0 	ldr	w0, [sp, #12]
+  18:	b9400be1 	ldr	w1, [sp, #8]
+  1c:	1ac10c02 	sdiv	w2, w0, w1
+  20:	b9400be1 	ldr	w1, [sp, #8]
+  24:	1b017c41 	mul	w1, w2, w1
+  28:	4b010000 	sub	w0, w0, w1
+  2c:	b90007e0 	str	w0, [sp, #4]
+
+end program mod_int
+  30:	d503201f 	nop
+  34:	910043ff 	add	sp, sp, #0x10
+  38:	d65f03c0 	ret
+
+000000000000003c <main>:
+  3c:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  40:	910003fd 	mov	x29, sp
+  44:	b9001fe0 	str	w0, [sp, #28]
+  48:	f9000be1 	str	x1, [sp, #16]
+  4c:	f9400be1 	ldr	x1, [sp, #16]
+  50:	b9401fe0 	ldr	w0, [sp, #28]
+  54:	94000000 	bl	0 <_gfortran_set_args>
+			54: R_AARCH64_CALL26	_gfortran_set_args
+  58:	90000000 	adrp	x0, 0 <MAIN__>
+			58: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+  5c:	91000001 	add	x1, x0, #0x0
+			5c: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+  60:	528000e0 	mov	w0, #0x7                   	// #7
+  64:	94000000 	bl	0 <_gfortran_set_options>
+			64: R_AARCH64_CALL26	_gfortran_set_options
+  68:	97ffffe6 	bl	0 <MAIN__>
+  6c:	52800000 	mov	w0, #0x0                   	// #0
+  70:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  74:	d65f03c0 	ret
 
 Disassembly of section .rodata:
 
-0000000000000060 <options.0.0>:
-  60:	44 28 00             	sub    %r8b,(%rax)
-  63:	00 ff                	add    %bh,%bh
-  65:	3f                   	(bad)
-  66:	00 00                	add    %al,(%rax)
-  68:	00 00                	add    %al,(%rax)
-  6a:	00 00                	add    %al,(%rax)
-  6c:	01 00                	add    %eax,(%rax)
-  6e:	00 00                	add    %al,(%rax)
-  70:	01 00                	add    %eax,(%rax)
-  72:	00 00                	add    %al,(%rax)
-  74:	00 00                	add    %al,(%rax)
-  76:	00 00                	add    %al,(%rax)
-  78:	1f                   	(bad)
-  79:	00 00                	add    %al,(%rax)
-	...
+0000000000000000 <options.0.0>:
+   0:	00000844 	udf	#2116
+   4:	00000fff 	udf	#4095
+   8:	00000000 	udf	#0
+   c:	00000001 	udf	#1
+  10:	00000001 	udf	#1
+  14:	00000000 	udf	#0
+  18:	0000001f 	udf	#31
 
 Disassembly of section .debug_info:
 
 0000000000000000 <.debug_info>:
-   0:	01 00                	add    %eax,(%rax)
-   2:	00 00                	add    %al,(%rax)
-   4:	00 00                	add    %al,(%rax)
-   6:	00 00                	add    %al,(%rax)
-   8:	c6 00 00             	movb   $0x0,(%rax)
-			8: R_X86_64_32	.debug_abbrev
-   b:	00 00                	add    %al,(%rax)
-   d:	00 00                	add    %al,(%rax)
-			d: R_X86_64_32	.debug_str+0x27
-   f:	00 01                	add    %al,(%rcx)
-  11:	00 00                	add    %al,(%rax)
-  13:	00 00                	add    %al,(%rax)
-			13: R_X86_64_32	.debug_line_str+0x83
-  15:	00 00                	add    %al,(%rax)
-  17:	00 78 9c             	add    %bh,-0x64(%rax)
-			17: R_X86_64_32	.debug_line_str
-  1a:	3b c4                	cmp    %esp,%eax
-			1b: R_X86_64_64	.text
-  1c:	c0 c0 c0             	rol    $0xc0,%al
-  1f:	ca c0 c8             	lret   $0xc8c0
-  22:	01 a4 18 58 40 84 32 	add    %esp,0x32844058(%rax,%rbx,1)
-  29:	13 03                	adc    (%rbx),%eax
-  2b:	1a 88 47 e3 b3 82    	sbb    -0x7d4c1cb9(%rax),%cl
-			2b: R_X86_64_32	.debug_line
-			2f: R_X86_64_32	.debug_macro
-  31:	08 46 1e             	or     %al,0x1e(%rsi)
-  34:	e1 7c                	loope  b2 <options.0.0+0x52>
-			34: R_X86_64_32	.debug_str+0x13e
-  36:	24 31                	and    $0x31,%al
-  38:	07                   	(bad)
-  39:	28 cd                	sub    %cl,%ch
-  3b:	38 07                	cmp    %al,(%rdi)
-  3d:	24 0a                	and    $0xa,%al
-  3f:	36 a2 0c c4 98 98 03 	ss movabs %al,0x35766039898c40c
-  46:	66 57 03 
-			3f: R_X86_64_64	.text+0x1f
-  49:	31 f3                	xor    %esi,%ebx
-  4b:	c4                   	(bad)
-  4c:	04 36                	add    $0x36,%al
-  4e:	06                   	(bad)
-  4f:	66 16                	data16 (bad)
-  51:	b0 6e                	mov    $0x6e,%al
-  53:	36 90                	ss nop
-  55:	2a 76 8e             	sub    -0x72(%rsi),%dh
-			56: R_X86_64_32	.debug_str+0x12
-  58:	46 90                	rex.RX nop
-  5a:	30 c4                	xor    %al,%ah
-  5c:	6e                   	outsb  %ds:(%rsi),(%dx)
-  5d:	30 c1                	xor    %al,%cl
-  5f:	c8 c8 0f b7          	enter  $0xfc8,$0xb7
-			62: R_X86_64_32	.debug_str+0x14b
-  63:	5d                   	pop    %rbp
-  64:	1e                   	(bad)
-  65:	6e                   	outsb  %ds:(%rsi),(%dx)
-  66:	22 63 22             	and    0x22(%rbx),%ah
-  69:	83 4c 3e c4 30       	orl    $0x30,-0x3c(%rsi,%rdi,1)
-  6e:	c6                   	(bad)
-  6f:	24 06                	and    $0x6,%al
-  71:	79 08                	jns    7b <.debug_info+0x7b>
-			72: R_X86_64_32	.debug_str+0x17
-  73:	33 83 31 99 41 09    	xor    0x9419931(%rbx),%eax
-  79:	c2 4c 61             	ret    $0x614c
-  7c:	60                   	(bad)
-  7d:	00 00                	add    %al,(%rax)
-  7f:	e4 1b                	in     $0x1b,%al
-  81:	0d                   	.byte 0xd
-  82:	df                   	.byte 0xdf
+program mod_int
+   0:	000000cd 	udf	#205
+        a = 10
+   4:	00000004 	udf	#4
+			6: R_AARCH64_ABS32	.debug_abbrev
+   8:	01080000 	.inst	0x01080000 ; undefined
+        b = 4
+   c:	00000000 	udf	#0
+			c: R_AARCH64_ABS32	.debug_str+0xc0
+  10:	0000020e 	udf	#526
+			12: R_AARCH64_ABS32	.debug_str+0x9f
+	...
+			16: R_AARCH64_ABS32	.debug_str
+			1a: R_AARCH64_ABS64	.text
+        c = MOD(a, b)
+  20:	00780000 	.inst	0x00780000 ; undefined
+	...
+			2a: R_AARCH64_ABS32	.debug_line
+			2e: R_AARCH64_ABS32	.debug_macro
+end program mod_int
+  30:	00020000 	.inst	0x00020000 ; undefined
+			33: R_AARCH64_ABS32	.debug_str+0xbb
+  34:	01000000 	.inst	0x01000000 ; undefined
+  38:	0074130c 	.inst	0x0074130c ; undefined
+	...
+			3e: R_AARCH64_ABS64	.text+0x3c
+  44:	003c0000 	.inst	0x003c0000 ; NYI
+  48:	00000000 	udf	#0
+  4c:	9c010000 	ldr	q0, 204c <main+0x2010>
+  50:	00000074 	udf	#116
+  54:	00000003 	udf	#3
+			55: R_AARCH64_ABS32	.debug_str+0x9a
+  58:	130c0100 	sbfiz	w0, w8, #20, #1
+  5c:	0000007b 	udf	#123
+  60:	037c9102 	.inst	0x037c9102 ; undefined
+  64:	00000000 	udf	#0
+			64: R_AARCH64_ABS32	.debug_str+0x19a
+  68:	80130c01 	.inst	0x80130c01 ; undefined
+  6c:	03000000 	.inst	0x03000000 ; undefined
+  70:	00067091 	.inst	0x00067091 ; undefined
+  74:	00050404 	.inst	0x00050404 ; undefined
+			77: R_AARCH64_ABS32	.debug_str+0xab
+  78:	05000000 	orr	z0.s, z0.s, #0x1
+  7c:	00000074 	udf	#116
+  80:	00860806 	.inst	0x00860806 ; undefined
+  84:	01040000 	.inst	0x01040000 ; undefined
+  88:	00000008 	udf	#8
+			89: R_AARCH64_ABS32	.debug_str+0x88
+  8c:	00000700 	udf	#1792
+			8e: R_AARCH64_ABS32	.debug_str+0x192
+  90:	01010000 	.inst	0x01010000 ; undefined
+  94:	0000020f 	udf	#527
+			96: R_AARCH64_ABS64	.text
+  98:	00000000 	udf	#0
+  9c:	003c0000 	.inst	0x003c0000 ; NYI
+  a0:	00000000 	udf	#0
+  a4:	9c010000 	ldr	q0, 20a4 <main+0x2068>
+  a8:	01006108 	.inst	0x01006108 ; undefined
+  ac:	00741c05 	.inst	0x00741c05 ; undefined
+  b0:	91020000 	add	x0, x0, #0x80
+  b4:	0062087c 	.inst	0x0062087c ; undefined
+  b8:	741f0501 	.inst	0x741f0501 ; undefined
+  bc:	02000000 	.inst	0x02000000 ; undefined
+  c0:	63087891 	.inst	0x63087891 ; undefined
+  c4:	22050100 	.inst	0x22050100 ; undefined
+  c8:	00000074 	udf	#116
+  cc:	00749102 	.inst	0x00749102 ; undefined
+	...
 
 Disassembly of section .debug_abbrev:
 
 0000000000000000 <.debug_abbrev>:
-   0:	01 34 00             	add    %esi,(%rax,%rax,1)
-   3:	03 08                	add    (%rax),%ecx
-   5:	3a 21                	cmp    (%rcx),%ah
-   7:	01 3b                	add    %edi,(%rbx)
-   9:	21 05 39 0b 49 13    	and    %eax,0x13490b39(%rip)        # 13490b48 <options.0.0+0x13490ae8>
-   f:	02 18                	add    (%rax),%bl
-  11:	00 00                	add    %al,(%rax)
-  13:	02 05 00 03 0e 3a    	add    0x3a0e0300(%rip),%al        # 3a0e0319 <options.0.0+0x3a0e02b9>
-  19:	21 01                	and    %eax,(%rcx)
-  1b:	3b 21                	cmp    (%rcx),%esp
-  1d:	0c 39                	or     $0x39,%al
-  1f:	21 13                	and    %edx,(%rbx)
-  21:	49 13 02             	adc    (%r10),%rax
-  24:	18 00                	sbb    %al,(%rax)
-  26:	00 03                	add    %al,(%rbx)
-  28:	24 00                	and    $0x0,%al
-  2a:	0b 0b                	or     (%rbx),%ecx
-  2c:	3e 0b 03             	ds or  (%rbx),%eax
-  2f:	0e                   	(bad)
-  30:	00 00                	add    %al,(%rax)
-  32:	04 11                	add    $0x11,%al
-  34:	01 25 0e 13 0b 42    	add    %esp,0x420b130e(%rip)        # 420b1348 <options.0.0+0x420b12e8>
-  3a:	0b 03                	or     (%rbx),%eax
-  3c:	1f                   	(bad)
-  3d:	1b 1f                	sbb    (%rdi),%ebx
-  3f:	11 01                	adc    %eax,(%rcx)
-  41:	12 07                	adc    (%rdi),%al
-  43:	10 17                	adc    %dl,(%rdi)
-  45:	79 17                	jns    5e <.debug_abbrev+0x5e>
-  47:	00 00                	add    %al,(%rax)
-  49:	05 2e 01 3f 19       	add    $0x193f012e,%eax
-  4e:	03 0e                	add    (%rsi),%ecx
-  50:	3a 0b                	cmp    (%rbx),%cl
-  52:	3b 0b                	cmp    (%rbx),%ecx
-  54:	39 0b                	cmp    %ecx,(%rbx)
-  56:	49 13 11             	adc    (%r9),%rdx
-  59:	01 12                	add    %edx,(%rdx)
-  5b:	07                   	(bad)
-  5c:	40 18 7c 19 01       	sbb    %dil,0x1(%rcx,%rbx,1)
-  61:	13 00                	adc    (%rax),%eax
-  63:	00 06                	add    %al,(%rsi)
-  65:	26 00 49 13          	es add %cl,0x13(%rcx)
-  69:	00 00                	add    %al,(%rax)
-  6b:	07                   	(bad)
-  6c:	0f 00 0b             	str    (%rbx)
-  6f:	0b 49 13             	or     0x13(%rcx),%ecx
-  72:	00 00                	add    %al,(%rax)
-  74:	08 2e                	or     %ch,(%rsi)
-  76:	01 03                	add    %eax,(%rbx)
-  78:	0e                   	(bad)
-  79:	3a 0b                	cmp    (%rbx),%cl
-  7b:	3b 0b                	cmp    (%rbx),%ecx
-  7d:	39 0b                	cmp    %ecx,(%rbx)
-  7f:	6a 19                	push   $0x19
-  81:	36 0b 11             	ss or  (%rcx),%edx
-  84:	01 12                	add    %edx,(%rdx)
-  86:	07                   	(bad)
-  87:	40 18 7a 19          	sbb    %dil,0x19(%rdx)
-  8b:	00 00                	add    %al,(%rax)
-	...
+program mod_int
+   0:	25011101 	cmpge	p1.b, p4/z, z8.b, #1
+        a = 10
+   4:	420b130e 	.inst	0x420b130e ; undefined
+   8:	1b0e030b 	madd	w11, w24, w14, w0
+        b = 4
+   c:	1201110e 	and	w14, w8, #0x8000000f
+  10:	99171007 	stlur	w7, [x0, #-143]
+        c = MOD(a, b)
+  14:	00001742 	udf	#5954
+  18:	3f012e02 	.inst	0x3f012e02 ; undefined
+  1c:	3a0e0319 	adcs	w25, w24, w14
+  20:	390b3b0b 	strb	w11, [x24, #718]
+  24:	1113490b 	add	w11, w8, #0x4d2
+  28:	40071201 	.inst	0x40071201 ; undefined
+  2c:	19429618 	.inst	0x19429618 ; undefined
+end program mod_int
+  30:	00001301 	udf	#4865
+  34:	03000503 	.inst	0x03000503 ; undefined
+  38:	3b0b3a0e 	.inst	0x3b0b3a0e ; undefined
+  3c:	490b390b 	.inst	0x490b390b ; undefined
+  40:	00180213 	.inst	0x00180213 ; undefined
+  44:	00240400 	.inst	0x00240400 ; NYI
+  48:	0b3e0b0b 	add	w11, w24, w30, uxtb #2
+  4c:	00000e03 	udf	#3587
+  50:	49002605 	.inst	0x49002605 ; undefined
+  54:	06000013 	.inst	0x06000013 ; undefined
+  58:	0b0b000f 	add	w15, w0, w11
+  5c:	00001349 	udf	#4937
+  60:	03012e07 	.inst	0x03012e07 ; undefined
+  64:	3b0b3a0e 	.inst	0x3b0b3a0e ; undefined
+  68:	6a0b390b 	ands	w11, w8, w11, lsl #14
+  6c:	110b3619 	add	w25, w16, #0x2cd
+  70:	40071201 	.inst	0x40071201 ; undefined
+  74:	19429718 	.inst	0x19429718 ; undefined
+  78:	34080000 	cbz	w0, 10078 <main+0x1003c>
+  7c:	3a080300 	adcs	w0, w24, w8
+  80:	390b3b0b 	strb	w11, [x24, #718]
+  84:	0213490b 	.inst	0x0213490b ; undefined
+  88:	00000018 	udf	#24
 
 Disassembly of section .debug_aranges:
 
 0000000000000000 <.debug_aranges>:
-   0:	01 00                	add    %eax,(%rax)
-   2:	00 00                	add    %al,(%rax)
-   4:	00 00                	add    %al,(%rax)
-   6:	00 00                	add    %al,(%rax)
-			6: R_X86_64_32	.debug_info
-   8:	30 00                	xor    %al,(%rax)
-   a:	00 00                	add    %al,(%rax)
-   c:	00 00                	add    %al,(%rax)
-   e:	00 00                	add    %al,(%rax)
-  10:	01 00                	add    %eax,(%rax)
-			10: R_X86_64_64	.text
-  12:	00 00                	add    %al,(%rax)
-  14:	00 00                	add    %al,(%rax)
-  16:	00 00                	add    %al,(%rax)
-  18:	78 9c                	js     ffffffffffffffb6 <options.0.0+0xffffffffffffff56>
-  1a:	d3 61 60             	shll   %cl,0x60(%rcx)
-  1d:	60                   	(bad)
-  1e:	60                   	(bad)
-  1f:	62                   	(bad)
-  20:	00 01                	add    %al,(%rcx)
-  22:	0e                   	(bad)
-  23:	06                   	(bad)
-  24:	64 10 cf             	fs adc %cl,%bh
-  27:	80 1d 00 00 12 e0 00 	sbbb   $0x0,-0x1fee0000(%rip)        # ffffffffe012002e <options.0.0+0xffffffffe011ffce>
-  2e:	96                   	xchg   %eax,%esi
+program mod_int
+   0:	0000002c 	udf	#44
+        a = 10
+   4:	00000002 	udf	#2
+			6: R_AARCH64_ABS32	.debug_info
+   8:	00080000 	.inst	0x00080000 ; undefined
+	...
+			10: R_AARCH64_ABS64	.text
+        c = MOD(a, b)
+  18:	00000078 	udf	#120
+	...
 
 Disassembly of section .debug_macro:
 
 0000000000000000 <.debug_macro>:
-   0:	05 00 02 00 00       	add    $0x200,%eax
-			3: R_X86_64_32	.debug_line
-   5:	00 00                	add    %al,(%rax)
-   7:	03 00                	add    (%rax),%eax
-   9:	01 03                	add    %eax,(%rbx)
-   b:	00 02                	add    %al,(%rdx)
-   d:	04 04                	add    $0x4,%al
-	...
+program mod_int
+   0:	00020004 	.inst	0x00020004 ; undefined
+			3: R_AARCH64_ABS32	.debug_line
+        a = 10
+   4:	03000000 	.inst	0x03000000 ; undefined
+   8:	00030100 	.inst	0x00030100 ; undefined
+        b = 4
+   c:	00040402 	.inst	0x00040402 ; undefined
 
 Disassembly of section .debug_line:
 
 0000000000000000 <.debug_line>:
-   0:	01 00                	add    %eax,(%rax)
-   2:	00 00                	add    %al,(%rax)
-   4:	00 00                	add    %al,(%rax)
-   6:	00 00                	add    %al,(%rax)
-   8:	73 00                	jae    a <.debug_line+0xa>
-   a:	00 00                	add    %al,(%rax)
-   c:	00 00                	add    %al,(%rax)
-   e:	00 00                	add    %al,(%rax)
-  10:	01 00                	add    %eax,(%rax)
-  12:	00 00                	add    %al,(%rax)
-  14:	00 00                	add    %al,(%rax)
-  16:	00 00                	add    %al,(%rax)
-  18:	78 9c                	js     ffffffffffffffb6 <options.0.0+0xffffffffffffff56>
-  1a:	cb                   	lret
-  1b:	67 60                	addr32 (bad)
-  1d:	60                   	(bad)
-  1e:	60                   	(bad)
-  1f:	65 e0 60             	gs loopne 82 <options.0.0+0x22>
-  22:	30 06                	xor    %al,(%rsi)
-			22: R_X86_64_32	.debug_line_str+0x8f
-  24:	d2 8c 8c 8c bf f9 78 	rorb   %cl,0x78f9bf8c(%rsp,%rcx,4)
-			26: R_X86_64_32	.debug_line_str+0x112
-  2b:	41 14 23             	rex.B adc $0x23,%al
-  2e:	88 07                	mov    %al,(%rdi)
-  30:	16                   	(bad)
-			30: R_X86_64_32	.debug_line_str+0x164
-  31:	90                   	nop
-  32:	67 62                	addr32 (bad)
-  34:	80 02 26             	addb   $0x26,(%rdx)
-			35: R_X86_64_32	.debug_line_str+0x170
-  37:	20 9b 9f 99 01 05    	and    %bl,0x501999f(%rbx)
-			3a: R_X86_64_32	.debug_line_str+0x17c
-  3d:	30 b2 f2 33 70 32    	xor    %dh,0x327033f2(%rdx)
-  43:	21 78 7c             	and    %edi,0x7c(%rax)
-			44: R_X86_64_64	.text
-  46:	01 ac bc a5 ac a2 65 	add    %ebp,0x65a2aca5(%rsp,%rdi,4)
-  4d:	ac                   	lods   %ds:(%rsi),%al
-  4e:	c2 0b 6c             	ret    $0x6c0b
-  51:	9e                   	sahf
-  52:	30 30                	xor    %dh,(%rax)
-  54:	b1 30                	mov    $0x30,%cl
-  56:	b2 71                	mov    $0x71,%dl
-  58:	08 01                	or     %al,(%rcx)
-  5a:	29 26                	sub    %esp,(%rsi)
-  5c:	0e                   	(bad)
-  5d:	1b 20                	sbb    (%rax),%esp
-  5f:	c9                   	leave
-  60:	1c 11                	sbb    $0x11,%al
-  62:	c1 c4 04             	rol    $0x4,%esp
-  65:	34 13                	xor    $0x13,%al
-  67:	00 49 92             	add    %cl,-0x6e(%rcx)
-  6a:	06                   	(bad)
-  6b:	cd                   	.byte 0xcd
+program mod_int
+   0:	0000008a 	udf	#138
+        a = 10
+   4:	00630003 	.inst	0x00630003 ; undefined
+   8:	01040000 	.inst	0x01040000 ; undefined
+        b = 4
+   c:	000d0efb 	.inst	0x000d0efb ; undefined
+  10:	01010101 	.inst	0x01010101 ; undefined
+        c = MOD(a, b)
+  14:	01000000 	.inst	0x01000000 ; undefined
+  18:	2f010000 	.inst	0x2f010000 ; undefined
+  1c:	2f727375 	fcmla	v21.4h, v27.4h, v18.h[1], #270
+  20:	6c636e69 	ldnp	d9, d27, [x19, #-464]
+  24:	2f656475 	.inst	0x2f656475 ; undefined
+  28:	636e6966 	.inst	0x636e6966 ; undefined
+  2c:	6564756c 	fnmls	z12.h, p5/m, z11.h, z4.h
+end program mod_int
+  30:	7261612f 	.inst	0x7261612f ; undefined
+  34:	34366863 	cbz	w3, 6cd40 <main+0x6cd04>
+  38:	6e696c2d 	umin	v13.8h, v1.8h, v9.8h
+  3c:	672d7875 	.inst	0x672d7875 ; undefined
+  40:	0000756e 	udf	#30062
+  44:	5f646f6d 	.inst	0x5f646f6d ; undefined
+  48:	2e746e69 	umin	v9.4h, v19.4h, v20.4h
+  4c:	00383066 	.inst	0x00383066 ; NYI
+  50:	6d000000 	stp	d0, d0, [x0]
+  54:	2d687461 	ldp	s1, s29, [x3, #-192]
+  58:	74636576 	.inst	0x74636576 ; undefined
+  5c:	662d726f 	.inst	0x662d726f ; undefined
+  60:	7274726f 	.inst	0x7274726f ; undefined
+  64:	682e6e61 	.inst	0x682e6e61 ; undefined
+  68:	00000100 	udf	#256
+  6c:	000f0500 	.inst	0x000f0500 ; undefined
+  70:	00000209 	udf	#521
+			72: R_AARCH64_ABS64	.text
+  74:	00000000 	udf	#0
+  78:	05010000 	orr	z0.s, z0.s, #0x1
+  7c:	0d05260e 	.inst	0x0d05260e ; undefined
+  80:	3015052f 	adr	x15, 2a125 <main+0x2a0e9>
+  84:	3c761305 	.inst	0x3c761305 ; undefined
+  88:	000b024a 	.inst	0x000b024a ; undefined
+  8c:	Address 0x000000000000008c is out of bounds.
+
 
 Disassembly of section .debug_str:
 
 0000000000000000 <.debug_str>:
-   0:	01 00                	add    %eax,(%rax)
-   2:	00 00                	add    %al,(%rax)
-   4:	00 00                	add    %al,(%rax)
-   6:	00 00                	add    %al,(%rax)
-   8:	50                   	push   %rax
-   9:	01 00                	add    %eax,(%rax)
-   b:	00 00                	add    %al,(%rax)
-   d:	00 00                	add    %al,(%rax)
-   f:	00 01                	add    %al,(%rcx)
-  11:	00 00                	add    %al,(%rax)
-  13:	00 00                	add    %al,(%rax)
-  15:	00 00                	add    %al,(%rax)
-  17:	00 78 9c             	add    %bh,-0x64(%rax)
-  1a:	7d d0                	jge    ffffffffffffffec <options.0.0+0xffffffffffffff8c>
-  1c:	b1 52                	mov    $0x52,%cl
-  1e:	c3                   	ret
-  1f:	30 0c 06             	xor    %cl,(%rsi,%rax,1)
-  22:	60                   	(bad)
-  23:	3f                   	(bad)
-  24:	8a 47 3a             	mov    0x3a(%rdi),%al
-  27:	28 4a 4a             	sub    %cl,0x4a(%rdx)
-  2a:	c8 75 c9 0a          	enter  $0xc975,$0xa
-  2e:	1b 1b                	sbb    (%rbx),%ebx
-  30:	73 cf                	jae    1 <.debug_str+0x1>
-  32:	71 14                	jno    48 <.debug_str+0x48>
-  34:	db 47 2c             	fildl  0x2c(%rdi)
-  37:	f7 14 bb             	notl   (%rbx,%rdi,4)
-  3a:	97                   	xchg   %eax,%edi
-  3b:	be 3d e6 5a d8       	mov    $0xd85ae63d,%esi
-  40:	60                   	(bad)
-  41:	fc                   	cld
-  42:	35 7c 92 7e eb       	xor    $0xeb7e927c,%eax
-  47:	8d 18                	lea    (%rax),%ebx
-  49:	9b                   	fwait
-  4a:	49 9e                	rex.WB sahf
-  4c:	3e 03 cf             	ds add %edi,%ecx
-  4f:	63 77 50             	movsxd 0x50(%rdi),%esi
-  52:	46 9c                	rex.RX pushf
-  54:	55                   	push   %rbp
-  55:	81 33 b9 9f 61 7f    	xorl   $0x7f619fb9,(%rbx)
-  5b:	50                   	push   %rax
-  5c:	6f                   	outsl  %ds:(%rsi),(%dx)
-  5d:	ef                   	out    %eax,(%dx)
-  5e:	1f                   	(bad)
-  5f:	fa                   	cli
-  60:	35 49 16 c3 c7       	xor    $0xc7c31649,%eax
-  65:	b6 3d                	mov    $0x3d,%dh
-  67:	e9 ee a5 e9 9a       	jmp    ffffffff9ae9a65a <options.0.0+0xffffffff9ae9a5fa>
-  6c:	56                   	push   %rsi
-  6d:	43 cc                	rex.XB int3
-  6f:	85 69 74             	test   %ebp,0x74(%rcx)
-  72:	c4                   	(bad)
-  73:	24 c1                	and    $0xc1,%al
-  75:	d6                   	(bad)
-  76:	68 c4 fa 71 3f       	push   $0x3f71fac4
-  7b:	0d 30 f4 1a 9c       	or     $0x9c1af430,%eax
-  80:	9b                   	fwait
-  81:	a7                   	cmpsl  %es:(%rdi),%ds:(%rsi)
-  82:	67 0d 4b c5 24 f0    	addr32 or $0xf024c54b,%eax
-  88:	16                   	(bad)
-  89:	2c c4                	sub    $0xc4,%al
-  8b:	34 97                	xor    $0x97,%al
-  8d:	95                   	xchg   %eax,%ebp
-  8e:	36 b8 98 ec 35 fa    	ss mov $0xfa35ec98,%eax
-  94:	14 09                	adc    $0x9,%al
-  96:	bd d9 93 60 34       	mov    $0x346093d9,%ebp
-  9b:	71 32                	jno    cf <.debug_str+0xcf>
-  9d:	4b 12 47 38          	rex.WXB adc 0x38(%r15),%al
-  a1:	05 c6 a6 c1 35       	add    $0x35c1a6c6,%eax
-  a6:	4c e8 ac c5 8a 9d    	rex.WR call ffffffff9d8ac658 <options.0.0+0xffffffff9d8ac5f8>
-  ac:	87 1e                	xchg   %ebx,(%rsi)
-  ae:	6c                   	insb   (%dx),%es:(%rdi)
-  af:	e2 d9                	loop   8a <.debug_str+0x8a>
-  b1:	c0 1a b8             	rcrb   $0xb8,(%rdx)
-  b4:	ec                   	in     (%dx),%al
-  b5:	e0 b8                	loopne 6f <.debug_str+0x6f>
-  b7:	e0 fd                	loopne b6 <.debug_str+0xb6>
-  b9:	00 ac b6 5d cb 4c 75 	add    %ch,0x754ccb5d(%rsi,%rsi,4)
-  c0:	cb                   	lret
-  c1:	45 08 1e             	or     %r11b,(%r14)
-  c4:	69 fc 9f fe 83 dc    	imul   $0xdc83fe9f,%esp,%edi
-  ca:	6e                   	outsb  %ds:(%rsi),(%dx)
-  cb:	9b                   	fwait
-  cc:	a4                   	movsb  %ds:(%rsi),%es:(%rdi)
-  cd:	94                   	xchg   %eax,%esp
-  ce:	b1 6c                	mov    $0x6c,%cl
-  d0:	82                   	(bad)
-  d1:	0f e8 d7             	psubsb %mm7,%mm2
-  d4:	af                   	scas   %es:(%rdi),%eax
-  d5:	4a f6 70 25          	rex.WX divb 0x25(%rax)
-  d9:	9b                   	fwait
-  da:	93                   	xchg   %eax,%ebx
-  db:	c0 72 2f a2          	shlb   $0xa2,0x2f(%rdx)
-  df:	f1                   	int1
-  e0:	2a 9a c0 aa 3e 75    	sub    0x753eaac0(%rdx),%bl
-  e6:	ae                   	scas   %es:(%rdi),%al
-  e7:	2f                   	(bad)
-  e8:	7e 17                	jle    101 <options.0.0+0xa1>
-  ea:	77 55                	ja     141 <options.0.0+0xe1>
-  ec:	5f                   	pop    %rdi
-  ed:	4c db 73 a8          	rex.WR (bad) -0x58(%rbx)
+program mod_int
+   0:	6d6f682f 	ldp	d15, d26, [x1, #-272]
+        a = 10
+   4:	616d2f65 	.inst	0x616d2f65 ; undefined
+   8:	686b6b72 	.inst	0x686b6b72 ; undefined
+        b = 4
+   c:	64697375 	.inst	0x64697375 ; undefined
+  10:	636f442f 	.inst	0x636f442f ; undefined
+        c = MOD(a, b)
+  14:	6e656d75 	umin	v21.8h, v11.8h, v5.8h
+  18:	452f7374 	.inst	0x452f7374 ; undefined
+  1c:	6e69676e 	umax	v14.8h, v27.8h, v9.8h
+  20:	69726565 	ldpsw	x5, x25, [x11, #-112]
+  24:	442f676e 	.inst	0x442f676e ; undefined
+  28:	73617369 	.inst	0x73617369 ; undefined
+  2c:	626d6573 	.inst	0x626d6573 ; undefined
+end program mod_int
+  30:	676e696c 	.inst	0x676e696c ; undefined
+  34:	6e69422d 	raddhn2	v13.8h, v17.4s, v9.4s
+  38:	65697261 	fnmls	z1.h, p4/m, z19.h, z9.h
+  3c:	6f462f73 	.inst	0x6f462f73 ; undefined
+  40:	61727472 	.inst	0x61727472 ; undefined
+  44:	52412f6e 	.inst	0x52412f6e ; undefined
+  48:	72615f4d 	.inst	0x72615f4d ; undefined
+  4c:	74696863 	.inst	0x74696863 ; undefined
+  50:	75746365 	.inst	0x75746365 ; undefined
+  54:	412f6572 	.inst	0x412f6572 ; undefined
+  58:	34364d52 	cbz	w18, 6ca00 <main+0x6c9c4>
+  5c:	746e492f 	.inst	0x746e492f ; undefined
+  60:	72656765 	.inst	0x72656765 ; undefined
+  64:	65704f5f 	fnmla	z31.h, p3/m, z26.h, z16.h
+  68:	69746172 	ldpsw	x18, x24, [x11, #-96]
+  6c:	2f736e6f 	.inst	0x2f736e6f ; undefined
+  70:	5f646f4d 	.inst	0x5f646f4d ; undefined
+  74:	2f746e49 	.inst	0x2f746e49 ; undefined
+  78:	68746957 	.inst	0x68746957 ; undefined
+  7c:	6265445f 	.inst	0x6265445f ; undefined
+  80:	495f6775 	.inst	0x495f6775 ; undefined
+  84:	006f666e 	.inst	0x006f666e ; undefined
+  88:	72616863 	.inst	0x72616863 ; undefined
+  8c:	65746361 	fnmls	z1.h, p0/m, z27.h, z20.h
+  90:	696b2872 	ldpsw	x18, x10, [x3, #-168]
+  94:	313d646e 	adds	w14, w3, #0xf59
+  98:	72610029 	.inst	0x72610029 ; undefined
+  9c:	6d006367 	stp	d7, d24, [x27]
+  a0:	695f646f 	ldpsw	x15, x25, [x3, #248]
+  a4:	662e746e 	.inst	0x662e746e ; undefined
+  a8:	69003830 	stgp	x16, x14, [x1]
+  ac:	6765746e 	.inst	0x6765746e ; undefined
+  b0:	6b287265 	subs	w5, w19, w8, uxtx #4
+  b4:	3d646e69 	ldr	b9, [x19, #2331]
+  b8:	6d002934 	stp	d20, d10, [x9]
+  bc:	006e6961 	.inst	0x006e6961 ; undefined
+  c0:	20554e47 	.inst	0x20554e47 ; undefined
+  c4:	74726f46 	.inst	0x74726f46 ; undefined
+  c8:	326e6172 	.inst	0x326e6172 ; undefined
+  cc:	20383030 	.inst	0x20383030 ; undefined
+  d0:	322e3031 	orr	w17, w1, #0x7ffc0000
+  d4:	3220312e 	orr	w14, w9, #0x1fff
+  d8:	30313230 	adr	x16, 6271d <main+0x626e1>
+  dc:	20303131 	.inst	0x20303131 ; undefined
+  e0:	696c6d2d 	ldpsw	x13, x27, [x9, #-160]
+  e4:	656c7474 	fnmls	z20.h, p5/m, z3.h, z12.h
+  e8:	646e652d 	.inst	0x646e652d ; undefined
+  ec:	206e6169 	.inst	0x206e6169 ; undefined
+  f0:	62616d2d 	.inst	0x62616d2d ; undefined
+  f4:	706c3d69 	adr	x9, d88a3 <main+0xd8867>
+  f8:	2d203436 	stp	s22, s13, [x1, #-256]
+  fc:	62646767 	.inst	0x62646767 ; undefined
+ 100:	662d2033 	.inst	0x662d2033 ; undefined
+ 104:	72746e69 	.inst	0x72746e69 ; undefined
+ 108:	69736e69 	ldpsw	x9, x27, [x19, #-104]
+ 10c:	6f6d2d63 	.inst	0x6f6d2d63 ; undefined
+ 110:	656c7564 	fnmls	z4.h, p5/m, z11.h, z12.h
+ 114:	61702d73 	.inst	0x61702d73 ; undefined
+ 118:	2f206874 	.inst	0x2f206874 ; undefined
+ 11c:	2f727375 	fcmla	v21.4h, v27.4h, v18.h[1], #270
+ 120:	2f62696c 	umlsl	v12.4s, v11.4h, v2.h[6]
+ 124:	2f636367 	umlsl	v7.4s, v27.4h, v3.h[2]
+ 128:	63726161 	.inst	0x63726161 ; undefined
+ 12c:	2d343668 	stp	s8, s13, [x19, #-96]
+ 130:	756e696c 	.inst	0x756e696c ; undefined
+ 134:	6e672d78 	uqsub	v24.8h, v11.8h, v7.8h
+ 138:	30312f75 	adr	x21, 62725 <main+0x626e9>
+ 13c:	6e69662f 	umax	v15.8h, v17.8h, v9.8h
+ 140:	64756c63 	.inst	0x64756c63 ; undefined
+ 144:	662d2065 	.inst	0x662d2065 ; undefined
+ 148:	2d657270 	ldp	s16, s28, [x19, #-216]
+ 14c:	6c636e69 	ldnp	d9, d27, [x19, #-464]
+ 150:	3d656475 	ldr	b21, [x3, #2393]
+ 154:	7273752f 	.inst	0x7273752f ; undefined
+ 158:	636e692f 	.inst	0x636e692f ; undefined
+ 15c:	6564756c 	fnmls	z12.h, p5/m, z11.h, z4.h
+ 160:	6e69662f 	umax	v15.8h, v17.8h, v9.8h
+ 164:	64756c63 	.inst	0x64756c63 ; undefined
+ 168:	61612f65 	.inst	0x61612f65 ; undefined
+ 16c:	36686372 	tbz	w18, #13, dd8 <main+0xd9c>
+ 170:	696c2d34 	ldpsw	x20, x11, [x9, #-160]
+ 174:	2d78756e 	ldp	s14, s29, [x11, #-64]
+ 178:	2f756e67 	.inst	0x2f756e67 ; undefined
+ 17c:	6874616d 	.inst	0x6874616d ; undefined
+ 180:	6365762d 	.inst	0x6365762d ; undefined
+ 184:	2d726f74 	ldp	s20, s27, [x27, #-112]
+ 188:	74726f66 	.inst	0x74726f66 ; undefined
+ 18c:	2e6e6172 	rsubhn	v18.4h, v11.4s, v14.4s
+ 190:	6f6d0068 	mla	v8.8h, v3.8h, v13.h[2]
+ 194:	6e695f64 	uqrshl	v4.8h, v27.8h, v9.8h
+ 198:	72610074 	.inst	0x72610074 ; undefined
+ 19c:	Address 0x000000000000019c is out of bounds.
 
-Disassembly of section .debug_line_str:
-
-0000000000000000 <.debug_line_str>:
-   0:	01 00                	add    %eax,(%rax)
-   2:	00 00                	add    %al,(%rax)
-   4:	00 00                	add    %al,(%rax)
-   6:	00 00                	add    %al,(%rax)
-   8:	92                   	xchg   %eax,%edx
-   9:	01 00                	add    %eax,(%rax)
-   b:	00 00                	add    %al,(%rax)
-   d:	00 00                	add    %al,(%rax)
-   f:	00 01                	add    %al,(%rcx)
-  11:	00 00                	add    %al,(%rax)
-  13:	00 00                	add    %al,(%rax)
-  15:	00 00                	add    %al,(%rax)
-  17:	00 78 9c             	add    %bh,-0x64(%rax)
-  1a:	c5 8f 31             	(bad)
-  1d:	4e 04 31             	rex.WRX add $0x31,%al
-  20:	0c 45                	or     $0x45,%al
-  22:	e7 42                	out    %eax,$0x42
-  24:	19 53 ac             	sbb    %edx,-0x54(%rbx)
-  27:	46 db 82 06 24 8a 15 	rex.RX fildl 0x158a2406(%rdx)
-  2e:	12 0d 65 94 c9 38    	adc    0x38c99465(%rip),%cl        # 38c99499 <options.0.0+0x38c99439>
-  34:	89 a5 8d 8d 1c 07    	mov    %esp,0x71c8d8d(%rbp)
-  3a:	0d b7 27 08 0a       	or     $0xa0827b7,%eax
-  3f:	f6 04 74 ef          	testb  $0xef,(%rsp,%rsi,2)
-  43:	bf ea 7d 28 52       	mov    $0x52287dea,%edi
-  48:	11 4a 38             	adc    %ecx,0x38(%rdx)
-  4b:	44 61                	rex.R (bad)
-  4d:	95                   	xchg   %eax,%ebp
-  4e:	d8 2b                	fsubrs (%rbx)
-  50:	b2 35                	mov    $0x35,%dl
-  52:	78 e4                	js     38 <.debug_line_str+0x38>
-  54:	4c 8c a8 c4 19 56 6a 	rex.WR mov %gs,0x6a5619c4(%rax)
-  5b:	a1 35 ac db 75 2c f7 	movabs 0x1c40f72c75dbac35,%eax
-  62:	40 1c 
-  64:	94                   	xchg   %eax,%esp
-  65:	b0 c1                	mov    $0xc1,%al
-  67:	93                   	xchg   %eax,%ebx
-  68:	a8 69                	test   $0x69,%al
-  6a:	60                   	(bad)
-  6b:	b8 7f bd f8 a0       	mov    $0xa0f8bd7f,%eax
-  70:	b1 90                	mov    $0x90,%cl
-  72:	61                   	(bad)
-  73:	b4 ae                	mov    $0xae,%ah
-  75:	f8                   	clc
-  76:	2d 96 13 3c b3       	sub    $0xb33c1396,%eax
-  7b:	61                   	(bad)
-  7c:	46 f5                	rex.RX cmc
-  7e:	2f                   	(bad)
-  7f:	ef                   	out    %eax,(%dx)
-  80:	a8 c1                	test   $0xc1,%al
-  82:	48 b8 c1 45 76 3f 34 	movabs $0x1591bc343f7645c1,%rax
-  89:	bc 91 15 
-  8c:	bf e2 d6 f3 98       	mov    $0x98f3d6e2,%edi
-  91:	49 a6                	rex.WB cmpsb %es:(%rdi),%ds:(%rsi)
-  93:	3a 3c b1             	cmp    (%rcx,%rsi,4),%bh
-  96:	cd e9                	int    $0xe9
-  98:	ee                   	out    %al,(%dx)
-  99:	3c c1                	cmp    $0xc1,%al
-  9b:	ff e7                	jmp    *%rdi
-  9d:	fc                   	cld
-  9e:	4d a8 a1             	rex.WRB test $0xa1,%al
-  a1:	6e                   	outsb  %ds:(%rsi),(%dx)
-  a2:	21 89 66 84 8d 18    	and    %ecx,0x188d8466(%rcx)
-  a8:	e6 19                	out    %al,$0x19
-  aa:	8e f3                	mov    %ebx,%?
-  ac:	e2 97                	loop   45 <.debug_line_str+0x45>
-  ae:	93                   	xchg   %eax,%ebx
-  af:	8b c2                	mov    %edx,%eax
-  b1:	7b 70                	jnp    123 <options.0.0+0xc3>
-  b3:	23 a1 1f 2e 73 87    	and    -0x788cd1e1(%rcx),%esp
-  b9:	f6 d9                	neg    %cl
-  bb:	54                   	push   %rsp
-  bc:	c4                   	(bad)
-  bd:	a0 37 05 e2 78 ed 3b 	movabs 0xfa423bed78e20537,%al
-  c4:	42 fa 
-  c6:	85 9b 83 37 1c ac    	test   %ebx,-0x53e3c87d(%rbx)
-  cc:	b8 8f d1 29 ea       	mov    $0xea29d18f,%eax
-  d1:	d2 4f ff             	rorb   %cl,-0x1(%rdi)
-  d4:	5c                   	pop    %rsp
-  d5:	a6                   	cmpsb  %es:(%rdi),%ds:(%rsi)
-  d6:	2f                   	(bad)
-  d7:	f6                   	.byte 0xf6
-  d8:	97                   	xchg   %eax,%edi
-  d9:	92                   	xchg   %eax,%edx
-  da:	fb                   	sti
 
 Disassembly of section .comment:
 
 0000000000000000 <.comment>:
-   0:	00 47 43             	add    %al,0x43(%rdi)
-   3:	43 3a 20             	rex.XB cmp (%r8),%spl
-   6:	28 63 6f             	sub    %ah,0x6f(%rbx)
-   9:	6e                   	outsb  %ds:(%rsi),(%dx)
-   a:	64 61                	fs (bad)
-   c:	2d 66 6f 72 67       	sub    $0x67726f66,%eax
-  11:	65 20 67 63          	and    %ah,%gs:0x63(%rdi)
-  15:	63 20                	movsxd (%rax),%esp
-  17:	31 35 2e 31 2e 30    	xor    %esi,0x302e312e(%rip)        # 302e314b <options.0.0+0x302e30eb>
-  1d:	2d 33 29 20 31       	sub    $0x31202933,%eax
-  22:	35 2e 31 2e 30       	xor    $0x302e312e,%eax
-	...
-
-Disassembly of section .note.gnu.property:
-
-0000000000000080 <.note.gnu.property>:
-  80:	04 00                	add    $0x0,%al
-  82:	00 00                	add    %al,(%rax)
-  84:	20 00                	and    %al,(%rax)
-  86:	00 00                	add    %al,(%rax)
-  88:	05 00 00 00 47       	add    $0x47000000,%eax
-  8d:	4e 55                	rex.WRX push %rbp
-  8f:	00 02                	add    %al,(%rdx)
-  91:	00 01                	add    %al,(%rcx)
-  93:	c0 04 00 00          	rolb   $0x0,(%rax,%rax,1)
-  97:	00 01                	add    %al,(%rcx)
-  99:	00 00                	add    %al,(%rax)
-  9b:	00 00                	add    %al,(%rax)
-  9d:	00 00                	add    %al,(%rax)
-  9f:	00 01                	add    %al,(%rcx)
-  a1:	00 01                	add    %al,(%rcx)
-  a3:	c0 04 00 00          	rolb   $0x0,(%rax,%rax,1)
-  a7:	00 01                	add    %al,(%rcx)
-  a9:	00 00                	add    %al,(%rax)
-  ab:	00 00                	add    %al,(%rax)
-  ad:	00 00                	add    %al,(%rax)
-	...
+program mod_int
+   0:	43434700 	.inst	0x43434700 ; undefined
+        a = 10
+   4:	4428203a 	.inst	0x4428203a ; undefined
+   8:	61696265 	.inst	0x61696265 ; undefined
+        b = 4
+   c:	3031206e 	adr	x14, 62419 <main+0x623dd>
+  10:	312e322e 	adds	w14, w17, #0xb8c
+        c = MOD(a, b)
+  14:	2029362d 	.inst	0x2029362d ; undefined
+  18:	322e3031 	orr	w17, w1, #0x7ffc0000
+  1c:	3220312e 	orr	w14, w9, #0x1fff
+  20:	30313230 	adr	x16, 62665 <main+0x62629>
+  24:	00303131 	.inst	0x00303131 ; NYI
 
 Disassembly of section .eh_frame:
 
-00000000000000b0 <.eh_frame>:
-  b0:	14 00                	adc    $0x0,%al
-  b2:	00 00                	add    %al,(%rax)
-  b4:	00 00                	add    %al,(%rax)
-  b6:	00 00                	add    %al,(%rax)
-  b8:	01 7a 52             	add    %edi,0x52(%rdx)
-  bb:	00 01                	add    %al,(%rcx)
-  bd:	78 10                	js     cf <.eh_frame+0x1f>
-  bf:	01 1b                	add    %ebx,(%rbx)
-  c1:	0c 07                	or     $0x7,%al
-  c3:	08 90 01 00 00 1c    	or     %dl,0x1c000001(%rax)
-  c9:	00 00                	add    %al,(%rax)
-  cb:	00 1c 00             	add    %bl,(%rax,%rax,1)
-  ce:	00 00                	add    %al,(%rax)
-  d0:	00 00                	add    %al,(%rax)
-			d0: R_X86_64_PC32	.text
-  d2:	00 00                	add    %al,(%rax)
-  d4:	1f                   	(bad)
-  d5:	00 00                	add    %al,(%rax)
-  d7:	00 00                	add    %al,(%rax)
-  d9:	41 0e                	rex.B (bad)
-  db:	10 86 02 43 0d 06    	adc    %al,0x60d4302(%rsi)
-  e1:	5a                   	pop    %rdx
-  e2:	0c 07                	or     $0x7,%al
-  e4:	08 00                	or     %al,(%rax)
-  e6:	00 00                	add    %al,(%rax)
-  e8:	1c 00                	sbb    $0x0,%al
-  ea:	00 00                	add    %al,(%rax)
-  ec:	3c 00                	cmp    $0x0,%al
-  ee:	00 00                	add    %al,(%rax)
-  f0:	00 00                	add    %al,(%rax)
-			f0: R_X86_64_PC32	.text+0x1f
-  f2:	00 00                	add    %al,(%rax)
-  f4:	40 00 00             	rex add %al,(%rax)
-  f7:	00 00                	add    %al,(%rax)
-  f9:	41 0e                	rex.B (bad)
-  fb:	10 86 02 43 0d 06    	adc    %al,0x60d4302(%rsi)
- 101:	7b 0c                	jnp    10f <options.0.0+0xaf>
- 103:	07                   	(bad)
- 104:	08 00                	or     %al,(%rax)
+0000000000000000 <.eh_frame>:
+   0:	00000010 	udf	#16
+   4:	00000000 	udf	#0
+   8:	00527a01 	.inst	0x00527a01 ; undefined
+   c:	011e7804 	.inst	0x011e7804 ; undefined
+  10:	001f0c1b 	.inst	0x001f0c1b ; undefined
+  14:	00000014 	udf	#20
+  18:	00000018 	udf	#24
+  1c:	00000000 	udf	#0
+			1c: R_AARCH64_PREL32	.text
+  20:	0000003c 	udf	#60
+  24:	100e4100 	adr	x0, 1c844 <main+0x1c808>
+  28:	00000e4d 	udf	#3661
+  2c:	00000020 	udf	#32
+  30:	00000030 	udf	#48
+  34:	00000000 	udf	#0
+			34: R_AARCH64_PREL32	.text+0x3c
+  38:	0000003c 	udf	#60
+  3c:	200e4100 	.inst	0x200e4100 ; undefined
+  40:	039e049d 	.inst	0x039e049d ; undefined
+  44:	0eddde4d 	.inst	0x0eddde4d ; undefined
 	...
+Contents of the .debug_info section (loaded from mod_int.o):
 
-Can't get contents for section '.debug_info'.
+  Compilation Unit @ offset 0x0:
+   Length:        0xcd (32-bit)
+   Version:       4
+   Abbrev Offset: 0x0
+   Pointer Size:  8
+ <0><b>: Abbrev Number: 1 (DW_TAG_compile_unit)
+    <c>   DW_AT_producer    : (indirect string, offset: 0xc0): GNU Fortran2008 10.2.1 20210110 -mlittle-endian -mabi=lp64 -ggdb3 -fintrinsic-modules-path /usr/lib/gcc/aarch64-linux-gnu/10/finclude -fpre-include=/usr/include/finclude/aarch64-linux-gnu/math-vector-fortran.h
+    <10>   DW_AT_language    : 14	(Fortran 95)
+    <11>   DW_AT_identifier_case: 2	(down_case)
+    <12>   DW_AT_name        : (indirect string, offset: 0x9f): mod_int.f08
+    <16>   DW_AT_comp_dir    : (indirect string, offset: 0x0): /home/markkhusid/Documents/Engineering/Disassembling-Binaries/Fortran/ARM_architecture/ARM64/Integer_Operations/Mod_Int/With_Debug_Info
+    <1a>   DW_AT_low_pc      : 0x0
+    <22>   DW_AT_high_pc     : 0x78
+    <2a>   DW_AT_stmt_list   : 0x0
+    <2e>   DW_AT_GNU_macros  : 0x0
+ <1><32>: Abbrev Number: 2 (DW_TAG_subprogram)
+    <33>   DW_AT_external    : 1
+    <33>   DW_AT_name        : (indirect string, offset: 0xbb): main
+    <37>   DW_AT_decl_file   : 1
+    <38>   DW_AT_decl_line   : 12
+    <39>   DW_AT_decl_column : 19
+    <3a>   DW_AT_type        : <0x74>
+    <3e>   DW_AT_low_pc      : 0x3c
+    <46>   DW_AT_high_pc     : 0x3c
+    <4e>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
+    <50>   DW_AT_GNU_all_tail_call_sites: 1
+    <50>   DW_AT_sibling     : <0x74>
+ <2><54>: Abbrev Number: 3 (DW_TAG_formal_parameter)
+    <55>   DW_AT_name        : (indirect string, offset: 0x9a): argc
+    <59>   DW_AT_decl_file   : 1
+    <5a>   DW_AT_decl_line   : 12
+    <5b>   DW_AT_decl_column : 19
+    <5c>   DW_AT_type        : <0x7b>
+    <60>   DW_AT_location    : 2 byte block: 91 7c 	(DW_OP_fbreg: -4)
+ <2><63>: Abbrev Number: 3 (DW_TAG_formal_parameter)
+    <64>   DW_AT_name        : (indirect string, offset: 0x19a): argv
+    <68>   DW_AT_decl_file   : 1
+    <69>   DW_AT_decl_line   : 12
+    <6a>   DW_AT_decl_column : 19
+    <6b>   DW_AT_type        : <0x80>
+    <6f>   DW_AT_location    : 3 byte block: 91 70 6 	(DW_OP_fbreg: -16; DW_OP_deref)
+ <2><73>: Abbrev Number: 0
+ <1><74>: Abbrev Number: 4 (DW_TAG_base_type)
+    <75>   DW_AT_byte_size   : 4
+    <76>   DW_AT_encoding    : 5	(signed)
+    <77>   DW_AT_name        : (indirect string, offset: 0xab): integer(kind=4)
+ <1><7b>: Abbrev Number: 5 (DW_TAG_const_type)
+    <7c>   DW_AT_type        : <0x74>
+ <1><80>: Abbrev Number: 6 (DW_TAG_pointer_type)
+    <81>   DW_AT_byte_size   : 8
+    <82>   DW_AT_type        : <0x86>
+ <1><86>: Abbrev Number: 4 (DW_TAG_base_type)
+    <87>   DW_AT_byte_size   : 1
+    <88>   DW_AT_encoding    : 8	(unsigned char)
+    <89>   DW_AT_name        : (indirect string, offset: 0x88): character(kind=1)
+ <1><8d>: Abbrev Number: 7 (DW_TAG_subprogram)
+    <8e>   DW_AT_name        : (indirect string, offset: 0x192): mod_int
+    <92>   DW_AT_decl_file   : 1
+    <93>   DW_AT_decl_line   : 1
+    <94>   DW_AT_decl_column : 15
+    <95>   DW_AT_main_subprogram: 1
+    <95>   DW_AT_calling_convention: 2	(program)
+    <96>   DW_AT_low_pc      : 0x0
+    <9e>   DW_AT_high_pc     : 0x3c
+    <a6>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
+    <a8>   DW_AT_GNU_all_call_sites: 1
+ <2><a8>: Abbrev Number: 8 (DW_TAG_variable)
+    <a9>   DW_AT_name        : a
+    <ab>   DW_AT_decl_file   : 1
+    <ac>   DW_AT_decl_line   : 5
+    <ad>   DW_AT_decl_column : 28
+    <ae>   DW_AT_type        : <0x74>
+    <b2>   DW_AT_location    : 2 byte block: 91 7c 	(DW_OP_fbreg: -4)
+ <2><b5>: Abbrev Number: 8 (DW_TAG_variable)
+    <b6>   DW_AT_name        : b
+    <b8>   DW_AT_decl_file   : 1
+    <b9>   DW_AT_decl_line   : 5
+    <ba>   DW_AT_decl_column : 31
+    <bb>   DW_AT_type        : <0x74>
+    <bf>   DW_AT_location    : 2 byte block: 91 78 	(DW_OP_fbreg: -8)
+ <2><c2>: Abbrev Number: 8 (DW_TAG_variable)
+    <c3>   DW_AT_name        : c
+    <c5>   DW_AT_decl_file   : 1
+    <c6>   DW_AT_decl_line   : 5
+    <c7>   DW_AT_decl_column : 34
+    <c8>   DW_AT_type        : <0x74>
+    <cc>   DW_AT_location    : 2 byte block: 91 74 	(DW_OP_fbreg: -12)
+ <2><cf>: Abbrev Number: 0
+ <1><d0>: Abbrev Number: 0
+
 Contents of the .debug_abbrev section (loaded from mod_int.o):
 
-  Number TAG (0)
-   1      DW_TAG_variable    [no children]
-    DW_AT_name         DW_FORM_string
-    DW_AT_decl_file    DW_FORM_implicit_const: 1
-    DW_AT_decl_line    DW_FORM_implicit_const: 5
-    DW_AT_decl_column  DW_FORM_data1
-    DW_AT_type         DW_FORM_ref4
-    DW_AT_location     DW_FORM_exprloc
-    DW_AT value: 0     DW_FORM value: 0
-   2      DW_TAG_formal_parameter    [no children]
-    DW_AT_name         DW_FORM_strp
-    DW_AT_decl_file    DW_FORM_implicit_const: 1
-    DW_AT_decl_line    DW_FORM_implicit_const: 12
-    DW_AT_decl_column  DW_FORM_implicit_const: 19
-    DW_AT_type         DW_FORM_ref4
-    DW_AT_location     DW_FORM_exprloc
-    DW_AT value: 0     DW_FORM value: 0
-   3      DW_TAG_base_type    [no children]
-    DW_AT_byte_size    DW_FORM_data1
-    DW_AT_encoding     DW_FORM_data1
-    DW_AT_name         DW_FORM_strp
-    DW_AT value: 0     DW_FORM value: 0
-   4      DW_TAG_compile_unit    [has children]
+  Number TAG (0x0)
+   1      DW_TAG_compile_unit    [has children]
     DW_AT_producer     DW_FORM_strp
     DW_AT_language     DW_FORM_data1
     DW_AT_identifier_case DW_FORM_data1
-    DW_AT_name         DW_FORM_line_strp
-    DW_AT_comp_dir     DW_FORM_line_strp
+    DW_AT_name         DW_FORM_strp
+    DW_AT_comp_dir     DW_FORM_strp
     DW_AT_low_pc       DW_FORM_addr
     DW_AT_high_pc      DW_FORM_data8
     DW_AT_stmt_list    DW_FORM_sec_offset
-    DW_AT_macros       DW_FORM_sec_offset
+    DW_AT_GNU_macros   DW_FORM_sec_offset
     DW_AT value: 0     DW_FORM value: 0
-   5      DW_TAG_subprogram    [has children]
+   2      DW_TAG_subprogram    [has children]
     DW_AT_external     DW_FORM_flag_present
     DW_AT_name         DW_FORM_strp
     DW_AT_decl_file    DW_FORM_data1
@@ -762,17 +672,30 @@ Contents of the .debug_abbrev section (loaded from mod_int.o):
     DW_AT_low_pc       DW_FORM_addr
     DW_AT_high_pc      DW_FORM_data8
     DW_AT_frame_base   DW_FORM_exprloc
-    DW_AT_call_all_tail_calls DW_FORM_flag_present
+    DW_AT_GNU_all_tail_call_sites DW_FORM_flag_present
     DW_AT_sibling      DW_FORM_ref4
     DW_AT value: 0     DW_FORM value: 0
-   6      DW_TAG_const_type    [no children]
+   3      DW_TAG_formal_parameter    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_decl_column  DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_location     DW_FORM_exprloc
+    DW_AT value: 0     DW_FORM value: 0
+   4      DW_TAG_base_type    [no children]
+    DW_AT_byte_size    DW_FORM_data1
+    DW_AT_encoding     DW_FORM_data1
+    DW_AT_name         DW_FORM_strp
+    DW_AT value: 0     DW_FORM value: 0
+   5      DW_TAG_const_type    [no children]
     DW_AT_type         DW_FORM_ref4
     DW_AT value: 0     DW_FORM value: 0
-   7      DW_TAG_pointer_type    [no children]
+   6      DW_TAG_pointer_type    [no children]
     DW_AT_byte_size    DW_FORM_data1
     DW_AT_type         DW_FORM_ref4
     DW_AT value: 0     DW_FORM value: 0
-   8      DW_TAG_subprogram    [has children]
+   7      DW_TAG_subprogram    [has children]
     DW_AT_name         DW_FORM_strp
     DW_AT_decl_file    DW_FORM_data1
     DW_AT_decl_line    DW_FORM_data1
@@ -782,99 +705,154 @@ Contents of the .debug_abbrev section (loaded from mod_int.o):
     DW_AT_low_pc       DW_FORM_addr
     DW_AT_high_pc      DW_FORM_data8
     DW_AT_frame_base   DW_FORM_exprloc
-    DW_AT_call_all_calls DW_FORM_flag_present
+    DW_AT_GNU_all_call_sites DW_FORM_flag_present
+    DW_AT value: 0     DW_FORM value: 0
+   8      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_string
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_decl_column  DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_location     DW_FORM_exprloc
     DW_AT value: 0     DW_FORM value: 0
 
 Contents of the .debug_aranges section (loaded from mod_int.o):
 
+  Length:                   44
+  Version:                  2
+  Offset into .debug_info:  0x0
+  Pointer Size:             8
+  Segment Size:             0
 
-Can't get contents for section '.debug_info'.
+    Address            Length
+    0000000000000000 0000000000000078 
+    0000000000000000 0000000000000000 
 
 Contents of the .debug_macro section (loaded from mod_int.o):
 
-  Offset:                      0
-  Version:                     5
+  Offset:                      0x0
+  Version:                     4
   Offset size:                 4
-  Offset into .debug_line:     0
+  Offset into .debug_line:     0x0
 
- DW_MACRO_start_file - lineno: 0 filenum: 1
- DW_MACRO_start_file - lineno: 0 filenum: 2
+ DW_MACRO_start_file - lineno: 0 filenum: 1 filename: mod_int.f08
+ DW_MACRO_start_file - lineno: 0 filenum: 2 filename: /usr/include/finclude/aarch64-linux-gnu/math-vector-fortran.h
  DW_MACRO_end_file
  DW_MACRO_end_file
 
 Raw dump of debug contents of section .debug_line (loaded from mod_int.o):
 
+  Offset:                      0x0
+  Length:                      138
+  DWARF Version:               3
+  Prologue Length:             99
+  Minimum Instruction Length:  4
+  Initial value of 'is_stmt':  1
+  Line Base:                   -5
+  Line Range:                  14
+  Opcode Base:                 13
+
+ Opcodes:
+  Opcode 1 has 0 args
+  Opcode 2 has 1 arg
+  Opcode 3 has 1 arg
+  Opcode 4 has 1 arg
+  Opcode 5 has 1 arg
+  Opcode 6 has 0 args
+  Opcode 7 has 0 args
+  Opcode 8 has 0 args
+  Opcode 9 has 1 arg
+  Opcode 10 has 0 args
+  Opcode 11 has 0 args
+  Opcode 12 has 1 arg
+
+ The Directory Table (offset 0x1b):
+  1	/usr/include/finclude/aarch64-linux-gnu
+
+ The File Name Table (offset 0x44):
+  Entry	Dir	Time	Size	Name
+  1	0	0	0	mod_int.f08
+  2	1	0	0	math-vector-fortran.h
+
+ Line Number Statements:
+  [0x0000006d]  Set column to 15
+  [0x0000006f]  Extended opcode 2: set Address to 0x0
+  [0x0000007a]  Copy
+  [0x0000007b]  Set column to 14
+  [0x0000007d]  Special opcode 25: advance Address by 4 to 0x4 and Line by 6 to 7
+  [0x0000007e]  Set column to 13
+  [0x00000080]  Special opcode 34: advance Address by 8 to 0xc and Line by 1 to 8
+  [0x00000081]  Set column to 21
+  [0x00000083]  Special opcode 35: advance Address by 8 to 0x14 and Line by 2 to 10
+  [0x00000084]  Set column to 19
+  [0x00000086]  Special opcode 105: advance Address by 28 to 0x30 and Line by 2 to 12
+  [0x00000087]  Special opcode 47: advance Address by 12 to 0x3c and Line by 0 to 12
+  [0x00000088]  Special opcode 61: advance Address by 16 to 0x4c and Line by 0 to 12
+  [0x00000089]  Advance PC by 44 to 0x78
+  [0x0000008b]  Extended opcode 1: End of Sequence
+
+
 Contents of the .debug_str section (loaded from mod_int.o):
 
-  0x00000000 01000000 00000000 50010000 00000000 ........P.......
-  0x00000010 01000000 00000000 789c7dd0 b152c330 ........x.}..R.0
-  0x00000020 0c06603f 8a473a28 4a4ac875 c90a1b1b ..`?.G:(JJ.u....
-  0x00000030 73cf7114 db472cf7 14bb97be 3de65ad8 s.q..G,.....=.Z.
-  0x00000040 60fc357c 927eeb8d 189b499e 3e03cf63 `.5|.~....I.>..c
-  0x00000050 7750469c 558133b9 9f617f50 6fef1ffa wPF.U.3..aPo...
-  0x00000060 354916c3 c7b63de9 eea5e99a 5643cc85 5I....=.....VC..
-  0x00000070 6974c424 c1d668c4 fa713f0d 30f41a9c it.$..h..q?.0...
-  0x00000080 9ba7670d 4bc524f0 162cc434 979536b8 ..g.K.$..,.4..6.
-  0x00000090 98ec35fa 1409bdd9 93603471 324b1247 ..5......`4q2K.G
-  0x000000a0 3805c6a6 c1354ce8 acc58a9d 871e6ce2 8....5L.......l.
-  0x000000b0 d9c01ab8 ece0b8e0 fd00acb6 5dcb4c75 ............].Lu
-  0x000000c0 cb45081e 69fc9ffe 83dc6e9b a494b16c .E..i.....n....l
-  0x000000d0 820fe8d7 af4af670 259b93c0 722fa2f1 .....J.p%...r/..
-  0x000000e0 2a9ac0aa 3e75ae2f 7e177755 5f4cdb73 *...>u./~.wU_L.s
-  0x000000f0 a8                                  .
-
-Contents of the .debug_line_str section (loaded from mod_int.o):
-
-  0x00000000 01000000 00000000 92010000 00000000 ................
-  0x00000010 01000000 00000000 789cc58f 314e0431 ........x...1N.1
-  0x00000020 0c45e742 1953ac46 db820624 8a15120d .E.B.S.F...$....
-  0x00000030 6594c938 89a58d8d 1c070db7 27080af6 e..8........'...
-  0x00000040 0474efbf ea7d2852 114a3844 6195d82b .t...}(R.J8Da..+
-  0x00000050 b23578e4 4c8ca8c4 19566aa1 35acdb75 .5x.L....Vj.5..u
-  0x00000060 2cf7401c 94b0c193 a86960b8 7fbdf8a0 ,.@......i`....
-  0x00000070 b19061b4 aef82d96 133cb361 46f52fef ..a...-..<.aF./.
-  0x00000080 a8c148b8 c145763f 34bc9115 bfe2d6f3 ..H..Ev?4.......
-  0x00000090 9849a63a 3cb1cde9 ee3cc1ff e7fc4da8 .I.:<....<....M.
-  0x000000a0 a16e2189 66848d18 e6198ef3 e297938b .n!.f...........
-  0x000000b0 c27b7023 a11f2e73 87f6d954 c4a03705 .{p#...s...T..7.
-  0x000000c0 e278ed3b 42fa859b 83371cac b88fd129 .x.;B....7.....)
-  0x000000d0 ead24fff 5ca62ff6 9792fb            ..O.\./....
+  0x00000000 2f686f6d 652f6d61 726b6b68 75736964 /home/markkhusid
+  0x00000010 2f446f63 756d656e 74732f45 6e67696e /Documents/Engin
+  0x00000020 65657269 6e672f44 69736173 73656d62 eering/Disassemb
+  0x00000030 6c696e67 2d42696e 61726965 732f466f ling-Binaries/Fo
+  0x00000040 72747261 6e2f4152 4d5f6172 63686974 rtran/ARM_archit
+  0x00000050 65637475 72652f41 524d3634 2f496e74 ecture/ARM64/Int
+  0x00000060 65676572 5f4f7065 72617469 6f6e732f eger_Operations/
+  0x00000070 4d6f645f 496e742f 57697468 5f446562 Mod_Int/With_Deb
+  0x00000080 75675f49 6e666f00 63686172 61637465 ug_Info.characte
+  0x00000090 72286b69 6e643d31 29006172 6763006d r(kind=1).argc.m
+  0x000000a0 6f645f69 6e742e66 30380069 6e746567 od_int.f08.integ
+  0x000000b0 6572286b 696e643d 3429006d 61696e00 er(kind=4).main.
+  0x000000c0 474e5520 466f7274 72616e32 30303820 GNU Fortran2008 
+  0x000000d0 31302e32 2e312032 30323130 31313020 10.2.1 20210110 
+  0x000000e0 2d6d6c69 74746c65 2d656e64 69616e20 -mlittle-endian 
+  0x000000f0 2d6d6162 693d6c70 3634202d 67676462 -mabi=lp64 -ggdb
+  0x00000100 33202d66 696e7472 696e7369 632d6d6f 3 -fintrinsic-mo
+  0x00000110 64756c65 732d7061 7468202f 7573722f dules-path /usr/
+  0x00000120 6c69622f 6763632f 61617263 6836342d lib/gcc/aarch64-
+  0x00000130 6c696e75 782d676e 752f3130 2f66696e linux-gnu/10/fin
+  0x00000140 636c7564 65202d66 7072652d 696e636c clude -fpre-incl
+  0x00000150 7564653d 2f757372 2f696e63 6c756465 ude=/usr/include
+  0x00000160 2f66696e 636c7564 652f6161 72636836 /finclude/aarch6
+  0x00000170 342d6c69 6e75782d 676e752f 6d617468 4-linux-gnu/math
+  0x00000180 2d766563 746f722d 666f7274 72616e2e -vector-fortran.
+  0x00000190 68006d6f 645f696e 74006172 677600   h.mod_int.argv.
 
 Contents of the .eh_frame section (loaded from mod_int.o):
 
 
-00000000 0000000000000014 00000000 CIE
+00000000 0000000000000010 00000000 CIE
   Version:               1
   Augmentation:          "zR"
-  Code alignment factor: 1
+  Code alignment factor: 4
   Data alignment factor: -8
-  Return address column: 16
+  Return address column: 30
   Augmentation data:     1b
-  DW_CFA_def_cfa: r7 (rsp) ofs 8
-  DW_CFA_offset: r16 (rip) at cfa-8
-  DW_CFA_nop
+  DW_CFA_def_cfa: r31 (sp) ofs 0
+
+00000014 0000000000000014 00000018 FDE cie=00000000 pc=0000000000000000..000000000000003c
+  DW_CFA_advance_loc: 4 to 0000000000000004
+  DW_CFA_def_cfa_offset: 16
+  DW_CFA_advance_loc: 52 to 0000000000000038
+  DW_CFA_def_cfa_offset: 0
   DW_CFA_nop
 
-00000018 000000000000001c 0000001c FDE cie=00000000 pc=0000000000000000..000000000000001f
-  DW_CFA_advance_loc: 1 to 0000000000000001
-  DW_CFA_def_cfa_offset: 16
-  DW_CFA_offset: r6 (rbp) at cfa-16
-  DW_CFA_advance_loc: 3 to 0000000000000004
-  DW_CFA_def_cfa_register: r6 (rbp)
-  DW_CFA_advance_loc: 26 to 000000000000001e
-  DW_CFA_def_cfa: r7 (rsp) ofs 8
+0000002c 0000000000000020 00000030 FDE cie=00000000 pc=000000000000003c..0000000000000078
+  DW_CFA_advance_loc: 4 to 0000000000000040
+  DW_CFA_def_cfa_offset: 32
+  DW_CFA_offset: r29 (x29) at cfa-32
+  DW_CFA_offset: r30 (x30) at cfa-24
+  DW_CFA_advance_loc: 52 to 0000000000000074
+  DW_CFA_restore: r30 (x30)
+  DW_CFA_restore: r29 (x29)
+  DW_CFA_def_cfa_offset: 0
   DW_CFA_nop
   DW_CFA_nop
   DW_CFA_nop
-
-00000038 000000000000001c 0000003c FDE cie=00000000 pc=000000000000001f..000000000000005f
-  DW_CFA_advance_loc: 1 to 0000000000000020
-  DW_CFA_def_cfa_offset: 16
-  DW_CFA_offset: r6 (rbp) at cfa-16
-  DW_CFA_advance_loc: 3 to 0000000000000023
-  DW_CFA_def_cfa_register: r6 (rbp)
-  DW_CFA_advance_loc: 59 to 000000000000005e
-  DW_CFA_def_cfa: r7 (rsp) ofs 8
+  DW_CFA_nop
   DW_CFA_nop
   DW_CFA_nop
   DW_CFA_nop

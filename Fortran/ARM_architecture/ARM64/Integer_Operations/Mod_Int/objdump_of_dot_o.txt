@@ -1,203 +1,152 @@
 
-mod_int.o:     file format elf64-x86-64
+mod_int.o:     file format elf64-littleaarch64
 mod_int.o
-architecture: i386:x86-64, flags 0x00000011:
+architecture: aarch64, flags 0x00000011:
 HAS_RELOC, HAS_SYMS
 start address 0x0000000000000000
+private flags = 0:
 
 Sections:
 Idx Name          Size      VMA               LMA               File off  Algn
-  0 .text         0000005f  0000000000000000  0000000000000000  00000040  2**0
+  0 .text         00000078  0000000000000000  0000000000000000  00000040  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  1 .data         00000000  0000000000000000  0000000000000000  0000009f  2**0
+  1 .data         00000000  0000000000000000  0000000000000000  000000b8  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          00000000  0000000000000000  0000000000000000  0000009f  2**0
+  2 .bss          00000000  0000000000000000  0000000000000000  000000b8  2**0
                   ALLOC
-  3 .rodata       0000001c  0000000000000000  0000000000000000  000000a0  2**4
+  3 .rodata       0000001c  0000000000000000  0000000000000000  000000b8  2**3
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  4 .comment      00000028  0000000000000000  0000000000000000  000000bc  2**0
+  4 .comment      00000028  0000000000000000  0000000000000000  000000d4  2**0
                   CONTENTS, READONLY
-  5 .note.GNU-stack 00000000  0000000000000000  0000000000000000  000000e4  2**0
+  5 .note.GNU-stack 00000000  0000000000000000  0000000000000000  000000fc  2**0
                   CONTENTS, READONLY
-  6 .note.gnu.property 00000030  0000000000000000  0000000000000000  000000e8  2**3
-                  CONTENTS, ALLOC, LOAD, READONLY, DATA
-  7 .eh_frame     00000058  0000000000000000  0000000000000000  00000118  2**3
+  6 .eh_frame     00000050  0000000000000000  0000000000000000  00000100  2**3
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
 SYMBOL TABLE:
 0000000000000000 l    df *ABS*	0000000000000000 mod_int.f08
 0000000000000000 l    d  .text	0000000000000000 .text
-0000000000000000 l     F .text	000000000000001f MAIN__
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l     F .text	000000000000003c MAIN__
 0000000000000000 l     O .rodata	000000000000001c options.0.0
 0000000000000000 l    d  .rodata	0000000000000000 .rodata
-000000000000001f g     F .text	0000000000000040 main
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 l    d  .eh_frame	0000000000000000 .eh_frame
+0000000000000000 l    d  .comment	0000000000000000 .comment
+000000000000003c g     F .text	000000000000003c main
 0000000000000000         *UND*	0000000000000000 _gfortran_set_args
 0000000000000000         *UND*	0000000000000000 _gfortran_set_options
 
 
 Contents of section .text:
- 0000 554889e5 c745fc0a 000000c7 45f80400  UH...E......E...
- 0010 00008b45 fc99f77d f88955f4 905dc355  ...E...}..U..].U
- 0020 4889e548 83ec1089 7dfc4889 75f0488b  H..H....}.H.u.H.
- 0030 55f08b45 fc4889d6 89c7e800 00000048  U..E.H.........H
- 0040 8d050000 00004889 c6bf0700 0000e800  ......H.........
- 0050 000000e8 a8ffffff b8000000 00c9c3    ............... 
+ 0000 ff4300d1 40018052 e00f00b9 80008052  .C..@..R.......R
+ 0010 e00b00b9 e00f40b9 e10b40b9 020cc11a  ......@...@.....
+ 0020 e10b40b9 417c011b 0000014b e00700b9  ..@.A|.....K....
+ 0030 1f2003d5 ff430091 c0035fd6 fd7bbea9  . ...C...._..{..
+ 0040 fd030091 e01f00b9 e10b00f9 e10b40f9  ..............@.
+ 0050 e01f40b9 00000094 00000090 01000091  ..@.............
+ 0060 e0008052 00000094 e6ffff97 00008052  ...R...........R
+ 0070 fd7bc2a8 c0035fd6                    .{...._.        
 Contents of section .rodata:
- 0000 44280000 ff3f0000 00000000 01000000  D(...?..........
+ 0000 44080000 ff0f0000 00000000 01000000  D...............
  0010 01000000 00000000 1f000000           ............    
 Contents of section .comment:
- 0000 00474343 3a202863 6f6e6461 2d666f72  .GCC: (conda-for
- 0010 67652067 63632031 352e312e 302d3329  ge gcc 15.1.0-3)
- 0020 2031352e 312e3000                     15.1.0.        
-Contents of section .note.gnu.property:
- 0000 04000000 20000000 05000000 474e5500  .... .......GNU.
- 0010 020001c0 04000000 01000000 00000000  ................
- 0020 010001c0 04000000 01000000 00000000  ................
+ 0000 00474343 3a202844 65626961 6e203130  .GCC: (Debian 10
+ 0010 2e322e31 2d362920 31302e32 2e312032  .2.1-6) 10.2.1 2
+ 0020 30323130 31313000                    0210110.        
 Contents of section .eh_frame:
- 0000 14000000 00000000 017a5200 01781001  .........zR..x..
- 0010 1b0c0708 90010000 1c000000 1c000000  ................
- 0020 00000000 1f000000 00410e10 8602430d  .........A....C.
- 0030 065a0c07 08000000 1c000000 3c000000  .Z..........<...
- 0040 00000000 40000000 00410e10 8602430d  ....@....A....C.
- 0050 067b0c07 08000000                    .{......        
+ 0000 10000000 00000000 017a5200 04781e01  .........zR..x..
+ 0010 1b0c1f00 14000000 18000000 00000000  ................
+ 0020 3c000000 00410e10 4d0e0000 20000000  <....A..M... ...
+ 0030 30000000 00000000 3c000000 00410e20  0.......<....A. 
+ 0040 9d049e03 4ddedd0e 00000000 00000000  ....M...........
 
 Disassembly of section .text:
 
 0000000000000000 <MAIN__>:
-   0:	55                   	push   %rbp
-   1:	48 89 e5             	mov    %rsp,%rbp
-   4:	c7 45 fc 0a 00 00 00 	movl   $0xa,-0x4(%rbp)
-   b:	c7 45 f8 04 00 00 00 	movl   $0x4,-0x8(%rbp)
-  12:	8b 45 fc             	mov    -0x4(%rbp),%eax
-  15:	99                   	cltd
-  16:	f7 7d f8             	idivl  -0x8(%rbp)
-  19:	89 55 f4             	mov    %edx,-0xc(%rbp)
-  1c:	90                   	nop
-  1d:	5d                   	pop    %rbp
-  1e:	c3                   	ret
+   0:	d10043ff 	sub	sp, sp, #0x10
+   4:	52800140 	mov	w0, #0xa                   	// #10
+   8:	b9000fe0 	str	w0, [sp, #12]
+   c:	52800080 	mov	w0, #0x4                   	// #4
+  10:	b9000be0 	str	w0, [sp, #8]
+  14:	b9400fe0 	ldr	w0, [sp, #12]
+  18:	b9400be1 	ldr	w1, [sp, #8]
+  1c:	1ac10c02 	sdiv	w2, w0, w1
+  20:	b9400be1 	ldr	w1, [sp, #8]
+  24:	1b017c41 	mul	w1, w2, w1
+  28:	4b010000 	sub	w0, w0, w1
+  2c:	b90007e0 	str	w0, [sp, #4]
+  30:	d503201f 	nop
+  34:	910043ff 	add	sp, sp, #0x10
+  38:	d65f03c0 	ret
 
-000000000000001f <main>:
-  1f:	55                   	push   %rbp
-  20:	48 89 e5             	mov    %rsp,%rbp
-  23:	48 83 ec 10          	sub    $0x10,%rsp
-  27:	89 7d fc             	mov    %edi,-0x4(%rbp)
-  2a:	48 89 75 f0          	mov    %rsi,-0x10(%rbp)
-  2e:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
-  32:	8b 45 fc             	mov    -0x4(%rbp),%eax
-  35:	48 89 d6             	mov    %rdx,%rsi
-  38:	89 c7                	mov    %eax,%edi
-  3a:	e8 00 00 00 00       	call   3f <main+0x20>
-			3b: R_X86_64_PLT32	_gfortran_set_args-0x4
-  3f:	48 8d 05 00 00 00 00 	lea    0x0(%rip),%rax        # 46 <main+0x27>
-			42: R_X86_64_PC32	.rodata-0x4
-  46:	48 89 c6             	mov    %rax,%rsi
-  49:	bf 07 00 00 00       	mov    $0x7,%edi
-  4e:	e8 00 00 00 00       	call   53 <main+0x34>
-			4f: R_X86_64_PLT32	_gfortran_set_options-0x4
-  53:	e8 a8 ff ff ff       	call   0 <MAIN__>
-  58:	b8 00 00 00 00       	mov    $0x0,%eax
-  5d:	c9                   	leave
-  5e:	c3                   	ret
+000000000000003c <main>:
+  3c:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  40:	910003fd 	mov	x29, sp
+  44:	b9001fe0 	str	w0, [sp, #28]
+  48:	f9000be1 	str	x1, [sp, #16]
+  4c:	f9400be1 	ldr	x1, [sp, #16]
+  50:	b9401fe0 	ldr	w0, [sp, #28]
+  54:	94000000 	bl	0 <_gfortran_set_args>
+			54: R_AARCH64_CALL26	_gfortran_set_args
+  58:	90000000 	adrp	x0, 0 <MAIN__>
+			58: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+  5c:	91000001 	add	x1, x0, #0x0
+			5c: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+  60:	528000e0 	mov	w0, #0x7                   	// #7
+  64:	94000000 	bl	0 <_gfortran_set_options>
+			64: R_AARCH64_CALL26	_gfortran_set_options
+  68:	97ffffe6 	bl	0 <MAIN__>
+  6c:	52800000 	mov	w0, #0x0                   	// #0
+  70:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  74:	d65f03c0 	ret
 
 Disassembly of section .rodata:
 
 0000000000000000 <options.0.0>:
-   0:	44 28 00             	sub    %r8b,(%rax)
-   3:	00 ff                	add    %bh,%bh
-   5:	3f                   	(bad)
-   6:	00 00                	add    %al,(%rax)
-   8:	00 00                	add    %al,(%rax)
-   a:	00 00                	add    %al,(%rax)
-   c:	01 00                	add    %eax,(%rax)
-   e:	00 00                	add    %al,(%rax)
-  10:	01 00                	add    %eax,(%rax)
-  12:	00 00                	add    %al,(%rax)
-  14:	00 00                	add    %al,(%rax)
-  16:	00 00                	add    %al,(%rax)
-  18:	1f                   	(bad)
-  19:	00 00                	add    %al,(%rax)
-	...
+   0:	00000844 	udf	#2116
+   4:	00000fff 	udf	#4095
+   8:	00000000 	udf	#0
+   c:	00000001 	udf	#1
+  10:	00000001 	udf	#1
+  14:	00000000 	udf	#0
+  18:	0000001f 	udf	#31
 
 Disassembly of section .comment:
 
 0000000000000000 <.comment>:
-   0:	00 47 43             	add    %al,0x43(%rdi)
-   3:	43 3a 20             	rex.XB cmp (%r8),%spl
-   6:	28 63 6f             	sub    %ah,0x6f(%rbx)
-   9:	6e                   	outsb  %ds:(%rsi),(%dx)
-   a:	64 61                	fs (bad)
-   c:	2d 66 6f 72 67       	sub    $0x67726f66,%eax
-  11:	65 20 67 63          	and    %ah,%gs:0x63(%rdi)
-  15:	63 20                	movsxd (%rax),%esp
-  17:	31 35 2e 31 2e 30    	xor    %esi,0x302e312e(%rip)        # 302e314b <main+0x302e312c>
-  1d:	2d 33 29 20 31       	sub    $0x31202933,%eax
-  22:	35 2e 31 2e 30       	xor    $0x302e312e,%eax
-	...
-
-Disassembly of section .note.gnu.property:
-
-0000000000000000 <.note.gnu.property>:
-   0:	04 00                	add    $0x0,%al
-   2:	00 00                	add    %al,(%rax)
-   4:	20 00                	and    %al,(%rax)
-   6:	00 00                	add    %al,(%rax)
-   8:	05 00 00 00 47       	add    $0x47000000,%eax
-   d:	4e 55                	rex.WRX push %rbp
-   f:	00 02                	add    %al,(%rdx)
-  11:	00 01                	add    %al,(%rcx)
-  13:	c0 04 00 00          	rolb   $0x0,(%rax,%rax,1)
-  17:	00 01                	add    %al,(%rcx)
-  19:	00 00                	add    %al,(%rax)
-  1b:	00 00                	add    %al,(%rax)
-  1d:	00 00                	add    %al,(%rax)
-  1f:	00 01                	add    %al,(%rcx)
-  21:	00 01                	add    %al,(%rcx)
-  23:	c0 04 00 00          	rolb   $0x0,(%rax,%rax,1)
-  27:	00 01                	add    %al,(%rcx)
-  29:	00 00                	add    %al,(%rax)
-  2b:	00 00                	add    %al,(%rax)
-  2d:	00 00                	add    %al,(%rax)
-	...
+   0:	43434700 	.inst	0x43434700 ; undefined
+   4:	4428203a 	.inst	0x4428203a ; undefined
+   8:	61696265 	.inst	0x61696265 ; undefined
+   c:	3031206e 	adr	x14, 62419 <main+0x623dd>
+  10:	312e322e 	adds	w14, w17, #0xb8c
+  14:	2029362d 	.inst	0x2029362d ; undefined
+  18:	322e3031 	orr	w17, w1, #0x7ffc0000
+  1c:	3220312e 	orr	w14, w9, #0x1fff
+  20:	30313230 	adr	x16, 62665 <main+0x62629>
+  24:	00303131 	.inst	0x00303131 ; NYI
 
 Disassembly of section .eh_frame:
 
 0000000000000000 <.eh_frame>:
-   0:	14 00                	adc    $0x0,%al
-   2:	00 00                	add    %al,(%rax)
-   4:	00 00                	add    %al,(%rax)
-   6:	00 00                	add    %al,(%rax)
-   8:	01 7a 52             	add    %edi,0x52(%rdx)
-   b:	00 01                	add    %al,(%rcx)
-   d:	78 10                	js     1f <.eh_frame+0x1f>
-   f:	01 1b                	add    %ebx,(%rbx)
-  11:	0c 07                	or     $0x7,%al
-  13:	08 90 01 00 00 1c    	or     %dl,0x1c000001(%rax)
-  19:	00 00                	add    %al,(%rax)
-  1b:	00 1c 00             	add    %bl,(%rax,%rax,1)
-  1e:	00 00                	add    %al,(%rax)
-  20:	00 00                	add    %al,(%rax)
-			20: R_X86_64_PC32	.text
-  22:	00 00                	add    %al,(%rax)
-  24:	1f                   	(bad)
-  25:	00 00                	add    %al,(%rax)
-  27:	00 00                	add    %al,(%rax)
-  29:	41 0e                	rex.B (bad)
-  2b:	10 86 02 43 0d 06    	adc    %al,0x60d4302(%rsi)
-  31:	5a                   	pop    %rdx
-  32:	0c 07                	or     $0x7,%al
-  34:	08 00                	or     %al,(%rax)
-  36:	00 00                	add    %al,(%rax)
-  38:	1c 00                	sbb    $0x0,%al
-  3a:	00 00                	add    %al,(%rax)
-  3c:	3c 00                	cmp    $0x0,%al
-  3e:	00 00                	add    %al,(%rax)
-  40:	00 00                	add    %al,(%rax)
-			40: R_X86_64_PC32	.text+0x1f
-  42:	00 00                	add    %al,(%rax)
-  44:	40 00 00             	rex add %al,(%rax)
-  47:	00 00                	add    %al,(%rax)
-  49:	41 0e                	rex.B (bad)
-  4b:	10 86 02 43 0d 06    	adc    %al,0x60d4302(%rsi)
-  51:	7b 0c                	jnp    5f <main+0x40>
-  53:	07                   	(bad)
-  54:	08 00                	or     %al,(%rax)
+   0:	00000010 	udf	#16
+   4:	00000000 	udf	#0
+   8:	00527a01 	.inst	0x00527a01 ; undefined
+   c:	011e7804 	.inst	0x011e7804 ; undefined
+  10:	001f0c1b 	.inst	0x001f0c1b ; undefined
+  14:	00000014 	udf	#20
+  18:	00000018 	udf	#24
+  1c:	00000000 	udf	#0
+			1c: R_AARCH64_PREL32	.text
+  20:	0000003c 	udf	#60
+  24:	100e4100 	adr	x0, 1c844 <main+0x1c808>
+  28:	00000e4d 	udf	#3661
+  2c:	00000020 	udf	#32
+  30:	00000030 	udf	#48
+  34:	00000000 	udf	#0
+			34: R_AARCH64_PREL32	.text+0x3c
+  38:	0000003c 	udf	#60
+  3c:	200e4100 	.inst	0x200e4100 ; undefined
+  40:	039e049d 	.inst	0x039e049d ; undefined
+  44:	0eddde4d 	.inst	0x0eddde4d ; undefined
 	...

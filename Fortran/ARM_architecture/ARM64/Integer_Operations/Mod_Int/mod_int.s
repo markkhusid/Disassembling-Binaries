@@ -1,68 +1,72 @@
+	.arch armv8-a
 	.file	"mod_int.f08"
 	.text
-	.type	MAIN__, @function
+	.align	2
+	.type	MAIN__, %function
 MAIN__:
 .LFB0:
 	.cfi_startproc
-	pushq	%rbp
+	sub	sp, sp, #16
 	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	movl	$10, -4(%rbp)
-	movl	$4, -8(%rbp)
-	movl	-4(%rbp), %eax
-	cltd
-	idivl	-8(%rbp)
-	movl	%edx, -12(%rbp)
+	mov	w0, 10
+	str	w0, [sp, 12]
+	mov	w0, 4
+	str	w0, [sp, 8]
+	ldr	w0, [sp, 12]
+	ldr	w1, [sp, 8]
+	sdiv	w2, w0, w1
+	ldr	w1, [sp, 8]
+	mul	w1, w2, w1
+	sub	w0, w0, w1
+	str	w0, [sp, 4]
 	nop
-	popq	%rbp
-	.cfi_def_cfa 7, 8
+	add	sp, sp, 16
+	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
 .LFE0:
 	.size	MAIN__, .-MAIN__
-	.globl	main
-	.type	main, @function
+	.align	2
+	.global	main
+	.type	main, %function
 main:
 .LFB1:
 	.cfi_startproc
-	pushq	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	subq	$16, %rsp
-	movl	%edi, -4(%rbp)
-	movq	%rsi, -16(%rbp)
-	movq	-16(%rbp), %rdx
-	movl	-4(%rbp), %eax
-	movq	%rdx, %rsi
-	movl	%eax, %edi
-	call	_gfortran_set_args@PLT
-	leaq	options.0.0(%rip), %rax
-	movq	%rax, %rsi
-	movl	$7, %edi
-	call	_gfortran_set_options@PLT
-	call	MAIN__
-	movl	$0, %eax
-	leave
-	.cfi_def_cfa 7, 8
+	stp	x29, x30, [sp, -32]!
+	.cfi_def_cfa_offset 32
+	.cfi_offset 29, -32
+	.cfi_offset 30, -24
+	mov	x29, sp
+	str	w0, [sp, 28]
+	str	x1, [sp, 16]
+	ldr	x1, [sp, 16]
+	ldr	w0, [sp, 28]
+	bl	_gfortran_set_args
+	adrp	x0, options.0.0
+	add	x1, x0, :lo12:options.0.0
+	mov	w0, 7
+	bl	_gfortran_set_options
+	bl	MAIN__
+	mov	w0, 0
+	ldp	x29, x30, [sp], 32
+	.cfi_restore 30
+	.cfi_restore 29
+	.cfi_def_cfa_offset 0
 	ret
 	.cfi_endproc
 .LFE1:
 	.size	main, .-main
 	.section	.rodata
-	.align 16
-	.type	options.0.0, @object
+	.align	3
+	.type	options.0.0, %object
 	.size	options.0.0, 28
 options.0.0:
-	.long	10308
-	.long	16383
-	.long	0
-	.long	1
-	.long	1
-	.long	0
-	.long	31
-	.ident	"GCC: (conda-forge gcc 15.1.0-3) 15.1.0"
+	.word	2116
+	.word	4095
+	.word	0
+	.word	1
+	.word	1
+	.word	0
+	.word	31
+	.ident	"GCC: (Debian 10.2.1-6) 10.2.1 20210110"
 	.section	.note.GNU-stack,"",@progbits
