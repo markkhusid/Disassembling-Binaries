@@ -2,9 +2,9 @@ gfortran -S sub_int.f08
 
 gfortran -c sub_int.s
 
-gfortran sub_int.o -o sub_int_Fortran_ARM64
+gfortran sub_int.o -o sub_int_Fortran_aarch64
 
 objdump -x -D -s -t sub_int.o > objdump_of_dot_o.txt
 
-objdump -x -D -s -t sub_int_Fortran_ARM64 > objdump_of_dot_exe.txt
+objdump -x -D -s -t sub_int_Fortran_aarch64 > objdump_of_dot_exe.txt
 
