@@ -1,0 +1,10 @@
+gfortran -ggdb3 -S mod_int.f08 
+
+gfortran -ggdb3 -c mod_int.s 
+
+gfortran -ggdb3 mod_int.o -o mod_int_Fortran_ARM64_ggdb3 
+
+objdump -x -D -S -s -g -t mod_int.o > objdump_of_dot_o.txt
+
+objdump -x -D -S -s -g -t mod_int_Fortran_ARM64_ggdb3 > objdump_of_dot_exe.txt
+

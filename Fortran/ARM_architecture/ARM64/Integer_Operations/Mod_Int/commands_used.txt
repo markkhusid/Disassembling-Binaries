@@ -1,0 +1,10 @@
+gfortran -S mod_int.f08
+
+gfortran -c mod_int.s
+
+gfortran mod_int.o -o mod_int_Fortran_ARM64
+
+objdump -x -D -s -t mod_int.o > objdump_of_dot_o.txt
+
+objdump -x -D -s -t mod_int_Fortran_ARM64 > objdump_of_dot_exe.txt
+
